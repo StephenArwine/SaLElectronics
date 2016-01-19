@@ -28,15 +28,15 @@
     <eraseonlaunchrule>0</eraseonlaunchrule>
     <AsfFrameworkConfig>
       <framework-data xmlns="">
-  <options />
-  <configurations />
-  <files />
-  <documentation help="" />
-  <offline-documentation help="" />
-  <dependencies>
-    <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.29.0" />
-  </dependencies>
-</framework-data>
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.29.0" />
+        </dependencies>
+      </framework-data>
     </AsfFrameworkConfig>
     <avrtool>com.atmel.avrdbg.tool.atmelice</avrtool>
     <avrtoolserialnumber>J41800028966</avrtoolserialnumber>
@@ -117,6 +117,7 @@
       <Value>%24(PackRepoDir)\arm\cmsis\4.2.0\CMSIS\Include\</Value>
       <Value>../../src</Value>
       <Value>../../src/services</Value>
+      <Value>../../src/drivers</Value>
     </ListValues>
   </armgcc.compiler.directories.IncludePaths>
   <armgcc.compiler.optimization.level>Optimize (-O1)</armgcc.compiler.optimization.level>
@@ -148,9 +149,41 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="..\src\drivers\ADXL345.c">
+      <SubType>compile</SubType>
+      <Link>ADXL345.c</Link>
+    </Compile>
+    <Compile Include="..\src\drivers\ADXL345.h">
+      <SubType>compile</SubType>
+      <Link>ADXL345.h</Link>
+    </Compile>
+    <Compile Include="..\src\drivers\MS5607.c">
+      <SubType>compile</SubType>
+      <Link>MS5607.c</Link>
+    </Compile>
+    <Compile Include="..\src\drivers\MS5607.h">
+      <SubType>compile</SubType>
+      <Link>MS5607.h</Link>
+    </Compile>
     <Compile Include="..\src\SaL.h">
       <SubType>compile</SubType>
       <Link>SaL.h</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLBitBang.c">
+      <SubType>compile</SubType>
+      <Link>SaLBitBang.c</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLBitBang.h">
+      <SubType>compile</SubType>
+      <Link>SaLBitBang.h</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLDelay.c">
+      <SubType>compile</SubType>
+      <Link>SaLDelay.c</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLDelay.h">
+      <SubType>compile</SubType>
+      <Link>SaLDelay.h</Link>
     </Compile>
     <Compile Include="..\src\services\SaLPort.c">
       <SubType>compile</SubType>

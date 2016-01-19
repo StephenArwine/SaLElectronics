@@ -1,8 +1,10 @@
+#include <SaL.h>
+
+
 
 #ifndef SALPORT_H_
 #define SALPORT_H_
 
-#include <SaL.h>
 
 #define INPUT 0
 #define OUTPUT 1
@@ -24,8 +26,9 @@ static inline PortGroup* SaLGetPort(
 void SaLPinMode(uint8_t pin,uint8_t DIR);
 
 static inline void SaLDigitalOut(uint8_t pin, uint8_t level) {
-	PortGroup *const port = SaLGetPort(pin);
+	volatile PortGroup *const port = SaLGetPort(pin);
 	uint32_t pin_mask = (1UL << (pin % 32));
+	
 
 	if (level) {
 		port->OUTSET.reg = pin_mask;

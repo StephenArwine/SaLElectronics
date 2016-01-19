@@ -8,6 +8,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9BB585FB-DBE2-46D0-AE64-8A36593F33C6}"
 	ProjectSection(SolutionItems) = preProject
 		src\SaL.h = src\SaL.h
+		src\services\SaLBitBang.c = src\services\SaLBitBang.c
+		src\services\SaLBitBang.h = src\services\SaLBitBang.h
 		src\services\SaLPort.c = src\services\SaLPort.c
 		src\services\SaLPort.h = src\services\SaLPort.h
 	EndProjectSection

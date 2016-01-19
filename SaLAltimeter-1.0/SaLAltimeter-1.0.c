@@ -5,12 +5,26 @@
  * Author : Stephen Arwine
  */
 
+#define pin1 PIN_PA12
+#define pin2 PIN_PA13
+#define HAS_MS5607 1
+#define MS5607_MOSIPIN PIN_PA13
+#define MS5607_MISOPIN PIN_PA14
+#define MS5607_SCKPIN PIN_PA15
+#define MS5607_SLAVE_SELECT_PIN PIN_PA09
+
+#define HAS_ADXL345 1
+#define ADXL345_MOSIPIN PIN_PA13
+#define ADXL345_MISOPIN PIN_PA14
+#define ADXL345_SCKPIN PIN_PA15
+#define ADXL345_SLAVE_SELECT_PIN PIN_PA16
 
 #include "sam.h"
 #include <samd21g18a.h>
 #include <SaL.h>
 
-#define pin1 PIN_PA12
+
+
 
 void ClockInit() {
     // start and enable external 32k crystal
@@ -46,9 +60,36 @@ void ClockInit() {
     GCLK->CLKCTRL.reg = (GCLK_CLKCTRL_GEN(0) | (GCLK_CLKCTRL_CLKEN) | GCLK_CLKCTRL_ID_DFLL48) ;
 }
 
-void PinConfig(){
-	SaLPinMode(pin1,OUTPUT);
-	
+void PinConfig() {
+
+    /* temp SS HIGH for other peripherals */
+    SaLPinMode(PIN_PA10,OUTPUT);
+    SaLPinMode(PIN_PA08,OUTPUT);
+    SaLDigitalOut(PIN_PA10,true);
+    SaLDigitalOut(PIN_PA08,true);
+}
+
+struct spiModule baroModuleSetup() {
+
+    struct spiModule baroModule;
+    configSpiModule(&baroModule,
+                    MS5607_MOSIPIN,
+                    MS5607_MISOPIN,
+                    MS5607_SCKPIN,
+                    MS5607_SLAVE_SELECT_PIN);
+
+    return baroModule;
+}
+
+struct spiModule accelModuleSetup() {
+    struct spiModule accelModule;
+    configSpiModule(&accelModule,
+                    ADXL345_MOSIPIN,
+                    ADXL345_MISOPIN,
+                    ADXL345_SCKPIN,
+                    ADXL345_SLAVE_SELECT_PIN);
+
+    return accelModule;
 }
 
 volatile uint32_t counter = 0;
@@ -56,10 +97,53 @@ volatile uint32_t counter = 0;
 int main(void) {
     /* Initialize the SAM system */
     SystemInit();
-    ClockInit();
-	PinConfig();
-    /* Replace with your application code */
+//    ClockInit();
+    SaLDelayInit();
+    PinConfig();
+    struct spiModule baroModule =baroModuleSetup();
+    struct spiModule accelModule =accelModuleSetup();
+
+
+    /*=========================================================================
+    					baro init stuff
+    -----------------------------------------------------------------------*/
+   // /SaLDigitalOut(baroModule.SS,false);
+    //byteOut(&baroModule,cmdReset_);
+   // SaLDigitalOut(baroModule.SS,true);
+  //  delay_us(30);
+  //  read_coeff(&baroModule);
+    /*=========================================================================*/
+
+
+
+    /*=========================================================================
+    					accel init stuff
+    -----------------------------------------------------------------------*/
+     setRange(&accelModule,ADXL345_RANGE_16_G);
+     delay_us(300);
+    SaLDigitalOut(accelModule.SS,false);
+    byteOut(&accelModule,ADXL345_REG_POWER_CTL);
+    byteOut(&accelModule,0x08);
+    SaLDigitalOut(accelModule.SS,true);
+    /*=========================================================================*/
+    delay_us(300);
+    SaLDigitalOut(accelModule.SS,false);
+    byteOut(&accelModule,ADXL345_REG_DEVID);
+    volatile uint8_t devId = getByte(&accelModule);
+    SaLDigitalOut(accelModule.SS,true);
+
+    volatile int16_t accelX = getX(&accelModule);
+    volatile int16_t accelY =  getY(&accelModule);
+    volatile int16_t accelZ =  getZ(&accelModule);
+
+
+
     while (1) {
-		counter++;
+        counter++;
+     //   delay_ms(100);
+        accelX = getX(&accelModule);
+        accelY =  getY(&accelModule);
+        accelZ =  getZ(&accelModule);
+
     }
 }
