@@ -177,6 +177,14 @@
       <SubType>compile</SubType>
       <Link>SaLBitBang.h</Link>
     </Compile>
+    <Compile Include="..\src\services\SaLBuzzer.c">
+      <SubType>compile</SubType>
+      <Link>SaLBuzzer.c</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLBuzzer.h">
+      <SubType>compile</SubType>
+      <Link>SaLBuzzer.h</Link>
+    </Compile>
     <Compile Include="..\src\services\SaLDelay.c">
       <SubType>compile</SubType>
       <Link>SaLDelay.c</Link>

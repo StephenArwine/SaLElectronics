@@ -8,6 +8,8 @@
 
 ..\src\services\SaLBitBang.c
 
+..\src\services\SaLBuzzer.c
+
 ..\src\services\SaLDelay.c
 
 ..\src\services\SaLPort.c

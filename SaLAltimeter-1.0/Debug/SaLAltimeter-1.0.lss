@@ -3,2010 +3,3785 @@ SaLAltimeter-1.0.elf:     file format elf32-littlearm
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .text         0000090c  00000000  00000000  00008000  2**2
+  0 .text         000013e0  00000000  00000000  00008000  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  1 .relocate     00000438  20000000  0000090c  00010000  2**3
+  1 .relocate     00000438  20000000  000013e0  00010000  2**3
                   CONTENTS, ALLOC, LOAD, DATA
-  2 .bss          00000020  20000438  00000d44  00010438  2**2
+  2 .bss          00000034  20000438  00001818  00010438  2**2
                   ALLOC
-  3 .stack        00002000  20000458  00000d64  00010438  2**0
+  3 .stack        00002004  2000046c  0000184c  00010438  2**0
                   ALLOC
   4 .ARM.attributes 00000028  00000000  00000000  00010438  2**0
                   CONTENTS, READONLY
   5 .comment      0000005b  00000000  00000000  00010460  2**0
                   CONTENTS, READONLY
-  6 .debug_info   00008120  00000000  00000000  000104bb  2**0
+  6 .debug_info   0000a8cf  00000000  00000000  000104bb  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_abbrev 00000ddd  00000000  00000000  000185db  2**0
+  7 .debug_abbrev 000013bb  00000000  00000000  0001ad8a  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_loc    000011f2  00000000  00000000  000193b8  2**0
+  8 .debug_loc    0000268c  00000000  00000000  0001c145  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_aranges 00000140  00000000  00000000  0001a5aa  2**0
+  9 .debug_aranges 000001f0  00000000  00000000  0001e7d1  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_ranges 00000130  00000000  00000000  0001a6ea  2**0
+ 10 .debug_ranges 00000208  00000000  00000000  0001e9c1  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_macro  00012a3f  00000000  00000000  0001a81a  2**0
+ 11 .debug_macro  00013517  00000000  00000000  0001ebc9  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_line   000036f2  00000000  00000000  0002d259  2**0
+ 12 .debug_line   000049bc  00000000  00000000  000320e0  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_str    0006d21c  00000000  00000000  0003094b  2**0
+ 13 .debug_str    0006de84  00000000  00000000  00036a9c  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_frame  0000035c  00000000  00000000  0009db68  2**2
+ 14 .debug_frame  000005ec  00000000  00000000  000a4920  2**2
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
 
 00000000 <_sfixed>:
-   0:	20002458 	.word	0x20002458
-   4:	00000455 	.word	0x00000455
-   8:	0000044d 	.word	0x0000044d
-   c:	0000044d 	.word	0x0000044d
+       0:	20002470 	.word	0x20002470
+       4:	00000705 	.word	0x00000705
+       8:	000006fd 	.word	0x000006fd
+       c:	000006fd 	.word	0x000006fd
 	...
-  2c:	0000044d 	.word	0x0000044d
+      2c:	000006fd 	.word	0x000006fd
 	...
-  38:	0000044d 	.word	0x0000044d
-  3c:	0000044d 	.word	0x0000044d
-  40:	0000044d 	.word	0x0000044d
-  44:	0000044d 	.word	0x0000044d
-  48:	0000044d 	.word	0x0000044d
-  4c:	0000044d 	.word	0x0000044d
-  50:	0000044d 	.word	0x0000044d
-  54:	0000044d 	.word	0x0000044d
-  58:	0000044d 	.word	0x0000044d
-  5c:	0000044d 	.word	0x0000044d
-  60:	0000044d 	.word	0x0000044d
-  64:	0000044d 	.word	0x0000044d
-  68:	0000044d 	.word	0x0000044d
-  6c:	0000044d 	.word	0x0000044d
-  70:	0000044d 	.word	0x0000044d
-  74:	0000044d 	.word	0x0000044d
-  78:	0000044d 	.word	0x0000044d
-  7c:	0000044d 	.word	0x0000044d
-  80:	0000044d 	.word	0x0000044d
-  84:	0000044d 	.word	0x0000044d
-  88:	0000044d 	.word	0x0000044d
-  8c:	0000044d 	.word	0x0000044d
-  90:	0000044d 	.word	0x0000044d
+      38:	000006fd 	.word	0x000006fd
+      3c:	000006fd 	.word	0x000006fd
+      40:	000006fd 	.word	0x000006fd
+      44:	000006fd 	.word	0x000006fd
+      48:	000006fd 	.word	0x000006fd
+      4c:	000006fd 	.word	0x000006fd
+      50:	000006fd 	.word	0x000006fd
+      54:	000006fd 	.word	0x000006fd
+      58:	000006fd 	.word	0x000006fd
+      5c:	000006fd 	.word	0x000006fd
+      60:	000006fd 	.word	0x000006fd
+      64:	000006fd 	.word	0x000006fd
+      68:	000006fd 	.word	0x000006fd
+      6c:	000006fd 	.word	0x000006fd
+      70:	000006fd 	.word	0x000006fd
+      74:	000006fd 	.word	0x000006fd
+      78:	000006fd 	.word	0x000006fd
+      7c:	000006fd 	.word	0x000006fd
+      80:	000006fd 	.word	0x000006fd
+      84:	000006fd 	.word	0x000006fd
+      88:	000006fd 	.word	0x000006fd
+      8c:	000006fd 	.word	0x000006fd
+      90:	000006fd 	.word	0x000006fd
 	...
-  9c:	0000044d 	.word	0x0000044d
-  a0:	0000044d 	.word	0x0000044d
-  a4:	0000044d 	.word	0x0000044d
-  a8:	0000044d 	.word	0x0000044d
-  ac:	0000044d 	.word	0x0000044d
-  b0:	00000000 	.word	0x00000000
+      9c:	000006fd 	.word	0x000006fd
+      a0:	000006fd 	.word	0x000006fd
+      a4:	000006fd 	.word	0x000006fd
+      a8:	000006fd 	.word	0x000006fd
+      ac:	000006fd 	.word	0x000006fd
+      b0:	00000000 	.word	0x00000000
 
 000000b4 <__do_global_dtors_aux>:
-  b4:	b510      	push	{r4, lr}
-  b6:	4c06      	ldr	r4, [pc, #24]	; (d0 <__do_global_dtors_aux+0x1c>)
-  b8:	7823      	ldrb	r3, [r4, #0]
-  ba:	2b00      	cmp	r3, #0
-  bc:	d107      	bne.n	ce <__do_global_dtors_aux+0x1a>
-  be:	4b05      	ldr	r3, [pc, #20]	; (d4 <__do_global_dtors_aux+0x20>)
-  c0:	2b00      	cmp	r3, #0
-  c2:	d002      	beq.n	ca <__do_global_dtors_aux+0x16>
-  c4:	4804      	ldr	r0, [pc, #16]	; (d8 <__do_global_dtors_aux+0x24>)
-  c6:	e000      	b.n	ca <__do_global_dtors_aux+0x16>
-  c8:	bf00      	nop
-  ca:	2301      	movs	r3, #1
-  cc:	7023      	strb	r3, [r4, #0]
-  ce:	bd10      	pop	{r4, pc}
-  d0:	20000438 	.word	0x20000438
-  d4:	00000000 	.word	0x00000000
-  d8:	0000090c 	.word	0x0000090c
+      b4:	b510      	push	{r4, lr}
+      b6:	4c06      	ldr	r4, [pc, #24]	; (d0 <__do_global_dtors_aux+0x1c>)
+      b8:	7823      	ldrb	r3, [r4, #0]
+      ba:	2b00      	cmp	r3, #0
+      bc:	d107      	bne.n	ce <__do_global_dtors_aux+0x1a>
+      be:	4b05      	ldr	r3, [pc, #20]	; (d4 <__do_global_dtors_aux+0x20>)
+      c0:	2b00      	cmp	r3, #0
+      c2:	d002      	beq.n	ca <__do_global_dtors_aux+0x16>
+      c4:	4804      	ldr	r0, [pc, #16]	; (d8 <__do_global_dtors_aux+0x24>)
+      c6:	e000      	b.n	ca <__do_global_dtors_aux+0x16>
+      c8:	bf00      	nop
+      ca:	2301      	movs	r3, #1
+      cc:	7023      	strb	r3, [r4, #0]
+      ce:	bd10      	pop	{r4, pc}
+      d0:	20000438 	.word	0x20000438
+      d4:	00000000 	.word	0x00000000
+      d8:	000013e0 	.word	0x000013e0
 
 000000dc <frame_dummy>:
-  dc:	b508      	push	{r3, lr}
-  de:	4b08      	ldr	r3, [pc, #32]	; (100 <frame_dummy+0x24>)
-  e0:	2b00      	cmp	r3, #0
-  e2:	d003      	beq.n	ec <frame_dummy+0x10>
-  e4:	4807      	ldr	r0, [pc, #28]	; (104 <frame_dummy+0x28>)
-  e6:	4908      	ldr	r1, [pc, #32]	; (108 <frame_dummy+0x2c>)
-  e8:	e000      	b.n	ec <frame_dummy+0x10>
-  ea:	bf00      	nop
-  ec:	4807      	ldr	r0, [pc, #28]	; (10c <frame_dummy+0x30>)
-  ee:	6803      	ldr	r3, [r0, #0]
-  f0:	2b00      	cmp	r3, #0
-  f2:	d100      	bne.n	f6 <frame_dummy+0x1a>
-  f4:	bd08      	pop	{r3, pc}
-  f6:	4b06      	ldr	r3, [pc, #24]	; (110 <frame_dummy+0x34>)
-  f8:	2b00      	cmp	r3, #0
-  fa:	d0fb      	beq.n	f4 <frame_dummy+0x18>
-  fc:	4798      	blx	r3
-  fe:	e7f9      	b.n	f4 <frame_dummy+0x18>
- 100:	00000000 	.word	0x00000000
- 104:	0000090c 	.word	0x0000090c
- 108:	2000043c 	.word	0x2000043c
- 10c:	0000090c 	.word	0x0000090c
- 110:	00000000 	.word	0x00000000
+      dc:	b508      	push	{r3, lr}
+      de:	4b08      	ldr	r3, [pc, #32]	; (100 <frame_dummy+0x24>)
+      e0:	2b00      	cmp	r3, #0
+      e2:	d003      	beq.n	ec <frame_dummy+0x10>
+      e4:	4807      	ldr	r0, [pc, #28]	; (104 <frame_dummy+0x28>)
+      e6:	4908      	ldr	r1, [pc, #32]	; (108 <frame_dummy+0x2c>)
+      e8:	e000      	b.n	ec <frame_dummy+0x10>
+      ea:	bf00      	nop
+      ec:	4807      	ldr	r0, [pc, #28]	; (10c <frame_dummy+0x30>)
+      ee:	6803      	ldr	r3, [r0, #0]
+      f0:	2b00      	cmp	r3, #0
+      f2:	d100      	bne.n	f6 <frame_dummy+0x1a>
+      f4:	bd08      	pop	{r3, pc}
+      f6:	4b06      	ldr	r3, [pc, #24]	; (110 <frame_dummy+0x34>)
+      f8:	2b00      	cmp	r3, #0
+      fa:	d0fb      	beq.n	f4 <frame_dummy+0x18>
+      fc:	4798      	blx	r3
+      fe:	e7f9      	b.n	f4 <frame_dummy+0x18>
+     100:	00000000 	.word	0x00000000
+     104:	000013e0 	.word	0x000013e0
+     108:	2000043c 	.word	0x2000043c
+     10c:	000013e0 	.word	0x000013e0
+     110:	00000000 	.word	0x00000000
 
 00000114 <setRange>:
 #include <ADXL345.h>
 
 void setRange(struct spiModule *const module,
               ADXL345Range _cmd) {
- 114:	b570      	push	{r4, r5, r6, lr}
- 116:	1c04      	adds	r4, r0, #0
- 118:	1c0d      	adds	r5, r1, #0
+     114:	b570      	push	{r4, r5, r6, lr}
+     116:	1c04      	adds	r4, r0, #0
+     118:	1c0d      	adds	r5, r1, #0
 
     SaLDigitalOut(module->SS,false);
- 11a:	78c3      	ldrb	r3, [r0, #3]
+     11a:	78c3      	ldrb	r3, [r0, #3]
     uint8_t port_index  = (gpio_pin / 128);
     uint8_t group_index = (gpio_pin / 32);
     /* Array of available ports */
     Port *const ports[PORT_INST_NUM] = PORT_INSTS;
 
     if (port_index < PORT_INST_NUM) {
- 11c:	09d9      	lsrs	r1, r3, #7
+     11c:	09d9      	lsrs	r1, r3, #7
         return &(ports[port_index]->Group[group_index]);
     } else {
         return NULL;
- 11e:	2200      	movs	r2, #0
+     11e:	2200      	movs	r2, #0
     uint8_t port_index  = (gpio_pin / 128);
     uint8_t group_index = (gpio_pin / 32);
     /* Array of available ports */
     Port *const ports[PORT_INST_NUM] = PORT_INSTS;
 
     if (port_index < PORT_INST_NUM) {
- 120:	2900      	cmp	r1, #0
- 122:	d104      	bne.n	12e <setRange+0x1a>
+     120:	2900      	cmp	r1, #0
+     122:	d104      	bne.n	12e <setRange+0x1a>
         return &(ports[port_index]->Group[group_index]);
- 124:	095a      	lsrs	r2, r3, #5
- 126:	01d2      	lsls	r2, r2, #7
- 128:	490f      	ldr	r1, [pc, #60]	; (168 <setRange+0x54>)
- 12a:	468c      	mov	ip, r1
- 12c:	4462      	add	r2, ip
+     124:	095a      	lsrs	r2, r3, #5
+     126:	01d2      	lsls	r2, r2, #7
+     128:	490f      	ldr	r1, [pc, #60]	; (168 <setRange+0x54>)
+     12a:	468c      	mov	ip, r1
+     12c:	4462      	add	r2, ip
 
 void SaLPinMode(uint8_t pin,uint8_t DIR);
 
 static inline void SaLDigitalOut(uint8_t pin, uint8_t level) {
 	volatile PortGroup *const port = SaLGetPort(pin);
 	uint32_t pin_mask = (1UL << (pin % 32));
- 12e:	211f      	movs	r1, #31
- 130:	400b      	ands	r3, r1
- 132:	391e      	subs	r1, #30
- 134:	4099      	lsls	r1, r3
+     12e:	211f      	movs	r1, #31
+     130:	400b      	ands	r3, r1
+     132:	391e      	subs	r1, #30
+     134:	4099      	lsls	r1, r3
 	
 
 	if (level) {
 		port->OUTSET.reg = pin_mask;
 		} else {
 		port->OUTCLR.reg = pin_mask;
- 136:	6151      	str	r1, [r2, #20]
-    byteOut(module,0x31);
- 138:	1c20      	adds	r0, r4, #0
- 13a:	2131      	movs	r1, #49	; 0x31
- 13c:	4e0b      	ldr	r6, [pc, #44]	; (16c <setRange+0x58>)
- 13e:	47b0      	blx	r6
+     136:	6151      	str	r1, [r2, #20]
+    byteOut(module,ADXL345_REG_DATA_FORMAT);
+     138:	1c20      	adds	r0, r4, #0
+     13a:	2131      	movs	r1, #49	; 0x31
+     13c:	4e0b      	ldr	r6, [pc, #44]	; (16c <setRange+0x58>)
+     13e:	47b0      	blx	r6
     byteOut(module,_cmd);
- 140:	1c20      	adds	r0, r4, #0
- 142:	1c29      	adds	r1, r5, #0
- 144:	47b0      	blx	r6
+     140:	1c20      	adds	r0, r4, #0
+     142:	1c29      	adds	r1, r5, #0
+     144:	47b0      	blx	r6
     SaLDigitalOut(module->SS,true);
- 146:	78e3      	ldrb	r3, [r4, #3]
+     146:	78e3      	ldrb	r3, [r4, #3]
     uint8_t port_index  = (gpio_pin / 128);
     uint8_t group_index = (gpio_pin / 32);
     /* Array of available ports */
     Port *const ports[PORT_INST_NUM] = PORT_INSTS;
 
     if (port_index < PORT_INST_NUM) {
- 148:	09d9      	lsrs	r1, r3, #7
+     148:	09d9      	lsrs	r1, r3, #7
         return &(ports[port_index]->Group[group_index]);
     } else {
         return NULL;
- 14a:	2200      	movs	r2, #0
+     14a:	2200      	movs	r2, #0
     uint8_t port_index  = (gpio_pin / 128);
     uint8_t group_index = (gpio_pin / 32);
     /* Array of available ports */
     Port *const ports[PORT_INST_NUM] = PORT_INSTS;
 
     if (port_index < PORT_INST_NUM) {
- 14c:	2900      	cmp	r1, #0
- 14e:	d104      	bne.n	15a <setRange+0x46>
+     14c:	2900      	cmp	r1, #0
+     14e:	d104      	bne.n	15a <setRange+0x46>
         return &(ports[port_index]->Group[group_index]);
- 150:	095a      	lsrs	r2, r3, #5
- 152:	01d2      	lsls	r2, r2, #7
- 154:	4904      	ldr	r1, [pc, #16]	; (168 <setRange+0x54>)
- 156:	468c      	mov	ip, r1
- 158:	4462      	add	r2, ip
+     150:	095a      	lsrs	r2, r3, #5
+     152:	01d2      	lsls	r2, r2, #7
+     154:	4904      	ldr	r1, [pc, #16]	; (168 <setRange+0x54>)
+     156:	468c      	mov	ip, r1
+     158:	4462      	add	r2, ip
 
 void SaLPinMode(uint8_t pin,uint8_t DIR);
 
 static inline void SaLDigitalOut(uint8_t pin, uint8_t level) {
 	volatile PortGroup *const port = SaLGetPort(pin);
 	uint32_t pin_mask = (1UL << (pin % 32));
- 15a:	211f      	movs	r1, #31
- 15c:	400b      	ands	r3, r1
- 15e:	391e      	subs	r1, #30
- 160:	4099      	lsls	r1, r3
+     15a:	211f      	movs	r1, #31
+     15c:	400b      	ands	r3, r1
+     15e:	391e      	subs	r1, #30
+     160:	4099      	lsls	r1, r3
 	
 
 	if (level) {
 		port->OUTSET.reg = pin_mask;
- 162:	6191      	str	r1, [r2, #24]
+     162:	6191      	str	r1, [r2, #24]
 }
- 164:	bd70      	pop	{r4, r5, r6, pc}
- 166:	46c0      	nop			; (mov r8, r8)
- 168:	41004400 	.word	0x41004400
- 16c:	000002a9 	.word	0x000002a9
+     164:	bd70      	pop	{r4, r5, r6, pc}
+     166:	46c0      	nop			; (mov r8, r8)
+     168:	41004400 	.word	0x41004400
+     16c:	000004c5 	.word	0x000004c5
 
 00000170 <getX>:
 
 int16_t getX(struct spiModule *const module) {
- 170:	b570      	push	{r4, r5, r6, lr}
- 172:	1c04      	adds	r4, r0, #0
+     170:	b570      	push	{r4, r5, r6, lr}
+     172:	1c04      	adds	r4, r0, #0
 
     SaLDigitalOut(module->SS,false);
- 174:	78c3      	ldrb	r3, [r0, #3]
+     174:	78c3      	ldrb	r3, [r0, #3]
     uint8_t port_index  = (gpio_pin / 128);
     uint8_t group_index = (gpio_pin / 32);
     /* Array of available ports */
     Port *const ports[PORT_INST_NUM] = PORT_INSTS;
 
     if (port_index < PORT_INST_NUM) {
- 176:	09d9      	lsrs	r1, r3, #7
+     176:	09d9      	lsrs	r1, r3, #7
         return &(ports[port_index]->Group[group_index]);
     } else {
         return NULL;
- 178:	2200      	movs	r2, #0
+     178:	2200      	movs	r2, #0
     uint8_t port_index  = (gpio_pin / 128);
     uint8_t group_index = (gpio_pin / 32);
     /* Array of available ports */
     Port *const ports[PORT_INST_NUM] = PORT_INSTS;
 
     if (port_index < PORT_INST_NUM) {
- 17a:	2900      	cmp	r1, #0
- 17c:	d104      	bne.n	188 <getX+0x18>
+     17a:	2900      	cmp	r1, #0
+     17c:	d104      	bne.n	188 <getX+0x18>
         return &(ports[port_index]->Group[group_index]);
- 17e:	095a      	lsrs	r2, r3, #5
- 180:	01d2      	lsls	r2, r2, #7
- 182:	4912      	ldr	r1, [pc, #72]	; (1cc <getX+0x5c>)
- 184:	468c      	mov	ip, r1
- 186:	4462      	add	r2, ip
+     17e:	095a      	lsrs	r2, r3, #5
+     180:	01d2      	lsls	r2, r2, #7
+     182:	4912      	ldr	r1, [pc, #72]	; (1cc <getX+0x5c>)
+     184:	468c      	mov	ip, r1
+     186:	4462      	add	r2, ip
 
 void SaLPinMode(uint8_t pin,uint8_t DIR);
 
 static inline void SaLDigitalOut(uint8_t pin, uint8_t level) {
 	volatile PortGroup *const port = SaLGetPort(pin);
 	uint32_t pin_mask = (1UL << (pin % 32));
- 188:	211f      	movs	r1, #31
- 18a:	400b      	ands	r3, r1
- 18c:	391e      	subs	r1, #30
- 18e:	4099      	lsls	r1, r3
+     188:	211f      	movs	r1, #31
+     18a:	400b      	ands	r3, r1
+     18c:	391e      	subs	r1, #30
+     18e:	4099      	lsls	r1, r3
 	
 
 	if (level) {
 		port->OUTSET.reg = pin_mask;
 		} else {
 		port->OUTCLR.reg = pin_mask;
- 190:	6151      	str	r1, [r2, #20]
-    byteOut(module,ADXL345_REG_DATAX0);
- 192:	1c20      	adds	r0, r4, #0
- 194:	2132      	movs	r1, #50	; 0x32
- 196:	4b0e      	ldr	r3, [pc, #56]	; (1d0 <getX+0x60>)
- 198:	4798      	blx	r3
+     190:	6151      	str	r1, [r2, #20]
+    byteOut(module,ADXL345_REG_DATAX0 | 0x80);
+     192:	1c20      	adds	r0, r4, #0
+     194:	21b2      	movs	r1, #178	; 0xb2
+     196:	4b0e      	ldr	r3, [pc, #56]	; (1d0 <getX+0x60>)
+     198:	4798      	blx	r3
     uint8_t _byte1 = getByte(module);
- 19a:	1c20      	adds	r0, r4, #0
- 19c:	4e0d      	ldr	r6, [pc, #52]	; (1d4 <getX+0x64>)
- 19e:	47b0      	blx	r6
- 1a0:	1c05      	adds	r5, r0, #0
+     19a:	1c20      	adds	r0, r4, #0
+     19c:	4e0d      	ldr	r6, [pc, #52]	; (1d4 <getX+0x64>)
+     19e:	47b0      	blx	r6
+     1a0:	1c05      	adds	r5, r0, #0
     uint8_t _byte2 = getByte(module);
- 1a2:	1c20      	adds	r0, r4, #0
- 1a4:	47b0      	blx	r6
+     1a2:	1c20      	adds	r0, r4, #0
+     1a4:	47b0      	blx	r6
     SaLDigitalOut(module->SS,true);
- 1a6:	78e3      	ldrb	r3, [r4, #3]
+     1a6:	78e3      	ldrb	r3, [r4, #3]
     uint8_t port_index  = (gpio_pin / 128);
     uint8_t group_index = (gpio_pin / 32);
     /* Array of available ports */
     Port *const ports[PORT_INST_NUM] = PORT_INSTS;
 
     if (port_index < PORT_INST_NUM) {
- 1a8:	09d9      	lsrs	r1, r3, #7
+     1a8:	09d9      	lsrs	r1, r3, #7
         return &(ports[port_index]->Group[group_index]);
     } else {
         return NULL;
- 1aa:	2200      	movs	r2, #0
+     1aa:	2200      	movs	r2, #0
     uint8_t port_index  = (gpio_pin / 128);
     uint8_t group_index = (gpio_pin / 32);
     /* Array of available ports */
     Port *const ports[PORT_INST_NUM] = PORT_INSTS;
 
     if (port_index < PORT_INST_NUM) {
- 1ac:	2900      	cmp	r1, #0
- 1ae:	d104      	bne.n	1ba <getX+0x4a>
+     1ac:	2900      	cmp	r1, #0
+     1ae:	d104      	bne.n	1ba <getX+0x4a>
         return &(ports[port_index]->Group[group_index]);
- 1b0:	095a      	lsrs	r2, r3, #5
- 1b2:	01d2      	lsls	r2, r2, #7
- 1b4:	4905      	ldr	r1, [pc, #20]	; (1cc <getX+0x5c>)
- 1b6:	468c      	mov	ip, r1
- 1b8:	4462      	add	r2, ip
+     1b0:	095a      	lsrs	r2, r3, #5
+     1b2:	01d2      	lsls	r2, r2, #7
+     1b4:	4905      	ldr	r1, [pc, #20]	; (1cc <getX+0x5c>)
+     1b6:	468c      	mov	ip, r1
+     1b8:	4462      	add	r2, ip
 
 void SaLPinMode(uint8_t pin,uint8_t DIR);
 
 static inline void SaLDigitalOut(uint8_t pin, uint8_t level) {
 	volatile PortGroup *const port = SaLGetPort(pin);
 	uint32_t pin_mask = (1UL << (pin % 32));
- 1ba:	211f      	movs	r1, #31
- 1bc:	400b      	ands	r3, r1
- 1be:	391e      	subs	r1, #30
- 1c0:	4099      	lsls	r1, r3
+     1ba:	211f      	movs	r1, #31
+     1bc:	400b      	ands	r3, r1
+     1be:	391e      	subs	r1, #30
+     1c0:	4099      	lsls	r1, r3
 	
 
 	if (level) {
 		port->OUTSET.reg = pin_mask;
- 1c2:	6191      	str	r1, [r2, #24]
+     1c2:	6191      	str	r1, [r2, #24]
+
     uint16_t _receive = _byte1;
     _receive = (_receive * 256) + _byte2;
- 1c4:	022d      	lsls	r5, r5, #8
- 1c6:	1828      	adds	r0, r5, r0
+     1c4:	022d      	lsls	r5, r5, #8
+     1c6:	1828      	adds	r0, r5, r0
+
     return _receive;
- 1c8:	b200      	sxth	r0, r0
+     1c8:	b200      	sxth	r0, r0
 }
- 1ca:	bd70      	pop	{r4, r5, r6, pc}
- 1cc:	41004400 	.word	0x41004400
- 1d0:	000002a9 	.word	0x000002a9
- 1d4:	0000033d 	.word	0x0000033d
+     1ca:	bd70      	pop	{r4, r5, r6, pc}
+     1cc:	41004400 	.word	0x41004400
+     1d0:	000004c5 	.word	0x000004c5
+     1d4:	00000559 	.word	0x00000559
 
 000001d8 <getY>:
 
 int16_t getY(struct spiModule *const module) {
- 1d8:	b570      	push	{r4, r5, r6, lr}
- 1da:	1c04      	adds	r4, r0, #0
+     1d8:	b570      	push	{r4, r5, r6, lr}
+     1da:	1c04      	adds	r4, r0, #0
 
     SaLDigitalOut(module->SS,false);
- 1dc:	78c3      	ldrb	r3, [r0, #3]
+     1dc:	78c3      	ldrb	r3, [r0, #3]
     uint8_t port_index  = (gpio_pin / 128);
     uint8_t group_index = (gpio_pin / 32);
     /* Array of available ports */
     Port *const ports[PORT_INST_NUM] = PORT_INSTS;
 
     if (port_index < PORT_INST_NUM) {
- 1de:	09d9      	lsrs	r1, r3, #7
+     1de:	09d9      	lsrs	r1, r3, #7
         return &(ports[port_index]->Group[group_index]);
     } else {
         return NULL;
- 1e0:	2200      	movs	r2, #0
+     1e0:	2200      	movs	r2, #0
     uint8_t port_index  = (gpio_pin / 128);
     uint8_t group_index = (gpio_pin / 32);
     /* Array of available ports */
     Port *const ports[PORT_INST_NUM] = PORT_INSTS;
 
     if (port_index < PORT_INST_NUM) {
- 1e2:	2900      	cmp	r1, #0
- 1e4:	d104      	bne.n	1f0 <getY+0x18>
+     1e2:	2900      	cmp	r1, #0
+     1e4:	d104      	bne.n	1f0 <getY+0x18>
         return &(ports[port_index]->Group[group_index]);
- 1e6:	095a      	lsrs	r2, r3, #5
- 1e8:	01d2      	lsls	r2, r2, #7
- 1ea:	4912      	ldr	r1, [pc, #72]	; (234 <getY+0x5c>)
- 1ec:	468c      	mov	ip, r1
- 1ee:	4462      	add	r2, ip
+     1e6:	095a      	lsrs	r2, r3, #5
+     1e8:	01d2      	lsls	r2, r2, #7
+     1ea:	4912      	ldr	r1, [pc, #72]	; (234 <getY+0x5c>)
+     1ec:	468c      	mov	ip, r1
+     1ee:	4462      	add	r2, ip
 
 void SaLPinMode(uint8_t pin,uint8_t DIR);
 
 static inline void SaLDigitalOut(uint8_t pin, uint8_t level) {
 	volatile PortGroup *const port = SaLGetPort(pin);
 	uint32_t pin_mask = (1UL << (pin % 32));
- 1f0:	211f      	movs	r1, #31
- 1f2:	400b      	ands	r3, r1
- 1f4:	391e      	subs	r1, #30
- 1f6:	4099      	lsls	r1, r3
+     1f0:	211f      	movs	r1, #31
+     1f2:	400b      	ands	r3, r1
+     1f4:	391e      	subs	r1, #30
+     1f6:	4099      	lsls	r1, r3
 	
 
 	if (level) {
 		port->OUTSET.reg = pin_mask;
 		} else {
 		port->OUTCLR.reg = pin_mask;
- 1f8:	6151      	str	r1, [r2, #20]
-    byteOut(module,ADXL345_REG_DATAY0);
- 1fa:	1c20      	adds	r0, r4, #0
- 1fc:	2134      	movs	r1, #52	; 0x34
- 1fe:	4b0e      	ldr	r3, [pc, #56]	; (238 <getY+0x60>)
- 200:	4798      	blx	r3
+     1f8:	6151      	str	r1, [r2, #20]
+    byteOut(module,ADXL345_REG_DATAY0|0x80);
+     1fa:	1c20      	adds	r0, r4, #0
+     1fc:	21b4      	movs	r1, #180	; 0xb4
+     1fe:	4b0e      	ldr	r3, [pc, #56]	; (238 <getY+0x60>)
+     200:	4798      	blx	r3
     uint8_t _byte1 = getByte(module);
- 202:	1c20      	adds	r0, r4, #0
- 204:	4e0d      	ldr	r6, [pc, #52]	; (23c <getY+0x64>)
- 206:	47b0      	blx	r6
- 208:	1c05      	adds	r5, r0, #0
+     202:	1c20      	adds	r0, r4, #0
+     204:	4e0d      	ldr	r6, [pc, #52]	; (23c <getY+0x64>)
+     206:	47b0      	blx	r6
+     208:	1c05      	adds	r5, r0, #0
     uint8_t _byte2 = getByte(module);
- 20a:	1c20      	adds	r0, r4, #0
- 20c:	47b0      	blx	r6
+     20a:	1c20      	adds	r0, r4, #0
+     20c:	47b0      	blx	r6
     SaLDigitalOut(module->SS,true);
- 20e:	78e3      	ldrb	r3, [r4, #3]
+     20e:	78e3      	ldrb	r3, [r4, #3]
     uint8_t port_index  = (gpio_pin / 128);
     uint8_t group_index = (gpio_pin / 32);
     /* Array of available ports */
     Port *const ports[PORT_INST_NUM] = PORT_INSTS;
 
     if (port_index < PORT_INST_NUM) {
- 210:	09d9      	lsrs	r1, r3, #7
+     210:	09d9      	lsrs	r1, r3, #7
         return &(ports[port_index]->Group[group_index]);
     } else {
         return NULL;
- 212:	2200      	movs	r2, #0
+     212:	2200      	movs	r2, #0
     uint8_t port_index  = (gpio_pin / 128);
     uint8_t group_index = (gpio_pin / 32);
     /* Array of available ports */
     Port *const ports[PORT_INST_NUM] = PORT_INSTS;
 
     if (port_index < PORT_INST_NUM) {
- 214:	2900      	cmp	r1, #0
- 216:	d104      	bne.n	222 <getY+0x4a>
+     214:	2900      	cmp	r1, #0
+     216:	d104      	bne.n	222 <getY+0x4a>
         return &(ports[port_index]->Group[group_index]);
- 218:	095a      	lsrs	r2, r3, #5
- 21a:	01d2      	lsls	r2, r2, #7
- 21c:	4905      	ldr	r1, [pc, #20]	; (234 <getY+0x5c>)
- 21e:	468c      	mov	ip, r1
- 220:	4462      	add	r2, ip
+     218:	095a      	lsrs	r2, r3, #5
+     21a:	01d2      	lsls	r2, r2, #7
+     21c:	4905      	ldr	r1, [pc, #20]	; (234 <getY+0x5c>)
+     21e:	468c      	mov	ip, r1
+     220:	4462      	add	r2, ip
 
 void SaLPinMode(uint8_t pin,uint8_t DIR);
 
 static inline void SaLDigitalOut(uint8_t pin, uint8_t level) {
 	volatile PortGroup *const port = SaLGetPort(pin);
 	uint32_t pin_mask = (1UL << (pin % 32));
- 222:	211f      	movs	r1, #31
- 224:	400b      	ands	r3, r1
- 226:	391e      	subs	r1, #30
- 228:	4099      	lsls	r1, r3
+     222:	211f      	movs	r1, #31
+     224:	400b      	ands	r3, r1
+     226:	391e      	subs	r1, #30
+     228:	4099      	lsls	r1, r3
 	
 
 	if (level) {
 		port->OUTSET.reg = pin_mask;
- 22a:	6191      	str	r1, [r2, #24]
+     22a:	6191      	str	r1, [r2, #24]
+
     uint16_t _receive = _byte1;
     _receive = (_receive * 256) + _byte2;
- 22c:	022d      	lsls	r5, r5, #8
- 22e:	1828      	adds	r0, r5, r0
+     22c:	022d      	lsls	r5, r5, #8
+     22e:	1828      	adds	r0, r5, r0
+
     return _receive;
- 230:	b200      	sxth	r0, r0
+     230:	b200      	sxth	r0, r0
 }
- 232:	bd70      	pop	{r4, r5, r6, pc}
- 234:	41004400 	.word	0x41004400
- 238:	000002a9 	.word	0x000002a9
- 23c:	0000033d 	.word	0x0000033d
+     232:	bd70      	pop	{r4, r5, r6, pc}
+     234:	41004400 	.word	0x41004400
+     238:	000004c5 	.word	0x000004c5
+     23c:	00000559 	.word	0x00000559
 
 00000240 <getZ>:
 
 int16_t getZ(struct spiModule *const module) {
- 240:	b570      	push	{r4, r5, r6, lr}
- 242:	1c04      	adds	r4, r0, #0
+     240:	b570      	push	{r4, r5, r6, lr}
+     242:	1c04      	adds	r4, r0, #0
 
     SaLDigitalOut(module->SS,false);
- 244:	78c3      	ldrb	r3, [r0, #3]
+     244:	78c3      	ldrb	r3, [r0, #3]
     uint8_t port_index  = (gpio_pin / 128);
     uint8_t group_index = (gpio_pin / 32);
     /* Array of available ports */
     Port *const ports[PORT_INST_NUM] = PORT_INSTS;
 
     if (port_index < PORT_INST_NUM) {
- 246:	09d9      	lsrs	r1, r3, #7
+     246:	09d9      	lsrs	r1, r3, #7
         return &(ports[port_index]->Group[group_index]);
     } else {
         return NULL;
- 248:	2200      	movs	r2, #0
+     248:	2200      	movs	r2, #0
     uint8_t port_index  = (gpio_pin / 128);
     uint8_t group_index = (gpio_pin / 32);
     /* Array of available ports */
     Port *const ports[PORT_INST_NUM] = PORT_INSTS;
 
     if (port_index < PORT_INST_NUM) {
- 24a:	2900      	cmp	r1, #0
- 24c:	d104      	bne.n	258 <getZ+0x18>
+     24a:	2900      	cmp	r1, #0
+     24c:	d104      	bne.n	258 <getZ+0x18>
         return &(ports[port_index]->Group[group_index]);
- 24e:	095a      	lsrs	r2, r3, #5
- 250:	01d2      	lsls	r2, r2, #7
- 252:	4912      	ldr	r1, [pc, #72]	; (29c <getZ+0x5c>)
- 254:	468c      	mov	ip, r1
- 256:	4462      	add	r2, ip
+     24e:	095a      	lsrs	r2, r3, #5
+     250:	01d2      	lsls	r2, r2, #7
+     252:	4912      	ldr	r1, [pc, #72]	; (29c <getZ+0x5c>)
+     254:	468c      	mov	ip, r1
+     256:	4462      	add	r2, ip
 
 void SaLPinMode(uint8_t pin,uint8_t DIR);
 
 static inline void SaLDigitalOut(uint8_t pin, uint8_t level) {
 	volatile PortGroup *const port = SaLGetPort(pin);
 	uint32_t pin_mask = (1UL << (pin % 32));
- 258:	211f      	movs	r1, #31
- 25a:	400b      	ands	r3, r1
- 25c:	391e      	subs	r1, #30
- 25e:	4099      	lsls	r1, r3
+     258:	211f      	movs	r1, #31
+     25a:	400b      	ands	r3, r1
+     25c:	391e      	subs	r1, #30
+     25e:	4099      	lsls	r1, r3
 	
 
 	if (level) {
 		port->OUTSET.reg = pin_mask;
 		} else {
 		port->OUTCLR.reg = pin_mask;
- 260:	6151      	str	r1, [r2, #20]
-    byteOut(module,ADXL345_REG_DATAZ0);
- 262:	1c20      	adds	r0, r4, #0
- 264:	2136      	movs	r1, #54	; 0x36
- 266:	4b0e      	ldr	r3, [pc, #56]	; (2a0 <getZ+0x60>)
- 268:	4798      	blx	r3
+     260:	6151      	str	r1, [r2, #20]
+    byteOut(module,ADXL345_REG_DATAZ0|0x80);
+     262:	1c20      	adds	r0, r4, #0
+     264:	21b6      	movs	r1, #182	; 0xb6
+     266:	4b0e      	ldr	r3, [pc, #56]	; (2a0 <getZ+0x60>)
+     268:	4798      	blx	r3
     uint8_t _byte1 = getByte(module);
- 26a:	1c20      	adds	r0, r4, #0
- 26c:	4e0d      	ldr	r6, [pc, #52]	; (2a4 <getZ+0x64>)
- 26e:	47b0      	blx	r6
- 270:	1c05      	adds	r5, r0, #0
+     26a:	1c20      	adds	r0, r4, #0
+     26c:	4e0d      	ldr	r6, [pc, #52]	; (2a4 <getZ+0x64>)
+     26e:	47b0      	blx	r6
+     270:	1c05      	adds	r5, r0, #0
     uint8_t _byte2 = getByte(module);
- 272:	1c20      	adds	r0, r4, #0
- 274:	47b0      	blx	r6
+     272:	1c20      	adds	r0, r4, #0
+     274:	47b0      	blx	r6
     SaLDigitalOut(module->SS,true);
- 276:	78e3      	ldrb	r3, [r4, #3]
+     276:	78e3      	ldrb	r3, [r4, #3]
     uint8_t port_index  = (gpio_pin / 128);
     uint8_t group_index = (gpio_pin / 32);
     /* Array of available ports */
     Port *const ports[PORT_INST_NUM] = PORT_INSTS;
 
     if (port_index < PORT_INST_NUM) {
- 278:	09d9      	lsrs	r1, r3, #7
+     278:	09d9      	lsrs	r1, r3, #7
         return &(ports[port_index]->Group[group_index]);
     } else {
         return NULL;
- 27a:	2200      	movs	r2, #0
+     27a:	2200      	movs	r2, #0
     uint8_t port_index  = (gpio_pin / 128);
     uint8_t group_index = (gpio_pin / 32);
     /* Array of available ports */
     Port *const ports[PORT_INST_NUM] = PORT_INSTS;
 
     if (port_index < PORT_INST_NUM) {
- 27c:	2900      	cmp	r1, #0
- 27e:	d104      	bne.n	28a <getZ+0x4a>
+     27c:	2900      	cmp	r1, #0
+     27e:	d104      	bne.n	28a <getZ+0x4a>
         return &(ports[port_index]->Group[group_index]);
- 280:	095a      	lsrs	r2, r3, #5
- 282:	01d2      	lsls	r2, r2, #7
- 284:	4905      	ldr	r1, [pc, #20]	; (29c <getZ+0x5c>)
- 286:	468c      	mov	ip, r1
- 288:	4462      	add	r2, ip
+     280:	095a      	lsrs	r2, r3, #5
+     282:	01d2      	lsls	r2, r2, #7
+     284:	4905      	ldr	r1, [pc, #20]	; (29c <getZ+0x5c>)
+     286:	468c      	mov	ip, r1
+     288:	4462      	add	r2, ip
 
 void SaLPinMode(uint8_t pin,uint8_t DIR);
 
 static inline void SaLDigitalOut(uint8_t pin, uint8_t level) {
 	volatile PortGroup *const port = SaLGetPort(pin);
 	uint32_t pin_mask = (1UL << (pin % 32));
- 28a:	211f      	movs	r1, #31
- 28c:	400b      	ands	r3, r1
- 28e:	391e      	subs	r1, #30
- 290:	4099      	lsls	r1, r3
+     28a:	211f      	movs	r1, #31
+     28c:	400b      	ands	r3, r1
+     28e:	391e      	subs	r1, #30
+     290:	4099      	lsls	r1, r3
 	
 
 	if (level) {
 		port->OUTSET.reg = pin_mask;
- 292:	6191      	str	r1, [r2, #24]
+     292:	6191      	str	r1, [r2, #24]
+
     uint16_t _receive = _byte1;
     _receive = (_receive * 256) + _byte2;
- 294:	022d      	lsls	r5, r5, #8
- 296:	1828      	adds	r0, r5, r0
-    return _receive;
- 298:	b200      	sxth	r0, r0
- 29a:	bd70      	pop	{r4, r5, r6, pc}
- 29c:	41004400 	.word	0x41004400
- 2a0:	000002a9 	.word	0x000002a9
- 2a4:	0000033d 	.word	0x0000033d
+     294:	022d      	lsls	r5, r5, #8
+     296:	1828      	adds	r0, r5, r0
 
-000002a8 <byteOut>:
+    return _receive;
+     298:	b200      	sxth	r0, r0
+}
+     29a:	bd70      	pop	{r4, r5, r6, pc}
+     29c:	41004400 	.word	0x41004400
+     2a0:	000004c5 	.word	0x000004c5
+     2a4:	00000559 	.word	0x00000559
+
+000002a8 <getevents>:
+
+void getevents(struct spiModule *const module) {
+     2a8:	b530      	push	{r4, r5, lr}
+     2aa:	b083      	sub	sp, #12
+     2ac:	1c04      	adds	r4, r0, #0
+    SaLDigitalOut(module->SS,false);
+     2ae:	78c3      	ldrb	r3, [r0, #3]
+    uint8_t port_index  = (gpio_pin / 128);
+    uint8_t group_index = (gpio_pin / 32);
+    /* Array of available ports */
+    Port *const ports[PORT_INST_NUM] = PORT_INSTS;
+
+    if (port_index < PORT_INST_NUM) {
+     2b0:	09d9      	lsrs	r1, r3, #7
+        return &(ports[port_index]->Group[group_index]);
+    } else {
+        return NULL;
+     2b2:	2200      	movs	r2, #0
+    uint8_t port_index  = (gpio_pin / 128);
+    uint8_t group_index = (gpio_pin / 32);
+    /* Array of available ports */
+    Port *const ports[PORT_INST_NUM] = PORT_INSTS;
+
+    if (port_index < PORT_INST_NUM) {
+     2b4:	2900      	cmp	r1, #0
+     2b6:	d104      	bne.n	2c2 <getevents+0x1a>
+        return &(ports[port_index]->Group[group_index]);
+     2b8:	095a      	lsrs	r2, r3, #5
+     2ba:	01d2      	lsls	r2, r2, #7
+     2bc:	492d      	ldr	r1, [pc, #180]	; (374 <getevents+0xcc>)
+     2be:	468c      	mov	ip, r1
+     2c0:	4462      	add	r2, ip
+
+void SaLPinMode(uint8_t pin,uint8_t DIR);
+
+static inline void SaLDigitalOut(uint8_t pin, uint8_t level) {
+	volatile PortGroup *const port = SaLGetPort(pin);
+	uint32_t pin_mask = (1UL << (pin % 32));
+     2c2:	211f      	movs	r1, #31
+     2c4:	400b      	ands	r3, r1
+     2c6:	391e      	subs	r1, #30
+     2c8:	4099      	lsls	r1, r3
+	
+
+	if (level) {
+		port->OUTSET.reg = pin_mask;
+		} else {
+		port->OUTCLR.reg = pin_mask;
+     2ca:	6151      	str	r1, [r2, #20]
+    byteOut(module,ADXL345_REG_DATAX0 | 0x80 | 0x40);
+     2cc:	1c20      	adds	r0, r4, #0
+     2ce:	21f2      	movs	r1, #242	; 0xf2
+     2d0:	4b29      	ldr	r3, [pc, #164]	; (378 <getevents+0xd0>)
+     2d2:	4798      	blx	r3
+    volatile uint8_t _byte1 = getByte(module);
+     2d4:	1c20      	adds	r0, r4, #0
+     2d6:	4d29      	ldr	r5, [pc, #164]	; (37c <getevents+0xd4>)
+     2d8:	47a8      	blx	r5
+     2da:	466b      	mov	r3, sp
+     2dc:	71d8      	strb	r0, [r3, #7]
+    volatile uint8_t _byte2 = getByte(module);
+     2de:	1c20      	adds	r0, r4, #0
+     2e0:	47a8      	blx	r5
+     2e2:	466b      	mov	r3, sp
+     2e4:	7198      	strb	r0, [r3, #6]
+    volatile uint8_t _byte3 = getByte(module);
+     2e6:	1c20      	adds	r0, r4, #0
+     2e8:	47a8      	blx	r5
+     2ea:	466b      	mov	r3, sp
+     2ec:	7158      	strb	r0, [r3, #5]
+    volatile uint8_t _byte4 = getByte(module);
+     2ee:	1c20      	adds	r0, r4, #0
+     2f0:	47a8      	blx	r5
+     2f2:	ab01      	add	r3, sp, #4
+     2f4:	7018      	strb	r0, [r3, #0]
+    volatile uint8_t _byte5 = getByte(module);
+     2f6:	1c20      	adds	r0, r4, #0
+     2f8:	47a8      	blx	r5
+     2fa:	466b      	mov	r3, sp
+     2fc:	70d8      	strb	r0, [r3, #3]
+    volatile uint8_t _byte6 = getByte(module);
+     2fe:	1c20      	adds	r0, r4, #0
+     300:	47a8      	blx	r5
+     302:	466b      	mov	r3, sp
+     304:	7098      	strb	r0, [r3, #2]
+    SaLDigitalOut(module->SS,true);
+     306:	78e3      	ldrb	r3, [r4, #3]
+    uint8_t port_index  = (gpio_pin / 128);
+    uint8_t group_index = (gpio_pin / 32);
+    /* Array of available ports */
+    Port *const ports[PORT_INST_NUM] = PORT_INSTS;
+
+    if (port_index < PORT_INST_NUM) {
+     308:	09d9      	lsrs	r1, r3, #7
+        return &(ports[port_index]->Group[group_index]);
+    } else {
+        return NULL;
+     30a:	2200      	movs	r2, #0
+    uint8_t port_index  = (gpio_pin / 128);
+    uint8_t group_index = (gpio_pin / 32);
+    /* Array of available ports */
+    Port *const ports[PORT_INST_NUM] = PORT_INSTS;
+
+    if (port_index < PORT_INST_NUM) {
+     30c:	2900      	cmp	r1, #0
+     30e:	d104      	bne.n	31a <getevents+0x72>
+        return &(ports[port_index]->Group[group_index]);
+     310:	095a      	lsrs	r2, r3, #5
+     312:	01d2      	lsls	r2, r2, #7
+     314:	4917      	ldr	r1, [pc, #92]	; (374 <getevents+0xcc>)
+     316:	468c      	mov	ip, r1
+     318:	4462      	add	r2, ip
+
+void SaLPinMode(uint8_t pin,uint8_t DIR);
+
+static inline void SaLDigitalOut(uint8_t pin, uint8_t level) {
+	volatile PortGroup *const port = SaLGetPort(pin);
+	uint32_t pin_mask = (1UL << (pin % 32));
+     31a:	211f      	movs	r1, #31
+     31c:	400b      	ands	r3, r1
+     31e:	391e      	subs	r1, #30
+     320:	4099      	lsls	r1, r3
+	
+
+	if (level) {
+		port->OUTSET.reg = pin_mask;
+     322:	6191      	str	r1, [r2, #24]
+
+    curaccelX = _byte1;
+     324:	466b      	mov	r3, sp
+     326:	3307      	adds	r3, #7
+     328:	781b      	ldrb	r3, [r3, #0]
+     32a:	4a15      	ldr	r2, [pc, #84]	; (380 <getevents+0xd8>)
+     32c:	8013      	strh	r3, [r2, #0]
+    curaccelX = (curaccelX * 256) + _byte2;
+     32e:	8813      	ldrh	r3, [r2, #0]
+     330:	4669      	mov	r1, sp
+     332:	3106      	adds	r1, #6
+     334:	7809      	ldrb	r1, [r1, #0]
+     336:	021b      	lsls	r3, r3, #8
+     338:	18cb      	adds	r3, r1, r3
+     33a:	b29b      	uxth	r3, r3
+     33c:	8013      	strh	r3, [r2, #0]
+    curaccelY = _byte3;
+     33e:	466b      	mov	r3, sp
+     340:	3305      	adds	r3, #5
+     342:	781b      	ldrb	r3, [r3, #0]
+     344:	4a0f      	ldr	r2, [pc, #60]	; (384 <getevents+0xdc>)
+     346:	8013      	strh	r3, [r2, #0]
+    curaccelY = (curaccelY * 256) + _byte4;
+     348:	8813      	ldrh	r3, [r2, #0]
+     34a:	a901      	add	r1, sp, #4
+     34c:	7809      	ldrb	r1, [r1, #0]
+     34e:	021b      	lsls	r3, r3, #8
+     350:	18cb      	adds	r3, r1, r3
+     352:	b29b      	uxth	r3, r3
+     354:	8013      	strh	r3, [r2, #0]
+    curaccelZ = _byte5;
+     356:	466b      	mov	r3, sp
+     358:	3303      	adds	r3, #3
+     35a:	781b      	ldrb	r3, [r3, #0]
+     35c:	4a0a      	ldr	r2, [pc, #40]	; (388 <getevents+0xe0>)
+     35e:	8013      	strh	r3, [r2, #0]
+    curaccelZ = (curaccelZ * 256) + _byte6;
+     360:	8813      	ldrh	r3, [r2, #0]
+     362:	4669      	mov	r1, sp
+     364:	3102      	adds	r1, #2
+     366:	7809      	ldrb	r1, [r1, #0]
+     368:	021b      	lsls	r3, r3, #8
+     36a:	18cb      	adds	r3, r1, r3
+     36c:	b29b      	uxth	r3, r3
+     36e:	8013      	strh	r3, [r2, #0]
+}
+     370:	b003      	add	sp, #12
+     372:	bd30      	pop	{r4, r5, pc}
+     374:	41004400 	.word	0x41004400
+     378:	000004c5 	.word	0x000004c5
+     37c:	00000559 	.word	0x00000559
+     380:	2000045c 	.word	0x2000045c
+     384:	20000458 	.word	0x20000458
+     388:	2000045a 	.word	0x2000045a
+
+0000038c <currentX>:
+
+int16_t currentX() {
+     38c:	b510      	push	{r4, lr}
+    return (curaccelX * ADXL345_MG2G_MULTIPLIER);
+     38e:	4b06      	ldr	r3, [pc, #24]	; (3a8 <currentX+0x1c>)
+     390:	8818      	ldrh	r0, [r3, #0]
+     392:	b280      	uxth	r0, r0
+     394:	4b05      	ldr	r3, [pc, #20]	; (3ac <currentX+0x20>)
+     396:	4798      	blx	r3
+     398:	4a05      	ldr	r2, [pc, #20]	; (3b0 <currentX+0x24>)
+     39a:	4b06      	ldr	r3, [pc, #24]	; (3b4 <currentX+0x28>)
+     39c:	4c06      	ldr	r4, [pc, #24]	; (3b8 <currentX+0x2c>)
+     39e:	47a0      	blx	r4
+     3a0:	4b06      	ldr	r3, [pc, #24]	; (3bc <currentX+0x30>)
+     3a2:	4798      	blx	r3
+     3a4:	b200      	sxth	r0, r0
+}
+     3a6:	bd10      	pop	{r4, pc}
+     3a8:	2000045c 	.word	0x2000045c
+     3ac:	00001149 	.word	0x00001149
+     3b0:	d2f1a9fc 	.word	0xd2f1a9fc
+     3b4:	3f70624d 	.word	0x3f70624d
+     3b8:	00000ba9 	.word	0x00000ba9
+     3bc:	000010dd 	.word	0x000010dd
+
+000003c0 <currentY>:
+int16_t currentY() {
+     3c0:	b510      	push	{r4, lr}
+    return (curaccelY * ADXL345_MG2G_MULTIPLIER);
+     3c2:	4b06      	ldr	r3, [pc, #24]	; (3dc <currentY+0x1c>)
+     3c4:	8818      	ldrh	r0, [r3, #0]
+     3c6:	b280      	uxth	r0, r0
+     3c8:	4b05      	ldr	r3, [pc, #20]	; (3e0 <currentY+0x20>)
+     3ca:	4798      	blx	r3
+     3cc:	4a05      	ldr	r2, [pc, #20]	; (3e4 <currentY+0x24>)
+     3ce:	4b06      	ldr	r3, [pc, #24]	; (3e8 <currentY+0x28>)
+     3d0:	4c06      	ldr	r4, [pc, #24]	; (3ec <currentY+0x2c>)
+     3d2:	47a0      	blx	r4
+     3d4:	4b06      	ldr	r3, [pc, #24]	; (3f0 <currentY+0x30>)
+     3d6:	4798      	blx	r3
+     3d8:	b200      	sxth	r0, r0
+}
+     3da:	bd10      	pop	{r4, pc}
+     3dc:	20000458 	.word	0x20000458
+     3e0:	00001149 	.word	0x00001149
+     3e4:	d2f1a9fc 	.word	0xd2f1a9fc
+     3e8:	3f70624d 	.word	0x3f70624d
+     3ec:	00000ba9 	.word	0x00000ba9
+     3f0:	000010dd 	.word	0x000010dd
+
+000003f4 <currentZ>:
+int16_t currentZ() {
+     3f4:	b510      	push	{r4, lr}
+    return (curaccelZ * ADXL345_MG2G_MULTIPLIER);
+     3f6:	4b06      	ldr	r3, [pc, #24]	; (410 <currentZ+0x1c>)
+     3f8:	8818      	ldrh	r0, [r3, #0]
+     3fa:	b280      	uxth	r0, r0
+     3fc:	4b05      	ldr	r3, [pc, #20]	; (414 <currentZ+0x20>)
+     3fe:	4798      	blx	r3
+     400:	4a05      	ldr	r2, [pc, #20]	; (418 <currentZ+0x24>)
+     402:	4b06      	ldr	r3, [pc, #24]	; (41c <currentZ+0x28>)
+     404:	4c06      	ldr	r4, [pc, #24]	; (420 <currentZ+0x2c>)
+     406:	47a0      	blx	r4
+     408:	4b06      	ldr	r3, [pc, #24]	; (424 <currentZ+0x30>)
+     40a:	4798      	blx	r3
+     40c:	b200      	sxth	r0, r0
+     40e:	bd10      	pop	{r4, pc}
+     410:	2000045a 	.word	0x2000045a
+     414:	00001149 	.word	0x00001149
+     418:	d2f1a9fc 	.word	0xd2f1a9fc
+     41c:	3f70624d 	.word	0x3f70624d
+     420:	00000ba9 	.word	0x00000ba9
+     424:	000010dd 	.word	0x000010dd
+
+00000428 <read_coeff>:
+
+	return _receive;
+
+}
+
+void read_coeff(struct spiModule *const module) {
+     428:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+     42a:	464f      	mov	r7, r9
+     42c:	4646      	mov	r6, r8
+     42e:	b4c0      	push	{r6, r7}
+     430:	1c04      	adds	r4, r0, #0
+     432:	2500      	movs	r5, #0
+
+	uint16_t coefficient;
+	for (uint8_t coeff_num = 0; coeff_num < 6 ; ++coeff_num ) {
+
+		uint8_t _cmd = cmdPromRd_ + ((coeff_num+1)*2);
+		delay_us(300);
+     434:	4b1e      	ldr	r3, [pc, #120]	; (4b0 <read_coeff+0x88>)
+     436:	4698      	mov	r8, r3
+		SaLDigitalOut(module->SS,false);
+		byteOut(module,_cmd);
+     438:	4f1e      	ldr	r7, [pc, #120]	; (4b4 <read_coeff+0x8c>)
+		uint8_t _byte1 = getByte(module);
+     43a:	4e1f      	ldr	r6, [pc, #124]	; (4b8 <read_coeff+0x90>)
+     43c:	1c2b      	adds	r3, r5, #0
+     43e:	3b5e      	subs	r3, #94	; 0x5e
+     440:	b2db      	uxtb	r3, r3
+     442:	4699      	mov	r9, r3
+
+	uint16_t coefficient;
+	for (uint8_t coeff_num = 0; coeff_num < 6 ; ++coeff_num ) {
+
+		uint8_t _cmd = cmdPromRd_ + ((coeff_num+1)*2);
+		delay_us(300);
+     444:	2096      	movs	r0, #150	; 0x96
+     446:	0040      	lsls	r0, r0, #1
+     448:	47c0      	blx	r8
+		SaLDigitalOut(module->SS,false);
+     44a:	78e3      	ldrb	r3, [r4, #3]
+    uint8_t port_index  = (gpio_pin / 128);
+    uint8_t group_index = (gpio_pin / 32);
+    /* Array of available ports */
+    Port *const ports[PORT_INST_NUM] = PORT_INSTS;
+
+    if (port_index < PORT_INST_NUM) {
+     44c:	09d9      	lsrs	r1, r3, #7
+        return &(ports[port_index]->Group[group_index]);
+    } else {
+        return NULL;
+     44e:	2200      	movs	r2, #0
+    uint8_t port_index  = (gpio_pin / 128);
+    uint8_t group_index = (gpio_pin / 32);
+    /* Array of available ports */
+    Port *const ports[PORT_INST_NUM] = PORT_INSTS;
+
+    if (port_index < PORT_INST_NUM) {
+     450:	2900      	cmp	r1, #0
+     452:	d104      	bne.n	45e <read_coeff+0x36>
+        return &(ports[port_index]->Group[group_index]);
+     454:	095a      	lsrs	r2, r3, #5
+     456:	01d2      	lsls	r2, r2, #7
+     458:	4918      	ldr	r1, [pc, #96]	; (4bc <read_coeff+0x94>)
+     45a:	468c      	mov	ip, r1
+     45c:	4462      	add	r2, ip
+
+void SaLPinMode(uint8_t pin,uint8_t DIR);
+
+static inline void SaLDigitalOut(uint8_t pin, uint8_t level) {
+	volatile PortGroup *const port = SaLGetPort(pin);
+	uint32_t pin_mask = (1UL << (pin % 32));
+     45e:	211f      	movs	r1, #31
+     460:	400b      	ands	r3, r1
+     462:	391e      	subs	r1, #30
+     464:	4099      	lsls	r1, r3
+	
+
+	if (level) {
+		port->OUTSET.reg = pin_mask;
+		} else {
+		port->OUTCLR.reg = pin_mask;
+     466:	6151      	str	r1, [r2, #20]
+		byteOut(module,_cmd);
+     468:	1c20      	adds	r0, r4, #0
+     46a:	4649      	mov	r1, r9
+     46c:	47b8      	blx	r7
+		uint8_t _byte1 = getByte(module);
+     46e:	1c20      	adds	r0, r4, #0
+     470:	47b0      	blx	r6
+     472:	4681      	mov	r9, r0
+		uint8_t _byte2 = getByte(module);
+     474:	1c20      	adds	r0, r4, #0
+     476:	47b0      	blx	r6
+
+		SaLDigitalOut(module->SS,true);
+     478:	78e3      	ldrb	r3, [r4, #3]
+    uint8_t port_index  = (gpio_pin / 128);
+    uint8_t group_index = (gpio_pin / 32);
+    /* Array of available ports */
+    Port *const ports[PORT_INST_NUM] = PORT_INSTS;
+
+    if (port_index < PORT_INST_NUM) {
+     47a:	09d9      	lsrs	r1, r3, #7
+        return &(ports[port_index]->Group[group_index]);
+    } else {
+        return NULL;
+     47c:	2200      	movs	r2, #0
+    uint8_t port_index  = (gpio_pin / 128);
+    uint8_t group_index = (gpio_pin / 32);
+    /* Array of available ports */
+    Port *const ports[PORT_INST_NUM] = PORT_INSTS;
+
+    if (port_index < PORT_INST_NUM) {
+     47e:	2900      	cmp	r1, #0
+     480:	d104      	bne.n	48c <read_coeff+0x64>
+        return &(ports[port_index]->Group[group_index]);
+     482:	095a      	lsrs	r2, r3, #5
+     484:	01d2      	lsls	r2, r2, #7
+     486:	490d      	ldr	r1, [pc, #52]	; (4bc <read_coeff+0x94>)
+     488:	468c      	mov	ip, r1
+     48a:	4462      	add	r2, ip
+
+void SaLPinMode(uint8_t pin,uint8_t DIR);
+
+static inline void SaLDigitalOut(uint8_t pin, uint8_t level) {
+	volatile PortGroup *const port = SaLGetPort(pin);
+	uint32_t pin_mask = (1UL << (pin % 32));
+     48c:	211f      	movs	r1, #31
+     48e:	400b      	ands	r3, r1
+     490:	391e      	subs	r1, #30
+     492:	4099      	lsls	r1, r3
+	
+
+	if (level) {
+		port->OUTSET.reg = pin_mask;
+     494:	6191      	str	r1, [r2, #24]
+
+		coefficient = _byte1;
+		coefficient = (coefficient *256 )+ _byte2;
+     496:	464b      	mov	r3, r9
+     498:	021b      	lsls	r3, r3, #8
+     49a:	1818      	adds	r0, r3, r0
+		coefficients_[coeff_num] = coefficient;
+     49c:	4b08      	ldr	r3, [pc, #32]	; (4c0 <read_coeff+0x98>)
+     49e:	5358      	strh	r0, [r3, r5]
+     4a0:	3502      	adds	r5, #2
+}
+
+void read_coeff(struct spiModule *const module) {
+
+	uint16_t coefficient;
+	for (uint8_t coeff_num = 0; coeff_num < 6 ; ++coeff_num ) {
+     4a2:	2d0c      	cmp	r5, #12
+     4a4:	d1ca      	bne.n	43c <read_coeff+0x14>
+
+		coefficient = _byte1;
+		coefficient = (coefficient *256 )+ _byte2;
+		coefficients_[coeff_num] = coefficient;
+	}
+}
+     4a6:	bc0c      	pop	{r2, r3}
+     4a8:	4690      	mov	r8, r2
+     4aa:	4699      	mov	r9, r3
+     4ac:	bdf8      	pop	{r3, r4, r5, r6, r7, pc}
+     4ae:	46c0      	nop			; (mov r8, r8)
+     4b0:	0000064d 	.word	0x0000064d
+     4b4:	000004c5 	.word	0x000004c5
+     4b8:	00000559 	.word	0x00000559
+     4bc:	41004400 	.word	0x41004400
+     4c0:	20000460 	.word	0x20000460
+
+000004c4 <byteOut>:
 #include "SaLBitBang.h"
 
 
 
 void byteOut(struct spiModule *const module,
-uint8_t byte) {
- 2a8:	b5f0      	push	{r4, r5, r6, r7, lr}
- 2aa:	2408      	movs	r4, #8
+             uint8_t byte) {
+     4c4:	b5f0      	push	{r4, r5, r6, r7, lr}
+     4c6:	2408      	movs	r4, #8
 
 void SaLPinMode(uint8_t pin,uint8_t DIR);
 
 static inline void SaLDigitalOut(uint8_t pin, uint8_t level) {
 	volatile PortGroup *const port = SaLGetPort(pin);
 	uint32_t pin_mask = (1UL << (pin % 32));
- 2ac:	261f      	movs	r6, #31
- 2ae:	2501      	movs	r5, #1
+     4c8:	261f      	movs	r6, #31
+     4ca:	2501      	movs	r5, #1
 
-	for (uint8_t i = 0; i<8; ++i) {
-
-		SaLDigitalOut(module->SCK,PINLOW);
- 2b0:	7883      	ldrb	r3, [r0, #2]
+    for (uint8_t i = 0; i<8; ++i) {
+        SaLDigitalOut(module->SCK,PINLOW);
+     4cc:	7883      	ldrb	r3, [r0, #2]
     uint8_t port_index  = (gpio_pin / 128);
     uint8_t group_index = (gpio_pin / 32);
     /* Array of available ports */
     Port *const ports[PORT_INST_NUM] = PORT_INSTS;
 
     if (port_index < PORT_INST_NUM) {
- 2b2:	09da      	lsrs	r2, r3, #7
+     4ce:	09da      	lsrs	r2, r3, #7
         return &(ports[port_index]->Group[group_index]);
     } else {
         return NULL;
- 2b4:	2700      	movs	r7, #0
+     4d0:	2700      	movs	r7, #0
     uint8_t port_index  = (gpio_pin / 128);
     uint8_t group_index = (gpio_pin / 32);
     /* Array of available ports */
     Port *const ports[PORT_INST_NUM] = PORT_INSTS;
 
     if (port_index < PORT_INST_NUM) {
- 2b6:	2a00      	cmp	r2, #0
- 2b8:	d104      	bne.n	2c4 <byteOut+0x1c>
+     4d2:	2a00      	cmp	r2, #0
+     4d4:	d104      	bne.n	4e0 <byteOut+0x1c>
         return &(ports[port_index]->Group[group_index]);
- 2ba:	095f      	lsrs	r7, r3, #5
- 2bc:	01ff      	lsls	r7, r7, #7
- 2be:	4a1e      	ldr	r2, [pc, #120]	; (338 <byteOut+0x90>)
- 2c0:	4694      	mov	ip, r2
- 2c2:	4467      	add	r7, ip
+     4d6:	095f      	lsrs	r7, r3, #5
+     4d8:	01ff      	lsls	r7, r7, #7
+     4da:	4a1e      	ldr	r2, [pc, #120]	; (554 <byteOut+0x90>)
+     4dc:	4694      	mov	ip, r2
+     4de:	4467      	add	r7, ip
 
 void SaLPinMode(uint8_t pin,uint8_t DIR);
 
 static inline void SaLDigitalOut(uint8_t pin, uint8_t level) {
 	volatile PortGroup *const port = SaLGetPort(pin);
 	uint32_t pin_mask = (1UL << (pin % 32));
- 2c4:	4033      	ands	r3, r6
- 2c6:	1c2a      	adds	r2, r5, #0
- 2c8:	409a      	lsls	r2, r3
+     4e0:	4033      	ands	r3, r6
+     4e2:	1c2a      	adds	r2, r5, #0
+     4e4:	409a      	lsls	r2, r3
 	
 
 	if (level) {
 		port->OUTSET.reg = pin_mask;
 		} else {
 		port->OUTCLR.reg = pin_mask;
- 2ca:	617a      	str	r2, [r7, #20]
-		if (byte & 0x80) {
- 2cc:	b24b      	sxtb	r3, r1
- 2ce:	2b00      	cmp	r3, #0
- 2d0:	da0e      	bge.n	2f0 <byteOut+0x48>
-			SaLDigitalOut(module->MOSI,true);
- 2d2:	7843      	ldrb	r3, [r0, #1]
+     4e6:	617a      	str	r2, [r7, #20]
+        if (byte & 0x80) {
+     4e8:	b24b      	sxtb	r3, r1
+     4ea:	2b00      	cmp	r3, #0
+     4ec:	da0e      	bge.n	50c <byteOut+0x48>
+            SaLDigitalOut(module->MOSI,true);
+     4ee:	7843      	ldrb	r3, [r0, #1]
     uint8_t port_index  = (gpio_pin / 128);
     uint8_t group_index = (gpio_pin / 32);
     /* Array of available ports */
     Port *const ports[PORT_INST_NUM] = PORT_INSTS;
 
     if (port_index < PORT_INST_NUM) {
- 2d4:	09da      	lsrs	r2, r3, #7
+     4f0:	09da      	lsrs	r2, r3, #7
         return &(ports[port_index]->Group[group_index]);
     } else {
         return NULL;
- 2d6:	2700      	movs	r7, #0
+     4f2:	2700      	movs	r7, #0
     uint8_t port_index  = (gpio_pin / 128);
     uint8_t group_index = (gpio_pin / 32);
     /* Array of available ports */
     Port *const ports[PORT_INST_NUM] = PORT_INSTS;
 
     if (port_index < PORT_INST_NUM) {
- 2d8:	2a00      	cmp	r2, #0
- 2da:	d104      	bne.n	2e6 <byteOut+0x3e>
+     4f4:	2a00      	cmp	r2, #0
+     4f6:	d104      	bne.n	502 <byteOut+0x3e>
         return &(ports[port_index]->Group[group_index]);
- 2dc:	095f      	lsrs	r7, r3, #5
- 2de:	01ff      	lsls	r7, r7, #7
- 2e0:	4a15      	ldr	r2, [pc, #84]	; (338 <byteOut+0x90>)
- 2e2:	4694      	mov	ip, r2
- 2e4:	4467      	add	r7, ip
+     4f8:	095f      	lsrs	r7, r3, #5
+     4fa:	01ff      	lsls	r7, r7, #7
+     4fc:	4a15      	ldr	r2, [pc, #84]	; (554 <byteOut+0x90>)
+     4fe:	4694      	mov	ip, r2
+     500:	4467      	add	r7, ip
 
 void SaLPinMode(uint8_t pin,uint8_t DIR);
 
 static inline void SaLDigitalOut(uint8_t pin, uint8_t level) {
 	volatile PortGroup *const port = SaLGetPort(pin);
 	uint32_t pin_mask = (1UL << (pin % 32));
- 2e6:	4033      	ands	r3, r6
- 2e8:	1c2a      	adds	r2, r5, #0
- 2ea:	409a      	lsls	r2, r3
+     502:	4033      	ands	r3, r6
+     504:	1c2a      	adds	r2, r5, #0
+     506:	409a      	lsls	r2, r3
 	
 
 	if (level) {
 		port->OUTSET.reg = pin_mask;
- 2ec:	61ba      	str	r2, [r7, #24]
- 2ee:	e00d      	b.n	30c <byteOut+0x64>
-			} else {
-			SaLDigitalOut(module->MOSI,false);
- 2f0:	7843      	ldrb	r3, [r0, #1]
+     508:	61ba      	str	r2, [r7, #24]
+     50a:	e00d      	b.n	528 <byteOut+0x64>
+        } else {
+            SaLDigitalOut(module->MOSI,false);
+     50c:	7843      	ldrb	r3, [r0, #1]
     uint8_t port_index  = (gpio_pin / 128);
     uint8_t group_index = (gpio_pin / 32);
     /* Array of available ports */
     Port *const ports[PORT_INST_NUM] = PORT_INSTS;
 
     if (port_index < PORT_INST_NUM) {
- 2f2:	09da      	lsrs	r2, r3, #7
+     50e:	09da      	lsrs	r2, r3, #7
         return &(ports[port_index]->Group[group_index]);
     } else {
         return NULL;
- 2f4:	2700      	movs	r7, #0
+     510:	2700      	movs	r7, #0
     uint8_t port_index  = (gpio_pin / 128);
     uint8_t group_index = (gpio_pin / 32);
     /* Array of available ports */
     Port *const ports[PORT_INST_NUM] = PORT_INSTS;
 
     if (port_index < PORT_INST_NUM) {
- 2f6:	2a00      	cmp	r2, #0
- 2f8:	d104      	bne.n	304 <byteOut+0x5c>
+     512:	2a00      	cmp	r2, #0
+     514:	d104      	bne.n	520 <byteOut+0x5c>
         return &(ports[port_index]->Group[group_index]);
- 2fa:	095f      	lsrs	r7, r3, #5
- 2fc:	01ff      	lsls	r7, r7, #7
- 2fe:	4a0e      	ldr	r2, [pc, #56]	; (338 <byteOut+0x90>)
- 300:	4694      	mov	ip, r2
- 302:	4467      	add	r7, ip
+     516:	095f      	lsrs	r7, r3, #5
+     518:	01ff      	lsls	r7, r7, #7
+     51a:	4a0e      	ldr	r2, [pc, #56]	; (554 <byteOut+0x90>)
+     51c:	4694      	mov	ip, r2
+     51e:	4467      	add	r7, ip
 
 void SaLPinMode(uint8_t pin,uint8_t DIR);
 
 static inline void SaLDigitalOut(uint8_t pin, uint8_t level) {
 	volatile PortGroup *const port = SaLGetPort(pin);
 	uint32_t pin_mask = (1UL << (pin % 32));
- 304:	4033      	ands	r3, r6
- 306:	1c2a      	adds	r2, r5, #0
- 308:	409a      	lsls	r2, r3
+     520:	4033      	ands	r3, r6
+     522:	1c2a      	adds	r2, r5, #0
+     524:	409a      	lsls	r2, r3
 	
 
 	if (level) {
 		port->OUTSET.reg = pin_mask;
 		} else {
 		port->OUTCLR.reg = pin_mask;
- 30a:	617a      	str	r2, [r7, #20]
-		}
-		SaLDigitalOut(module->SCK,PINHIGH);
- 30c:	7883      	ldrb	r3, [r0, #2]
+     526:	617a      	str	r2, [r7, #20]
+        }
+        SaLDigitalOut(module->SCK,PINHIGH);
+     528:	7883      	ldrb	r3, [r0, #2]
     uint8_t port_index  = (gpio_pin / 128);
     uint8_t group_index = (gpio_pin / 32);
     /* Array of available ports */
     Port *const ports[PORT_INST_NUM] = PORT_INSTS;
 
     if (port_index < PORT_INST_NUM) {
- 30e:	09da      	lsrs	r2, r3, #7
+     52a:	09da      	lsrs	r2, r3, #7
         return &(ports[port_index]->Group[group_index]);
     } else {
         return NULL;
- 310:	2700      	movs	r7, #0
+     52c:	2700      	movs	r7, #0
     uint8_t port_index  = (gpio_pin / 128);
     uint8_t group_index = (gpio_pin / 32);
     /* Array of available ports */
     Port *const ports[PORT_INST_NUM] = PORT_INSTS;
 
     if (port_index < PORT_INST_NUM) {
- 312:	2a00      	cmp	r2, #0
- 314:	d104      	bne.n	320 <byteOut+0x78>
+     52e:	2a00      	cmp	r2, #0
+     530:	d104      	bne.n	53c <byteOut+0x78>
         return &(ports[port_index]->Group[group_index]);
- 316:	095f      	lsrs	r7, r3, #5
- 318:	01ff      	lsls	r7, r7, #7
- 31a:	4a07      	ldr	r2, [pc, #28]	; (338 <byteOut+0x90>)
- 31c:	4694      	mov	ip, r2
- 31e:	4467      	add	r7, ip
+     532:	095f      	lsrs	r7, r3, #5
+     534:	01ff      	lsls	r7, r7, #7
+     536:	4a07      	ldr	r2, [pc, #28]	; (554 <byteOut+0x90>)
+     538:	4694      	mov	ip, r2
+     53a:	4467      	add	r7, ip
 
 void SaLPinMode(uint8_t pin,uint8_t DIR);
 
 static inline void SaLDigitalOut(uint8_t pin, uint8_t level) {
 	volatile PortGroup *const port = SaLGetPort(pin);
 	uint32_t pin_mask = (1UL << (pin % 32));
- 320:	4033      	ands	r3, r6
- 322:	1c2a      	adds	r2, r5, #0
- 324:	409a      	lsls	r2, r3
+     53c:	4033      	ands	r3, r6
+     53e:	1c2a      	adds	r2, r5, #0
+     540:	409a      	lsls	r2, r3
 	
 
 	if (level) {
 		port->OUTSET.reg = pin_mask;
- 326:	61ba      	str	r2, [r7, #24]
-		byte <<= 1;
- 328:	0049      	lsls	r1, r1, #1
- 32a:	b2c9      	uxtb	r1, r1
- 32c:	3c01      	subs	r4, #1
- 32e:	b2e4      	uxtb	r4, r4
+     542:	61ba      	str	r2, [r7, #24]
+        byte <<= 1;
+     544:	0049      	lsls	r1, r1, #1
+     546:	b2c9      	uxtb	r1, r1
+     548:	3c01      	subs	r4, #1
+     54a:	b2e4      	uxtb	r4, r4
 
 
 void byteOut(struct spiModule *const module,
-uint8_t byte) {
+             uint8_t byte) {
 
-	for (uint8_t i = 0; i<8; ++i) {
- 330:	2c00      	cmp	r4, #0
- 332:	d1bd      	bne.n	2b0 <byteOut+0x8>
-		}
-		SaLDigitalOut(module->SCK,PINHIGH);
-		byte <<= 1;
-	}
+    for (uint8_t i = 0; i<8; ++i) {
+     54c:	2c00      	cmp	r4, #0
+     54e:	d1bd      	bne.n	4cc <byteOut+0x8>
+        }
+        SaLDigitalOut(module->SCK,PINHIGH);
+        byte <<= 1;
+    }
 
 }
- 334:	bdf0      	pop	{r4, r5, r6, r7, pc}
- 336:	46c0      	nop			; (mov r8, r8)
- 338:	41004400 	.word	0x41004400
+     550:	bdf0      	pop	{r4, r5, r6, r7, pc}
+     552:	46c0      	nop			; (mov r8, r8)
+     554:	41004400 	.word	0x41004400
 
-0000033c <getByte>:
+00000558 <getByte>:
+        dataBits <<= 1;
+    }
+
+}
 
 uint8_t getByte(struct spiModule *const module) {
- 33c:	b5f0      	push	{r4, r5, r6, r7, lr}
- 33e:	1c07      	adds	r7, r0, #0
- 340:	2408      	movs	r4, #8
-	uint8_t byte = 0x00;
- 342:	2300      	movs	r3, #0
+     558:	b5f0      	push	{r4, r5, r6, r7, lr}
+     55a:	1c07      	adds	r7, r0, #0
+     55c:	2408      	movs	r4, #8
+    uint8_t byte = 0x00;
+     55e:	2300      	movs	r3, #0
 
 void SaLPinMode(uint8_t pin,uint8_t DIR);
 
 static inline void SaLDigitalOut(uint8_t pin, uint8_t level) {
 	volatile PortGroup *const port = SaLGetPort(pin);
 	uint32_t pin_mask = (1UL << (pin % 32));
- 344:	261f      	movs	r6, #31
- 346:	2501      	movs	r5, #1
-	for (uint8_t i = 0; i<8; ++i) {
-		SaLDigitalOut(module->SCK,PINLOW);
- 348:	78ba      	ldrb	r2, [r7, #2]
+     560:	261f      	movs	r6, #31
+     562:	2501      	movs	r5, #1
+    for (uint8_t i = 0; i<8; ++i) {
+        SaLDigitalOut(module->SCK,PINLOW);
+     564:	78ba      	ldrb	r2, [r7, #2]
     uint8_t port_index  = (gpio_pin / 128);
     uint8_t group_index = (gpio_pin / 32);
     /* Array of available ports */
     Port *const ports[PORT_INST_NUM] = PORT_INSTS;
 
     if (port_index < PORT_INST_NUM) {
- 34a:	09d1      	lsrs	r1, r2, #7
+     566:	09d1      	lsrs	r1, r2, #7
         return &(ports[port_index]->Group[group_index]);
     } else {
         return NULL;
- 34c:	2000      	movs	r0, #0
+     568:	2000      	movs	r0, #0
     uint8_t port_index  = (gpio_pin / 128);
     uint8_t group_index = (gpio_pin / 32);
     /* Array of available ports */
     Port *const ports[PORT_INST_NUM] = PORT_INSTS;
 
     if (port_index < PORT_INST_NUM) {
- 34e:	2900      	cmp	r1, #0
- 350:	d104      	bne.n	35c <getByte+0x20>
+     56a:	2900      	cmp	r1, #0
+     56c:	d104      	bne.n	578 <getByte+0x20>
         return &(ports[port_index]->Group[group_index]);
- 352:	0950      	lsrs	r0, r2, #5
- 354:	01c0      	lsls	r0, r0, #7
- 356:	4919      	ldr	r1, [pc, #100]	; (3bc <getByte+0x80>)
- 358:	468c      	mov	ip, r1
- 35a:	4460      	add	r0, ip
+     56e:	0950      	lsrs	r0, r2, #5
+     570:	01c0      	lsls	r0, r0, #7
+     572:	4919      	ldr	r1, [pc, #100]	; (5d8 <getByte+0x80>)
+     574:	468c      	mov	ip, r1
+     576:	4460      	add	r0, ip
 
 void SaLPinMode(uint8_t pin,uint8_t DIR);
 
 static inline void SaLDigitalOut(uint8_t pin, uint8_t level) {
 	volatile PortGroup *const port = SaLGetPort(pin);
 	uint32_t pin_mask = (1UL << (pin % 32));
- 35c:	4032      	ands	r2, r6
- 35e:	1c29      	adds	r1, r5, #0
- 360:	4091      	lsls	r1, r2
+     578:	4032      	ands	r2, r6
+     57a:	1c29      	adds	r1, r5, #0
+     57c:	4091      	lsls	r1, r2
 	
 
 	if (level) {
 		port->OUTSET.reg = pin_mask;
 		} else {
 		port->OUTCLR.reg = pin_mask;
- 362:	6141      	str	r1, [r0, #20]
-		byte = (byte << 1 ) | SaLDigitalIn(module->MISO);
- 364:	005b      	lsls	r3, r3, #1
- 366:	b2d8      	uxtb	r0, r3
- 368:	783b      	ldrb	r3, [r7, #0]
+     57e:	6141      	str	r1, [r0, #20]
+        byte = (byte << 1 ) | SaLDigitalIn(module->MISO);
+     580:	005b      	lsls	r3, r3, #1
+     582:	b2d8      	uxtb	r0, r3
+     584:	783b      	ldrb	r3, [r7, #0]
     uint8_t port_index  = (gpio_pin / 128);
     uint8_t group_index = (gpio_pin / 32);
     /* Array of available ports */
     Port *const ports[PORT_INST_NUM] = PORT_INSTS;
 
     if (port_index < PORT_INST_NUM) {
- 36a:	09d9      	lsrs	r1, r3, #7
+     586:	09d9      	lsrs	r1, r3, #7
         return &(ports[port_index]->Group[group_index]);
     } else {
         return NULL;
- 36c:	2200      	movs	r2, #0
+     588:	2200      	movs	r2, #0
     uint8_t port_index  = (gpio_pin / 128);
     uint8_t group_index = (gpio_pin / 32);
     /* Array of available ports */
     Port *const ports[PORT_INST_NUM] = PORT_INSTS;
 
     if (port_index < PORT_INST_NUM) {
- 36e:	2900      	cmp	r1, #0
- 370:	d104      	bne.n	37c <getByte+0x40>
+     58a:	2900      	cmp	r1, #0
+     58c:	d104      	bne.n	598 <getByte+0x40>
         return &(ports[port_index]->Group[group_index]);
- 372:	095a      	lsrs	r2, r3, #5
- 374:	01d2      	lsls	r2, r2, #7
- 376:	4911      	ldr	r1, [pc, #68]	; (3bc <getByte+0x80>)
- 378:	468c      	mov	ip, r1
- 37a:	4462      	add	r2, ip
+     58e:	095a      	lsrs	r2, r3, #5
+     590:	01d2      	lsls	r2, r2, #7
+     592:	4911      	ldr	r1, [pc, #68]	; (5d8 <getByte+0x80>)
+     594:	468c      	mov	ip, r1
+     596:	4462      	add	r2, ip
 };
 
 static inline bool SaLDigitalIn(uint8_t pin) {
 	PortGroup *const port = SaLGetPort(pin);
 	uint32_t pin_mask = (1UL << (pin % 32));
 	bool level = (port->IN.reg & pin_mask);
- 37c:	6a11      	ldr	r1, [r2, #32]
+     598:	6a11      	ldr	r1, [r2, #32]
 	}
 };
 
 static inline bool SaLDigitalIn(uint8_t pin) {
 	PortGroup *const port = SaLGetPort(pin);
 	uint32_t pin_mask = (1UL << (pin % 32));
- 37e:	4033      	ands	r3, r6
- 380:	1c1a      	adds	r2, r3, #0
- 382:	1c2b      	adds	r3, r5, #0
- 384:	4093      	lsls	r3, r2
- 386:	1c1a      	adds	r2, r3, #0
+     59a:	4033      	ands	r3, r6
+     59c:	1c1a      	adds	r2, r3, #0
+     59e:	1c2b      	adds	r3, r5, #0
+     5a0:	4093      	lsls	r3, r2
+     5a2:	1c1a      	adds	r2, r3, #0
 	bool level = (port->IN.reg & pin_mask);
- 388:	1c0b      	adds	r3, r1, #0
- 38a:	4013      	ands	r3, r2
- 38c:	1e5a      	subs	r2, r3, #1
- 38e:	4193      	sbcs	r3, r2
- 390:	4303      	orrs	r3, r0
-		SaLDigitalOut(module->SCK,PINHIGH);
- 392:	78ba      	ldrb	r2, [r7, #2]
+     5a4:	1c0b      	adds	r3, r1, #0
+     5a6:	4013      	ands	r3, r2
+     5a8:	1e5a      	subs	r2, r3, #1
+     5aa:	4193      	sbcs	r3, r2
+     5ac:	4303      	orrs	r3, r0
+        SaLDigitalOut(module->SCK,PINHIGH);
+     5ae:	78ba      	ldrb	r2, [r7, #2]
     uint8_t port_index  = (gpio_pin / 128);
     uint8_t group_index = (gpio_pin / 32);
     /* Array of available ports */
     Port *const ports[PORT_INST_NUM] = PORT_INSTS;
 
     if (port_index < PORT_INST_NUM) {
- 394:	09d1      	lsrs	r1, r2, #7
+     5b0:	09d1      	lsrs	r1, r2, #7
         return &(ports[port_index]->Group[group_index]);
     } else {
         return NULL;
- 396:	2000      	movs	r0, #0
+     5b2:	2000      	movs	r0, #0
     uint8_t port_index  = (gpio_pin / 128);
     uint8_t group_index = (gpio_pin / 32);
     /* Array of available ports */
     Port *const ports[PORT_INST_NUM] = PORT_INSTS;
 
     if (port_index < PORT_INST_NUM) {
- 398:	2900      	cmp	r1, #0
- 39a:	d104      	bne.n	3a6 <getByte+0x6a>
+     5b4:	2900      	cmp	r1, #0
+     5b6:	d104      	bne.n	5c2 <getByte+0x6a>
         return &(ports[port_index]->Group[group_index]);
- 39c:	0950      	lsrs	r0, r2, #5
- 39e:	01c0      	lsls	r0, r0, #7
- 3a0:	4906      	ldr	r1, [pc, #24]	; (3bc <getByte+0x80>)
- 3a2:	468c      	mov	ip, r1
- 3a4:	4460      	add	r0, ip
+     5b8:	0950      	lsrs	r0, r2, #5
+     5ba:	01c0      	lsls	r0, r0, #7
+     5bc:	4906      	ldr	r1, [pc, #24]	; (5d8 <getByte+0x80>)
+     5be:	468c      	mov	ip, r1
+     5c0:	4460      	add	r0, ip
 
 void SaLPinMode(uint8_t pin,uint8_t DIR);
 
 static inline void SaLDigitalOut(uint8_t pin, uint8_t level) {
 	volatile PortGroup *const port = SaLGetPort(pin);
 	uint32_t pin_mask = (1UL << (pin % 32));
- 3a6:	4032      	ands	r2, r6
- 3a8:	1c29      	adds	r1, r5, #0
- 3aa:	4091      	lsls	r1, r2
+     5c2:	4032      	ands	r2, r6
+     5c4:	1c29      	adds	r1, r5, #0
+     5c6:	4091      	lsls	r1, r2
 	
 
 	if (level) {
 		port->OUTSET.reg = pin_mask;
- 3ac:	6181      	str	r1, [r0, #24]
- 3ae:	3c01      	subs	r4, #1
- 3b0:	b2e4      	uxtb	r4, r4
+     5c8:	6181      	str	r1, [r0, #24]
+     5ca:	3c01      	subs	r4, #1
+     5cc:	b2e4      	uxtb	r4, r4
 
 }
 
 uint8_t getByte(struct spiModule *const module) {
-	uint8_t byte = 0x00;
-	for (uint8_t i = 0; i<8; ++i) {
- 3b2:	2c00      	cmp	r4, #0
- 3b4:	d1c8      	bne.n	348 <getByte+0xc>
-		SaLDigitalOut(module->SCK,PINLOW);
-		byte = (byte << 1 ) | SaLDigitalIn(module->MISO);
-		SaLDigitalOut(module->SCK,PINHIGH);
-	}
-	return byte;
- 3b6:	1c18      	adds	r0, r3, #0
- 3b8:	bdf0      	pop	{r4, r5, r6, r7, pc}
- 3ba:	46c0      	nop			; (mov r8, r8)
- 3bc:	41004400 	.word	0x41004400
+    uint8_t byte = 0x00;
+    for (uint8_t i = 0; i<8; ++i) {
+     5ce:	2c00      	cmp	r4, #0
+     5d0:	d1c8      	bne.n	564 <getByte+0xc>
+        SaLDigitalOut(module->SCK,PINLOW);
+        byte = (byte << 1 ) | SaLDigitalIn(module->MISO);
+        SaLDigitalOut(module->SCK,PINHIGH);
+    }
+    return byte;
+}
+     5d2:	1c18      	adds	r0, r3, #0
+     5d4:	bdf0      	pop	{r4, r5, r6, r7, pc}
+     5d6:	46c0      	nop			; (mov r8, r8)
+     5d8:	41004400 	.word	0x41004400
 
-000003c0 <SaLDelayInit>:
+000005dc <SaLPlayTone>:
+
+#include <SaLBuzzer.h>
+
+
+void SaLPlayTone(int16_t tone_) {
+     5dc:	b5f0      	push	{r4, r5, r6, r7, lr}
+     5de:	464f      	mov	r7, r9
+     5e0:	4646      	mov	r6, r8
+     5e2:	b4c0      	push	{r6, r7}
+     5e4:	b083      	sub	sp, #12
+     5e6:	4680      	mov	r8, r0
+	int32_t duration = 100000;
+	
+    while (elapsed_time < duration) {
+		
+		SaLDigitalOut(BUZZER,true);
+		delay_us(tone_/2);
+     5e8:	0fc6      	lsrs	r6, r0, #31
+     5ea:	4446      	add	r6, r8
+     5ec:	1073      	asrs	r3, r6, #1
+     5ee:	9301      	str	r3, [sp, #4]
+
+
+void SaLPlayTone(int16_t tone_) {
+
+	
+	int32_t elapsed_time = 0;
+     5f0:	2400      	movs	r4, #0
+     5f2:	4f0b      	ldr	r7, [pc, #44]	; (620 <SaLPlayTone+0x44>)
+     5f4:	2380      	movs	r3, #128	; 0x80
+     5f6:	015b      	lsls	r3, r3, #5
+     5f8:	4699      	mov	r9, r3
+     5fa:	1c1e      	adds	r6, r3, #0
+     5fc:	61be      	str	r6, [r7, #24]
+	int32_t duration = 100000;
+	
+    while (elapsed_time < duration) {
+		
+		SaLDigitalOut(BUZZER,true);
+		delay_us(tone_/2);
+     5fe:	9801      	ldr	r0, [sp, #4]
+     600:	4d08      	ldr	r5, [pc, #32]	; (624 <SaLPlayTone+0x48>)
+     602:	47a8      	blx	r5
+		} else {
+		port->OUTCLR.reg = pin_mask;
+     604:	464b      	mov	r3, r9
+     606:	617b      	str	r3, [r7, #20]
+		
+		 SaLDigitalOut(BUZZER, false);
+		 delay_us(tone_/2);
+     608:	9801      	ldr	r0, [sp, #4]
+     60a:	47a8      	blx	r5
+     60c:	4444      	add	r4, r8
+
+	
+	int32_t elapsed_time = 0;
+	int32_t duration = 100000;
+	
+    while (elapsed_time < duration) {
+     60e:	4b06      	ldr	r3, [pc, #24]	; (628 <SaLPlayTone+0x4c>)
+     610:	429c      	cmp	r4, r3
+     612:	ddf3      	ble.n	5fc <SaLPlayTone+0x20>
+	
+	
+	}
+
+
+     614:	b003      	add	sp, #12
+     616:	bc0c      	pop	{r2, r3}
+     618:	4690      	mov	r8, r2
+     61a:	4699      	mov	r9, r3
+     61c:	bdf0      	pop	{r4, r5, r6, r7, pc}
+     61e:	46c0      	nop			; (mov r8, r8)
+     620:	41004400 	.word	0x41004400
+     624:	0000064d 	.word	0x0000064d
+     628:	0001869f 	.word	0x0001869f
+
+0000062c <SaLDelayInit>:
 static uint32_t cycles_per_ms = 48000000UL / 1000;
 static uint32_t cycles_per_us = 48000000UL / 1000000;
 
 void SaLDelayInit(void) {
-    cycles_per_ms = 8000000UL;
+    cycles_per_ms = 41900000UL;
     cycles_per_ms /= 1000;
- 3c0:	4b04      	ldr	r3, [pc, #16]	; (3d4 <SaLDelayInit+0x14>)
- 3c2:	22fa      	movs	r2, #250	; 0xfa
- 3c4:	0152      	lsls	r2, r2, #5
- 3c6:	601a      	str	r2, [r3, #0]
+     62c:	4b04      	ldr	r3, [pc, #16]	; (640 <SaLDelayInit+0x14>)
+     62e:	4a05      	ldr	r2, [pc, #20]	; (644 <SaLDelayInit+0x18>)
+     630:	601a      	str	r2, [r3, #0]
     cycles_per_us = cycles_per_ms / 1000;
- 3c8:	2208      	movs	r2, #8
- 3ca:	605a      	str	r2, [r3, #4]
+     632:	2229      	movs	r2, #41	; 0x29
+     634:	605a      	str	r2, [r3, #4]
 
     SysTick->CTRL = SysTick_CTRL_CLKSOURCE_Msk | SysTick_CTRL_ENABLE_Msk;
- 3cc:	3a03      	subs	r2, #3
- 3ce:	4b02      	ldr	r3, [pc, #8]	; (3d8 <SaLDelayInit+0x18>)
- 3d0:	601a      	str	r2, [r3, #0]
+     636:	3a24      	subs	r2, #36	; 0x24
+     638:	4b03      	ldr	r3, [pc, #12]	; (648 <SaLDelayInit+0x1c>)
+     63a:	601a      	str	r2, [r3, #0]
 }
- 3d2:	4770      	bx	lr
- 3d4:	20000000 	.word	0x20000000
- 3d8:	e000e010 	.word	0xe000e010
+     63c:	4770      	bx	lr
+     63e:	46c0      	nop			; (mov r8, r8)
+     640:	20000000 	.word	0x20000000
+     644:	0000a3ac 	.word	0x0000a3ac
+     648:	e000e010 	.word	0xe000e010
 
-000003dc <delay_us>:
+0000064c <delay_us>:
  * \brief Delay loop to delay at least n number of microseconds
  *
  * \param n  Number of microseconds to wait
  */
 void delay_us(
     uint32_t n) {
- 3dc:	b530      	push	{r4, r5, lr}
+     64c:	b530      	push	{r4, r5, lr}
     while (n--) {
         /* Devide up to blocks of 10u */
         delay_cycles(cycles_per_us);
- 3de:	4b08      	ldr	r3, [pc, #32]	; (400 <delay_us+0x24>)
- 3e0:	685c      	ldr	r4, [r3, #4]
+     64e:	4b08      	ldr	r3, [pc, #32]	; (670 <delay_us+0x24>)
+     650:	685c      	ldr	r4, [r3, #4]
 void SaLDelayInit(void);
 
 static inline void delay_cycles(
     const uint32_t n) {
     if (n > 0) {
         SysTick->LOAD = n;
- 3e2:	4a08      	ldr	r2, [pc, #32]	; (404 <delay_us+0x28>)
+     652:	4a08      	ldr	r2, [pc, #32]	; (674 <delay_us+0x28>)
         SysTick->VAL = 0;
- 3e4:	2500      	movs	r5, #0
+     654:	2500      	movs	r5, #0
 
         while (!(SysTick->CTRL & SysTick_CTRL_COUNTFLAG_Msk)) {
- 3e6:	2180      	movs	r1, #128	; 0x80
- 3e8:	0249      	lsls	r1, r1, #9
+     656:	2180      	movs	r1, #128	; 0x80
+     658:	0249      	lsls	r1, r1, #9
  *
  * \param n  Number of microseconds to wait
  */
 void delay_us(
     uint32_t n) {
     while (n--) {
- 3ea:	e006      	b.n	3fa <delay_us+0x1e>
+     65a:	e006      	b.n	66a <delay_us+0x1e>
 
 void SaLDelayInit(void);
 
 static inline void delay_cycles(
     const uint32_t n) {
     if (n > 0) {
- 3ec:	2c00      	cmp	r4, #0
- 3ee:	d004      	beq.n	3fa <delay_us+0x1e>
+     65c:	2c00      	cmp	r4, #0
+     65e:	d004      	beq.n	66a <delay_us+0x1e>
         SysTick->LOAD = n;
- 3f0:	6054      	str	r4, [r2, #4]
+     660:	6054      	str	r4, [r2, #4]
         SysTick->VAL = 0;
- 3f2:	6095      	str	r5, [r2, #8]
+     662:	6095      	str	r5, [r2, #8]
 
         while (!(SysTick->CTRL & SysTick_CTRL_COUNTFLAG_Msk)) {
- 3f4:	6813      	ldr	r3, [r2, #0]
- 3f6:	420b      	tst	r3, r1
- 3f8:	d0fc      	beq.n	3f4 <delay_us+0x18>
- 3fa:	3801      	subs	r0, #1
- 3fc:	d2f6      	bcs.n	3ec <delay_us+0x10>
+     664:	6813      	ldr	r3, [r2, #0]
+     666:	420b      	tst	r3, r1
+     668:	d0fc      	beq.n	664 <delay_us+0x18>
+     66a:	3801      	subs	r0, #1
+     66c:	d2f6      	bcs.n	65c <delay_us+0x10>
         /* Devide up to blocks of 10u */
         delay_cycles(cycles_per_us);
     }
 }
- 3fe:	bd30      	pop	{r4, r5, pc}
- 400:	20000000 	.word	0x20000000
- 404:	e000e010 	.word	0xe000e010
+     66e:	bd30      	pop	{r4, r5, pc}
+     670:	20000000 	.word	0x20000000
+     674:	e000e010 	.word	0xe000e010
 
-00000408 <SaLPinMode>:
+00000678 <delay_ms>:
+ * \brief Delay loop to delay at least n number of milliseconds
+ *
+ * \param n  Number of milliseconds to wait
+ */
+void delay_ms(
+    uint32_t n) {
+     678:	b530      	push	{r4, r5, lr}
+    while (n--) {
+        /* Devide up to blocks of 1ms */
+        delay_cycles(cycles_per_ms);
+     67a:	4b08      	ldr	r3, [pc, #32]	; (69c <delay_ms+0x24>)
+     67c:	681c      	ldr	r4, [r3, #0]
+void SaLDelayInit(void);
+
+static inline void delay_cycles(
+    const uint32_t n) {
+    if (n > 0) {
+        SysTick->LOAD = n;
+     67e:	4a08      	ldr	r2, [pc, #32]	; (6a0 <delay_ms+0x28>)
+        SysTick->VAL = 0;
+     680:	2500      	movs	r5, #0
+
+        while (!(SysTick->CTRL & SysTick_CTRL_COUNTFLAG_Msk)) {
+     682:	2180      	movs	r1, #128	; 0x80
+     684:	0249      	lsls	r1, r1, #9
+ *
+ * \param n  Number of milliseconds to wait
+ */
+void delay_ms(
+    uint32_t n) {
+    while (n--) {
+     686:	e006      	b.n	696 <delay_ms+0x1e>
+
+void SaLDelayInit(void);
+
+static inline void delay_cycles(
+    const uint32_t n) {
+    if (n > 0) {
+     688:	2c00      	cmp	r4, #0
+     68a:	d004      	beq.n	696 <delay_ms+0x1e>
+        SysTick->LOAD = n;
+     68c:	6054      	str	r4, [r2, #4]
+        SysTick->VAL = 0;
+     68e:	6095      	str	r5, [r2, #8]
+
+        while (!(SysTick->CTRL & SysTick_CTRL_COUNTFLAG_Msk)) {
+     690:	6813      	ldr	r3, [r2, #0]
+     692:	420b      	tst	r3, r1
+     694:	d0fc      	beq.n	690 <delay_ms+0x18>
+     696:	3801      	subs	r0, #1
+     698:	d2f6      	bcs.n	688 <delay_ms+0x10>
+        /* Devide up to blocks of 1ms */
+        delay_cycles(cycles_per_ms);
+    }
+     69a:	bd30      	pop	{r4, r5, pc}
+     69c:	20000000 	.word	0x20000000
+     6a0:	e000e010 	.word	0xe000e010
+
+000006a4 <SaLPinMode>:
 
 
 #include <SaLPort.h>
 
 void SaLPinMode(uint8_t pin,uint8_t DIR) {
- 408:	b510      	push	{r4, lr}
+     6a4:	b510      	push	{r4, lr}
     uint8_t port_index  = (gpio_pin / 128);
     uint8_t group_index = (gpio_pin / 32);
     /* Array of available ports */
     Port *const ports[PORT_INST_NUM] = PORT_INSTS;
 
     if (port_index < PORT_INST_NUM) {
- 40a:	09c2      	lsrs	r2, r0, #7
+     6a6:	09c2      	lsrs	r2, r0, #7
         return &(ports[port_index]->Group[group_index]);
     } else {
         return NULL;
- 40c:	2300      	movs	r3, #0
+     6a8:	2300      	movs	r3, #0
     uint8_t port_index  = (gpio_pin / 128);
     uint8_t group_index = (gpio_pin / 32);
     /* Array of available ports */
     Port *const ports[PORT_INST_NUM] = PORT_INSTS;
 
     if (port_index < PORT_INST_NUM) {
- 40e:	2a00      	cmp	r2, #0
- 410:	d104      	bne.n	41c <SaLPinMode+0x14>
+     6aa:	2a00      	cmp	r2, #0
+     6ac:	d104      	bne.n	6b8 <SaLPinMode+0x14>
         return &(ports[port_index]->Group[group_index]);
- 412:	0943      	lsrs	r3, r0, #5
- 414:	01db      	lsls	r3, r3, #7
- 416:	4a0c      	ldr	r2, [pc, #48]	; (448 <SaLPinMode+0x40>)
- 418:	4694      	mov	ip, r2
- 41a:	4463      	add	r3, ip
+     6ae:	0943      	lsrs	r3, r0, #5
+     6b0:	01db      	lsls	r3, r3, #7
+     6b2:	4a11      	ldr	r2, [pc, #68]	; (6f8 <SaLPinMode+0x54>)
+     6b4:	4694      	mov	ip, r2
+     6b6:	4463      	add	r3, ip
     PortGroup *const port = SaLGetPort(pin);
     uint32_t pin_mask = (1UL << (pin % 32));
- 41c:	221f      	movs	r2, #31
- 41e:	4002      	ands	r2, r0
- 420:	2401      	movs	r4, #1
- 422:	4094      	lsls	r4, r2
+     6b8:	221f      	movs	r2, #31
+     6ba:	4002      	ands	r2, r0
+     6bc:	2401      	movs	r4, #1
+     6be:	4094      	lsls	r4, r2
 
     if ( DIR == OUTPUT) {
- 424:	2901      	cmp	r1, #1
- 426:	d105      	bne.n	434 <SaLPinMode+0x2c>
+     6c0:	2901      	cmp	r1, #1
+     6c2:	d105      	bne.n	6d0 <SaLPinMode+0x2c>
         port->DIRSET.reg = pin_mask;
- 428:	609c      	str	r4, [r3, #8]
+     6c4:	609c      	str	r4, [r3, #8]
         port->PINCFG[pin].reg = 0;
- 42a:	1818      	adds	r0, r3, r0
- 42c:	3040      	adds	r0, #64	; 0x40
- 42e:	2300      	movs	r3, #0
- 430:	7003      	strb	r3, [r0, #0]
- 432:	e008      	b.n	446 <SaLPinMode+0x3e>
+     6c6:	1818      	adds	r0, r3, r0
+     6c8:	3040      	adds	r0, #64	; 0x40
+     6ca:	2300      	movs	r3, #0
+     6cc:	7003      	strb	r3, [r0, #0]
+     6ce:	e012      	b.n	6f6 <SaLPinMode+0x52>
 
-    } else {
+    } else if(DIR == INPUT) {
+     6d0:	2900      	cmp	r1, #0
+     6d2:	d109      	bne.n	6e8 <SaLPinMode+0x44>
         port->DIRCLR.reg = pin_mask;
- 434:	605c      	str	r4, [r3, #4]
+     6d4:	605c      	str	r4, [r3, #4]
         port->PINCFG[pin].reg = PORT_PINCFG_INEN;
- 436:	1818      	adds	r0, r3, r0
- 438:	3040      	adds	r0, #64	; 0x40
- 43a:	2302      	movs	r3, #2
- 43c:	7003      	strb	r3, [r0, #0]
+     6d6:	1818      	adds	r0, r3, r0
+     6d8:	3040      	adds	r0, #64	; 0x40
+     6da:	2302      	movs	r3, #2
+     6dc:	7003      	strb	r3, [r0, #0]
         port->PINCFG[pin].reg |= PORT_PINCFG_PULLEN;
- 43e:	7802      	ldrb	r2, [r0, #0]
- 440:	3302      	adds	r3, #2
- 442:	4313      	orrs	r3, r2
- 444:	7003      	strb	r3, [r0, #0]
-    }
- 446:	bd10      	pop	{r4, pc}
- 448:	41004400 	.word	0x41004400
+     6de:	7802      	ldrb	r2, [r0, #0]
+     6e0:	3302      	adds	r3, #2
+     6e2:	4313      	orrs	r3, r2
+     6e4:	7003      	strb	r3, [r0, #0]
+     6e6:	e006      	b.n	6f6 <SaLPinMode+0x52>
+    } else if (DIR == OUTSTRONG) {
+     6e8:	2903      	cmp	r1, #3
+     6ea:	d104      	bne.n	6f6 <SaLPinMode+0x52>
+        port->DIRSET.reg = pin_mask;
+     6ec:	609c      	str	r4, [r3, #8]
+        port->PINCFG[pin].reg = 0x40;
+     6ee:	1818      	adds	r0, r3, r0
+     6f0:	3040      	adds	r0, #64	; 0x40
+     6f2:	2340      	movs	r3, #64	; 0x40
+     6f4:	7003      	strb	r3, [r0, #0]
 
-0000044c <Dummy_Handler>:
+    }
+     6f6:	bd10      	pop	{r4, pc}
+     6f8:	41004400 	.word	0x41004400
+
+000006fc <Dummy_Handler>:
  */
 __attribute__( ( always_inline ) ) __STATIC_INLINE uint32_t __get_IPSR(void)
 {
   uint32_t result;
 
   __ASM volatile ("MRS %0, ipsr" : "=r" (result) );
- 44c:	f3ef 8305 	mrs	r3, IPSR
- 450:	e7fc      	b.n	44c <Dummy_Handler>
- 452:	46c0      	nop			; (mov r8, r8)
+     6fc:	f3ef 8305 	mrs	r3, IPSR
+     700:	e7fc      	b.n	6fc <Dummy_Handler>
+     702:	46c0      	nop			; (mov r8, r8)
 
-00000454 <Reset_Handler>:
+00000704 <Reset_Handler>:
 /**
  * \brief This is the code that gets called on processor reset.
  * To initialize the device, and call the main() routine.
  */
 void Reset_Handler(void)
 {
- 454:	b570      	push	{r4, r5, r6, lr}
+     704:	b570      	push	{r4, r5, r6, lr}
 
         /* Initialize the relocate segment */
         pSrc = &_etext;
         pDest = &_srelocate;
 
         if (pSrc != pDest) {
- 456:	4b2e      	ldr	r3, [pc, #184]	; (510 <Reset_Handler+0xbc>)
- 458:	4a2e      	ldr	r2, [pc, #184]	; (514 <Reset_Handler+0xc0>)
- 45a:	429a      	cmp	r2, r3
- 45c:	d003      	beq.n	466 <Reset_Handler+0x12>
+     706:	4b2e      	ldr	r3, [pc, #184]	; (7c0 <Reset_Handler+0xbc>)
+     708:	4a2e      	ldr	r2, [pc, #184]	; (7c4 <Reset_Handler+0xc0>)
+     70a:	429a      	cmp	r2, r3
+     70c:	d003      	beq.n	716 <Reset_Handler+0x12>
                 for (; pDest < &_erelocate;) {
- 45e:	4b2e      	ldr	r3, [pc, #184]	; (518 <Reset_Handler+0xc4>)
- 460:	4a2b      	ldr	r2, [pc, #172]	; (510 <Reset_Handler+0xbc>)
- 462:	429a      	cmp	r2, r3
- 464:	d304      	bcc.n	470 <Reset_Handler+0x1c>
+     70e:	4b2e      	ldr	r3, [pc, #184]	; (7c8 <Reset_Handler+0xc4>)
+     710:	4a2b      	ldr	r2, [pc, #172]	; (7c0 <Reset_Handler+0xbc>)
+     712:	429a      	cmp	r2, r3
+     714:	d304      	bcc.n	720 <Reset_Handler+0x1c>
                         *pDest++ = *pSrc++;
                 }
         }
 
         /* Clear the zero segment */
         for (pDest = &_szero; pDest < &_ezero;) {
- 466:	4b2d      	ldr	r3, [pc, #180]	; (51c <Reset_Handler+0xc8>)
- 468:	4a2d      	ldr	r2, [pc, #180]	; (520 <Reset_Handler+0xcc>)
- 46a:	429a      	cmp	r2, r3
- 46c:	d310      	bcc.n	490 <Reset_Handler+0x3c>
- 46e:	e01e      	b.n	4ae <Reset_Handler+0x5a>
- 470:	4a2c      	ldr	r2, [pc, #176]	; (524 <Reset_Handler+0xd0>)
- 472:	4b29      	ldr	r3, [pc, #164]	; (518 <Reset_Handler+0xc4>)
- 474:	3303      	adds	r3, #3
- 476:	1a9b      	subs	r3, r3, r2
- 478:	089b      	lsrs	r3, r3, #2
- 47a:	3301      	adds	r3, #1
- 47c:	009b      	lsls	r3, r3, #2
+     716:	4b2d      	ldr	r3, [pc, #180]	; (7cc <Reset_Handler+0xc8>)
+     718:	4a2d      	ldr	r2, [pc, #180]	; (7d0 <Reset_Handler+0xcc>)
+     71a:	429a      	cmp	r2, r3
+     71c:	d310      	bcc.n	740 <Reset_Handler+0x3c>
+     71e:	e01e      	b.n	75e <Reset_Handler+0x5a>
+     720:	4a2c      	ldr	r2, [pc, #176]	; (7d4 <Reset_Handler+0xd0>)
+     722:	4b29      	ldr	r3, [pc, #164]	; (7c8 <Reset_Handler+0xc4>)
+     724:	3303      	adds	r3, #3
+     726:	1a9b      	subs	r3, r3, r2
+     728:	089b      	lsrs	r3, r3, #2
+     72a:	3301      	adds	r3, #1
+     72c:	009b      	lsls	r3, r3, #2
         /* Initialize the relocate segment */
         pSrc = &_etext;
         pDest = &_srelocate;
 
         if (pSrc != pDest) {
                 for (; pDest < &_erelocate;) {
- 47e:	2200      	movs	r2, #0
+     72e:	2200      	movs	r2, #0
                         *pDest++ = *pSrc++;
- 480:	4823      	ldr	r0, [pc, #140]	; (510 <Reset_Handler+0xbc>)
- 482:	4924      	ldr	r1, [pc, #144]	; (514 <Reset_Handler+0xc0>)
- 484:	588c      	ldr	r4, [r1, r2]
- 486:	5084      	str	r4, [r0, r2]
- 488:	3204      	adds	r2, #4
+     730:	4823      	ldr	r0, [pc, #140]	; (7c0 <Reset_Handler+0xbc>)
+     732:	4924      	ldr	r1, [pc, #144]	; (7c4 <Reset_Handler+0xc0>)
+     734:	588c      	ldr	r4, [r1, r2]
+     736:	5084      	str	r4, [r0, r2]
+     738:	3204      	adds	r2, #4
         /* Initialize the relocate segment */
         pSrc = &_etext;
         pDest = &_srelocate;
 
         if (pSrc != pDest) {
                 for (; pDest < &_erelocate;) {
- 48a:	429a      	cmp	r2, r3
- 48c:	d1fa      	bne.n	484 <Reset_Handler+0x30>
- 48e:	e7ea      	b.n	466 <Reset_Handler+0x12>
- 490:	4a25      	ldr	r2, [pc, #148]	; (528 <Reset_Handler+0xd4>)
- 492:	4b22      	ldr	r3, [pc, #136]	; (51c <Reset_Handler+0xc8>)
- 494:	3303      	adds	r3, #3
- 496:	1a9b      	subs	r3, r3, r2
- 498:	089b      	lsrs	r3, r3, #2
- 49a:	3301      	adds	r3, #1
- 49c:	009b      	lsls	r3, r3, #2
+     73a:	429a      	cmp	r2, r3
+     73c:	d1fa      	bne.n	734 <Reset_Handler+0x30>
+     73e:	e7ea      	b.n	716 <Reset_Handler+0x12>
+     740:	4a25      	ldr	r2, [pc, #148]	; (7d8 <Reset_Handler+0xd4>)
+     742:	4b22      	ldr	r3, [pc, #136]	; (7cc <Reset_Handler+0xc8>)
+     744:	3303      	adds	r3, #3
+     746:	1a9b      	subs	r3, r3, r2
+     748:	089b      	lsrs	r3, r3, #2
+     74a:	3301      	adds	r3, #1
+     74c:	009b      	lsls	r3, r3, #2
                         *pDest++ = *pSrc++;
                 }
         }
 
         /* Clear the zero segment */
         for (pDest = &_szero; pDest < &_ezero;) {
- 49e:	2200      	movs	r2, #0
+     74e:	2200      	movs	r2, #0
                 *pDest++ = 0;
- 4a0:	481f      	ldr	r0, [pc, #124]	; (520 <Reset_Handler+0xcc>)
- 4a2:	2100      	movs	r1, #0
- 4a4:	1814      	adds	r4, r2, r0
- 4a6:	6021      	str	r1, [r4, #0]
- 4a8:	3204      	adds	r2, #4
+     750:	481f      	ldr	r0, [pc, #124]	; (7d0 <Reset_Handler+0xcc>)
+     752:	2100      	movs	r1, #0
+     754:	1814      	adds	r4, r2, r0
+     756:	6021      	str	r1, [r4, #0]
+     758:	3204      	adds	r2, #4
                         *pDest++ = *pSrc++;
                 }
         }
 
         /* Clear the zero segment */
         for (pDest = &_szero; pDest < &_ezero;) {
- 4aa:	429a      	cmp	r2, r3
- 4ac:	d1fa      	bne.n	4a4 <Reset_Handler+0x50>
+     75a:	429a      	cmp	r2, r3
+     75c:	d1fa      	bne.n	754 <Reset_Handler+0x50>
                 *pDest++ = 0;
         }
 
         /* Set the vector table base address */
         pSrc = (uint32_t *) & _sfixed;
         SCB->VTOR = ((uint32_t) pSrc & SCB_VTOR_TBLOFF_Msk);
- 4ae:	4a1f      	ldr	r2, [pc, #124]	; (52c <Reset_Handler+0xd8>)
- 4b0:	21ff      	movs	r1, #255	; 0xff
- 4b2:	4b1f      	ldr	r3, [pc, #124]	; (530 <Reset_Handler+0xdc>)
- 4b4:	438b      	bics	r3, r1
- 4b6:	6093      	str	r3, [r2, #8]
+     75e:	4a1f      	ldr	r2, [pc, #124]	; (7dc <Reset_Handler+0xd8>)
+     760:	21ff      	movs	r1, #255	; 0xff
+     762:	4b1f      	ldr	r3, [pc, #124]	; (7e0 <Reset_Handler+0xdc>)
+     764:	438b      	bics	r3, r1
+     766:	6093      	str	r3, [r2, #8]
 
         /* Change default QOS values to have the best performance and correct USB behaviour */
         SBMATRIX->SFR[SBMATRIX_SLAVE_HMCRAMC0].reg = 2;
- 4b8:	39fd      	subs	r1, #253	; 0xfd
- 4ba:	2390      	movs	r3, #144	; 0x90
- 4bc:	005b      	lsls	r3, r3, #1
- 4be:	4a1d      	ldr	r2, [pc, #116]	; (534 <Reset_Handler+0xe0>)
- 4c0:	50d1      	str	r1, [r2, r3]
+     768:	39fd      	subs	r1, #253	; 0xfd
+     76a:	2390      	movs	r3, #144	; 0x90
+     76c:	005b      	lsls	r3, r3, #1
+     76e:	4a1d      	ldr	r2, [pc, #116]	; (7e4 <Reset_Handler+0xe0>)
+     770:	50d1      	str	r1, [r2, r3]
 #if defined(ID_USB)
         USB->DEVICE.QOSCTRL.bit.CQOS = 2;
- 4c2:	481d      	ldr	r0, [pc, #116]	; (538 <Reset_Handler+0xe4>)
- 4c4:	78c3      	ldrb	r3, [r0, #3]
- 4c6:	2403      	movs	r4, #3
- 4c8:	43a3      	bics	r3, r4
- 4ca:	2202      	movs	r2, #2
- 4cc:	4313      	orrs	r3, r2
- 4ce:	70c3      	strb	r3, [r0, #3]
+     772:	481d      	ldr	r0, [pc, #116]	; (7e8 <Reset_Handler+0xe4>)
+     774:	78c3      	ldrb	r3, [r0, #3]
+     776:	2403      	movs	r4, #3
+     778:	43a3      	bics	r3, r4
+     77a:	2202      	movs	r2, #2
+     77c:	4313      	orrs	r3, r2
+     77e:	70c3      	strb	r3, [r0, #3]
         USB->DEVICE.QOSCTRL.bit.DQOS = 2;
- 4d0:	78c3      	ldrb	r3, [r0, #3]
- 4d2:	260c      	movs	r6, #12
- 4d4:	43b3      	bics	r3, r6
- 4d6:	2108      	movs	r1, #8
- 4d8:	430b      	orrs	r3, r1
- 4da:	70c3      	strb	r3, [r0, #3]
+     780:	78c3      	ldrb	r3, [r0, #3]
+     782:	260c      	movs	r6, #12
+     784:	43b3      	bics	r3, r6
+     786:	2108      	movs	r1, #8
+     788:	430b      	orrs	r3, r1
+     78a:	70c3      	strb	r3, [r0, #3]
 #endif
         DMAC->QOSCTRL.bit.DQOS = 2;
- 4dc:	4b17      	ldr	r3, [pc, #92]	; (53c <Reset_Handler+0xe8>)
- 4de:	7b98      	ldrb	r0, [r3, #14]
- 4e0:	2530      	movs	r5, #48	; 0x30
- 4e2:	43a8      	bics	r0, r5
- 4e4:	1c05      	adds	r5, r0, #0
- 4e6:	2020      	movs	r0, #32
- 4e8:	4328      	orrs	r0, r5
- 4ea:	7398      	strb	r0, [r3, #14]
+     78c:	4b17      	ldr	r3, [pc, #92]	; (7ec <Reset_Handler+0xe8>)
+     78e:	7b98      	ldrb	r0, [r3, #14]
+     790:	2530      	movs	r5, #48	; 0x30
+     792:	43a8      	bics	r0, r5
+     794:	1c05      	adds	r5, r0, #0
+     796:	2020      	movs	r0, #32
+     798:	4328      	orrs	r0, r5
+     79a:	7398      	strb	r0, [r3, #14]
         DMAC->QOSCTRL.bit.FQOS = 2;
- 4ec:	7b98      	ldrb	r0, [r3, #14]
- 4ee:	43b0      	bics	r0, r6
- 4f0:	4301      	orrs	r1, r0
- 4f2:	7399      	strb	r1, [r3, #14]
+     79c:	7b98      	ldrb	r0, [r3, #14]
+     79e:	43b0      	bics	r0, r6
+     7a0:	4301      	orrs	r1, r0
+     7a2:	7399      	strb	r1, [r3, #14]
         DMAC->QOSCTRL.bit.WRBQOS = 2;
- 4f4:	7b99      	ldrb	r1, [r3, #14]
- 4f6:	43a1      	bics	r1, r4
- 4f8:	430a      	orrs	r2, r1
- 4fa:	739a      	strb	r2, [r3, #14]
+     7a4:	7b99      	ldrb	r1, [r3, #14]
+     7a6:	43a1      	bics	r1, r4
+     7a8:	430a      	orrs	r2, r1
+     7aa:	739a      	strb	r2, [r3, #14]
 
         /* Overwriting the default value of the NVMCTRL.CTRLB.MANW bit (errata reference 13134) */
         NVMCTRL->CTRLB.bit.MANW = 1;
- 4fc:	4a10      	ldr	r2, [pc, #64]	; (540 <Reset_Handler+0xec>)
- 4fe:	6851      	ldr	r1, [r2, #4]
- 500:	2380      	movs	r3, #128	; 0x80
- 502:	430b      	orrs	r3, r1
- 504:	6053      	str	r3, [r2, #4]
+     7ac:	4a10      	ldr	r2, [pc, #64]	; (7f0 <Reset_Handler+0xec>)
+     7ae:	6851      	ldr	r1, [r2, #4]
+     7b0:	2380      	movs	r3, #128	; 0x80
+     7b2:	430b      	orrs	r3, r1
+     7b4:	6053      	str	r3, [r2, #4]
 
         /* Initialize the C library */
         __libc_init_array();
- 506:	4b0f      	ldr	r3, [pc, #60]	; (544 <Reset_Handler+0xf0>)
- 508:	4798      	blx	r3
+     7b6:	4b0f      	ldr	r3, [pc, #60]	; (7f4 <Reset_Handler+0xf0>)
+     7b8:	4798      	blx	r3
 
         /* Branch to main function */
         main();
- 50a:	4b0f      	ldr	r3, [pc, #60]	; (548 <Reset_Handler+0xf4>)
- 50c:	4798      	blx	r3
+     7ba:	4b0f      	ldr	r3, [pc, #60]	; (7f8 <Reset_Handler+0xf4>)
+     7bc:	4798      	blx	r3
 
         /* Infinite loop */
         while (1);
- 50e:	e7fe      	b.n	50e <Reset_Handler+0xba>
- 510:	20000000 	.word	0x20000000
- 514:	0000090c 	.word	0x0000090c
- 518:	20000438 	.word	0x20000438
- 51c:	20000458 	.word	0x20000458
- 520:	20000438 	.word	0x20000438
- 524:	20000004 	.word	0x20000004
- 528:	2000043c 	.word	0x2000043c
- 52c:	e000ed00 	.word	0xe000ed00
- 530:	00000000 	.word	0x00000000
- 534:	41007000 	.word	0x41007000
- 538:	41005000 	.word	0x41005000
- 53c:	41004800 	.word	0x41004800
- 540:	41004000 	.word	0x41004000
- 544:	00000769 	.word	0x00000769
- 548:	00000615 	.word	0x00000615
+     7be:	e7fe      	b.n	7be <Reset_Handler+0xba>
+     7c0:	20000000 	.word	0x20000000
+     7c4:	000013e0 	.word	0x000013e0
+     7c8:	20000438 	.word	0x20000438
+     7cc:	2000046c 	.word	0x2000046c
+     7d0:	20000438 	.word	0x20000438
+     7d4:	20000004 	.word	0x20000004
+     7d8:	2000043c 	.word	0x2000043c
+     7dc:	e000ed00 	.word	0xe000ed00
+     7e0:	00000000 	.word	0x00000000
+     7e4:	41007000 	.word	0x41007000
+     7e8:	41005000 	.word	0x41005000
+     7ec:	41004800 	.word	0x41004800
+     7f0:	41004000 	.word	0x41004000
+     7f4:	000011fd 	.word	0x000011fd
+     7f8:	00000ab9 	.word	0x00000ab9
 
-0000054c <SystemInit>:
+000007fc <SystemInit>:
  *         Initialize the System and update the SystemCoreClock variable.
  */
 void SystemInit(void)
 {
 	// Keep the default device state after reset
 	SystemCoreClock = __SYSTEM_CLOCK;
- 54c:	4a01      	ldr	r2, [pc, #4]	; (554 <SystemInit+0x8>)
- 54e:	4b02      	ldr	r3, [pc, #8]	; (558 <SystemInit+0xc>)
- 550:	601a      	str	r2, [r3, #0]
+     7fc:	4a01      	ldr	r2, [pc, #4]	; (804 <SystemInit+0x8>)
+     7fe:	4b02      	ldr	r3, [pc, #8]	; (808 <SystemInit+0xc>)
+     800:	601a      	str	r2, [r3, #0]
 	return;
 }
- 552:	4770      	bx	lr
- 554:	000f4240 	.word	0x000f4240
- 558:	20000008 	.word	0x20000008
+     802:	4770      	bx	lr
+     804:	000f4240 	.word	0x000f4240
+     808:	20000008 	.word	0x20000008
 
-0000055c <PinConfig>:
-    GCLK->GENDIV.reg  = (GCLK_GENDIV_DIV(1)  | GCLK_GENDIV_ID(0));
+0000080c <ClockInit>:
+
+
+
+void ClockInit() {
+
+    SYSCTRL->INTFLAG.reg = SYSCTRL_INTFLAG_BOD33RDY | SYSCTRL_INTFLAG_BOD33DET |
+     80c:	491a      	ldr	r1, [pc, #104]	; (878 <ClockInit+0x6c>)
+     80e:	23c2      	movs	r3, #194	; 0xc2
+     810:	00db      	lsls	r3, r3, #3
+     812:	608b      	str	r3, [r1, #8]
+                           SYSCTRL_INTFLAG_DFLLRDY;
+
+    NVMCTRL->CTRLB.bit.RWS = 1;
+     814:	4819      	ldr	r0, [pc, #100]	; (87c <ClockInit+0x70>)
+     816:	6843      	ldr	r3, [r0, #4]
+     818:	221e      	movs	r2, #30
+     81a:	4393      	bics	r3, r2
+     81c:	3a1c      	subs	r2, #28
+     81e:	4313      	orrs	r3, r2
+     820:	6043      	str	r3, [r0, #4]
+
+    // start and enable external 32k crystal
+    SYSCTRL->XOSC32K.reg = SYSCTRL_XOSC32K_ENABLE |
+     822:	4b17      	ldr	r3, [pc, #92]	; (880 <ClockInit+0x74>)
+     824:	828b      	strh	r3, [r1, #20]
+                           SYSCTRL_XOSC32K_XTALEN |
+                           SYSCTRL_XOSC32K_EN32K |
+                           ( 6 << SYSCTRL_XOSC32K_STARTUP_Pos);
+    //wait for crystal to warm up
+    while((SYSCTRL->PCLKSR.reg & (SYSCTRL_PCLKSR_XOSC32KRDY)) == 0);
+     826:	68cb      	ldr	r3, [r1, #12]
+     828:	421a      	tst	r2, r3
+     82a:	d0fc      	beq.n	826 <ClockInit+0x1a>
+
+    GCLK->GENDIV.reg = GCLK_GENDIV_ID(1) |
+     82c:	4b15      	ldr	r3, [pc, #84]	; (884 <ClockInit+0x78>)
+     82e:	2202      	movs	r2, #2
+     830:	32ff      	adds	r2, #255	; 0xff
+     832:	609a      	str	r2, [r3, #8]
+                       GCLK_GENDIV_DIV(1);
+    GCLK->GENCTRL.reg = GCLK_GENCTRL_ID(1) |
+     834:	4a14      	ldr	r2, [pc, #80]	; (888 <ClockInit+0x7c>)
+     836:	605a      	str	r2, [r3, #4]
+                        GCLK_GENCTRL_SRC_XOSC32K |
+                        GCLK_GENCTRL_GENEN;
+    GCLK->CLKCTRL.reg = GCLK_CLKCTRL_GEN(1) |
+     838:	2282      	movs	r2, #130	; 0x82
+     83a:	01d2      	lsls	r2, r2, #7
+     83c:	805a      	strh	r2, [r3, #2]
+                        GCLK_CLKCTRL_CLKEN |
+                        GCLK_CLKCTRL_ID_DFLL48;
+
+    //Configure the FDLL48MHz FLL, we will use this to provide a clock to the CPU
+    //Set the course and fine step sizes, these should be less than 50% of the values used for the course and fine values (P150)
+    SYSCTRL->DFLLCTRL.reg = (SYSCTRL_DFLLCTRL_ENABLE); //Enable the DFLL
+     83e:	4b0e      	ldr	r3, [pc, #56]	; (878 <ClockInit+0x6c>)
+     840:	2202      	movs	r2, #2
+     842:	849a      	strh	r2, [r3, #36]	; 0x24
+    SYSCTRL->DFLLMUL.reg = (SYSCTRL_DFLLMUL_CSTEP(7) | SYSCTRL_DFLLMUL_FSTEP(30));
+     844:	4a11      	ldr	r2, [pc, #68]	; (88c <ClockInit+0x80>)
+     846:	62da      	str	r2, [r3, #44]	; 0x2c
+    SYSCTRL->DFLLMUL.reg |= (SYSCTRL_DFLLMUL_MUL(1280));
+     848:	6ada      	ldr	r2, [r3, #44]	; 0x2c
+     84a:	21a0      	movs	r1, #160	; 0xa0
+     84c:	00c9      	lsls	r1, r1, #3
+     84e:	430a      	orrs	r2, r1
+     850:	62da      	str	r2, [r3, #44]	; 0x2c
+    SYSCTRL->DFLLCTRL.reg |= (SYSCTRL_DFLLCTRL_MODE);
+     852:	8c99      	ldrh	r1, [r3, #36]	; 0x24
+     854:	2204      	movs	r2, #4
+     856:	430a      	orrs	r2, r1
+     858:	849a      	strh	r2, [r3, #36]	; 0x24
+
+    //Wait and see if the DFLL output is good . . .
+    while((SYSCTRL->PCLKSR.reg & (SYSCTRL_PCLKSR_DFLLRDY)) == 0);
+     85a:	1c19      	adds	r1, r3, #0
+     85c:	2210      	movs	r2, #16
+     85e:	68cb      	ldr	r3, [r1, #12]
+     860:	421a      	tst	r2, r3
+     862:	d0fc      	beq.n	85e <ClockInit+0x52>
+
+    //For generic clock generator 0, select the DFLL48 Clock as input
+    GCLK->GENDIV.reg  = (GCLK_GENDIV_DIV(2)  | GCLK_GENDIV_ID(0));
+     864:	4b07      	ldr	r3, [pc, #28]	; (884 <ClockInit+0x78>)
+     866:	2280      	movs	r2, #128	; 0x80
+     868:	0092      	lsls	r2, r2, #2
+     86a:	609a      	str	r2, [r3, #8]
     GCLK->GENCTRL.reg = (GCLK_GENCTRL_ID(0)  | (GCLK_GENCTRL_SRC_DFLL48M) | (GCLK_GENCTRL_GENEN));
-    GCLK->CLKCTRL.reg = (GCLK_CLKCTRL_GEN(0) | (GCLK_CLKCTRL_CLKEN) | GCLK_CLKCTRL_ID_DFLL48) ;
+     86c:	4a08      	ldr	r2, [pc, #32]	; (890 <ClockInit+0x84>)
+     86e:	605a      	str	r2, [r3, #4]
+    GCLK->CLKCTRL.reg = (GCLK_CLKCTRL_GEN(0) | GCLK_CLKCTRL_CLKEN ) ;
+     870:	2280      	movs	r2, #128	; 0x80
+     872:	01d2      	lsls	r2, r2, #7
+     874:	805a      	strh	r2, [r3, #2]
 }
+     876:	4770      	bx	lr
+     878:	40000800 	.word	0x40000800
+     87c:	41004000 	.word	0x41004000
+     880:	0000060e 	.word	0x0000060e
+     884:	40000c00 	.word	0x40000c00
+     888:	00010501 	.word	0x00010501
+     88c:	1c1e0000 	.word	0x1c1e0000
+     890:	00010700 	.word	0x00010700
+
+00000894 <PinConfig>:
 
 void PinConfig() {
- 55c:	b510      	push	{r4, lr}
+     894:	b510      	push	{r4, lr}
 
     /* temp SS HIGH for other peripherals */
+    SaLPinMode(PIN_PA07,INPUT);
+     896:	2007      	movs	r0, #7
+     898:	2100      	movs	r1, #0
+     89a:	4c09      	ldr	r4, [pc, #36]	; (8c0 <PinConfig+0x2c>)
+     89c:	47a0      	blx	r4
     SaLPinMode(PIN_PA10,OUTPUT);
- 55e:	200a      	movs	r0, #10
- 560:	2101      	movs	r1, #1
- 562:	4c06      	ldr	r4, [pc, #24]	; (57c <PinConfig+0x20>)
- 564:	47a0      	blx	r4
+     89e:	200a      	movs	r0, #10
+     8a0:	2101      	movs	r1, #1
+     8a2:	47a0      	blx	r4
     SaLPinMode(PIN_PA08,OUTPUT);
- 566:	2008      	movs	r0, #8
- 568:	2101      	movs	r1, #1
- 56a:	47a0      	blx	r4
+     8a4:	2008      	movs	r0, #8
+     8a6:	2101      	movs	r1, #1
+     8a8:	47a0      	blx	r4
+    SaLPinMode(BUZZER,OUTSTRONG);
+     8aa:	200c      	movs	r0, #12
+     8ac:	2103      	movs	r1, #3
+     8ae:	47a0      	blx	r4
 	volatile PortGroup *const port = SaLGetPort(pin);
 	uint32_t pin_mask = (1UL << (pin % 32));
 	
 
 	if (level) {
 		port->OUTSET.reg = pin_mask;
- 56c:	4b04      	ldr	r3, [pc, #16]	; (580 <PinConfig+0x24>)
- 56e:	2280      	movs	r2, #128	; 0x80
- 570:	00d2      	lsls	r2, r2, #3
- 572:	619a      	str	r2, [r3, #24]
- 574:	2280      	movs	r2, #128	; 0x80
- 576:	0052      	lsls	r2, r2, #1
- 578:	619a      	str	r2, [r3, #24]
+     8b0:	4b04      	ldr	r3, [pc, #16]	; (8c4 <PinConfig+0x30>)
+     8b2:	2280      	movs	r2, #128	; 0x80
+     8b4:	00d2      	lsls	r2, r2, #3
+     8b6:	619a      	str	r2, [r3, #24]
+     8b8:	2280      	movs	r2, #128	; 0x80
+     8ba:	0052      	lsls	r2, r2, #1
+     8bc:	619a      	str	r2, [r3, #24]
     SaLDigitalOut(PIN_PA10,true);
     SaLDigitalOut(PIN_PA08,true);
 }
- 57a:	bd10      	pop	{r4, pc}
- 57c:	00000409 	.word	0x00000409
- 580:	41004400 	.word	0x41004400
+     8be:	bd10      	pop	{r4, pc}
+     8c0:	000006a5 	.word	0x000006a5
+     8c4:	41004400 	.word	0x41004400
 
-00000584 <baroModuleSetup>:
+000008c8 <baroModuleSetup>:
 
 struct spiModule baroModuleSetup() {
- 584:	b538      	push	{r3, r4, r5, lr}
- 586:	1c04      	adds	r4, r0, #0
+     8c8:	b538      	push	{r3, r4, r5, lr}
+     8ca:	1c04      	adds	r4, r0, #0
     module->MOSI		= MOSI_PIN;
     module->MISO		= MISO_pin;
     module->SCK		    = SCK_PIN;
     module->SS			= SS_PIN;
 
     SaLPinMode(module->MOSI,OUTPUT);
- 588:	200d      	movs	r0, #13
- 58a:	2101      	movs	r1, #1
- 58c:	4d0d      	ldr	r5, [pc, #52]	; (5c4 <baroModuleSetup+0x40>)
- 58e:	47a8      	blx	r5
+     8cc:	200d      	movs	r0, #13
+     8ce:	2101      	movs	r1, #1
+     8d0:	4d0d      	ldr	r5, [pc, #52]	; (908 <baroModuleSetup+0x40>)
+     8d2:	47a8      	blx	r5
     SaLPinMode(module->SCK ,OUTPUT);
- 590:	200f      	movs	r0, #15
- 592:	2101      	movs	r1, #1
- 594:	47a8      	blx	r5
+     8d4:	200f      	movs	r0, #15
+     8d6:	2101      	movs	r1, #1
+     8d8:	47a8      	blx	r5
     SaLPinMode(module->SS,  OUTPUT);
- 596:	2009      	movs	r0, #9
- 598:	2101      	movs	r1, #1
- 59a:	47a8      	blx	r5
+     8da:	2009      	movs	r0, #9
+     8dc:	2101      	movs	r1, #1
+     8de:	47a8      	blx	r5
     SaLPinMode(module->MISO,INPUT);
- 59c:	200e      	movs	r0, #14
- 59e:	2100      	movs	r1, #0
- 5a0:	47a8      	blx	r5
- 5a2:	2280      	movs	r2, #128	; 0x80
- 5a4:	0092      	lsls	r2, r2, #2
- 5a6:	4b08      	ldr	r3, [pc, #32]	; (5c8 <baroModuleSetup+0x44>)
- 5a8:	619a      	str	r2, [r3, #24]
+     8e0:	200e      	movs	r0, #14
+     8e2:	2100      	movs	r1, #0
+     8e4:	47a8      	blx	r5
+     8e6:	2280      	movs	r2, #128	; 0x80
+     8e8:	0092      	lsls	r2, r2, #2
+     8ea:	4b08      	ldr	r3, [pc, #32]	; (90c <baroModuleSetup+0x44>)
+     8ec:	619a      	str	r2, [r3, #24]
                     MS5607_MOSIPIN,
                     MS5607_MISOPIN,
                     MS5607_SCKPIN,
                     MS5607_SLAVE_SELECT_PIN);
 
     return baroModule;
- 5aa:	230e      	movs	r3, #14
- 5ac:	7023      	strb	r3, [r4, #0]
- 5ae:	3b01      	subs	r3, #1
- 5b0:	7063      	strb	r3, [r4, #1]
- 5b2:	3302      	adds	r3, #2
- 5b4:	70a3      	strb	r3, [r4, #2]
- 5b6:	3b06      	subs	r3, #6
- 5b8:	70e3      	strb	r3, [r4, #3]
- 5ba:	2300      	movs	r3, #0
- 5bc:	7123      	strb	r3, [r4, #4]
- 5be:	7163      	strb	r3, [r4, #5]
+     8ee:	230e      	movs	r3, #14
+     8f0:	7023      	strb	r3, [r4, #0]
+     8f2:	3b01      	subs	r3, #1
+     8f4:	7063      	strb	r3, [r4, #1]
+     8f6:	3302      	adds	r3, #2
+     8f8:	70a3      	strb	r3, [r4, #2]
+     8fa:	3b06      	subs	r3, #6
+     8fc:	70e3      	strb	r3, [r4, #3]
+     8fe:	2300      	movs	r3, #0
+     900:	7123      	strb	r3, [r4, #4]
+     902:	7163      	strb	r3, [r4, #5]
 }
- 5c0:	1c20      	adds	r0, r4, #0
- 5c2:	bd38      	pop	{r3, r4, r5, pc}
- 5c4:	00000409 	.word	0x00000409
- 5c8:	41004400 	.word	0x41004400
+     904:	1c20      	adds	r0, r4, #0
+     906:	bd38      	pop	{r3, r4, r5, pc}
+     908:	000006a5 	.word	0x000006a5
+     90c:	41004400 	.word	0x41004400
 
-000005cc <accelModuleSetup>:
+00000910 <accelModuleSetup>:
 
 struct spiModule accelModuleSetup() {
- 5cc:	b538      	push	{r3, r4, r5, lr}
- 5ce:	1c04      	adds	r4, r0, #0
+     910:	b538      	push	{r3, r4, r5, lr}
+     912:	1c04      	adds	r4, r0, #0
     module->MOSI		= MOSI_PIN;
     module->MISO		= MISO_pin;
     module->SCK		    = SCK_PIN;
     module->SS			= SS_PIN;
 
     SaLPinMode(module->MOSI,OUTPUT);
- 5d0:	200d      	movs	r0, #13
- 5d2:	2101      	movs	r1, #1
- 5d4:	4d0d      	ldr	r5, [pc, #52]	; (60c <accelModuleSetup+0x40>)
- 5d6:	47a8      	blx	r5
+     914:	200d      	movs	r0, #13
+     916:	2101      	movs	r1, #1
+     918:	4d0d      	ldr	r5, [pc, #52]	; (950 <accelModuleSetup+0x40>)
+     91a:	47a8      	blx	r5
     SaLPinMode(module->SCK ,OUTPUT);
- 5d8:	200f      	movs	r0, #15
- 5da:	2101      	movs	r1, #1
- 5dc:	47a8      	blx	r5
+     91c:	200f      	movs	r0, #15
+     91e:	2101      	movs	r1, #1
+     920:	47a8      	blx	r5
     SaLPinMode(module->SS,  OUTPUT);
- 5de:	2010      	movs	r0, #16
- 5e0:	2101      	movs	r1, #1
- 5e2:	47a8      	blx	r5
+     922:	2010      	movs	r0, #16
+     924:	2101      	movs	r1, #1
+     926:	47a8      	blx	r5
     SaLPinMode(module->MISO,INPUT);
- 5e4:	200e      	movs	r0, #14
- 5e6:	2100      	movs	r1, #0
- 5e8:	47a8      	blx	r5
- 5ea:	2280      	movs	r2, #128	; 0x80
- 5ec:	0252      	lsls	r2, r2, #9
- 5ee:	4b08      	ldr	r3, [pc, #32]	; (610 <accelModuleSetup+0x44>)
- 5f0:	619a      	str	r2, [r3, #24]
+     928:	200e      	movs	r0, #14
+     92a:	2100      	movs	r1, #0
+     92c:	47a8      	blx	r5
+     92e:	2280      	movs	r2, #128	; 0x80
+     930:	0252      	lsls	r2, r2, #9
+     932:	4b08      	ldr	r3, [pc, #32]	; (954 <accelModuleSetup+0x44>)
+     934:	619a      	str	r2, [r3, #24]
                     ADXL345_MOSIPIN,
                     ADXL345_MISOPIN,
                     ADXL345_SCKPIN,
                     ADXL345_SLAVE_SELECT_PIN);
 
     return accelModule;
- 5f2:	230e      	movs	r3, #14
- 5f4:	7023      	strb	r3, [r4, #0]
- 5f6:	3b01      	subs	r3, #1
- 5f8:	7063      	strb	r3, [r4, #1]
- 5fa:	3302      	adds	r3, #2
- 5fc:	70a3      	strb	r3, [r4, #2]
- 5fe:	3301      	adds	r3, #1
- 600:	70e3      	strb	r3, [r4, #3]
- 602:	2300      	movs	r3, #0
- 604:	7123      	strb	r3, [r4, #4]
- 606:	7163      	strb	r3, [r4, #5]
+     936:	230e      	movs	r3, #14
+     938:	7023      	strb	r3, [r4, #0]
+     93a:	3b01      	subs	r3, #1
+     93c:	7063      	strb	r3, [r4, #1]
+     93e:	3302      	adds	r3, #2
+     940:	70a3      	strb	r3, [r4, #2]
+     942:	3301      	adds	r3, #1
+     944:	70e3      	strb	r3, [r4, #3]
+     946:	2300      	movs	r3, #0
+     948:	7123      	strb	r3, [r4, #4]
+     94a:	7163      	strb	r3, [r4, #5]
 }
- 608:	1c20      	adds	r0, r4, #0
- 60a:	bd38      	pop	{r3, r4, r5, pc}
- 60c:	00000409 	.word	0x00000409
- 610:	41004400 	.word	0x41004400
+     94c:	1c20      	adds	r0, r4, #0
+     94e:	bd38      	pop	{r3, r4, r5, pc}
+     950:	000006a5 	.word	0x000006a5
+     954:	41004400 	.word	0x41004400
 
-00000614 <main>:
+00000958 <initAccelSensor>:
 
-volatile uint32_t counter = 0;
-
-int main(void) {
- 614:	b570      	push	{r4, r5, r6, lr}
- 616:	b086      	sub	sp, #24
-    /* Initialize the SAM system */
-    SystemInit();
- 618:	4b45      	ldr	r3, [pc, #276]	; (730 <main+0x11c>)
- 61a:	4798      	blx	r3
-//    ClockInit();
-    SaLDelayInit();
- 61c:	4b45      	ldr	r3, [pc, #276]	; (734 <main+0x120>)
- 61e:	4798      	blx	r3
-    PinConfig();
- 620:	4b45      	ldr	r3, [pc, #276]	; (738 <main+0x124>)
- 622:	4798      	blx	r3
-    struct spiModule baroModule =baroModuleSetup();
- 624:	a804      	add	r0, sp, #16
- 626:	4b45      	ldr	r3, [pc, #276]	; (73c <main+0x128>)
- 628:	4798      	blx	r3
-    struct spiModule accelModule =accelModuleSetup();
- 62a:	ac02      	add	r4, sp, #8
- 62c:	1c20      	adds	r0, r4, #0
- 62e:	4b44      	ldr	r3, [pc, #272]	; (740 <main+0x12c>)
- 630:	4798      	blx	r3
-
+void initAccelSensor(struct spiModule *const module) {
+     958:	b538      	push	{r3, r4, r5, lr}
+     95a:	1c04      	adds	r4, r0, #0
 
     /*=========================================================================
     					accel init stuff
     -----------------------------------------------------------------------*/
-     setRange(&accelModule,ADXL345_RANGE_16_G);
- 632:	1c20      	adds	r0, r4, #0
- 634:	2111      	movs	r1, #17
- 636:	4b43      	ldr	r3, [pc, #268]	; (744 <main+0x130>)
- 638:	4798      	blx	r3
-     delay_us(300);
- 63a:	2096      	movs	r0, #150	; 0x96
- 63c:	0040      	lsls	r0, r0, #1
- 63e:	4b42      	ldr	r3, [pc, #264]	; (748 <main+0x134>)
- 640:	4798      	blx	r3
-    SaLDigitalOut(accelModule.SS,false);
- 642:	78e2      	ldrb	r2, [r4, #3]
+    SaLDigitalOut(module->SS,false);
+     95c:	78c3      	ldrb	r3, [r0, #3]
     uint8_t port_index  = (gpio_pin / 128);
     uint8_t group_index = (gpio_pin / 32);
     /* Array of available ports */
     Port *const ports[PORT_INST_NUM] = PORT_INSTS;
 
     if (port_index < PORT_INST_NUM) {
- 644:	09d1      	lsrs	r1, r2, #7
+     95e:	09d9      	lsrs	r1, r3, #7
         return &(ports[port_index]->Group[group_index]);
     } else {
         return NULL;
- 646:	2300      	movs	r3, #0
+     960:	2200      	movs	r2, #0
     uint8_t port_index  = (gpio_pin / 128);
     uint8_t group_index = (gpio_pin / 32);
     /* Array of available ports */
     Port *const ports[PORT_INST_NUM] = PORT_INSTS;
 
     if (port_index < PORT_INST_NUM) {
- 648:	2900      	cmp	r1, #0
- 64a:	d104      	bne.n	656 <main+0x42>
+     962:	2900      	cmp	r1, #0
+     964:	d104      	bne.n	970 <initAccelSensor+0x18>
         return &(ports[port_index]->Group[group_index]);
- 64c:	0953      	lsrs	r3, r2, #5
- 64e:	01db      	lsls	r3, r3, #7
- 650:	493e      	ldr	r1, [pc, #248]	; (74c <main+0x138>)
- 652:	468c      	mov	ip, r1
- 654:	4463      	add	r3, ip
+     966:	095a      	lsrs	r2, r3, #5
+     968:	01d2      	lsls	r2, r2, #7
+     96a:	4936      	ldr	r1, [pc, #216]	; (a44 <initAccelSensor+0xec>)
+     96c:	468c      	mov	ip, r1
+     96e:	4462      	add	r2, ip
 
 void SaLPinMode(uint8_t pin,uint8_t DIR);
 
 static inline void SaLDigitalOut(uint8_t pin, uint8_t level) {
 	volatile PortGroup *const port = SaLGetPort(pin);
 	uint32_t pin_mask = (1UL << (pin % 32));
- 656:	211f      	movs	r1, #31
- 658:	400a      	ands	r2, r1
- 65a:	391e      	subs	r1, #30
- 65c:	4091      	lsls	r1, r2
+     970:	211f      	movs	r1, #31
+     972:	400b      	ands	r3, r1
+     974:	391e      	subs	r1, #30
+     976:	4099      	lsls	r1, r3
 	
 
 	if (level) {
 		port->OUTSET.reg = pin_mask;
 		} else {
 		port->OUTCLR.reg = pin_mask;
- 65e:	6159      	str	r1, [r3, #20]
-    byteOut(&accelModule,ADXL345_REG_POWER_CTL);
- 660:	ac02      	add	r4, sp, #8
- 662:	1c20      	adds	r0, r4, #0
- 664:	212d      	movs	r1, #45	; 0x2d
- 666:	4d3a      	ldr	r5, [pc, #232]	; (750 <main+0x13c>)
- 668:	47a8      	blx	r5
-    byteOut(&accelModule,0x08);
- 66a:	1c20      	adds	r0, r4, #0
- 66c:	2108      	movs	r1, #8
- 66e:	47a8      	blx	r5
-    SaLDigitalOut(accelModule.SS,true);
- 670:	78e2      	ldrb	r2, [r4, #3]
+     978:	6151      	str	r1, [r2, #20]
+    byteOut(module,ADXL345_REG_POWER_CTL);
+     97a:	1c20      	adds	r0, r4, #0
+     97c:	212d      	movs	r1, #45	; 0x2d
+     97e:	4d32      	ldr	r5, [pc, #200]	; (a48 <initAccelSensor+0xf0>)
+     980:	47a8      	blx	r5
+    byteOut(module,0x00);
+     982:	1c20      	adds	r0, r4, #0
+     984:	2100      	movs	r1, #0
+     986:	47a8      	blx	r5
+    SaLDigitalOut(module->SS,true);
+     988:	78e3      	ldrb	r3, [r4, #3]
     uint8_t port_index  = (gpio_pin / 128);
     uint8_t group_index = (gpio_pin / 32);
     /* Array of available ports */
     Port *const ports[PORT_INST_NUM] = PORT_INSTS;
 
     if (port_index < PORT_INST_NUM) {
- 672:	09d1      	lsrs	r1, r2, #7
+     98a:	09d9      	lsrs	r1, r3, #7
         return &(ports[port_index]->Group[group_index]);
     } else {
         return NULL;
- 674:	2300      	movs	r3, #0
+     98c:	2200      	movs	r2, #0
     uint8_t port_index  = (gpio_pin / 128);
     uint8_t group_index = (gpio_pin / 32);
     /* Array of available ports */
     Port *const ports[PORT_INST_NUM] = PORT_INSTS;
 
     if (port_index < PORT_INST_NUM) {
- 676:	2900      	cmp	r1, #0
- 678:	d104      	bne.n	684 <main+0x70>
+     98e:	2900      	cmp	r1, #0
+     990:	d104      	bne.n	99c <initAccelSensor+0x44>
         return &(ports[port_index]->Group[group_index]);
- 67a:	0953      	lsrs	r3, r2, #5
- 67c:	01db      	lsls	r3, r3, #7
- 67e:	4933      	ldr	r1, [pc, #204]	; (74c <main+0x138>)
- 680:	468c      	mov	ip, r1
- 682:	4463      	add	r3, ip
+     992:	095a      	lsrs	r2, r3, #5
+     994:	01d2      	lsls	r2, r2, #7
+     996:	492b      	ldr	r1, [pc, #172]	; (a44 <initAccelSensor+0xec>)
+     998:	468c      	mov	ip, r1
+     99a:	4462      	add	r2, ip
 
 void SaLPinMode(uint8_t pin,uint8_t DIR);
 
 static inline void SaLDigitalOut(uint8_t pin, uint8_t level) {
 	volatile PortGroup *const port = SaLGetPort(pin);
 	uint32_t pin_mask = (1UL << (pin % 32));
- 684:	211f      	movs	r1, #31
- 686:	400a      	ands	r2, r1
- 688:	391e      	subs	r1, #30
- 68a:	4091      	lsls	r1, r2
+     99c:	211f      	movs	r1, #31
+     99e:	400b      	ands	r3, r1
+     9a0:	391e      	subs	r1, #30
+     9a2:	4099      	lsls	r1, r3
 	
 
 	if (level) {
 		port->OUTSET.reg = pin_mask;
- 68c:	6199      	str	r1, [r3, #24]
+     9a4:	6191      	str	r1, [r2, #24]
+
+    setRange(module,ADXL345_RANGE_2_G);
+     9a6:	1c20      	adds	r0, r4, #0
+     9a8:	2100      	movs	r1, #0
+     9aa:	4b28      	ldr	r3, [pc, #160]	; (a4c <initAccelSensor+0xf4>)
+     9ac:	4798      	blx	r3
+//     byteOut(&accelModule,ADXL345_REG_DATA_FORMAT);
+//     byteOut(&accelModule,0b10000000);
+//     SaLDigitalOut(accelModule.SS,true);
+
+
+    SaLDigitalOut(module->SS,false);
+     9ae:	78e3      	ldrb	r3, [r4, #3]
+    uint8_t port_index  = (gpio_pin / 128);
+    uint8_t group_index = (gpio_pin / 32);
+    /* Array of available ports */
+    Port *const ports[PORT_INST_NUM] = PORT_INSTS;
+
+    if (port_index < PORT_INST_NUM) {
+     9b0:	09d9      	lsrs	r1, r3, #7
+        return &(ports[port_index]->Group[group_index]);
+    } else {
+        return NULL;
+     9b2:	2200      	movs	r2, #0
+    uint8_t port_index  = (gpio_pin / 128);
+    uint8_t group_index = (gpio_pin / 32);
+    /* Array of available ports */
+    Port *const ports[PORT_INST_NUM] = PORT_INSTS;
+
+    if (port_index < PORT_INST_NUM) {
+     9b4:	2900      	cmp	r1, #0
+     9b6:	d104      	bne.n	9c2 <initAccelSensor+0x6a>
+        return &(ports[port_index]->Group[group_index]);
+     9b8:	095a      	lsrs	r2, r3, #5
+     9ba:	01d2      	lsls	r2, r2, #7
+     9bc:	4921      	ldr	r1, [pc, #132]	; (a44 <initAccelSensor+0xec>)
+     9be:	468c      	mov	ip, r1
+     9c0:	4462      	add	r2, ip
+
+void SaLPinMode(uint8_t pin,uint8_t DIR);
+
+static inline void SaLDigitalOut(uint8_t pin, uint8_t level) {
+	volatile PortGroup *const port = SaLGetPort(pin);
+	uint32_t pin_mask = (1UL << (pin % 32));
+     9c2:	211f      	movs	r1, #31
+     9c4:	400b      	ands	r3, r1
+     9c6:	391e      	subs	r1, #30
+     9c8:	4099      	lsls	r1, r3
+	
+
+	if (level) {
+		port->OUTSET.reg = pin_mask;
+		} else {
+		port->OUTCLR.reg = pin_mask;
+     9ca:	6151      	str	r1, [r2, #20]
+    byteOut(module,ADXL345_REG_BW_RATE);
+     9cc:	1c20      	adds	r0, r4, #0
+     9ce:	212c      	movs	r1, #44	; 0x2c
+     9d0:	4d1d      	ldr	r5, [pc, #116]	; (a48 <initAccelSensor+0xf0>)
+     9d2:	47a8      	blx	r5
+    byteOut(module,0b1110);
+     9d4:	1c20      	adds	r0, r4, #0
+     9d6:	210e      	movs	r1, #14
+     9d8:	47a8      	blx	r5
+    SaLDigitalOut(module->SS,true);
+     9da:	78e3      	ldrb	r3, [r4, #3]
+    uint8_t port_index  = (gpio_pin / 128);
+    uint8_t group_index = (gpio_pin / 32);
+    /* Array of available ports */
+    Port *const ports[PORT_INST_NUM] = PORT_INSTS;
+
+    if (port_index < PORT_INST_NUM) {
+     9dc:	09d9      	lsrs	r1, r3, #7
+        return &(ports[port_index]->Group[group_index]);
+    } else {
+        return NULL;
+     9de:	2200      	movs	r2, #0
+    uint8_t port_index  = (gpio_pin / 128);
+    uint8_t group_index = (gpio_pin / 32);
+    /* Array of available ports */
+    Port *const ports[PORT_INST_NUM] = PORT_INSTS;
+
+    if (port_index < PORT_INST_NUM) {
+     9e0:	2900      	cmp	r1, #0
+     9e2:	d104      	bne.n	9ee <initAccelSensor+0x96>
+        return &(ports[port_index]->Group[group_index]);
+     9e4:	095a      	lsrs	r2, r3, #5
+     9e6:	01d2      	lsls	r2, r2, #7
+     9e8:	4916      	ldr	r1, [pc, #88]	; (a44 <initAccelSensor+0xec>)
+     9ea:	468c      	mov	ip, r1
+     9ec:	4462      	add	r2, ip
+
+void SaLPinMode(uint8_t pin,uint8_t DIR);
+
+static inline void SaLDigitalOut(uint8_t pin, uint8_t level) {
+	volatile PortGroup *const port = SaLGetPort(pin);
+	uint32_t pin_mask = (1UL << (pin % 32));
+     9ee:	211f      	movs	r1, #31
+     9f0:	400b      	ands	r3, r1
+     9f2:	391e      	subs	r1, #30
+     9f4:	4099      	lsls	r1, r3
+	
+
+	if (level) {
+		port->OUTSET.reg = pin_mask;
+     9f6:	6191      	str	r1, [r2, #24]
+
+
+    SaLDigitalOut(module->SS,false);
+     9f8:	78e3      	ldrb	r3, [r4, #3]
+    uint8_t port_index  = (gpio_pin / 128);
+    uint8_t group_index = (gpio_pin / 32);
+    /* Array of available ports */
+    Port *const ports[PORT_INST_NUM] = PORT_INSTS;
+
+    if (port_index < PORT_INST_NUM) {
+     9fa:	09d9      	lsrs	r1, r3, #7
+        return &(ports[port_index]->Group[group_index]);
+    } else {
+        return NULL;
+     9fc:	2200      	movs	r2, #0
+    uint8_t port_index  = (gpio_pin / 128);
+    uint8_t group_index = (gpio_pin / 32);
+    /* Array of available ports */
+    Port *const ports[PORT_INST_NUM] = PORT_INSTS;
+
+    if (port_index < PORT_INST_NUM) {
+     9fe:	2900      	cmp	r1, #0
+     a00:	d104      	bne.n	a0c <initAccelSensor+0xb4>
+        return &(ports[port_index]->Group[group_index]);
+     a02:	095a      	lsrs	r2, r3, #5
+     a04:	01d2      	lsls	r2, r2, #7
+     a06:	490f      	ldr	r1, [pc, #60]	; (a44 <initAccelSensor+0xec>)
+     a08:	468c      	mov	ip, r1
+     a0a:	4462      	add	r2, ip
+
+void SaLPinMode(uint8_t pin,uint8_t DIR);
+
+static inline void SaLDigitalOut(uint8_t pin, uint8_t level) {
+	volatile PortGroup *const port = SaLGetPort(pin);
+	uint32_t pin_mask = (1UL << (pin % 32));
+     a0c:	211f      	movs	r1, #31
+     a0e:	400b      	ands	r3, r1
+     a10:	391e      	subs	r1, #30
+     a12:	4099      	lsls	r1, r3
+	
+
+	if (level) {
+		port->OUTSET.reg = pin_mask;
+		} else {
+		port->OUTCLR.reg = pin_mask;
+     a14:	6151      	str	r1, [r2, #20]
+    byteOut(module,ADXL345_REG_POWER_CTL);
+     a16:	1c20      	adds	r0, r4, #0
+     a18:	212d      	movs	r1, #45	; 0x2d
+     a1a:	4d0b      	ldr	r5, [pc, #44]	; (a48 <initAccelSensor+0xf0>)
+     a1c:	47a8      	blx	r5
+    byteOut(module,0x08);
+     a1e:	1c20      	adds	r0, r4, #0
+     a20:	2108      	movs	r1, #8
+     a22:	47a8      	blx	r5
+    SaLDigitalOut(module->SS,true);
+     a24:	78e3      	ldrb	r3, [r4, #3]
+    uint8_t port_index  = (gpio_pin / 128);
+    uint8_t group_index = (gpio_pin / 32);
+    /* Array of available ports */
+    Port *const ports[PORT_INST_NUM] = PORT_INSTS;
+
+    if (port_index < PORT_INST_NUM) {
+     a26:	09d9      	lsrs	r1, r3, #7
+        return &(ports[port_index]->Group[group_index]);
+    } else {
+        return NULL;
+     a28:	2200      	movs	r2, #0
+    uint8_t port_index  = (gpio_pin / 128);
+    uint8_t group_index = (gpio_pin / 32);
+    /* Array of available ports */
+    Port *const ports[PORT_INST_NUM] = PORT_INSTS;
+
+    if (port_index < PORT_INST_NUM) {
+     a2a:	2900      	cmp	r1, #0
+     a2c:	d104      	bne.n	a38 <initAccelSensor+0xe0>
+        return &(ports[port_index]->Group[group_index]);
+     a2e:	095a      	lsrs	r2, r3, #5
+     a30:	01d2      	lsls	r2, r2, #7
+     a32:	4904      	ldr	r1, [pc, #16]	; (a44 <initAccelSensor+0xec>)
+     a34:	468c      	mov	ip, r1
+     a36:	4462      	add	r2, ip
+
+void SaLPinMode(uint8_t pin,uint8_t DIR);
+
+static inline void SaLDigitalOut(uint8_t pin, uint8_t level) {
+	volatile PortGroup *const port = SaLGetPort(pin);
+	uint32_t pin_mask = (1UL << (pin % 32));
+     a38:	211f      	movs	r1, #31
+     a3a:	400b      	ands	r3, r1
+     a3c:	391e      	subs	r1, #30
+     a3e:	4099      	lsls	r1, r3
+	
+
+	if (level) {
+		port->OUTSET.reg = pin_mask;
+     a40:	6191      	str	r1, [r2, #24]
     /*=========================================================================*/
-    delay_us(300);
- 68e:	2096      	movs	r0, #150	; 0x96
- 690:	0040      	lsls	r0, r0, #1
- 692:	4b2d      	ldr	r3, [pc, #180]	; (748 <main+0x134>)
- 694:	4798      	blx	r3
-    SaLDigitalOut(accelModule.SS,false);
- 696:	ab02      	add	r3, sp, #8
- 698:	78da      	ldrb	r2, [r3, #3]
+
+
+}
+     a42:	bd38      	pop	{r3, r4, r5, pc}
+     a44:	41004400 	.word	0x41004400
+     a48:	000004c5 	.word	0x000004c5
+     a4c:	00000115 	.word	0x00000115
+
+00000a50 <initBaroSensor>:
+
+void initBaroSensor(struct spiModule *const module ) {
+     a50:	b510      	push	{r4, lr}
+     a52:	1c04      	adds	r4, r0, #0
+    /*=========================================================================
+    			baro init stuff
+    -----------------------------------------------------------------------*/
+    SaLDigitalOut(module->SS,false);
+     a54:	78c3      	ldrb	r3, [r0, #3]
     uint8_t port_index  = (gpio_pin / 128);
     uint8_t group_index = (gpio_pin / 32);
     /* Array of available ports */
     Port *const ports[PORT_INST_NUM] = PORT_INSTS;
 
     if (port_index < PORT_INST_NUM) {
- 69a:	09d1      	lsrs	r1, r2, #7
+     a56:	09d9      	lsrs	r1, r3, #7
         return &(ports[port_index]->Group[group_index]);
     } else {
         return NULL;
- 69c:	2300      	movs	r3, #0
+     a58:	2200      	movs	r2, #0
     uint8_t port_index  = (gpio_pin / 128);
     uint8_t group_index = (gpio_pin / 32);
     /* Array of available ports */
     Port *const ports[PORT_INST_NUM] = PORT_INSTS;
 
     if (port_index < PORT_INST_NUM) {
- 69e:	2900      	cmp	r1, #0
- 6a0:	d104      	bne.n	6ac <main+0x98>
+     a5a:	2900      	cmp	r1, #0
+     a5c:	d104      	bne.n	a68 <initBaroSensor+0x18>
         return &(ports[port_index]->Group[group_index]);
- 6a2:	0953      	lsrs	r3, r2, #5
- 6a4:	01db      	lsls	r3, r3, #7
- 6a6:	4929      	ldr	r1, [pc, #164]	; (74c <main+0x138>)
- 6a8:	468c      	mov	ip, r1
- 6aa:	4463      	add	r3, ip
+     a5e:	095a      	lsrs	r2, r3, #5
+     a60:	01d2      	lsls	r2, r2, #7
+     a62:	4911      	ldr	r1, [pc, #68]	; (aa8 <initBaroSensor+0x58>)
+     a64:	468c      	mov	ip, r1
+     a66:	4462      	add	r2, ip
 
 void SaLPinMode(uint8_t pin,uint8_t DIR);
 
 static inline void SaLDigitalOut(uint8_t pin, uint8_t level) {
 	volatile PortGroup *const port = SaLGetPort(pin);
 	uint32_t pin_mask = (1UL << (pin % 32));
- 6ac:	211f      	movs	r1, #31
- 6ae:	400a      	ands	r2, r1
- 6b0:	391e      	subs	r1, #30
- 6b2:	4091      	lsls	r1, r2
+     a68:	211f      	movs	r1, #31
+     a6a:	400b      	ands	r3, r1
+     a6c:	391e      	subs	r1, #30
+     a6e:	4099      	lsls	r1, r3
 	
 
 	if (level) {
 		port->OUTSET.reg = pin_mask;
 		} else {
 		port->OUTCLR.reg = pin_mask;
- 6b4:	6159      	str	r1, [r3, #20]
-    byteOut(&accelModule,ADXL345_REG_DEVID);
- 6b6:	ac02      	add	r4, sp, #8
- 6b8:	1c20      	adds	r0, r4, #0
- 6ba:	2100      	movs	r1, #0
- 6bc:	4b24      	ldr	r3, [pc, #144]	; (750 <main+0x13c>)
- 6be:	4798      	blx	r3
-    volatile uint8_t devId = getByte(&accelModule);
- 6c0:	1c20      	adds	r0, r4, #0
- 6c2:	4b24      	ldr	r3, [pc, #144]	; (754 <main+0x140>)
- 6c4:	4798      	blx	r3
- 6c6:	466b      	mov	r3, sp
- 6c8:	71d8      	strb	r0, [r3, #7]
-    SaLDigitalOut(accelModule.SS,true);
- 6ca:	78e2      	ldrb	r2, [r4, #3]
+     a70:	6151      	str	r1, [r2, #20]
+    byteOut(module,cmdReset_);
+     a72:	1c20      	adds	r0, r4, #0
+     a74:	211e      	movs	r1, #30
+     a76:	4b0d      	ldr	r3, [pc, #52]	; (aac <initBaroSensor+0x5c>)
+     a78:	4798      	blx	r3
+    SaLDigitalOut(module->SS,true);
+     a7a:	78e3      	ldrb	r3, [r4, #3]
     uint8_t port_index  = (gpio_pin / 128);
     uint8_t group_index = (gpio_pin / 32);
     /* Array of available ports */
     Port *const ports[PORT_INST_NUM] = PORT_INSTS;
 
     if (port_index < PORT_INST_NUM) {
- 6cc:	09d1      	lsrs	r1, r2, #7
+     a7c:	09d9      	lsrs	r1, r3, #7
         return &(ports[port_index]->Group[group_index]);
     } else {
         return NULL;
- 6ce:	2300      	movs	r3, #0
+     a7e:	2200      	movs	r2, #0
     uint8_t port_index  = (gpio_pin / 128);
     uint8_t group_index = (gpio_pin / 32);
     /* Array of available ports */
     Port *const ports[PORT_INST_NUM] = PORT_INSTS;
 
     if (port_index < PORT_INST_NUM) {
- 6d0:	2900      	cmp	r1, #0
- 6d2:	d104      	bne.n	6de <main+0xca>
+     a80:	2900      	cmp	r1, #0
+     a82:	d104      	bne.n	a8e <initBaroSensor+0x3e>
         return &(ports[port_index]->Group[group_index]);
- 6d4:	0953      	lsrs	r3, r2, #5
- 6d6:	01db      	lsls	r3, r3, #7
- 6d8:	491c      	ldr	r1, [pc, #112]	; (74c <main+0x138>)
- 6da:	468c      	mov	ip, r1
- 6dc:	4463      	add	r3, ip
+     a84:	095a      	lsrs	r2, r3, #5
+     a86:	01d2      	lsls	r2, r2, #7
+     a88:	4907      	ldr	r1, [pc, #28]	; (aa8 <initBaroSensor+0x58>)
+     a8a:	468c      	mov	ip, r1
+     a8c:	4462      	add	r2, ip
 
 void SaLPinMode(uint8_t pin,uint8_t DIR);
 
 static inline void SaLDigitalOut(uint8_t pin, uint8_t level) {
 	volatile PortGroup *const port = SaLGetPort(pin);
 	uint32_t pin_mask = (1UL << (pin % 32));
- 6de:	211f      	movs	r1, #31
- 6e0:	400a      	ands	r2, r1
- 6e2:	391e      	subs	r1, #30
- 6e4:	4091      	lsls	r1, r2
+     a8e:	211f      	movs	r1, #31
+     a90:	400b      	ands	r3, r1
+     a92:	391e      	subs	r1, #30
+     a94:	4099      	lsls	r1, r3
 	
 
 	if (level) {
 		port->OUTSET.reg = pin_mask;
- 6e6:	6199      	str	r1, [r3, #24]
+     a96:	6191      	str	r1, [r2, #24]
+    delay_us(30);
+     a98:	201e      	movs	r0, #30
+     a9a:	4b05      	ldr	r3, [pc, #20]	; (ab0 <initBaroSensor+0x60>)
+     a9c:	4798      	blx	r3
+    read_coeff(module);
+     a9e:	1c20      	adds	r0, r4, #0
+     aa0:	4b04      	ldr	r3, [pc, #16]	; (ab4 <initBaroSensor+0x64>)
+     aa2:	4798      	blx	r3
+    /*=========================================================================*/
+
+
+}
+     aa4:	bd10      	pop	{r4, pc}
+     aa6:	46c0      	nop			; (mov r8, r8)
+     aa8:	41004400 	.word	0x41004400
+     aac:	000004c5 	.word	0x000004c5
+     ab0:	0000064d 	.word	0x0000064d
+     ab4:	00000429 	.word	0x00000429
+
+00000ab8 <main>:
+
+volatile uint32_t counter = 0;
+
+int main(void) {
+     ab8:	b570      	push	{r4, r5, r6, lr}
+     aba:	b086      	sub	sp, #24
+    /* Initialize the SAM system */
+    SystemInit();
+     abc:	4b27      	ldr	r3, [pc, #156]	; (b5c <main+0xa4>)
+     abe:	4798      	blx	r3
+    ClockInit();
+     ac0:	4b27      	ldr	r3, [pc, #156]	; (b60 <main+0xa8>)
+     ac2:	4798      	blx	r3
+    SaLDelayInit();
+     ac4:	4b27      	ldr	r3, [pc, #156]	; (b64 <main+0xac>)
+     ac6:	4798      	blx	r3
+    PinConfig();
+     ac8:	4b27      	ldr	r3, [pc, #156]	; (b68 <main+0xb0>)
+     aca:	4798      	blx	r3
+    struct spiModule baroModule =baroModuleSetup();
+     acc:	a804      	add	r0, sp, #16
+     ace:	4b27      	ldr	r3, [pc, #156]	; (b6c <main+0xb4>)
+     ad0:	4798      	blx	r3
+    struct spiModule accelModule =accelModuleSetup();
+     ad2:	a802      	add	r0, sp, #8
+     ad4:	4b26      	ldr	r3, [pc, #152]	; (b70 <main+0xb8>)
+     ad6:	4798      	blx	r3
+
+    initAccelSensor(&accelModule);
+     ad8:	a802      	add	r0, sp, #8
+     ada:	4b26      	ldr	r3, [pc, #152]	; (b74 <main+0xbc>)
+     adc:	4798      	blx	r3
+    initBaroSensor(&baroModule);
+     ade:	a804      	add	r0, sp, #16
+     ae0:	4b25      	ldr	r3, [pc, #148]	; (b78 <main+0xc0>)
+     ae2:	4798      	blx	r3
+
+
 
     volatile int16_t accelX = getX(&accelModule);
- 6e8:	a802      	add	r0, sp, #8
- 6ea:	4b1b      	ldr	r3, [pc, #108]	; (758 <main+0x144>)
- 6ec:	4798      	blx	r3
- 6ee:	ab01      	add	r3, sp, #4
- 6f0:	8018      	strh	r0, [r3, #0]
+     ae4:	a802      	add	r0, sp, #8
+     ae6:	4b25      	ldr	r3, [pc, #148]	; (b7c <main+0xc4>)
+     ae8:	4798      	blx	r3
+     aea:	466b      	mov	r3, sp
+     aec:	80d8      	strh	r0, [r3, #6]
     volatile int16_t accelY =  getY(&accelModule);
- 6f2:	a802      	add	r0, sp, #8
- 6f4:	4b19      	ldr	r3, [pc, #100]	; (75c <main+0x148>)
- 6f6:	4798      	blx	r3
- 6f8:	466b      	mov	r3, sp
- 6fa:	8058      	strh	r0, [r3, #2]
+     aee:	a802      	add	r0, sp, #8
+     af0:	4b23      	ldr	r3, [pc, #140]	; (b80 <main+0xc8>)
+     af2:	4798      	blx	r3
+     af4:	ab01      	add	r3, sp, #4
+     af6:	8018      	strh	r0, [r3, #0]
     volatile int16_t accelZ =  getZ(&accelModule);
- 6fc:	a802      	add	r0, sp, #8
- 6fe:	4b18      	ldr	r3, [pc, #96]	; (760 <main+0x14c>)
- 700:	4798      	blx	r3
- 702:	466b      	mov	r3, sp
- 704:	8018      	strh	r0, [r3, #0]
+     af8:	a802      	add	r0, sp, #8
+     afa:	4b22      	ldr	r3, [pc, #136]	; (b84 <main+0xcc>)
+     afc:	4798      	blx	r3
+     afe:	466b      	mov	r3, sp
+     b00:	8058      	strh	r0, [r3, #2]
+
+    //delay_ms(1000);
+    SaLPlayTone(100);
+     b02:	2064      	movs	r0, #100	; 0x64
+     b04:	4c20      	ldr	r4, [pc, #128]	; (b88 <main+0xd0>)
+     b06:	47a0      	blx	r4
+    SaLPlayTone(200);
+     b08:	20c8      	movs	r0, #200	; 0xc8
+     b0a:	47a0      	blx	r4
+    SaLPlayTone(300);
+     b0c:	2096      	movs	r0, #150	; 0x96
+     b0e:	0040      	lsls	r0, r0, #1
+     b10:	47a0      	blx	r4
+    SaLPlayTone(400);
+     b12:	20c8      	movs	r0, #200	; 0xc8
+     b14:	0040      	lsls	r0, r0, #1
+     b16:	47a0      	blx	r4
+    SaLPlayTone(500);
+     b18:	20fa      	movs	r0, #250	; 0xfa
+     b1a:	0040      	lsls	r0, r0, #1
+     b1c:	47a0      	blx	r4
+    SaLPlayTone(800);
+     b1e:	20c8      	movs	r0, #200	; 0xc8
+     b20:	0080      	lsls	r0, r0, #2
+     b22:	47a0      	blx	r4
+    SaLPlayTone(900);
+     b24:	20e1      	movs	r0, #225	; 0xe1
+     b26:	0080      	lsls	r0, r0, #2
+     b28:	47a0      	blx	r4
+	delay_ms(10000);
+     b2a:	4818      	ldr	r0, [pc, #96]	; (b8c <main+0xd4>)
+     b2c:	4b18      	ldr	r3, [pc, #96]	; (b90 <main+0xd8>)
+     b2e:	4798      	blx	r3
+    SaLPlayTone(170);
+     b30:	20aa      	movs	r0, #170	; 0xaa
+     b32:	47a0      	blx	r4
+
 
 
 
     while (1) {
         counter++;
- 706:	4c17      	ldr	r4, [pc, #92]	; (764 <main+0x150>)
-     //   delay_ms(100);
-        accelX = getX(&accelModule);
- 708:	4e13      	ldr	r6, [pc, #76]	; (758 <main+0x144>)
-        accelY =  getY(&accelModule);
- 70a:	4d14      	ldr	r5, [pc, #80]	; (75c <main+0x148>)
-    volatile int16_t accelZ =  getZ(&accelModule);
+     b34:	4c17      	ldr	r4, [pc, #92]	; (b94 <main+0xdc>)
+        getevents(&accelModule);
+     b36:	4e18      	ldr	r6, [pc, #96]	; (b98 <main+0xe0>)
+        accelX = currentX();
+     b38:	4d18      	ldr	r5, [pc, #96]	; (b9c <main+0xe4>)
+
 
 
 
     while (1) {
         counter++;
- 70c:	6823      	ldr	r3, [r4, #0]
- 70e:	3301      	adds	r3, #1
- 710:	6023      	str	r3, [r4, #0]
-     //   delay_ms(100);
-        accelX = getX(&accelModule);
- 712:	a802      	add	r0, sp, #8
- 714:	47b0      	blx	r6
- 716:	ab01      	add	r3, sp, #4
- 718:	8018      	strh	r0, [r3, #0]
-        accelY =  getY(&accelModule);
- 71a:	a802      	add	r0, sp, #8
- 71c:	47a8      	blx	r5
- 71e:	466b      	mov	r3, sp
- 720:	8058      	strh	r0, [r3, #2]
-        accelZ =  getZ(&accelModule);
- 722:	a802      	add	r0, sp, #8
- 724:	4b0e      	ldr	r3, [pc, #56]	; (760 <main+0x14c>)
- 726:	4798      	blx	r3
- 728:	466b      	mov	r3, sp
- 72a:	8018      	strh	r0, [r3, #0]
+     b3a:	6823      	ldr	r3, [r4, #0]
+     b3c:	3301      	adds	r3, #1
+     b3e:	6023      	str	r3, [r4, #0]
+        getevents(&accelModule);
+     b40:	a802      	add	r0, sp, #8
+     b42:	47b0      	blx	r6
+        accelX = currentX();
+     b44:	47a8      	blx	r5
+     b46:	466b      	mov	r3, sp
+     b48:	80d8      	strh	r0, [r3, #6]
+        accelY = currentY();
+     b4a:	4b15      	ldr	r3, [pc, #84]	; (ba0 <main+0xe8>)
+     b4c:	4798      	blx	r3
+     b4e:	ab01      	add	r3, sp, #4
+     b50:	8018      	strh	r0, [r3, #0]
+        accelZ = currentZ();
+     b52:	4b14      	ldr	r3, [pc, #80]	; (ba4 <main+0xec>)
+     b54:	4798      	blx	r3
+     b56:	466b      	mov	r3, sp
+     b58:	8058      	strh	r0, [r3, #2]
 
     }
- 72c:	e7ee      	b.n	70c <main+0xf8>
- 72e:	46c0      	nop			; (mov r8, r8)
- 730:	0000054d 	.word	0x0000054d
- 734:	000003c1 	.word	0x000003c1
- 738:	0000055d 	.word	0x0000055d
- 73c:	00000585 	.word	0x00000585
- 740:	000005cd 	.word	0x000005cd
- 744:	00000115 	.word	0x00000115
- 748:	000003dd 	.word	0x000003dd
- 74c:	41004400 	.word	0x41004400
- 750:	000002a9 	.word	0x000002a9
- 754:	0000033d 	.word	0x0000033d
- 758:	00000171 	.word	0x00000171
- 75c:	000001d9 	.word	0x000001d9
- 760:	00000241 	.word	0x00000241
- 764:	20000454 	.word	0x20000454
+     b5a:	e7ee      	b.n	b3a <main+0x82>
+     b5c:	000007fd 	.word	0x000007fd
+     b60:	0000080d 	.word	0x0000080d
+     b64:	0000062d 	.word	0x0000062d
+     b68:	00000895 	.word	0x00000895
+     b6c:	000008c9 	.word	0x000008c9
+     b70:	00000911 	.word	0x00000911
+     b74:	00000959 	.word	0x00000959
+     b78:	00000a51 	.word	0x00000a51
+     b7c:	00000171 	.word	0x00000171
+     b80:	000001d9 	.word	0x000001d9
+     b84:	00000241 	.word	0x00000241
+     b88:	000005dd 	.word	0x000005dd
+     b8c:	00002710 	.word	0x00002710
+     b90:	00000679 	.word	0x00000679
+     b94:	20000454 	.word	0x20000454
+     b98:	000002a9 	.word	0x000002a9
+     b9c:	0000038d 	.word	0x0000038d
+     ba0:	000003c1 	.word	0x000003c1
+     ba4:	000003f5 	.word	0x000003f5
 
-00000768 <__libc_init_array>:
- 768:	b570      	push	{r4, r5, r6, lr}
- 76a:	4e0d      	ldr	r6, [pc, #52]	; (7a0 <__libc_init_array+0x38>)
- 76c:	4d0d      	ldr	r5, [pc, #52]	; (7a4 <__libc_init_array+0x3c>)
- 76e:	2400      	movs	r4, #0
- 770:	1bad      	subs	r5, r5, r6
- 772:	10ad      	asrs	r5, r5, #2
- 774:	d005      	beq.n	782 <__libc_init_array+0x1a>
- 776:	00a3      	lsls	r3, r4, #2
- 778:	58f3      	ldr	r3, [r6, r3]
- 77a:	3401      	adds	r4, #1
- 77c:	4798      	blx	r3
- 77e:	42a5      	cmp	r5, r4
- 780:	d1f9      	bne.n	776 <__libc_init_array+0xe>
- 782:	f000 f8b1 	bl	8e8 <_init>
- 786:	4e08      	ldr	r6, [pc, #32]	; (7a8 <__libc_init_array+0x40>)
- 788:	4d08      	ldr	r5, [pc, #32]	; (7ac <__libc_init_array+0x44>)
- 78a:	2400      	movs	r4, #0
- 78c:	1bad      	subs	r5, r5, r6
- 78e:	10ad      	asrs	r5, r5, #2
- 790:	d005      	beq.n	79e <__libc_init_array+0x36>
- 792:	00a3      	lsls	r3, r4, #2
- 794:	58f3      	ldr	r3, [r6, r3]
- 796:	3401      	adds	r4, #1
- 798:	4798      	blx	r3
- 79a:	42a5      	cmp	r5, r4
- 79c:	d1f9      	bne.n	792 <__libc_init_array+0x2a>
- 79e:	bd70      	pop	{r4, r5, r6, pc}
- 7a0:	000008f4 	.word	0x000008f4
- 7a4:	000008f4 	.word	0x000008f4
- 7a8:	000008f4 	.word	0x000008f4
- 7ac:	000008fc 	.word	0x000008fc
+00000ba8 <__aeabi_dmul>:
+     ba8:	b5f0      	push	{r4, r5, r6, r7, lr}
+     baa:	465f      	mov	r7, fp
+     bac:	4656      	mov	r6, sl
+     bae:	464d      	mov	r5, r9
+     bb0:	4644      	mov	r4, r8
+     bb2:	b4f0      	push	{r4, r5, r6, r7}
+     bb4:	1c05      	adds	r5, r0, #0
+     bb6:	1c06      	adds	r6, r0, #0
+     bb8:	0308      	lsls	r0, r1, #12
+     bba:	b087      	sub	sp, #28
+     bbc:	4699      	mov	r9, r3
+     bbe:	004f      	lsls	r7, r1, #1
+     bc0:	0b03      	lsrs	r3, r0, #12
+     bc2:	0fcc      	lsrs	r4, r1, #31
+     bc4:	4692      	mov	sl, r2
+     bc6:	469b      	mov	fp, r3
+     bc8:	0d7f      	lsrs	r7, r7, #21
+     bca:	9401      	str	r4, [sp, #4]
+     bcc:	d067      	beq.n	c9e <__aeabi_dmul+0xf6>
+     bce:	4b6c      	ldr	r3, [pc, #432]	; (d80 <__aeabi_dmul+0x1d8>)
+     bd0:	429f      	cmp	r7, r3
+     bd2:	d036      	beq.n	c42 <__aeabi_dmul+0x9a>
+     bd4:	2080      	movs	r0, #128	; 0x80
+     bd6:	465b      	mov	r3, fp
+     bd8:	0340      	lsls	r0, r0, #13
+     bda:	4318      	orrs	r0, r3
+     bdc:	00c0      	lsls	r0, r0, #3
+     bde:	0f6b      	lsrs	r3, r5, #29
+     be0:	4318      	orrs	r0, r3
+     be2:	4b68      	ldr	r3, [pc, #416]	; (d84 <__aeabi_dmul+0x1dc>)
+     be4:	4683      	mov	fp, r0
+     be6:	469c      	mov	ip, r3
+     be8:	2300      	movs	r3, #0
+     bea:	4698      	mov	r8, r3
+     bec:	00ee      	lsls	r6, r5, #3
+     bee:	4467      	add	r7, ip
+     bf0:	9300      	str	r3, [sp, #0]
+     bf2:	464b      	mov	r3, r9
+     bf4:	4649      	mov	r1, r9
+     bf6:	031d      	lsls	r5, r3, #12
+     bf8:	0fc9      	lsrs	r1, r1, #31
+     bfa:	005b      	lsls	r3, r3, #1
+     bfc:	4652      	mov	r2, sl
+     bfe:	0b2d      	lsrs	r5, r5, #12
+     c00:	0d5b      	lsrs	r3, r3, #21
+     c02:	4689      	mov	r9, r1
+     c04:	d100      	bne.n	c08 <__aeabi_dmul+0x60>
+     c06:	e06e      	b.n	ce6 <__aeabi_dmul+0x13e>
+     c08:	495d      	ldr	r1, [pc, #372]	; (d80 <__aeabi_dmul+0x1d8>)
+     c0a:	428b      	cmp	r3, r1
+     c0c:	d064      	beq.n	cd8 <__aeabi_dmul+0x130>
+     c0e:	2080      	movs	r0, #128	; 0x80
+     c10:	495c      	ldr	r1, [pc, #368]	; (d84 <__aeabi_dmul+0x1dc>)
+     c12:	0340      	lsls	r0, r0, #13
+     c14:	468c      	mov	ip, r1
+     c16:	2100      	movs	r1, #0
+     c18:	4305      	orrs	r5, r0
+     c1a:	00ed      	lsls	r5, r5, #3
+     c1c:	0f50      	lsrs	r0, r2, #29
+     c1e:	4305      	orrs	r5, r0
+     c20:	00d2      	lsls	r2, r2, #3
+     c22:	4463      	add	r3, ip
+     c24:	4648      	mov	r0, r9
+     c26:	18ff      	adds	r7, r7, r3
+     c28:	1c7b      	adds	r3, r7, #1
+     c2a:	469a      	mov	sl, r3
+     c2c:	9b00      	ldr	r3, [sp, #0]
+     c2e:	4060      	eors	r0, r4
+     c30:	9002      	str	r0, [sp, #8]
+     c32:	430b      	orrs	r3, r1
+     c34:	2b0f      	cmp	r3, #15
+     c36:	d900      	bls.n	c3a <__aeabi_dmul+0x92>
+     c38:	e0ac      	b.n	d94 <__aeabi_dmul+0x1ec>
+     c3a:	4853      	ldr	r0, [pc, #332]	; (d88 <__aeabi_dmul+0x1e0>)
+     c3c:	009b      	lsls	r3, r3, #2
+     c3e:	58c3      	ldr	r3, [r0, r3]
+     c40:	469f      	mov	pc, r3
+     c42:	465b      	mov	r3, fp
+     c44:	431d      	orrs	r5, r3
+     c46:	d000      	beq.n	c4a <__aeabi_dmul+0xa2>
+     c48:	e082      	b.n	d50 <__aeabi_dmul+0x1a8>
+     c4a:	2308      	movs	r3, #8
+     c4c:	9300      	str	r3, [sp, #0]
+     c4e:	2300      	movs	r3, #0
+     c50:	469b      	mov	fp, r3
+     c52:	3302      	adds	r3, #2
+     c54:	2600      	movs	r6, #0
+     c56:	4698      	mov	r8, r3
+     c58:	e7cb      	b.n	bf2 <__aeabi_dmul+0x4a>
+     c5a:	9b02      	ldr	r3, [sp, #8]
+     c5c:	9301      	str	r3, [sp, #4]
+     c5e:	4643      	mov	r3, r8
+     c60:	2b02      	cmp	r3, #2
+     c62:	d159      	bne.n	d18 <__aeabi_dmul+0x170>
+     c64:	2401      	movs	r4, #1
+     c66:	2500      	movs	r5, #0
+     c68:	2600      	movs	r6, #0
+     c6a:	9b01      	ldr	r3, [sp, #4]
+     c6c:	401c      	ands	r4, r3
+     c6e:	4b44      	ldr	r3, [pc, #272]	; (d80 <__aeabi_dmul+0x1d8>)
+     c70:	2100      	movs	r1, #0
+     c72:	032d      	lsls	r5, r5, #12
+     c74:	0d0a      	lsrs	r2, r1, #20
+     c76:	0512      	lsls	r2, r2, #20
+     c78:	0b2d      	lsrs	r5, r5, #12
+     c7a:	4315      	orrs	r5, r2
+     c7c:	4a43      	ldr	r2, [pc, #268]	; (d8c <__aeabi_dmul+0x1e4>)
+     c7e:	051b      	lsls	r3, r3, #20
+     c80:	4015      	ands	r5, r2
+     c82:	431d      	orrs	r5, r3
+     c84:	006d      	lsls	r5, r5, #1
+     c86:	07e4      	lsls	r4, r4, #31
+     c88:	086d      	lsrs	r5, r5, #1
+     c8a:	4325      	orrs	r5, r4
+     c8c:	1c30      	adds	r0, r6, #0
+     c8e:	1c29      	adds	r1, r5, #0
+     c90:	b007      	add	sp, #28
+     c92:	bc3c      	pop	{r2, r3, r4, r5}
+     c94:	4690      	mov	r8, r2
+     c96:	4699      	mov	r9, r3
+     c98:	46a2      	mov	sl, r4
+     c9a:	46ab      	mov	fp, r5
+     c9c:	bdf0      	pop	{r4, r5, r6, r7, pc}
+     c9e:	432b      	orrs	r3, r5
+     ca0:	d04e      	beq.n	d40 <__aeabi_dmul+0x198>
+     ca2:	465b      	mov	r3, fp
+     ca4:	2b00      	cmp	r3, #0
+     ca6:	d100      	bne.n	caa <__aeabi_dmul+0x102>
+     ca8:	e185      	b.n	fb6 <__aeabi_dmul+0x40e>
+     caa:	4658      	mov	r0, fp
+     cac:	f000 fa88 	bl	11c0 <__clzsi2>
+     cb0:	1c02      	adds	r2, r0, #0
+     cb2:	2328      	movs	r3, #40	; 0x28
+     cb4:	1c29      	adds	r1, r5, #0
+     cb6:	1a9b      	subs	r3, r3, r2
+     cb8:	1c16      	adds	r6, r2, #0
+     cba:	4658      	mov	r0, fp
+     cbc:	40d9      	lsrs	r1, r3
+     cbe:	3e08      	subs	r6, #8
+     cc0:	40b0      	lsls	r0, r6
+     cc2:	1c0b      	adds	r3, r1, #0
+     cc4:	40b5      	lsls	r5, r6
+     cc6:	4303      	orrs	r3, r0
+     cc8:	469b      	mov	fp, r3
+     cca:	1c2e      	adds	r6, r5, #0
+     ccc:	2300      	movs	r3, #0
+     cce:	4f30      	ldr	r7, [pc, #192]	; (d90 <__aeabi_dmul+0x1e8>)
+     cd0:	9300      	str	r3, [sp, #0]
+     cd2:	1abf      	subs	r7, r7, r2
+     cd4:	4698      	mov	r8, r3
+     cd6:	e78c      	b.n	bf2 <__aeabi_dmul+0x4a>
+     cd8:	4651      	mov	r1, sl
+     cda:	4329      	orrs	r1, r5
+     cdc:	d12e      	bne.n	d3c <__aeabi_dmul+0x194>
+     cde:	2500      	movs	r5, #0
+     ce0:	2200      	movs	r2, #0
+     ce2:	2102      	movs	r1, #2
+     ce4:	e79e      	b.n	c24 <__aeabi_dmul+0x7c>
+     ce6:	4651      	mov	r1, sl
+     ce8:	4329      	orrs	r1, r5
+     cea:	d023      	beq.n	d34 <__aeabi_dmul+0x18c>
+     cec:	2d00      	cmp	r5, #0
+     cee:	d100      	bne.n	cf2 <__aeabi_dmul+0x14a>
+     cf0:	e154      	b.n	f9c <__aeabi_dmul+0x3f4>
+     cf2:	1c28      	adds	r0, r5, #0
+     cf4:	f000 fa64 	bl	11c0 <__clzsi2>
+     cf8:	1c03      	adds	r3, r0, #0
+     cfa:	2128      	movs	r1, #40	; 0x28
+     cfc:	4650      	mov	r0, sl
+     cfe:	1ac9      	subs	r1, r1, r3
+     d00:	1c1a      	adds	r2, r3, #0
+     d02:	40c8      	lsrs	r0, r1
+     d04:	4651      	mov	r1, sl
+     d06:	3a08      	subs	r2, #8
+     d08:	4091      	lsls	r1, r2
+     d0a:	4095      	lsls	r5, r2
+     d0c:	1c0a      	adds	r2, r1, #0
+     d0e:	4305      	orrs	r5, r0
+     d10:	481f      	ldr	r0, [pc, #124]	; (d90 <__aeabi_dmul+0x1e8>)
+     d12:	2100      	movs	r1, #0
+     d14:	1ac3      	subs	r3, r0, r3
+     d16:	e785      	b.n	c24 <__aeabi_dmul+0x7c>
+     d18:	2b03      	cmp	r3, #3
+     d1a:	d100      	bne.n	d1e <__aeabi_dmul+0x176>
+     d1c:	e1c2      	b.n	10a4 <__aeabi_dmul+0x4fc>
+     d1e:	2b01      	cmp	r3, #1
+     d20:	d000      	beq.n	d24 <__aeabi_dmul+0x17c>
+     d22:	e16d      	b.n	1000 <__aeabi_dmul+0x458>
+     d24:	4644      	mov	r4, r8
+     d26:	9b01      	ldr	r3, [sp, #4]
+     d28:	2500      	movs	r5, #0
+     d2a:	401c      	ands	r4, r3
+     d2c:	b2e4      	uxtb	r4, r4
+     d2e:	2300      	movs	r3, #0
+     d30:	2600      	movs	r6, #0
+     d32:	e79d      	b.n	c70 <__aeabi_dmul+0xc8>
+     d34:	2500      	movs	r5, #0
+     d36:	2200      	movs	r2, #0
+     d38:	2101      	movs	r1, #1
+     d3a:	e773      	b.n	c24 <__aeabi_dmul+0x7c>
+     d3c:	2103      	movs	r1, #3
+     d3e:	e771      	b.n	c24 <__aeabi_dmul+0x7c>
+     d40:	2304      	movs	r3, #4
+     d42:	9300      	str	r3, [sp, #0]
+     d44:	2300      	movs	r3, #0
+     d46:	469b      	mov	fp, r3
+     d48:	3301      	adds	r3, #1
+     d4a:	2600      	movs	r6, #0
+     d4c:	4698      	mov	r8, r3
+     d4e:	e750      	b.n	bf2 <__aeabi_dmul+0x4a>
+     d50:	230c      	movs	r3, #12
+     d52:	9300      	str	r3, [sp, #0]
+     d54:	3b09      	subs	r3, #9
+     d56:	4698      	mov	r8, r3
+     d58:	e74b      	b.n	bf2 <__aeabi_dmul+0x4a>
+     d5a:	2580      	movs	r5, #128	; 0x80
+     d5c:	2400      	movs	r4, #0
+     d5e:	032d      	lsls	r5, r5, #12
+     d60:	2600      	movs	r6, #0
+     d62:	4b07      	ldr	r3, [pc, #28]	; (d80 <__aeabi_dmul+0x1d8>)
+     d64:	e784      	b.n	c70 <__aeabi_dmul+0xc8>
+     d66:	464b      	mov	r3, r9
+     d68:	46ab      	mov	fp, r5
+     d6a:	1c16      	adds	r6, r2, #0
+     d6c:	9301      	str	r3, [sp, #4]
+     d6e:	4688      	mov	r8, r1
+     d70:	e775      	b.n	c5e <__aeabi_dmul+0xb6>
+     d72:	9b02      	ldr	r3, [sp, #8]
+     d74:	46ab      	mov	fp, r5
+     d76:	1c16      	adds	r6, r2, #0
+     d78:	9301      	str	r3, [sp, #4]
+     d7a:	4688      	mov	r8, r1
+     d7c:	e76f      	b.n	c5e <__aeabi_dmul+0xb6>
+     d7e:	46c0      	nop			; (mov r8, r8)
+     d80:	000007ff 	.word	0x000007ff
+     d84:	fffffc01 	.word	0xfffffc01
+     d88:	00001374 	.word	0x00001374
+     d8c:	800fffff 	.word	0x800fffff
+     d90:	fffffc0d 	.word	0xfffffc0d
+     d94:	0c33      	lsrs	r3, r6, #16
+     d96:	0436      	lsls	r6, r6, #16
+     d98:	0c36      	lsrs	r6, r6, #16
+     d9a:	469c      	mov	ip, r3
+     d9c:	1c33      	adds	r3, r6, #0
+     d9e:	0c14      	lsrs	r4, r2, #16
+     da0:	0412      	lsls	r2, r2, #16
+     da2:	0c12      	lsrs	r2, r2, #16
+     da4:	4353      	muls	r3, r2
+     da6:	4698      	mov	r8, r3
+     da8:	4663      	mov	r3, ip
+     daa:	4353      	muls	r3, r2
+     dac:	4699      	mov	r9, r3
+     dae:	4663      	mov	r3, ip
+     db0:	4363      	muls	r3, r4
+     db2:	9301      	str	r3, [sp, #4]
+     db4:	1c33      	adds	r3, r6, #0
+     db6:	4641      	mov	r1, r8
+     db8:	4363      	muls	r3, r4
+     dba:	0c09      	lsrs	r1, r1, #16
+     dbc:	444b      	add	r3, r9
+     dbe:	185b      	adds	r3, r3, r1
+     dc0:	4599      	cmp	r9, r3
+     dc2:	d905      	bls.n	dd0 <__aeabi_dmul+0x228>
+     dc4:	2080      	movs	r0, #128	; 0x80
+     dc6:	0240      	lsls	r0, r0, #9
+     dc8:	4681      	mov	r9, r0
+     dca:	9901      	ldr	r1, [sp, #4]
+     dcc:	4449      	add	r1, r9
+     dce:	9101      	str	r1, [sp, #4]
+     dd0:	0c19      	lsrs	r1, r3, #16
+     dd2:	9103      	str	r1, [sp, #12]
+     dd4:	4641      	mov	r1, r8
+     dd6:	0409      	lsls	r1, r1, #16
+     dd8:	0c09      	lsrs	r1, r1, #16
+     dda:	041b      	lsls	r3, r3, #16
+     ddc:	185b      	adds	r3, r3, r1
+     dde:	9304      	str	r3, [sp, #16]
+     de0:	0c2b      	lsrs	r3, r5, #16
+     de2:	4698      	mov	r8, r3
+     de4:	1c33      	adds	r3, r6, #0
+     de6:	042d      	lsls	r5, r5, #16
+     de8:	0c29      	lsrs	r1, r5, #16
+     dea:	434b      	muls	r3, r1
+     dec:	4660      	mov	r0, ip
+     dee:	9300      	str	r3, [sp, #0]
+     df0:	4643      	mov	r3, r8
+     df2:	4665      	mov	r5, ip
+     df4:	4358      	muls	r0, r3
+     df6:	435e      	muls	r6, r3
+     df8:	9b00      	ldr	r3, [sp, #0]
+     dfa:	434d      	muls	r5, r1
+     dfc:	0c1b      	lsrs	r3, r3, #16
+     dfe:	4699      	mov	r9, r3
+     e00:	19ae      	adds	r6, r5, r6
+     e02:	444e      	add	r6, r9
+     e04:	4684      	mov	ip, r0
+     e06:	42b5      	cmp	r5, r6
+     e08:	d903      	bls.n	e12 <__aeabi_dmul+0x26a>
+     e0a:	2380      	movs	r3, #128	; 0x80
+     e0c:	025b      	lsls	r3, r3, #9
+     e0e:	4699      	mov	r9, r3
+     e10:	44cc      	add	ip, r9
+     e12:	0c35      	lsrs	r5, r6, #16
+     e14:	1c2b      	adds	r3, r5, #0
+     e16:	9803      	ldr	r0, [sp, #12]
+     e18:	4463      	add	r3, ip
+     e1a:	4684      	mov	ip, r0
+     e1c:	9305      	str	r3, [sp, #20]
+     e1e:	9b00      	ldr	r3, [sp, #0]
+     e20:	0436      	lsls	r6, r6, #16
+     e22:	041b      	lsls	r3, r3, #16
+     e24:	0c1b      	lsrs	r3, r3, #16
+     e26:	18f3      	adds	r3, r6, r3
+     e28:	449c      	add	ip, r3
+     e2a:	4660      	mov	r0, ip
+     e2c:	9003      	str	r0, [sp, #12]
+     e2e:	4658      	mov	r0, fp
+     e30:	0405      	lsls	r5, r0, #16
+     e32:	0c06      	lsrs	r6, r0, #16
+     e34:	0c28      	lsrs	r0, r5, #16
+     e36:	4684      	mov	ip, r0
+     e38:	4350      	muls	r0, r2
+     e3a:	1c35      	adds	r5, r6, #0
+     e3c:	4681      	mov	r9, r0
+     e3e:	4660      	mov	r0, ip
+     e40:	4365      	muls	r5, r4
+     e42:	4344      	muls	r4, r0
+     e44:	4648      	mov	r0, r9
+     e46:	0c00      	lsrs	r0, r0, #16
+     e48:	4683      	mov	fp, r0
+     e4a:	4372      	muls	r2, r6
+     e4c:	1914      	adds	r4, r2, r4
+     e4e:	445c      	add	r4, fp
+     e50:	42a2      	cmp	r2, r4
+     e52:	d903      	bls.n	e5c <__aeabi_dmul+0x2b4>
+     e54:	2280      	movs	r2, #128	; 0x80
+     e56:	0252      	lsls	r2, r2, #9
+     e58:	4693      	mov	fp, r2
+     e5a:	445d      	add	r5, fp
+     e5c:	0c22      	lsrs	r2, r4, #16
+     e5e:	18ad      	adds	r5, r5, r2
+     e60:	464a      	mov	r2, r9
+     e62:	0412      	lsls	r2, r2, #16
+     e64:	0c12      	lsrs	r2, r2, #16
+     e66:	0424      	lsls	r4, r4, #16
+     e68:	4640      	mov	r0, r8
+     e6a:	18a4      	adds	r4, r4, r2
+     e6c:	4662      	mov	r2, ip
+     e6e:	434a      	muls	r2, r1
+     e70:	4371      	muls	r1, r6
+     e72:	4346      	muls	r6, r0
+     e74:	4660      	mov	r0, ip
+     e76:	9600      	str	r6, [sp, #0]
+     e78:	4646      	mov	r6, r8
+     e7a:	4370      	muls	r0, r6
+     e7c:	4680      	mov	r8, r0
+     e7e:	0c10      	lsrs	r0, r2, #16
+     e80:	4684      	mov	ip, r0
+     e82:	4488      	add	r8, r1
+     e84:	44e0      	add	r8, ip
+     e86:	4541      	cmp	r1, r8
+     e88:	d905      	bls.n	e96 <__aeabi_dmul+0x2ee>
+     e8a:	2180      	movs	r1, #128	; 0x80
+     e8c:	0249      	lsls	r1, r1, #9
+     e8e:	468c      	mov	ip, r1
+     e90:	9900      	ldr	r1, [sp, #0]
+     e92:	4461      	add	r1, ip
+     e94:	9100      	str	r1, [sp, #0]
+     e96:	9801      	ldr	r0, [sp, #4]
+     e98:	9903      	ldr	r1, [sp, #12]
+     e9a:	4684      	mov	ip, r0
+     e9c:	4461      	add	r1, ip
+     e9e:	4299      	cmp	r1, r3
+     ea0:	419b      	sbcs	r3, r3
+     ea2:	425b      	negs	r3, r3
+     ea4:	4699      	mov	r9, r3
+     ea6:	9805      	ldr	r0, [sp, #20]
+     ea8:	4643      	mov	r3, r8
+     eaa:	4684      	mov	ip, r0
+     eac:	0412      	lsls	r2, r2, #16
+     eae:	0c12      	lsrs	r2, r2, #16
+     eb0:	041b      	lsls	r3, r3, #16
+     eb2:	189b      	adds	r3, r3, r2
+     eb4:	4463      	add	r3, ip
+     eb6:	469c      	mov	ip, r3
+     eb8:	46ab      	mov	fp, r5
+     eba:	4283      	cmp	r3, r0
+     ebc:	419b      	sbcs	r3, r3
+     ebe:	4640      	mov	r0, r8
+     ec0:	190a      	adds	r2, r1, r4
+     ec2:	44cc      	add	ip, r9
+     ec4:	42a2      	cmp	r2, r4
+     ec6:	4189      	sbcs	r1, r1
+     ec8:	44e3      	add	fp, ip
+     eca:	45cc      	cmp	ip, r9
+     ecc:	41b6      	sbcs	r6, r6
+     ece:	465c      	mov	r4, fp
+     ed0:	0c00      	lsrs	r0, r0, #16
+     ed2:	4680      	mov	r8, r0
+     ed4:	4249      	negs	r1, r1
+     ed6:	4276      	negs	r6, r6
+     ed8:	425b      	negs	r3, r3
+     eda:	1864      	adds	r4, r4, r1
+     edc:	4333      	orrs	r3, r6
+     ede:	4498      	add	r8, r3
+     ee0:	428c      	cmp	r4, r1
+     ee2:	4189      	sbcs	r1, r1
+     ee4:	45ab      	cmp	fp, r5
+     ee6:	419b      	sbcs	r3, r3
+     ee8:	4249      	negs	r1, r1
+     eea:	425b      	negs	r3, r3
+     eec:	4319      	orrs	r1, r3
+     eee:	1c0d      	adds	r5, r1, #0
+     ef0:	9b00      	ldr	r3, [sp, #0]
+     ef2:	4445      	add	r5, r8
+     ef4:	18ee      	adds	r6, r5, r3
+     ef6:	0276      	lsls	r6, r6, #9
+     ef8:	0de5      	lsrs	r5, r4, #23
+     efa:	432e      	orrs	r6, r5
+     efc:	46b3      	mov	fp, r6
+     efe:	9b04      	ldr	r3, [sp, #16]
+     f00:	0256      	lsls	r6, r2, #9
+     f02:	431e      	orrs	r6, r3
+     f04:	1e73      	subs	r3, r6, #1
+     f06:	419e      	sbcs	r6, r3
+     f08:	465b      	mov	r3, fp
+     f0a:	0dd2      	lsrs	r2, r2, #23
+     f0c:	4332      	orrs	r2, r6
+     f0e:	0266      	lsls	r6, r4, #9
+     f10:	4316      	orrs	r6, r2
+     f12:	01db      	lsls	r3, r3, #7
+     f14:	d50a      	bpl.n	f2c <__aeabi_dmul+0x384>
+     f16:	2301      	movs	r3, #1
+     f18:	4033      	ands	r3, r6
+     f1a:	0876      	lsrs	r6, r6, #1
+     f1c:	431e      	orrs	r6, r3
+     f1e:	465b      	mov	r3, fp
+     f20:	07db      	lsls	r3, r3, #31
+     f22:	431e      	orrs	r6, r3
+     f24:	465b      	mov	r3, fp
+     f26:	085b      	lsrs	r3, r3, #1
+     f28:	469b      	mov	fp, r3
+     f2a:	4657      	mov	r7, sl
+     f2c:	4b63      	ldr	r3, [pc, #396]	; (10bc <__aeabi_dmul+0x514>)
+     f2e:	18fb      	adds	r3, r7, r3
+     f30:	2b00      	cmp	r3, #0
+     f32:	dd5a      	ble.n	fea <__aeabi_dmul+0x442>
+     f34:	0772      	lsls	r2, r6, #29
+     f36:	d009      	beq.n	f4c <__aeabi_dmul+0x3a4>
+     f38:	220f      	movs	r2, #15
+     f3a:	4032      	ands	r2, r6
+     f3c:	2a04      	cmp	r2, #4
+     f3e:	d005      	beq.n	f4c <__aeabi_dmul+0x3a4>
+     f40:	1d32      	adds	r2, r6, #4
+     f42:	42b2      	cmp	r2, r6
+     f44:	41b6      	sbcs	r6, r6
+     f46:	4276      	negs	r6, r6
+     f48:	44b3      	add	fp, r6
+     f4a:	1c16      	adds	r6, r2, #0
+     f4c:	465a      	mov	r2, fp
+     f4e:	01d2      	lsls	r2, r2, #7
+     f50:	d506      	bpl.n	f60 <__aeabi_dmul+0x3b8>
+     f52:	465a      	mov	r2, fp
+     f54:	4b5a      	ldr	r3, [pc, #360]	; (10c0 <__aeabi_dmul+0x518>)
+     f56:	401a      	ands	r2, r3
+     f58:	2380      	movs	r3, #128	; 0x80
+     f5a:	4693      	mov	fp, r2
+     f5c:	00db      	lsls	r3, r3, #3
+     f5e:	18fb      	adds	r3, r7, r3
+     f60:	4a58      	ldr	r2, [pc, #352]	; (10c4 <__aeabi_dmul+0x51c>)
+     f62:	4293      	cmp	r3, r2
+     f64:	dd34      	ble.n	fd0 <__aeabi_dmul+0x428>
+     f66:	2401      	movs	r4, #1
+     f68:	9b02      	ldr	r3, [sp, #8]
+     f6a:	2500      	movs	r5, #0
+     f6c:	401c      	ands	r4, r3
+     f6e:	2600      	movs	r6, #0
+     f70:	4b55      	ldr	r3, [pc, #340]	; (10c8 <__aeabi_dmul+0x520>)
+     f72:	e67d      	b.n	c70 <__aeabi_dmul+0xc8>
+     f74:	2080      	movs	r0, #128	; 0x80
+     f76:	465b      	mov	r3, fp
+     f78:	0300      	lsls	r0, r0, #12
+     f7a:	4203      	tst	r3, r0
+     f7c:	d008      	beq.n	f90 <__aeabi_dmul+0x3e8>
+     f7e:	4205      	tst	r5, r0
+     f80:	d106      	bne.n	f90 <__aeabi_dmul+0x3e8>
+     f82:	4305      	orrs	r5, r0
+     f84:	032d      	lsls	r5, r5, #12
+     f86:	0b2d      	lsrs	r5, r5, #12
+     f88:	464c      	mov	r4, r9
+     f8a:	1c16      	adds	r6, r2, #0
+     f8c:	4b4e      	ldr	r3, [pc, #312]	; (10c8 <__aeabi_dmul+0x520>)
+     f8e:	e66f      	b.n	c70 <__aeabi_dmul+0xc8>
+     f90:	465d      	mov	r5, fp
+     f92:	4305      	orrs	r5, r0
+     f94:	032d      	lsls	r5, r5, #12
+     f96:	0b2d      	lsrs	r5, r5, #12
+     f98:	4b4b      	ldr	r3, [pc, #300]	; (10c8 <__aeabi_dmul+0x520>)
+     f9a:	e669      	b.n	c70 <__aeabi_dmul+0xc8>
+     f9c:	4650      	mov	r0, sl
+     f9e:	f000 f90f 	bl	11c0 <__clzsi2>
+     fa2:	1c03      	adds	r3, r0, #0
+     fa4:	3320      	adds	r3, #32
+     fa6:	2b27      	cmp	r3, #39	; 0x27
+     fa8:	dc00      	bgt.n	fac <__aeabi_dmul+0x404>
+     faa:	e6a6      	b.n	cfa <__aeabi_dmul+0x152>
+     fac:	4655      	mov	r5, sl
+     fae:	3808      	subs	r0, #8
+     fb0:	4085      	lsls	r5, r0
+     fb2:	2200      	movs	r2, #0
+     fb4:	e6ac      	b.n	d10 <__aeabi_dmul+0x168>
+     fb6:	1c28      	adds	r0, r5, #0
+     fb8:	f000 f902 	bl	11c0 <__clzsi2>
+     fbc:	1c02      	adds	r2, r0, #0
+     fbe:	3220      	adds	r2, #32
+     fc0:	2a27      	cmp	r2, #39	; 0x27
+     fc2:	dc00      	bgt.n	fc6 <__aeabi_dmul+0x41e>
+     fc4:	e675      	b.n	cb2 <__aeabi_dmul+0x10a>
+     fc6:	3808      	subs	r0, #8
+     fc8:	4085      	lsls	r5, r0
+     fca:	2600      	movs	r6, #0
+     fcc:	46ab      	mov	fp, r5
+     fce:	e67d      	b.n	ccc <__aeabi_dmul+0x124>
+     fd0:	465a      	mov	r2, fp
+     fd2:	08f6      	lsrs	r6, r6, #3
+     fd4:	0752      	lsls	r2, r2, #29
+     fd6:	4316      	orrs	r6, r2
+     fd8:	465a      	mov	r2, fp
+     fda:	2401      	movs	r4, #1
+     fdc:	0255      	lsls	r5, r2, #9
+     fde:	9a02      	ldr	r2, [sp, #8]
+     fe0:	055b      	lsls	r3, r3, #21
+     fe2:	0b2d      	lsrs	r5, r5, #12
+     fe4:	0d5b      	lsrs	r3, r3, #21
+     fe6:	4014      	ands	r4, r2
+     fe8:	e642      	b.n	c70 <__aeabi_dmul+0xc8>
+     fea:	4d38      	ldr	r5, [pc, #224]	; (10cc <__aeabi_dmul+0x524>)
+     fec:	1bed      	subs	r5, r5, r7
+     fee:	2d38      	cmp	r5, #56	; 0x38
+     ff0:	dd0a      	ble.n	1008 <__aeabi_dmul+0x460>
+     ff2:	2401      	movs	r4, #1
+     ff4:	9b02      	ldr	r3, [sp, #8]
+     ff6:	2500      	movs	r5, #0
+     ff8:	401c      	ands	r4, r3
+     ffa:	2600      	movs	r6, #0
+     ffc:	2300      	movs	r3, #0
+     ffe:	e637      	b.n	c70 <__aeabi_dmul+0xc8>
+    1000:	9b01      	ldr	r3, [sp, #4]
+    1002:	4657      	mov	r7, sl
+    1004:	9302      	str	r3, [sp, #8]
+    1006:	e791      	b.n	f2c <__aeabi_dmul+0x384>
+    1008:	2d1f      	cmp	r5, #31
+    100a:	dc25      	bgt.n	1058 <__aeabi_dmul+0x4b0>
+    100c:	4b30      	ldr	r3, [pc, #192]	; (10d0 <__aeabi_dmul+0x528>)
+    100e:	1c32      	adds	r2, r6, #0
+    1010:	469c      	mov	ip, r3
+    1012:	4467      	add	r7, ip
+    1014:	40be      	lsls	r6, r7
+    1016:	465b      	mov	r3, fp
+    1018:	40bb      	lsls	r3, r7
+    101a:	1c37      	adds	r7, r6, #0
+    101c:	40ea      	lsrs	r2, r5
+    101e:	1e7e      	subs	r6, r7, #1
+    1020:	41b7      	sbcs	r7, r6
+    1022:	4313      	orrs	r3, r2
+    1024:	433b      	orrs	r3, r7
+    1026:	1c1e      	adds	r6, r3, #0
+    1028:	465b      	mov	r3, fp
+    102a:	40eb      	lsrs	r3, r5
+    102c:	1c1d      	adds	r5, r3, #0
+    102e:	0773      	lsls	r3, r6, #29
+    1030:	d009      	beq.n	1046 <__aeabi_dmul+0x49e>
+    1032:	230f      	movs	r3, #15
+    1034:	4033      	ands	r3, r6
+    1036:	2b04      	cmp	r3, #4
+    1038:	d005      	beq.n	1046 <__aeabi_dmul+0x49e>
+    103a:	1d33      	adds	r3, r6, #4
+    103c:	42b3      	cmp	r3, r6
+    103e:	41b6      	sbcs	r6, r6
+    1040:	4276      	negs	r6, r6
+    1042:	19ad      	adds	r5, r5, r6
+    1044:	1c1e      	adds	r6, r3, #0
+    1046:	022b      	lsls	r3, r5, #8
+    1048:	d520      	bpl.n	108c <__aeabi_dmul+0x4e4>
+    104a:	2401      	movs	r4, #1
+    104c:	9b02      	ldr	r3, [sp, #8]
+    104e:	2500      	movs	r5, #0
+    1050:	401c      	ands	r4, r3
+    1052:	2600      	movs	r6, #0
+    1054:	2301      	movs	r3, #1
+    1056:	e60b      	b.n	c70 <__aeabi_dmul+0xc8>
+    1058:	465a      	mov	r2, fp
+    105a:	4b1e      	ldr	r3, [pc, #120]	; (10d4 <__aeabi_dmul+0x52c>)
+    105c:	1bdb      	subs	r3, r3, r7
+    105e:	40da      	lsrs	r2, r3
+    1060:	1c13      	adds	r3, r2, #0
+    1062:	2d20      	cmp	r5, #32
+    1064:	d01c      	beq.n	10a0 <__aeabi_dmul+0x4f8>
+    1066:	4a1c      	ldr	r2, [pc, #112]	; (10d8 <__aeabi_dmul+0x530>)
+    1068:	4694      	mov	ip, r2
+    106a:	465a      	mov	r2, fp
+    106c:	4467      	add	r7, ip
+    106e:	40ba      	lsls	r2, r7
+    1070:	1c17      	adds	r7, r2, #0
+    1072:	433e      	orrs	r6, r7
+    1074:	1e72      	subs	r2, r6, #1
+    1076:	4196      	sbcs	r6, r2
+    1078:	431e      	orrs	r6, r3
+    107a:	2307      	movs	r3, #7
+    107c:	2500      	movs	r5, #0
+    107e:	4033      	ands	r3, r6
+    1080:	d007      	beq.n	1092 <__aeabi_dmul+0x4ea>
+    1082:	230f      	movs	r3, #15
+    1084:	2500      	movs	r5, #0
+    1086:	4033      	ands	r3, r6
+    1088:	2b04      	cmp	r3, #4
+    108a:	d1d6      	bne.n	103a <__aeabi_dmul+0x492>
+    108c:	076b      	lsls	r3, r5, #29
+    108e:	026d      	lsls	r5, r5, #9
+    1090:	0b2d      	lsrs	r5, r5, #12
+    1092:	2401      	movs	r4, #1
+    1094:	08f6      	lsrs	r6, r6, #3
+    1096:	431e      	orrs	r6, r3
+    1098:	9b02      	ldr	r3, [sp, #8]
+    109a:	401c      	ands	r4, r3
+    109c:	2300      	movs	r3, #0
+    109e:	e5e7      	b.n	c70 <__aeabi_dmul+0xc8>
+    10a0:	2700      	movs	r7, #0
+    10a2:	e7e6      	b.n	1072 <__aeabi_dmul+0x4ca>
+    10a4:	2580      	movs	r5, #128	; 0x80
+    10a6:	465b      	mov	r3, fp
+    10a8:	2401      	movs	r4, #1
+    10aa:	032d      	lsls	r5, r5, #12
+    10ac:	431d      	orrs	r5, r3
+    10ae:	9b01      	ldr	r3, [sp, #4]
+    10b0:	032d      	lsls	r5, r5, #12
+    10b2:	4023      	ands	r3, r4
+    10b4:	1c1c      	adds	r4, r3, #0
+    10b6:	0b2d      	lsrs	r5, r5, #12
+    10b8:	4b03      	ldr	r3, [pc, #12]	; (10c8 <__aeabi_dmul+0x520>)
+    10ba:	e5d9      	b.n	c70 <__aeabi_dmul+0xc8>
+    10bc:	000003ff 	.word	0x000003ff
+    10c0:	feffffff 	.word	0xfeffffff
+    10c4:	000007fe 	.word	0x000007fe
+    10c8:	000007ff 	.word	0x000007ff
+    10cc:	fffffc02 	.word	0xfffffc02
+    10d0:	0000041e 	.word	0x0000041e
+    10d4:	fffffbe2 	.word	0xfffffbe2
+    10d8:	0000043e 	.word	0x0000043e
 
-000007b0 <register_fini>:
- 7b0:	b508      	push	{r3, lr}
- 7b2:	4b03      	ldr	r3, [pc, #12]	; (7c0 <register_fini+0x10>)
- 7b4:	2b00      	cmp	r3, #0
- 7b6:	d002      	beq.n	7be <register_fini+0xe>
- 7b8:	4802      	ldr	r0, [pc, #8]	; (7c4 <register_fini+0x14>)
- 7ba:	f000 f805 	bl	7c8 <atexit>
- 7be:	bd08      	pop	{r3, pc}
- 7c0:	00000000 	.word	0x00000000
- 7c4:	000007d9 	.word	0x000007d9
+000010dc <__aeabi_d2iz>:
+    10dc:	030b      	lsls	r3, r1, #12
+    10de:	b530      	push	{r4, r5, lr}
+    10e0:	4c13      	ldr	r4, [pc, #76]	; (1130 <__aeabi_d2iz+0x54>)
+    10e2:	0b1a      	lsrs	r2, r3, #12
+    10e4:	004b      	lsls	r3, r1, #1
+    10e6:	1c05      	adds	r5, r0, #0
+    10e8:	0d5b      	lsrs	r3, r3, #21
+    10ea:	0fc9      	lsrs	r1, r1, #31
+    10ec:	2000      	movs	r0, #0
+    10ee:	42a3      	cmp	r3, r4
+    10f0:	dd10      	ble.n	1114 <__aeabi_d2iz+0x38>
+    10f2:	4810      	ldr	r0, [pc, #64]	; (1134 <__aeabi_d2iz+0x58>)
+    10f4:	4283      	cmp	r3, r0
+    10f6:	dc0e      	bgt.n	1116 <__aeabi_d2iz+0x3a>
+    10f8:	2080      	movs	r0, #128	; 0x80
+    10fa:	4c0f      	ldr	r4, [pc, #60]	; (1138 <__aeabi_d2iz+0x5c>)
+    10fc:	0340      	lsls	r0, r0, #13
+    10fe:	4302      	orrs	r2, r0
+    1100:	1ae4      	subs	r4, r4, r3
+    1102:	2c1f      	cmp	r4, #31
+    1104:	dd0a      	ble.n	111c <__aeabi_d2iz+0x40>
+    1106:	480d      	ldr	r0, [pc, #52]	; (113c <__aeabi_d2iz+0x60>)
+    1108:	1ac3      	subs	r3, r0, r3
+    110a:	40da      	lsrs	r2, r3
+    110c:	1c13      	adds	r3, r2, #0
+    110e:	4248      	negs	r0, r1
+    1110:	4043      	eors	r3, r0
+    1112:	1858      	adds	r0, r3, r1
+    1114:	bd30      	pop	{r4, r5, pc}
+    1116:	4b0a      	ldr	r3, [pc, #40]	; (1140 <__aeabi_d2iz+0x64>)
+    1118:	18c8      	adds	r0, r1, r3
+    111a:	e7fb      	b.n	1114 <__aeabi_d2iz+0x38>
+    111c:	1c28      	adds	r0, r5, #0
+    111e:	40e0      	lsrs	r0, r4
+    1120:	4c08      	ldr	r4, [pc, #32]	; (1144 <__aeabi_d2iz+0x68>)
+    1122:	46a4      	mov	ip, r4
+    1124:	4463      	add	r3, ip
+    1126:	409a      	lsls	r2, r3
+    1128:	1c13      	adds	r3, r2, #0
+    112a:	4303      	orrs	r3, r0
+    112c:	e7ef      	b.n	110e <__aeabi_d2iz+0x32>
+    112e:	46c0      	nop			; (mov r8, r8)
+    1130:	000003fe 	.word	0x000003fe
+    1134:	0000041d 	.word	0x0000041d
+    1138:	00000433 	.word	0x00000433
+    113c:	00000413 	.word	0x00000413
+    1140:	7fffffff 	.word	0x7fffffff
+    1144:	fffffbed 	.word	0xfffffbed
 
-000007c8 <atexit>:
- 7c8:	b508      	push	{r3, lr}
- 7ca:	1c01      	adds	r1, r0, #0
- 7cc:	2200      	movs	r2, #0
- 7ce:	2000      	movs	r0, #0
- 7d0:	2300      	movs	r3, #0
- 7d2:	f000 f81b 	bl	80c <__register_exitproc>
- 7d6:	bd08      	pop	{r3, pc}
+00001148 <__aeabi_i2d>:
+    1148:	b538      	push	{r3, r4, r5, lr}
+    114a:	1e04      	subs	r4, r0, #0
+    114c:	d016      	beq.n	117c <__aeabi_i2d+0x34>
+    114e:	0fc5      	lsrs	r5, r0, #31
+    1150:	d000      	beq.n	1154 <__aeabi_i2d+0xc>
+    1152:	4244      	negs	r4, r0
+    1154:	1c20      	adds	r0, r4, #0
+    1156:	f000 f833 	bl	11c0 <__clzsi2>
+    115a:	4b17      	ldr	r3, [pc, #92]	; (11b8 <__aeabi_i2d+0x70>)
+    115c:	1a1b      	subs	r3, r3, r0
+    115e:	280a      	cmp	r0, #10
+    1160:	dc21      	bgt.n	11a6 <__aeabi_i2d+0x5e>
+    1162:	1c02      	adds	r2, r0, #0
+    1164:	1c21      	adds	r1, r4, #0
+    1166:	3215      	adds	r2, #21
+    1168:	4091      	lsls	r1, r2
+    116a:	1c0a      	adds	r2, r1, #0
+    116c:	210b      	movs	r1, #11
+    116e:	1a08      	subs	r0, r1, r0
+    1170:	40c4      	lsrs	r4, r0
+    1172:	055b      	lsls	r3, r3, #21
+    1174:	0324      	lsls	r4, r4, #12
+    1176:	0b24      	lsrs	r4, r4, #12
+    1178:	0d5b      	lsrs	r3, r3, #21
+    117a:	e003      	b.n	1184 <__aeabi_i2d+0x3c>
+    117c:	2500      	movs	r5, #0
+    117e:	2300      	movs	r3, #0
+    1180:	2400      	movs	r4, #0
+    1182:	2200      	movs	r2, #0
+    1184:	2100      	movs	r1, #0
+    1186:	1c10      	adds	r0, r2, #0
+    1188:	0324      	lsls	r4, r4, #12
+    118a:	0d0a      	lsrs	r2, r1, #20
+    118c:	0512      	lsls	r2, r2, #20
+    118e:	0b24      	lsrs	r4, r4, #12
+    1190:	4314      	orrs	r4, r2
+    1192:	4a0a      	ldr	r2, [pc, #40]	; (11bc <__aeabi_i2d+0x74>)
+    1194:	051b      	lsls	r3, r3, #20
+    1196:	4014      	ands	r4, r2
+    1198:	431c      	orrs	r4, r3
+    119a:	0064      	lsls	r4, r4, #1
+    119c:	07ed      	lsls	r5, r5, #31
+    119e:	0864      	lsrs	r4, r4, #1
+    11a0:	432c      	orrs	r4, r5
+    11a2:	1c21      	adds	r1, r4, #0
+    11a4:	bd38      	pop	{r3, r4, r5, pc}
+    11a6:	380b      	subs	r0, #11
+    11a8:	4084      	lsls	r4, r0
+    11aa:	055b      	lsls	r3, r3, #21
+    11ac:	0324      	lsls	r4, r4, #12
+    11ae:	0b24      	lsrs	r4, r4, #12
+    11b0:	0d5b      	lsrs	r3, r3, #21
+    11b2:	2200      	movs	r2, #0
+    11b4:	e7e6      	b.n	1184 <__aeabi_i2d+0x3c>
+    11b6:	46c0      	nop			; (mov r8, r8)
+    11b8:	0000041e 	.word	0x0000041e
+    11bc:	800fffff 	.word	0x800fffff
 
-000007d8 <__libc_fini_array>:
- 7d8:	b538      	push	{r3, r4, r5, lr}
- 7da:	4b09      	ldr	r3, [pc, #36]	; (800 <__libc_fini_array+0x28>)
- 7dc:	4c09      	ldr	r4, [pc, #36]	; (804 <__libc_fini_array+0x2c>)
- 7de:	1ae4      	subs	r4, r4, r3
- 7e0:	10a4      	asrs	r4, r4, #2
- 7e2:	d009      	beq.n	7f8 <__libc_fini_array+0x20>
- 7e4:	4a08      	ldr	r2, [pc, #32]	; (808 <__libc_fini_array+0x30>)
- 7e6:	18a5      	adds	r5, r4, r2
- 7e8:	00ad      	lsls	r5, r5, #2
- 7ea:	18ed      	adds	r5, r5, r3
- 7ec:	682b      	ldr	r3, [r5, #0]
- 7ee:	3c01      	subs	r4, #1
- 7f0:	4798      	blx	r3
- 7f2:	3d04      	subs	r5, #4
- 7f4:	2c00      	cmp	r4, #0
- 7f6:	d1f9      	bne.n	7ec <__libc_fini_array+0x14>
- 7f8:	f000 f880 	bl	8fc <_fini>
- 7fc:	bd38      	pop	{r3, r4, r5, pc}
- 7fe:	46c0      	nop			; (mov r8, r8)
- 800:	00000908 	.word	0x00000908
- 804:	0000090c 	.word	0x0000090c
- 808:	3fffffff 	.word	0x3fffffff
+000011c0 <__clzsi2>:
+    11c0:	211c      	movs	r1, #28
+    11c2:	2301      	movs	r3, #1
+    11c4:	041b      	lsls	r3, r3, #16
+    11c6:	4298      	cmp	r0, r3
+    11c8:	d301      	bcc.n	11ce <__clzsi2+0xe>
+    11ca:	0c00      	lsrs	r0, r0, #16
+    11cc:	3910      	subs	r1, #16
+    11ce:	0a1b      	lsrs	r3, r3, #8
+    11d0:	4298      	cmp	r0, r3
+    11d2:	d301      	bcc.n	11d8 <__clzsi2+0x18>
+    11d4:	0a00      	lsrs	r0, r0, #8
+    11d6:	3908      	subs	r1, #8
+    11d8:	091b      	lsrs	r3, r3, #4
+    11da:	4298      	cmp	r0, r3
+    11dc:	d301      	bcc.n	11e2 <__clzsi2+0x22>
+    11de:	0900      	lsrs	r0, r0, #4
+    11e0:	3904      	subs	r1, #4
+    11e2:	a202      	add	r2, pc, #8	; (adr r2, 11ec <__clzsi2+0x2c>)
+    11e4:	5c10      	ldrb	r0, [r2, r0]
+    11e6:	1840      	adds	r0, r0, r1
+    11e8:	4770      	bx	lr
+    11ea:	46c0      	nop			; (mov r8, r8)
+    11ec:	02020304 	.word	0x02020304
+    11f0:	01010101 	.word	0x01010101
+	...
 
-0000080c <__register_exitproc>:
- 80c:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
- 80e:	4644      	mov	r4, r8
- 810:	465f      	mov	r7, fp
- 812:	4656      	mov	r6, sl
- 814:	464d      	mov	r5, r9
- 816:	469b      	mov	fp, r3
- 818:	4b2f      	ldr	r3, [pc, #188]	; (8d8 <__register_exitproc+0xcc>)
- 81a:	b4f0      	push	{r4, r5, r6, r7}
- 81c:	681c      	ldr	r4, [r3, #0]
- 81e:	23a4      	movs	r3, #164	; 0xa4
- 820:	005b      	lsls	r3, r3, #1
- 822:	1c05      	adds	r5, r0, #0
- 824:	58e0      	ldr	r0, [r4, r3]
- 826:	1c0e      	adds	r6, r1, #0
- 828:	4690      	mov	r8, r2
- 82a:	2800      	cmp	r0, #0
- 82c:	d04b      	beq.n	8c6 <__register_exitproc+0xba>
- 82e:	6843      	ldr	r3, [r0, #4]
- 830:	2b1f      	cmp	r3, #31
- 832:	dc0d      	bgt.n	850 <__register_exitproc+0x44>
- 834:	1c5c      	adds	r4, r3, #1
- 836:	2d00      	cmp	r5, #0
- 838:	d121      	bne.n	87e <__register_exitproc+0x72>
- 83a:	3302      	adds	r3, #2
- 83c:	009b      	lsls	r3, r3, #2
- 83e:	6044      	str	r4, [r0, #4]
- 840:	501e      	str	r6, [r3, r0]
- 842:	2000      	movs	r0, #0
- 844:	bc3c      	pop	{r2, r3, r4, r5}
- 846:	4690      	mov	r8, r2
- 848:	4699      	mov	r9, r3
- 84a:	46a2      	mov	sl, r4
- 84c:	46ab      	mov	fp, r5
- 84e:	bdf8      	pop	{r3, r4, r5, r6, r7, pc}
- 850:	4b22      	ldr	r3, [pc, #136]	; (8dc <__register_exitproc+0xd0>)
- 852:	2b00      	cmp	r3, #0
- 854:	d03c      	beq.n	8d0 <__register_exitproc+0xc4>
- 856:	20c8      	movs	r0, #200	; 0xc8
- 858:	0040      	lsls	r0, r0, #1
- 85a:	e000      	b.n	85e <__register_exitproc+0x52>
- 85c:	bf00      	nop
- 85e:	2800      	cmp	r0, #0
- 860:	d036      	beq.n	8d0 <__register_exitproc+0xc4>
- 862:	22a4      	movs	r2, #164	; 0xa4
- 864:	2300      	movs	r3, #0
- 866:	0052      	lsls	r2, r2, #1
- 868:	58a1      	ldr	r1, [r4, r2]
- 86a:	6043      	str	r3, [r0, #4]
- 86c:	6001      	str	r1, [r0, #0]
- 86e:	50a0      	str	r0, [r4, r2]
- 870:	3240      	adds	r2, #64	; 0x40
- 872:	5083      	str	r3, [r0, r2]
- 874:	3204      	adds	r2, #4
- 876:	5083      	str	r3, [r0, r2]
- 878:	2401      	movs	r4, #1
- 87a:	2d00      	cmp	r5, #0
- 87c:	d0dd      	beq.n	83a <__register_exitproc+0x2e>
- 87e:	009a      	lsls	r2, r3, #2
- 880:	4691      	mov	r9, r2
- 882:	4481      	add	r9, r0
- 884:	4642      	mov	r2, r8
- 886:	2188      	movs	r1, #136	; 0x88
- 888:	464f      	mov	r7, r9
- 88a:	507a      	str	r2, [r7, r1]
- 88c:	22c4      	movs	r2, #196	; 0xc4
- 88e:	0052      	lsls	r2, r2, #1
- 890:	4690      	mov	r8, r2
- 892:	4480      	add	r8, r0
- 894:	4642      	mov	r2, r8
- 896:	3987      	subs	r1, #135	; 0x87
- 898:	4099      	lsls	r1, r3
- 89a:	6812      	ldr	r2, [r2, #0]
- 89c:	468a      	mov	sl, r1
- 89e:	430a      	orrs	r2, r1
- 8a0:	4694      	mov	ip, r2
- 8a2:	4642      	mov	r2, r8
- 8a4:	4661      	mov	r1, ip
- 8a6:	6011      	str	r1, [r2, #0]
- 8a8:	2284      	movs	r2, #132	; 0x84
- 8aa:	4649      	mov	r1, r9
- 8ac:	465f      	mov	r7, fp
- 8ae:	0052      	lsls	r2, r2, #1
- 8b0:	508f      	str	r7, [r1, r2]
- 8b2:	2d02      	cmp	r5, #2
- 8b4:	d1c1      	bne.n	83a <__register_exitproc+0x2e>
- 8b6:	1c02      	adds	r2, r0, #0
- 8b8:	4655      	mov	r5, sl
- 8ba:	328d      	adds	r2, #141	; 0x8d
- 8bc:	32ff      	adds	r2, #255	; 0xff
- 8be:	6811      	ldr	r1, [r2, #0]
- 8c0:	430d      	orrs	r5, r1
- 8c2:	6015      	str	r5, [r2, #0]
- 8c4:	e7b9      	b.n	83a <__register_exitproc+0x2e>
- 8c6:	1c20      	adds	r0, r4, #0
- 8c8:	304d      	adds	r0, #77	; 0x4d
- 8ca:	30ff      	adds	r0, #255	; 0xff
- 8cc:	50e0      	str	r0, [r4, r3]
- 8ce:	e7ae      	b.n	82e <__register_exitproc+0x22>
- 8d0:	2001      	movs	r0, #1
- 8d2:	4240      	negs	r0, r0
- 8d4:	e7b6      	b.n	844 <__register_exitproc+0x38>
- 8d6:	46c0      	nop			; (mov r8, r8)
- 8d8:	000008e4 	.word	0x000008e4
- 8dc:	00000000 	.word	0x00000000
- 8e0:	00000043 	.word	0x00000043
+000011fc <__libc_init_array>:
+    11fc:	b570      	push	{r4, r5, r6, lr}
+    11fe:	4e0d      	ldr	r6, [pc, #52]	; (1234 <__libc_init_array+0x38>)
+    1200:	4d0d      	ldr	r5, [pc, #52]	; (1238 <__libc_init_array+0x3c>)
+    1202:	2400      	movs	r4, #0
+    1204:	1bad      	subs	r5, r5, r6
+    1206:	10ad      	asrs	r5, r5, #2
+    1208:	d005      	beq.n	1216 <__libc_init_array+0x1a>
+    120a:	00a3      	lsls	r3, r4, #2
+    120c:	58f3      	ldr	r3, [r6, r3]
+    120e:	3401      	adds	r4, #1
+    1210:	4798      	blx	r3
+    1212:	42a5      	cmp	r5, r4
+    1214:	d1f9      	bne.n	120a <__libc_init_array+0xe>
+    1216:	f000 f8d1 	bl	13bc <_init>
+    121a:	4e08      	ldr	r6, [pc, #32]	; (123c <__libc_init_array+0x40>)
+    121c:	4d08      	ldr	r5, [pc, #32]	; (1240 <__libc_init_array+0x44>)
+    121e:	2400      	movs	r4, #0
+    1220:	1bad      	subs	r5, r5, r6
+    1222:	10ad      	asrs	r5, r5, #2
+    1224:	d005      	beq.n	1232 <__libc_init_array+0x36>
+    1226:	00a3      	lsls	r3, r4, #2
+    1228:	58f3      	ldr	r3, [r6, r3]
+    122a:	3401      	adds	r4, #1
+    122c:	4798      	blx	r3
+    122e:	42a5      	cmp	r5, r4
+    1230:	d1f9      	bne.n	1226 <__libc_init_array+0x2a>
+    1232:	bd70      	pop	{r4, r5, r6, pc}
+    1234:	000013c8 	.word	0x000013c8
+    1238:	000013c8 	.word	0x000013c8
+    123c:	000013c8 	.word	0x000013c8
+    1240:	000013d0 	.word	0x000013d0
 
-000008e4 <_global_impure_ptr>:
- 8e4:	20000010                                ... 
+00001244 <register_fini>:
+    1244:	b508      	push	{r3, lr}
+    1246:	4b03      	ldr	r3, [pc, #12]	; (1254 <register_fini+0x10>)
+    1248:	2b00      	cmp	r3, #0
+    124a:	d002      	beq.n	1252 <register_fini+0xe>
+    124c:	4802      	ldr	r0, [pc, #8]	; (1258 <register_fini+0x14>)
+    124e:	f000 f805 	bl	125c <atexit>
+    1252:	bd08      	pop	{r3, pc}
+    1254:	00000000 	.word	0x00000000
+    1258:	0000126d 	.word	0x0000126d
 
-000008e8 <_init>:
- 8e8:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
- 8ea:	46c0      	nop			; (mov r8, r8)
- 8ec:	bcf8      	pop	{r3, r4, r5, r6, r7}
- 8ee:	bc08      	pop	{r3}
- 8f0:	469e      	mov	lr, r3
- 8f2:	4770      	bx	lr
+0000125c <atexit>:
+    125c:	b508      	push	{r3, lr}
+    125e:	1c01      	adds	r1, r0, #0
+    1260:	2200      	movs	r2, #0
+    1262:	2000      	movs	r0, #0
+    1264:	2300      	movs	r3, #0
+    1266:	f000 f81b 	bl	12a0 <__register_exitproc>
+    126a:	bd08      	pop	{r3, pc}
 
-000008f4 <__init_array_start>:
- 8f4:	000007b1 	.word	0x000007b1
+0000126c <__libc_fini_array>:
+    126c:	b538      	push	{r3, r4, r5, lr}
+    126e:	4b09      	ldr	r3, [pc, #36]	; (1294 <__libc_fini_array+0x28>)
+    1270:	4c09      	ldr	r4, [pc, #36]	; (1298 <__libc_fini_array+0x2c>)
+    1272:	1ae4      	subs	r4, r4, r3
+    1274:	10a4      	asrs	r4, r4, #2
+    1276:	d009      	beq.n	128c <__libc_fini_array+0x20>
+    1278:	4a08      	ldr	r2, [pc, #32]	; (129c <__libc_fini_array+0x30>)
+    127a:	18a5      	adds	r5, r4, r2
+    127c:	00ad      	lsls	r5, r5, #2
+    127e:	18ed      	adds	r5, r5, r3
+    1280:	682b      	ldr	r3, [r5, #0]
+    1282:	3c01      	subs	r4, #1
+    1284:	4798      	blx	r3
+    1286:	3d04      	subs	r5, #4
+    1288:	2c00      	cmp	r4, #0
+    128a:	d1f9      	bne.n	1280 <__libc_fini_array+0x14>
+    128c:	f000 f8a0 	bl	13d0 <_fini>
+    1290:	bd38      	pop	{r3, r4, r5, pc}
+    1292:	46c0      	nop			; (mov r8, r8)
+    1294:	000013dc 	.word	0x000013dc
+    1298:	000013e0 	.word	0x000013e0
+    129c:	3fffffff 	.word	0x3fffffff
 
-000008f8 <__frame_dummy_init_array_entry>:
- 8f8:	000000dd                                ....
+000012a0 <__register_exitproc>:
+    12a0:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+    12a2:	4644      	mov	r4, r8
+    12a4:	465f      	mov	r7, fp
+    12a6:	4656      	mov	r6, sl
+    12a8:	464d      	mov	r5, r9
+    12aa:	469b      	mov	fp, r3
+    12ac:	4b2f      	ldr	r3, [pc, #188]	; (136c <__register_exitproc+0xcc>)
+    12ae:	b4f0      	push	{r4, r5, r6, r7}
+    12b0:	681c      	ldr	r4, [r3, #0]
+    12b2:	23a4      	movs	r3, #164	; 0xa4
+    12b4:	005b      	lsls	r3, r3, #1
+    12b6:	1c05      	adds	r5, r0, #0
+    12b8:	58e0      	ldr	r0, [r4, r3]
+    12ba:	1c0e      	adds	r6, r1, #0
+    12bc:	4690      	mov	r8, r2
+    12be:	2800      	cmp	r0, #0
+    12c0:	d04b      	beq.n	135a <__register_exitproc+0xba>
+    12c2:	6843      	ldr	r3, [r0, #4]
+    12c4:	2b1f      	cmp	r3, #31
+    12c6:	dc0d      	bgt.n	12e4 <__register_exitproc+0x44>
+    12c8:	1c5c      	adds	r4, r3, #1
+    12ca:	2d00      	cmp	r5, #0
+    12cc:	d121      	bne.n	1312 <__register_exitproc+0x72>
+    12ce:	3302      	adds	r3, #2
+    12d0:	009b      	lsls	r3, r3, #2
+    12d2:	6044      	str	r4, [r0, #4]
+    12d4:	501e      	str	r6, [r3, r0]
+    12d6:	2000      	movs	r0, #0
+    12d8:	bc3c      	pop	{r2, r3, r4, r5}
+    12da:	4690      	mov	r8, r2
+    12dc:	4699      	mov	r9, r3
+    12de:	46a2      	mov	sl, r4
+    12e0:	46ab      	mov	fp, r5
+    12e2:	bdf8      	pop	{r3, r4, r5, r6, r7, pc}
+    12e4:	4b22      	ldr	r3, [pc, #136]	; (1370 <__register_exitproc+0xd0>)
+    12e6:	2b00      	cmp	r3, #0
+    12e8:	d03c      	beq.n	1364 <__register_exitproc+0xc4>
+    12ea:	20c8      	movs	r0, #200	; 0xc8
+    12ec:	0040      	lsls	r0, r0, #1
+    12ee:	e000      	b.n	12f2 <__register_exitproc+0x52>
+    12f0:	bf00      	nop
+    12f2:	2800      	cmp	r0, #0
+    12f4:	d036      	beq.n	1364 <__register_exitproc+0xc4>
+    12f6:	22a4      	movs	r2, #164	; 0xa4
+    12f8:	2300      	movs	r3, #0
+    12fa:	0052      	lsls	r2, r2, #1
+    12fc:	58a1      	ldr	r1, [r4, r2]
+    12fe:	6043      	str	r3, [r0, #4]
+    1300:	6001      	str	r1, [r0, #0]
+    1302:	50a0      	str	r0, [r4, r2]
+    1304:	3240      	adds	r2, #64	; 0x40
+    1306:	5083      	str	r3, [r0, r2]
+    1308:	3204      	adds	r2, #4
+    130a:	5083      	str	r3, [r0, r2]
+    130c:	2401      	movs	r4, #1
+    130e:	2d00      	cmp	r5, #0
+    1310:	d0dd      	beq.n	12ce <__register_exitproc+0x2e>
+    1312:	009a      	lsls	r2, r3, #2
+    1314:	4691      	mov	r9, r2
+    1316:	4481      	add	r9, r0
+    1318:	4642      	mov	r2, r8
+    131a:	2188      	movs	r1, #136	; 0x88
+    131c:	464f      	mov	r7, r9
+    131e:	507a      	str	r2, [r7, r1]
+    1320:	22c4      	movs	r2, #196	; 0xc4
+    1322:	0052      	lsls	r2, r2, #1
+    1324:	4690      	mov	r8, r2
+    1326:	4480      	add	r8, r0
+    1328:	4642      	mov	r2, r8
+    132a:	3987      	subs	r1, #135	; 0x87
+    132c:	4099      	lsls	r1, r3
+    132e:	6812      	ldr	r2, [r2, #0]
+    1330:	468a      	mov	sl, r1
+    1332:	430a      	orrs	r2, r1
+    1334:	4694      	mov	ip, r2
+    1336:	4642      	mov	r2, r8
+    1338:	4661      	mov	r1, ip
+    133a:	6011      	str	r1, [r2, #0]
+    133c:	2284      	movs	r2, #132	; 0x84
+    133e:	4649      	mov	r1, r9
+    1340:	465f      	mov	r7, fp
+    1342:	0052      	lsls	r2, r2, #1
+    1344:	508f      	str	r7, [r1, r2]
+    1346:	2d02      	cmp	r5, #2
+    1348:	d1c1      	bne.n	12ce <__register_exitproc+0x2e>
+    134a:	1c02      	adds	r2, r0, #0
+    134c:	4655      	mov	r5, sl
+    134e:	328d      	adds	r2, #141	; 0x8d
+    1350:	32ff      	adds	r2, #255	; 0xff
+    1352:	6811      	ldr	r1, [r2, #0]
+    1354:	430d      	orrs	r5, r1
+    1356:	6015      	str	r5, [r2, #0]
+    1358:	e7b9      	b.n	12ce <__register_exitproc+0x2e>
+    135a:	1c20      	adds	r0, r4, #0
+    135c:	304d      	adds	r0, #77	; 0x4d
+    135e:	30ff      	adds	r0, #255	; 0xff
+    1360:	50e0      	str	r0, [r4, r3]
+    1362:	e7ae      	b.n	12c2 <__register_exitproc+0x22>
+    1364:	2001      	movs	r0, #1
+    1366:	4240      	negs	r0, r0
+    1368:	e7b6      	b.n	12d8 <__register_exitproc+0x38>
+    136a:	46c0      	nop			; (mov r8, r8)
+    136c:	000013b8 	.word	0x000013b8
+    1370:	00000000 	.word	0x00000000
+    1374:	00000d94 	.word	0x00000d94
+    1378:	00000d72 	.word	0x00000d72
+    137c:	00000d72 	.word	0x00000d72
+    1380:	00000d66 	.word	0x00000d66
+    1384:	00000c5a 	.word	0x00000c5a
+    1388:	00000c5a 	.word	0x00000c5a
+    138c:	00000d5a 	.word	0x00000d5a
+    1390:	00000d66 	.word	0x00000d66
+    1394:	00000c5a 	.word	0x00000c5a
+    1398:	00000d5a 	.word	0x00000d5a
+    139c:	00000c5a 	.word	0x00000c5a
+    13a0:	00000d66 	.word	0x00000d66
+    13a4:	00000c5e 	.word	0x00000c5e
+    13a8:	00000c5e 	.word	0x00000c5e
+    13ac:	00000c5e 	.word	0x00000c5e
+    13b0:	00000f74 	.word	0x00000f74
+    13b4:	00000043 	.word	0x00000043
 
-000008fc <_fini>:
- 8fc:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
- 8fe:	46c0      	nop			; (mov r8, r8)
- 900:	bcf8      	pop	{r3, r4, r5, r6, r7}
- 902:	bc08      	pop	{r3}
- 904:	469e      	mov	lr, r3
- 906:	4770      	bx	lr
+000013b8 <_global_impure_ptr>:
+    13b8:	20000010                                ... 
 
-00000908 <__fini_array_start>:
- 908:	000000b5 	.word	0x000000b5
+000013bc <_init>:
+    13bc:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+    13be:	46c0      	nop			; (mov r8, r8)
+    13c0:	bcf8      	pop	{r3, r4, r5, r6, r7}
+    13c2:	bc08      	pop	{r3}
+    13c4:	469e      	mov	lr, r3
+    13c6:	4770      	bx	lr
+
+000013c8 <__init_array_start>:
+    13c8:	00001245 	.word	0x00001245
+
+000013cc <__frame_dummy_init_array_entry>:
+    13cc:	000000dd                                ....
+
+000013d0 <_fini>:
+    13d0:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+    13d2:	46c0      	nop			; (mov r8, r8)
+    13d4:	bcf8      	pop	{r3, r4, r5, r6, r7}
+    13d6:	bc08      	pop	{r3}
+    13d8:	469e      	mov	lr, r3
+    13da:	4770      	bx	lr
+
+000013dc <__fini_array_start>:
+    13dc:	000000b5 	.word	0x000000b5

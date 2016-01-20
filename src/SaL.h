@@ -15,6 +15,8 @@
 
 #include <SaLDelay.h>
 
+#include <SaLBuzzer.h>
+
 #ifdef HAS_MS5607
 #include <MS5607.h>
 #endif

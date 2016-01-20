@@ -87,7 +87,8 @@ SaLDelay.d SaLDelay.o: ../../src/services/SaLDelay.c \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\include/instance/usb.h \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\include/instance/wdt.h \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\include/pio/samd21g18a.h \
- ../../src/services/SaLPort.h ../../src/services/SaLBitBang.h
+ ../../src/services/SaLPort.h ../../src/services/SaLBitBang.h \
+ ../../src/services/SaLBuzzer.h
 
 ../../src/services/SaLDelay.h:
 
@@ -270,3 +271,5 @@ C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a
 ../../src/services/SaLPort.h:
 
 ../../src/services/SaLBitBang.h:
+
+../../src/services/SaLBuzzer.h:

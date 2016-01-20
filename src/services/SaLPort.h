@@ -8,6 +8,7 @@
 
 #define INPUT 0
 #define OUTPUT 1
+#define OUTSTRONG 3
 
 static inline PortGroup* SaLGetPort(
     const uint8_t gpio_pin) {

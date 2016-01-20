@@ -41,6 +41,7 @@ C_SRCS +=  \
 ../../src/drivers/ADXL345.c \
 ../../src/drivers/MS5607.c \
 ../../src/services/SaLBitBang.c \
+../../src/services/SaLBuzzer.c \
 ../../src/services/SaLDelay.c \
 ../../src/services/SaLPort.c \
 ../Device_Startup/startup_samd21.c \
@@ -58,6 +59,7 @@ OBJS +=  \
 ADXL345.o \
 MS5607.o \
 SaLBitBang.o \
+SaLBuzzer.o \
 SaLDelay.o \
 SaLPort.o \
 Device_Startup/startup_samd21.o \
@@ -68,6 +70,7 @@ OBJS_AS_ARGS +=  \
 ADXL345.o \
 MS5607.o \
 SaLBitBang.o \
+SaLBuzzer.o \
 SaLDelay.o \
 SaLPort.o \
 Device_Startup/startup_samd21.o \
@@ -78,6 +81,7 @@ C_DEPS +=  \
 ADXL345.d \
 MS5607.d \
 SaLBitBang.d \
+SaLBuzzer.d \
 SaLDelay.d \
 SaLPort.d \
 Device_Startup/startup_samd21.d \
@@ -88,6 +92,7 @@ C_DEPS_AS_ARGS +=  \
 ADXL345.d \
 MS5607.d \
 SaLBitBang.d \
+SaLBuzzer.d \
 SaLDelay.d \
 SaLPort.d \
 Device_Startup/startup_samd21.d \
@@ -110,6 +115,8 @@ LINKER_SCRIPT_DEP+=  \
 
 
 # AVR32/GNU C Compiler
+
+
 
 
 
