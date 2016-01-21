@@ -3,9 +3,9 @@
 
 #include <SaL.h>
 
-volatile uint16_t curaccelX;
-volatile uint16_t curaccelY;
-volatile uint16_t curaccelZ;
+volatile int16_t curaccelX;
+volatile int16_t curaccelY;
+volatile int16_t curaccelZ;
 
 void getevents(struct spiModule *const module);
 int16_t currentX();

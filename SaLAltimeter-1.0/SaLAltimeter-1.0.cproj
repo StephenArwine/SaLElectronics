@@ -201,6 +201,14 @@
       <SubType>compile</SubType>
       <Link>SaLPort.h</Link>
     </Compile>
+    <Compile Include="..\src\services\SaLUSART.c">
+      <SubType>compile</SubType>
+      <Link>SaLUSART.c</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLUSART.h">
+      <SubType>compile</SubType>
+      <Link>SaLUSART.h</Link>
+    </Compile>
     <Compile Include="Device_Startup\startup_samd21.c">
       <SubType>compile</SubType>
     </Compile>

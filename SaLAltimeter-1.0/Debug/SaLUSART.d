@@ -1,5 +1,5 @@
-SaLBuzzer.d SaLBuzzer.o: ../../src/services/SaLBuzzer.c \
- ../../src/services/SaLBuzzer.h ../../src/SaL.h \
+SaLUSART.d SaLUSART.o: ../../src/services/SaLUSART.c \
+ ../../src/services/SaLUSART.h ../../src/SaL.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.9.3\include\stddef.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.9.3\include\stdint.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\stdint.h \
@@ -88,9 +88,9 @@ SaLBuzzer.d SaLBuzzer.o: ../../src/services/SaLBuzzer.c \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\include/instance/wdt.h \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\include/pio/samd21g18a.h \
  ../../src/services/SaLPort.h ../../src/services/SaLBitBang.h \
- ../../src/services/SaLDelay.h ../../src/services/SaLUSART.h
+ ../../src/services/SaLDelay.h ../../src/services/SaLBuzzer.h
 
-../../src/services/SaLBuzzer.h:
+../../src/services/SaLUSART.h:
 
 ../../src/SaL.h:
 
@@ -274,4 +274,4 @@ C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a
 
 ../../src/services/SaLDelay.h:
 
-../../src/services/SaLUSART.h:
+../../src/services/SaLBuzzer.h:

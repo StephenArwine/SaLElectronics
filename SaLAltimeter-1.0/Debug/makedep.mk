@@ -14,6 +14,8 @@
 
 ..\src\services\SaLPort.c
 
+..\src\services\SaLUSART.c
+
 Device_Startup\startup_samd21.c
 
 Device_Startup\system_samd21.c

@@ -88,7 +88,8 @@ SaLBitBang.d SaLBitBang.o: ../../src/services/SaLBitBang.c \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\include/instance/wdt.h \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\include/pio/samd21g18a.h \
  ../../src/services/SaLPort.h ../../src/services/SaLBitBang.h \
- ../../src/services/SaLDelay.h ../../src/services/SaLBuzzer.h
+ ../../src/services/SaLDelay.h ../../src/services/SaLBuzzer.h \
+ ../../src/services/SaLUSART.h
 
 ../../src/services/SaLBitBang.h:
 
@@ -275,3 +276,5 @@ C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a
 ../../src/services/SaLDelay.h:
 
 ../../src/services/SaLBuzzer.h:
+
+../../src/services/SaLUSART.h:

@@ -22,17 +22,13 @@ typedef struct spiModule {
 
 #define PINHIGH true
 #define PINLOW false
-
-
 } spiModule;
 
 static inline void configSpiModule(struct spiModule *const module,
                                    uint8_t MOSI_PIN,
                                    uint8_t MISO_pin,
                                    uint8_t SCK_PIN,
-                                   uint8_t SS_PIN )
-
-{
+                                   uint8_t SS_PIN ) {
     module->MOSI		= MOSI_PIN;
     module->MISO		= MISO_pin;
     module->SCK		    = SCK_PIN;
@@ -52,7 +48,7 @@ static inline void configSpiModule(struct spiModule *const module,
 
 void byteOut(struct spiModule *const module,
              uint8_t btye);
-			 
+
 void bitsOut(struct spiModule *const module,
              uint8_t dataBits,uint8_t bits);
 

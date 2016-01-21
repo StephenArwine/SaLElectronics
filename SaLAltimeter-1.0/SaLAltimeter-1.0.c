@@ -30,6 +30,11 @@
 #include <SaL.h>
 
 
+int16_t accelDataX[100];
+int16_t accelDataY[100];
+int16_t accelDataZ[100];
+
+
 
 
 void ClockInit() {
@@ -46,7 +51,6 @@ void ClockInit() {
                            ( 6 << SYSCTRL_XOSC32K_STARTUP_Pos);
     //wait for crystal to warm up
     while((SYSCTRL->PCLKSR.reg & (SYSCTRL_PCLKSR_XOSC32KRDY)) == 0);
-
     GCLK->GENDIV.reg = GCLK_GENDIV_ID(1) |
                        GCLK_GENDIV_DIV(1);
     GCLK->GENCTRL.reg = GCLK_GENCTRL_ID(1) |
@@ -70,6 +74,8 @@ void ClockInit() {
     GCLK->GENDIV.reg  = (GCLK_GENDIV_DIV(2)  | GCLK_GENDIV_ID(0));
     GCLK->GENCTRL.reg = (GCLK_GENCTRL_ID(0)  | (GCLK_GENCTRL_SRC_DFLL48M) | (GCLK_GENCTRL_GENEN));
     GCLK->CLKCTRL.reg = (GCLK_CLKCTRL_GEN(0) | GCLK_CLKCTRL_CLKEN ) ;
+	
+	//set up OSC8M
 }
 
 void PinConfig() {
@@ -106,8 +112,18 @@ struct spiModule accelModuleSetup() {
     return accelModule;
 }
 
-void initAccelSensor(struct spiModule *const module) {
+struct USARTModule GPSmoduleSetup() {
+    struct USARTModule gpsModule;
+    configUSARTModule(&gpsModule,
+                      PIN_PB23,
+                      PIN_PB22,
+                      5700,
+                      5);
 
+    return gpsModule;
+}
+
+void initAccelSensor(struct spiModule *const module) {
     /*=========================================================================
     					accel init stuff
     -----------------------------------------------------------------------*/
@@ -116,26 +132,18 @@ void initAccelSensor(struct spiModule *const module) {
     byteOut(module,0x00);
     SaLDigitalOut(module->SS,true);
 
-    setRange(module,ADXL345_RANGE_2_G);
-//     SaLDigitalOut(accelModule.SS,false);
-//     byteOut(&accelModule,ADXL345_REG_DATA_FORMAT);
-//     byteOut(&accelModule,0b10000000);
-//     SaLDigitalOut(accelModule.SS,true);
-
+    // setRange(module,ADXL345_RANGE_2_G);
 
     SaLDigitalOut(module->SS,false);
-    byteOut(module,ADXL345_REG_BW_RATE);
-    byteOut(module,0b1110);
+    byteOut(module,ADXL345_REG_DATA_FORMAT);
+    byteOut(module,0b00 | 0b1000);
     SaLDigitalOut(module->SS,true);
-
 
     SaLDigitalOut(module->SS,false);
     byteOut(module,ADXL345_REG_POWER_CTL);
     byteOut(module,0x08);
     SaLDigitalOut(module->SS,true);
     /*=========================================================================*/
-
-
 }
 
 void initBaroSensor(struct spiModule *const module ) {
@@ -148,7 +156,11 @@ void initBaroSensor(struct spiModule *const module ) {
     delay_us(30);
     read_coeff(module);
     /*=========================================================================*/
+}
 
+void initGPS() {
+	
+	
 
 }
 
@@ -162,38 +174,41 @@ int main(void) {
     PinConfig();
     struct spiModule baroModule =baroModuleSetup();
     struct spiModule accelModule =accelModuleSetup();
+    struct USARTModule gpsModule =GPSmoduleSetup();
 
     initAccelSensor(&accelModule);
     initBaroSensor(&baroModule);
+	initGPS(&gpsModule);
 
 
 
-    volatile int16_t accelX = getX(&accelModule);
-    volatile int16_t accelY =  getY(&accelModule);
-    volatile int16_t accelZ =  getZ(&accelModule);
+    volatile int16_t accelX = 0;
+    volatile int16_t accelY = 0;
+    volatile int16_t accelZ = 0;
 
-    //delay_ms(1000);
-    SaLPlayTone(100);
-    SaLPlayTone(200);
-    SaLPlayTone(300);
-    SaLPlayTone(400);
-    SaLPlayTone(500);
-    SaLPlayTone(800);
     SaLPlayTone(900);
-	delay_ms(10000);
-    SaLPlayTone(170);
+    SaLPlayTone(800);
+    SaLPlayTone(700);
+    SaLPlayTone(600);
+    SaLPlayTone(500);
 
-
-
-
-
-
+    uint32_t index = 0;
     while (1) {
+        delay_us(100);
         counter++;
         getevents(&accelModule);
         accelX = currentX();
         accelY = currentY();
         accelZ = currentZ();
 
+        accelDataX[index] = accelX;
+        accelDataY[index] = accelY;
+        accelDataZ[index] = accelZ;
+        index++;
+        if (index == 100) {
+            index = 0;
+            // SaLPlayTone(500);
+
+        }
     }
 }

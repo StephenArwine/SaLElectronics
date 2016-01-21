@@ -44,6 +44,7 @@ C_SRCS +=  \
 ../../src/services/SaLBuzzer.c \
 ../../src/services/SaLDelay.c \
 ../../src/services/SaLPort.c \
+../../src/services/SaLUSART.c \
 ../Device_Startup/startup_samd21.c \
 ../Device_Startup/system_samd21.c \
 ../SaLAltimeter-1.0.c
@@ -62,6 +63,7 @@ SaLBitBang.o \
 SaLBuzzer.o \
 SaLDelay.o \
 SaLPort.o \
+SaLUSART.o \
 Device_Startup/startup_samd21.o \
 Device_Startup/system_samd21.o \
 SaLAltimeter-1.0.o
@@ -73,6 +75,7 @@ SaLBitBang.o \
 SaLBuzzer.o \
 SaLDelay.o \
 SaLPort.o \
+SaLUSART.o \
 Device_Startup/startup_samd21.o \
 Device_Startup/system_samd21.o \
 SaLAltimeter-1.0.o
@@ -84,6 +87,7 @@ SaLBitBang.d \
 SaLBuzzer.d \
 SaLDelay.d \
 SaLPort.d \
+SaLUSART.d \
 Device_Startup/startup_samd21.d \
 Device_Startup/system_samd21.d \
 SaLAltimeter-1.0.d
@@ -95,6 +99,7 @@ SaLBitBang.d \
 SaLBuzzer.d \
 SaLDelay.d \
 SaLPort.d \
+SaLUSART.d \
 Device_Startup/startup_samd21.d \
 Device_Startup/system_samd21.d \
 SaLAltimeter-1.0.d
@@ -115,6 +120,8 @@ LINKER_SCRIPT_DEP+=  \
 
 
 # AVR32/GNU C Compiler
+
+
 
 
 
