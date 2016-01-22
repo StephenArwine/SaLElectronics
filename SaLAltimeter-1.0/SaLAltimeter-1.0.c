@@ -30,9 +30,9 @@
 #include <SaL.h>
 
 
-int16_t accelDataX[100];
-int16_t accelDataY[100];
-int16_t accelDataZ[100];
+float accelDataX[1000];
+float accelDataY[1000];
+float accelDataZ[1000];
 
 
 
@@ -74,8 +74,8 @@ void ClockInit() {
     GCLK->GENDIV.reg  = (GCLK_GENDIV_DIV(2)  | GCLK_GENDIV_ID(0));
     GCLK->GENCTRL.reg = (GCLK_GENCTRL_ID(0)  | (GCLK_GENCTRL_SRC_DFLL48M) | (GCLK_GENCTRL_GENEN));
     GCLK->CLKCTRL.reg = (GCLK_CLKCTRL_GEN(0) | GCLK_CLKCTRL_CLKEN ) ;
-	
-	//set up OSC8M
+
+    //set up OSC8M
 }
 
 void PinConfig() {
@@ -132,7 +132,11 @@ void initAccelSensor(struct spiModule *const module) {
     byteOut(module,0x00);
     SaLDigitalOut(module->SS,true);
 
-    // setRange(module,ADXL345_RANGE_2_G);
+    SaLDigitalOut(module->SS,false);
+    byteOut(module,ADXL345_REG_BW_RATE);
+    byteOut(module,ADXL345_DATARATE_1600_HZ);
+    SaLDigitalOut(module->SS,true);
+
 
     SaLDigitalOut(module->SS,false);
     byteOut(module,ADXL345_REG_DATA_FORMAT);
@@ -159,15 +163,14 @@ void initBaroSensor(struct spiModule *const module ) {
 }
 
 void initGPS() {
-	
-	
+
+
 
 }
 
 volatile uint32_t counter = 0;
 
 int main(void) {
-    /* Initialize the SAM system */
     SystemInit();
     ClockInit();
     SaLDelayInit();
@@ -178,13 +181,11 @@ int main(void) {
 
     initAccelSensor(&accelModule);
     initBaroSensor(&baroModule);
-	initGPS(&gpsModule);
+    initGPS(&gpsModule);
 
-
-
-    volatile int16_t accelX = 0;
-    volatile int16_t accelY = 0;
-    volatile int16_t accelZ = 0;
+    volatile float accelX = 0;
+    volatile float accelY = 0;
+    volatile float accelZ = 0;
 
     SaLPlayTone(900);
     SaLPlayTone(800);
@@ -194,7 +195,6 @@ int main(void) {
 
     uint32_t index = 0;
     while (1) {
-        delay_us(100);
         counter++;
         getevents(&accelModule);
         accelX = currentX();
@@ -205,10 +205,10 @@ int main(void) {
         accelDataY[index] = accelY;
         accelDataZ[index] = accelZ;
         index++;
-        if (index == 100) {
+        if (index == 1000) {
             index = 0;
-            // SaLPlayTone(500);
-
         }
+		
     }
+
 }

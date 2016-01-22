@@ -3,19 +3,19 @@
 
 #include <SaL.h>
 
-volatile int16_t curaccelX;
-volatile int16_t curaccelY;
-volatile int16_t curaccelZ;
+volatile int16_t Xaccel;
+volatile int16_t Yaccel;
+volatile int16_t Zaccel;
 
 void getevents(struct spiModule *const module);
-int16_t currentX();
-int16_t currentY();
-int16_t currentZ();
+float currentX();
+float currentY();
+float currentZ();
 
 
 
 
-#define ADXL345_MG2G_MULTIPLIER (0.004)  // 4mg per lsb
+#define ADXL345_MG2G_MULTIPLIER (0.0039)  // 4mg per lsb
 /*=========================================================================
     REGISTERS
     -----------------------------------------------------------------------*/
@@ -83,10 +83,6 @@ typedef enum {
 
 void setRange(struct spiModule *const module,
               ADXL345Range _cmd);
-
-int16_t getX(struct spiModule *const module);
-int16_t getY(struct spiModule *const module);
-int16_t getZ(struct spiModule *const module);
 
 
 #endif
