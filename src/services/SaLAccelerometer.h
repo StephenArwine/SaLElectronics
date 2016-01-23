@@ -15,11 +15,11 @@ struct Acceleration {
 };
 
 
-typedef struct Accelerometer {
+struct Accelerometer {
 
     enum model_;
 
-    struct spiModule* const thisSpiModule;
+    struct spiModule thisSpiModule;
 
 #ifdef HAS_ADXL345
 
@@ -32,7 +32,7 @@ typedef struct Accelerometer {
     struct Acceleration acceleration;
 
 
-} Accelerometer;
+};
 
 
 

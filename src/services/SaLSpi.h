@@ -1,8 +1,7 @@
 #ifndef SALSPI_H_
 #define SALSPI_H_
 
-#include <stdint.h>
-#include <SaLPort.h>
+#include <SaL.h>
  
   struct spiModule{
 

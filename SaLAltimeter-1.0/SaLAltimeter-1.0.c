@@ -142,7 +142,7 @@ int main(void) {
     uint32_t index = 0;
     while (1) {
         counter++;
-        getevents(&myAccelerometer.thisSpiModule);
+        getevents(myAccelerometer.thisSpiModule);
         accelX = currentX();
         accelY = currentY();
         accelZ = currentZ();
