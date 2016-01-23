@@ -1,17 +1,27 @@
-#ifndef SAL_H_
-#define SAL_H_
+
+
+#define INPUT 0
+#define OUTPUT 1
+#define OUTSTRONG 3
+#define TRUE 1
+#define FALSE 0
 
 #include <stddef.h>
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <boardDefines.h>
 
-#include <samd21g18a.h>
+
 
 #include <SaLPort.h>
 
+
+
 #include <SaLBitBang.h>
+
+#include <SaLSpi.h>
 
 #include <SaLDelay.h>
 
@@ -27,9 +37,6 @@
 #include <ADXL345.h>
 #endif
 
+#include <SaLAccelerometer.h>
 
 
-
-
-
-#endif

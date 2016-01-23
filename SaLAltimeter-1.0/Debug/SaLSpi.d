@@ -1,13 +1,14 @@
-SaLBuzzer.d SaLBuzzer.o: ../../src/services/SaLBuzzer.c \
- C:\Users\sal\Documents\SaLElectronics\src\services/SaLBuzzer.h \
- C:\Users\sal\Documents\SaLElectronics\src/SaL.h \
- c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.9.3\include\stddef.h \
+SaLSpi.d SaLSpi.o: ../../src/services/SaLSpi.c \
+ C:\Users\sal\Documents\SaLElectronics\src\services/SaLSpi.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.9.3\include\stdint.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\stdint.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\machine\_default_types.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\features.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\_intsup.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\_stdint.h \
+ C:\Users\sal\Documents\SaLElectronics\src\services/SaLPort.h \
+ C:\Users\sal\Documents\SaLElectronics\src/SaL.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.9.3\include\stddef.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\stdio.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\_ansi.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\newlib.h \
@@ -89,20 +90,15 @@ SaLBuzzer.d SaLBuzzer.o: ../../src/services/SaLBuzzer.c \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\include/instance/usb.h \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\include/instance/wdt.h \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\include/pio/samd21g18a.h \
- C:\Users\sal\Documents\SaLElectronics\src\services/SaLPort.h \
  C:\Users\sal\Documents\SaLElectronics\src\services/SaLBitBang.h \
- C:\Users\sal\Documents\SaLElectronics\src\services/SaLSpi.h \
  C:\Users\sal\Documents\SaLElectronics\src\services/SaLDelay.h \
+ C:\Users\sal\Documents\SaLElectronics\src\services/SaLBuzzer.h \
  C:\Users\sal\Documents\SaLElectronics\src\services/SaLUSART.h \
  C:\Users\sal\Documents\SaLElectronics\src\drivers/MS5607.h \
  C:\Users\sal\Documents\SaLElectronics\src\drivers/ADXL345.h \
  C:\Users\sal\Documents\SaLElectronics\src\services/SaLAccelerometer.h
 
-C:\Users\sal\Documents\SaLElectronics\src\services/SaLBuzzer.h:
-
-C:\Users\sal\Documents\SaLElectronics\src/SaL.h:
-
-c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.9.3\include\stddef.h:
+C:\Users\sal\Documents\SaLElectronics\src\services/SaLSpi.h:
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.9.3\include\stdint.h:
 
@@ -115,6 +111,12 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\_intsup.h:
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\_stdint.h:
+
+C:\Users\sal\Documents\SaLElectronics\src\services/SaLPort.h:
+
+C:\Users\sal\Documents\SaLElectronics\src/SaL.h:
+
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.9.3\include\stddef.h:
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\stdio.h:
 
@@ -278,13 +280,11 @@ C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a
 
 C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\include/pio/samd21g18a.h:
 
-C:\Users\sal\Documents\SaLElectronics\src\services/SaLPort.h:
-
 C:\Users\sal\Documents\SaLElectronics\src\services/SaLBitBang.h:
 
-C:\Users\sal\Documents\SaLElectronics\src\services/SaLSpi.h:
-
 C:\Users\sal\Documents\SaLElectronics\src\services/SaLDelay.h:
+
+C:\Users\sal\Documents\SaLElectronics\src\services/SaLBuzzer.h:
 
 C:\Users\sal\Documents\SaLElectronics\src\services/SaLUSART.h:
 

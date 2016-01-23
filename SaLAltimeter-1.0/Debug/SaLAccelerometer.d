@@ -1,5 +1,6 @@
-SaLBuzzer.d SaLBuzzer.o: ../../src/services/SaLBuzzer.c \
- C:\Users\sal\Documents\SaLElectronics\src\services/SaLBuzzer.h \
+SaLAccelerometer.d SaLAccelerometer.o: \
+ ../../src/services/SaLAccelerometer.c \
+ C:\Users\sal\Documents\SaLElectronics\src\services/SaLAccelerometer.h \
  C:\Users\sal\Documents\SaLElectronics\src/SaL.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.9.3\include\stddef.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.9.3\include\stdint.h \
@@ -93,12 +94,12 @@ SaLBuzzer.d SaLBuzzer.o: ../../src/services/SaLBuzzer.c \
  C:\Users\sal\Documents\SaLElectronics\src\services/SaLBitBang.h \
  C:\Users\sal\Documents\SaLElectronics\src\services/SaLSpi.h \
  C:\Users\sal\Documents\SaLElectronics\src\services/SaLDelay.h \
+ C:\Users\sal\Documents\SaLElectronics\src\services/SaLBuzzer.h \
  C:\Users\sal\Documents\SaLElectronics\src\services/SaLUSART.h \
  C:\Users\sal\Documents\SaLElectronics\src\drivers/MS5607.h \
- C:\Users\sal\Documents\SaLElectronics\src\drivers/ADXL345.h \
- C:\Users\sal\Documents\SaLElectronics\src\services/SaLAccelerometer.h
+ C:\Users\sal\Documents\SaLElectronics\src\drivers/ADXL345.h
 
-C:\Users\sal\Documents\SaLElectronics\src\services/SaLBuzzer.h:
+C:\Users\sal\Documents\SaLElectronics\src\services/SaLAccelerometer.h:
 
 C:\Users\sal\Documents\SaLElectronics\src/SaL.h:
 
@@ -286,10 +287,10 @@ C:\Users\sal\Documents\SaLElectronics\src\services/SaLSpi.h:
 
 C:\Users\sal\Documents\SaLElectronics\src\services/SaLDelay.h:
 
+C:\Users\sal\Documents\SaLElectronics\src\services/SaLBuzzer.h:
+
 C:\Users\sal\Documents\SaLElectronics\src\services/SaLUSART.h:
 
 C:\Users\sal\Documents\SaLElectronics\src\drivers/MS5607.h:
 
 C:\Users\sal\Documents\SaLElectronics\src\drivers/ADXL345.h:
-
-C:\Users\sal\Documents\SaLElectronics\src\services/SaLAccelerometer.h:

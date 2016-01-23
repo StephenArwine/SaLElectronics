@@ -6,6 +6,8 @@
 
 ..\src\drivers\MS5607.c
 
+..\src\services\SaLAccelerometer.c
+
 ..\src\services\SaLBitBang.c
 
 ..\src\services\SaLBuzzer.c
@@ -13,6 +15,8 @@
 ..\src\services\SaLDelay.c
 
 ..\src\services\SaLPort.c
+
+..\src\services\SaLSpi.c
 
 ..\src\services\SaLUSART.c
 

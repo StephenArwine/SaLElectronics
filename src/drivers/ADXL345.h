@@ -1,5 +1,8 @@
+
+
 #ifndef ADXL345_H_
 #define ADXL345_H_
+
 
 #include <SaL.h>
 
@@ -69,15 +72,16 @@ typedef enum {
     ADXL345_DATARATE_0_39_HZ    = 0b0010, // 0.20Hz Bandwidth    23µA IDD
     ADXL345_DATARATE_0_20_HZ    = 0b0001, // 0.10Hz Bandwidth    23µA IDD
     ADXL345_DATARATE_0_10_HZ    = 0b0000  // 0.05Hz Bandwidth    23µA IDD (default value)
-} ADXL345DataRate;
+} ADXL345DATARATE;
 
 
 /* Used with register 0x31 (ADXL345_REG_DATA_FORMAT) to set g range */
 typedef enum {
-    ADXL345_RANGE_16_G          = 0x11,   // +/- 16g
-    ADXL345_RANGE_8_G           = 0x10,   // +/- 8g
-    ADXL345_RANGE_4_G           = 0x01,   // +/- 4g
-    ADXL345_RANGE_2_G           = 0x00    // +/- 2g (default value)
+    ADXL345_RANGE_16_G          = 0b11,   // +/- 16g
+    ADXL345_RANGE_8_G           = 0b10,   // +/- 8g
+    ADXL345_RANGE_4_G           = 0b01,   // +/- 4g
+    ADXL345_RANGE_2_G           = 0b00,   // +/- 2g (default value)
+    ADXL345_RANGE_FULL_RANGE    = 0b1000  //sets altimeter to full range
 } ADXL345Range;
 
 

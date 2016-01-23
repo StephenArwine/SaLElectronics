@@ -1,9 +1,9 @@
-#include <SaL.h>
 
 
 #ifndef MS5607_H_
 #define MS5607_H_
 
+#include <SaL.h>
 
 
 #define cmdReset_    0x1E
@@ -19,7 +19,7 @@
 #define cmdPromRd_   0xA0
 uint16_t coefficients_[6];
 
-typedef struct MS5607_module {
+struct MS5607_module {
 
     uint8_t sercom1setting;
 

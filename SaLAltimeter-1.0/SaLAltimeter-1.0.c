@@ -5,28 +5,7 @@
  * Author : Stephen Arwine
  */
 
-
-#define HAS_MS5607 1
-#define MS5607_MOSIPIN PIN_PA13
-#define MS5607_MISOPIN PIN_PA14
-#define MS5607_SCKPIN PIN_PA15
-#define MS5607_SLAVE_SELECT_PIN PIN_PA09
-
-#define HAS_ADXL345 1
-#define ADXL345_MOSIPIN PIN_PA13
-#define ADXL345_MISOPIN PIN_PA14
-#define ADXL345_SCKPIN PIN_PA15
-#define ADXL345_SLAVE_SELECT_PIN PIN_PA16
-
-#define NVM_DFLL_COARSE_POS    58
-#define NVM_DFLL_COARSE_SIZE   6
-#define NVM_DFLL_FINE_POS      64
-#define NVM_DFLL_FINE_SIZE     10
-
-#define BUZZER PIN_PA12
-
 #include "sam.h"
-#include <samd21g18a.h>
 #include <SaL.h>
 
 
@@ -89,28 +68,18 @@ void PinConfig() {
     SaLDigitalOut(PIN_PA08,true);
 }
 
-struct spiModule baroModuleSetup() {
+ struct spiModule baroModuleSetup() {
 
     struct spiModule baroModule;
     configSpiModule(&baroModule,
-                    MS5607_MOSIPIN,
-                    MS5607_MISOPIN,
-                    MS5607_SCKPIN,
+                    MS5607_MOSI_PIN,
+                    MS5607_MISO_PIN,
+                    MS5607_SCK_PIN,
                     MS5607_SLAVE_SELECT_PIN);
 
     return baroModule;
 }
 
-struct spiModule accelModuleSetup() {
-    struct spiModule accelModule;
-    configSpiModule(&accelModule,
-                    ADXL345_MOSIPIN,
-                    ADXL345_MISOPIN,
-                    ADXL345_SCKPIN,
-                    ADXL345_SLAVE_SELECT_PIN);
-
-    return accelModule;
-}
 
 struct USARTModule GPSmoduleSetup() {
     struct USARTModule gpsModule;
@@ -123,32 +92,7 @@ struct USARTModule GPSmoduleSetup() {
     return gpsModule;
 }
 
-void initAccelSensor(struct spiModule *const module) {
-    /*=========================================================================
-    					accel init stuff
-    -----------------------------------------------------------------------*/
-    SaLDigitalOut(module->SS,false);
-    byteOut(module,ADXL345_REG_POWER_CTL);
-    byteOut(module,0x00);
-    SaLDigitalOut(module->SS,true);
 
-    SaLDigitalOut(module->SS,false);
-    byteOut(module,ADXL345_REG_BW_RATE);
-    byteOut(module,ADXL345_DATARATE_1600_HZ);
-    SaLDigitalOut(module->SS,true);
-
-
-    SaLDigitalOut(module->SS,false);
-    byteOut(module,ADXL345_REG_DATA_FORMAT);
-    byteOut(module,0b00 | 0b1000);
-    SaLDigitalOut(module->SS,true);
-
-    SaLDigitalOut(module->SS,false);
-    byteOut(module,ADXL345_REG_POWER_CTL);
-    byteOut(module,0x08);
-    SaLDigitalOut(module->SS,true);
-    /*=========================================================================*/
-}
 
 void initBaroSensor(struct spiModule *const module ) {
     /*=========================================================================
@@ -175,11 +119,13 @@ int main(void) {
     ClockInit();
     SaLDelayInit();
     PinConfig();
+	
+	struct Accelerometer myAccelerometer;
+	initAccelerometer(&myAccelerometer);
+	
     struct spiModule baroModule =baroModuleSetup();
-    struct spiModule accelModule =accelModuleSetup();
     struct USARTModule gpsModule =GPSmoduleSetup();
 
-    initAccelSensor(&accelModule);
     initBaroSensor(&baroModule);
     initGPS(&gpsModule);
 
@@ -196,7 +142,7 @@ int main(void) {
     uint32_t index = 0;
     while (1) {
         counter++;
-        getevents(&accelModule);
+        getevents(&myAccelerometer.thisSpiModule);
         accelX = currentX();
         accelY = currentY();
         accelZ = currentZ();
@@ -208,7 +154,7 @@ int main(void) {
         if (index == 1000) {
             index = 0;
         }
-		
+
     }
 
 }

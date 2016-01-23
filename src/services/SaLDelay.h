@@ -1,8 +1,8 @@
-#include <SaL.h>
-
 
 #ifndef SALDELAY_H_
 #define SALDELAY_H_
+
+#include <SaL.h>
 
 
 void SaLDelayInit(void);

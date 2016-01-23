@@ -1,14 +1,9 @@
-#include <SaL.h>
-
-
 
 #ifndef SALPORT_H_
 #define SALPORT_H_
 
+#include <SaL.h>
 
-#define INPUT 0
-#define OUTPUT 1
-#define OUTSTRONG 3
 
 static inline PortGroup* SaLGetPort(
     const uint8_t gpio_pin) {
@@ -36,7 +31,7 @@ static inline void SaLDigitalOut(uint8_t pin, uint8_t level) {
 		} else {
 		port->OUTCLR.reg = pin_mask;
 	}
-};
+}
 
 static inline bool SaLDigitalIn(uint8_t pin) {
 	PortGroup *const port = SaLGetPort(pin);
