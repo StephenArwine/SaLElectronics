@@ -3,19 +3,18 @@
 
 
 
-uint32_t read_Adc(struct spiModule *const module,
-                  uint8_t _cmd) {
-    SaLDigitalOut(module->SS,false);
-    byteOut(module,_cmd);
-    SaLDigitalOut(module->SS,true);
+uint32_t read_Adc(uint8_t _cmd) {
+    SaLDigitalOut(MS5607_SLAVE_SELECT_PIN,FALSE);
+    byteOut(MS5607_SCK_PIN,MS5607_MOSI_PIN,_cmd);
+    SaLDigitalOut(MS5607_SLAVE_SELECT_PIN,TRUE);
     delay_us(900);
 
-    SaLDigitalOut(module->SS,false);
-    byteOut(module,cmdAdcRead_);
-    volatile uint8_t _byte1 = getByte(module);
-    volatile uint8_t _byte2 = getByte(module);
-    volatile uint8_t _byte3 = getByte(module);
-    SaLDigitalOut(module->SS,true);
+    SaLDigitalOut(MS5607_SLAVE_SELECT_PIN,FALSE);
+    byteOut(MS5607_SCK_PIN,MS5607_MOSI_PIN,cmdAdcRead_);
+    volatile uint8_t _byte1 = getByte(MS5607_SCK_PIN,MS5607_MISO_PIN);
+    volatile uint8_t _byte2 = getByte(MS5607_SCK_PIN,MS5607_MISO_PIN);
+    volatile uint8_t _byte3 = getByte(MS5607_SCK_PIN,MS5607_MISO_PIN);
+    SaLDigitalOut(MS5607_SLAVE_SELECT_PIN,TRUE);
 
     uint32_t _receive = _byte1;
     _receive = (_receive * 256) + _byte2;
@@ -25,19 +24,18 @@ uint32_t read_Adc(struct spiModule *const module,
 
 }
 
-void read_coeff(struct spiModule *const module) {
+void read_coeff() {
 
     uint16_t coefficient;
     for (uint8_t coeff_num = 0; coeff_num < 6 ; ++coeff_num ) {
 
         uint8_t _cmd = cmdPromRd_ + ((coeff_num+1)*2);
         delay_us(300);
-        SaLDigitalOut(module->SS,false);
-        byteOut(module,_cmd);
-        uint8_t _byte1 = getByte(module);
-        uint8_t _byte2 = getByte(module);
-
-        SaLDigitalOut(module->SS,true);
+        SaLDigitalOut(MS5607_SLAVE_SELECT_PIN,FALSE);
+        byteOut(MS5607_SCK_PIN,MS5607_MOSI_PIN,_cmd);
+        uint8_t _byte1 = getByte(MS5607_SCK_PIN,MS5607_MISO_PIN);
+        uint8_t _byte2 = getByte(MS5607_SCK_PIN,MS5607_MISO_PIN);
+        SaLDigitalOut(MS5607_SLAVE_SELECT_PIN,TRUE);
 
         coefficient = _byte1;
         coefficient = (coefficient *256 )+ _byte2;
@@ -63,10 +61,10 @@ uint32_t ConvertPressureTemperature(uint32_t pressure, uint32_t temperature) {
     return press;
 }
 
-uint32_t getAltFt(struct spiModule *const module) {
+uint32_t getAltFt() {
 
-    const uint32_t temperature = read_Adc(module, cmdAdcD2_);
-    const uint32_t pressure    = read_Adc(module, cmdAdcD1_);
+    const uint32_t temperature = read_Adc(cmdAdcD2_);
+    const uint32_t pressure    = read_Adc(cmdAdcD1_);
     const uint32_t pressConv   = ConvertPressureTemperature(pressure, temperature);
 
     //const int32_t AltCm = pascalToCent(pressConv);

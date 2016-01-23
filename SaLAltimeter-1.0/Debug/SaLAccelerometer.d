@@ -1,5 +1,6 @@
-ADXL345.d ADXL345.o: ../../src/drivers/ADXL345.c \
- ../../src/drivers/ADXL345.h ../../src/SaL.h \
+SaLAccelerometer.d SaLAccelerometer.o: \
+ ../../src/services/SaLAccelerometer.c \
+ ../../src/services/SaLAccelerometer.h ../../src/SaL.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.9.3\include\stddef.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.9.3\include\stdint.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\stdint.h \
@@ -91,9 +92,10 @@ ADXL345.d ADXL345.o: ../../src/drivers/ADXL345.c \
  ../../src/services/SaLPort.h ../../src/services/SaLBitBang.h \
  ../../src/services/SaLSpi.h ../../src/services/SaLDelay.h \
  ../../src/services/SaLBuzzer.h ../../src/services/SaLUSART.h \
- ../../src/drivers/MS5607.h ../../src/services/SaLAccelerometer.h
+ ../../src/drivers/MS5607.h ../../src/drivers/ADXL345.h \
+ ../../src/services/SaLConv2C.h
 
-../../src/drivers/ADXL345.h:
+../../src/services/SaLAccelerometer.h:
 
 ../../src/SaL.h:
 
@@ -287,4 +289,6 @@ C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a
 
 ../../src/drivers/MS5607.h:
 
-../../src/services/SaLAccelerometer.h:
+../../src/drivers/ADXL345.h:
+
+../../src/services/SaLConv2C.h:

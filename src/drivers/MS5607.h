@@ -42,15 +42,15 @@ struct MS5607_module {
 
 };
 
-uint32_t read_Adc(struct spiModule *const module,
+uint32_t read_Adc(
                   uint8_t _cmd);
 
-void read_coeff(struct spiModule *const module);
+void read_coeff();
 
 uint32_t ConvertPressureTemperature(uint32_t pressure,
                                     uint32_t temperature);
 
-uint32_t getAltFt(struct spiModule *const module);
+uint32_t getAltFt();
 uint32_t pascalToCent(const int32_t pressurePa);
 
 uint32_t paToFeetNOAA(const int32_t pressurePa);

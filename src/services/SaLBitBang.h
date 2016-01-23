@@ -8,15 +8,21 @@
 #include <SaL.h>
 
 
-void byteOut(struct spiModule *const module,
-             uint8_t btye);
+void byteOut(uint8_t SCK_PIN,
+             uint8_t MOSI_PIN,
+             uint8_t byte);
 
-void bitsOut(struct spiModule *const module,
-             uint8_t dataBits,uint8_t bits);
+void bitsOut(uint8_t SCK_PIN,
+             uint8_t MOSI_PIN,
+             uint8_t dataBits,
+             uint8_t bits);
 
-uint8_t getByte(struct spiModule *const module);
+uint8_t getByte(uint8_t SCK_PIN,
+                uint8_t MISO_PIN);
 
-uint16_t getBits(struct spiModule *const module,uint8_t bits);
+uint16_t getBits(uint8_t SCK_PIN,
+                 uint8_t MISO_PIN,
+                 uint8_t bits);
 
 
 #endif

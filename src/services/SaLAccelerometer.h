@@ -17,9 +17,7 @@ struct Acceleration {
 
 struct Accelerometer {
 
-    enum model_;
-
-    struct spiModule thisSpiModule;
+  ///  enum model_;
 
 #ifdef HAS_ADXL345
 
@@ -35,6 +33,7 @@ struct Accelerometer {
 };
 
 
+void getAccelEvent(struct Accelerometer *const myAccelerometer);
 
 void initAccelerometer(
     struct Accelerometer *const myAccelerometer);

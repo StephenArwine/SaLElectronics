@@ -10,7 +10,7 @@ volatile int16_t Xaccel;
 volatile int16_t Yaccel;
 volatile int16_t Zaccel;
 
-void getevents(struct spiModule *const module);
+
 float currentX();
 float currentY();
 float currentZ();
@@ -85,8 +85,9 @@ typedef enum {
 } ADXL345Range;
 
 
-void setRange(struct spiModule *const module,
-              ADXL345Range _cmd);
+void setRange(ADXL345Range _cmd);
+
+void getADXL345Event(uint8_t *values);
 
 
 #endif

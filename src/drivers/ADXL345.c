@@ -1,29 +1,39 @@
 #include <ADXL345.h>
 
-void setRange(struct spiModule *const module,
-              ADXL345Range _cmd) {
+void setRange(
+    ADXL345Range _cmd) {
 
-    SaLDigitalOut(module->SS,false);
-    byteOut(module,ADXL345_REG_DATA_FORMAT);
-    byteOut(module,_cmd);
-    SaLDigitalOut(module->SS,true);
+    SaLDigitalOut(ADXL345_SLAVE_SELECT_PIN,FALSE);
+    byteOut(ADXL345_SCK_PIN,ADXL345_MOSI_PIN,ADXL345_REG_DATA_FORMAT);
+    byteOut(ADXL345_SCK_PIN,ADXL345_MOSI_PIN,_cmd);
+    SaLDigitalOut(ADXL345_SLAVE_SELECT_PIN,TRUE);
 }
 
-void getevents(struct spiModule *const module) {
-    SaLDigitalOut(module->SS,false);
-    byteOut(module,ADXL345_REG_DATAX0 | 0x80 | 0x40);
-    volatile uint8_t _byte1 = getByte(module);
-    volatile uint8_t _byte2 = getByte(module);
-    volatile uint8_t _byte3 = getByte(module);
-    volatile uint8_t _byte4 = getByte(module);
-    volatile uint8_t _byte5 = getByte(module);
-    volatile uint8_t _byte6 = getByte(module);
+void getADXL345Event(uint8_t *values) {
 
-    SaLDigitalOut(module->SS,true);
+    SaLDigitalOut(ADXL345_SLAVE_SELECT_PIN,FALSE);
+    byteOut(ADXL345_SCK_PIN,ADXL345_MOSI_PIN,ADXL345_REG_DATAX0 | 0x80 | 0x40);
+    for (uint8_t i = 0; i < 6; i++) {
+        *(values+i) = getByte(ADXL345_SCK_PIN,ADXL345_MISO_PIN);
+    }
+    SaLDigitalOut(ADXL345_SLAVE_SELECT_PIN,TRUE);
+}
+
+void getevents() {
+    SaLDigitalOut(ADXL345_SLAVE_SELECT_PIN,FALSE);
+    byteOut(ADXL345_SCK_PIN,ADXL345_MOSI_PIN,ADXL345_REG_DATAX0 | 0x80 | 0x40);
+    volatile uint8_t _byte1 = getByte(ADXL345_SCK_PIN,ADXL345_MISO_PIN);
+    volatile uint8_t _byte2 = getByte(ADXL345_SCK_PIN,ADXL345_MISO_PIN);
+    volatile uint8_t _byte3 = getByte(ADXL345_SCK_PIN,ADXL345_MISO_PIN);
+    volatile uint8_t _byte4 = getByte(ADXL345_SCK_PIN,ADXL345_MISO_PIN);
+    volatile uint8_t _byte5 = getByte(ADXL345_SCK_PIN,ADXL345_MISO_PIN);
+    volatile uint8_t _byte6 = getByte(ADXL345_SCK_PIN,ADXL345_MISO_PIN);
+
+    SaLDigitalOut(ADXL345_SLAVE_SELECT_PIN,TRUE);
 
 
 
-		//check if last bit in second byte is 1 therefor negative number
+    //check if last bit in second byte is 1 therefor negative number
     int16_t negative = (_byte2 & (1 <<7)) != 0;
     if (negative) {
         // if negative then preform 2's complement to int conversion
@@ -31,21 +41,18 @@ void getevents(struct spiModule *const module) {
     } else {
         Xaccel = (_byte2 << 8) + _byte1;
     }
-
     negative = (_byte4 & (1 <<7)) != 0;
     if (negative) {
         Yaccel = ((_byte4 | ~((1 << 8) - 1)) << 8 ) | _byte4;
     } else {
         Yaccel = (_byte4 << 8) | _byte3;
     }
-
     negative = (_byte6 & (1 <<7)) != 0;
     if (negative) {
         Zaccel = ((_byte6 | ~((1 << 8) - 1)) << 8 ) | _byte5;
     } else {
         Zaccel = (_byte6 << 8) | _byte5;
     }
-
 }
 
 float currentX() {

@@ -21,7 +21,7 @@ static inline PortGroup* SaLGetPort(
 
 void SaLPinMode(uint8_t pin,uint8_t DIR);
 
-static inline void SaLDigitalOut(uint8_t pin, uint8_t level) {
+static inline void SaLDigitalOut(uint8_t pin, bool level) {
 	volatile PortGroup *const port = SaLGetPort(pin);
 	uint32_t pin_mask = (1UL << (pin % 32));
 	
