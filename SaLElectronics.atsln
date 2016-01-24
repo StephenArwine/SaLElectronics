@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		src\services\SaLSpi.h = src\services\SaLSpi.h
 	EndProjectSection
 EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "SaLAltimeter_rtc_test", "SaLAltimeter_rtc_test\SaLAltimeter_rtc_test.cproj", "{B40DF2B2-26F8-4513-85F5-6271523EF93E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -22,6 +24,10 @@ Global
 		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Debug|ARM.Build.0 = Debug|ARM
 		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Release|ARM.ActiveCfg = Release|ARM
 		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Release|ARM.Build.0 = Release|ARM
+		{B40DF2B2-26F8-4513-85F5-6271523EF93E}.Debug|ARM.ActiveCfg = Debug|ARM
+		{B40DF2B2-26F8-4513-85F5-6271523EF93E}.Debug|ARM.Build.0 = Debug|ARM
+		{B40DF2B2-26F8-4513-85F5-6271523EF93E}.Release|ARM.ActiveCfg = Release|ARM
+		{B40DF2B2-26F8-4513-85F5-6271523EF93E}.Release|ARM.Build.0 = Release|ARM
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
