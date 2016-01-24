@@ -38,5 +38,8 @@
 #endif
 
 #include <SaLAccelerometer.h>
+#include <SaLBarometer.h>
+
+#include <SaLAltimeter.h>
 
 

@@ -8,6 +8,10 @@
 
 ..\src\services\SaLAccelerometer.c
 
+..\src\services\SaLAltimeter.c
+
+..\src\services\SaLBarometer.c
+
 ..\src\services\SaLBitBang.c
 
 ..\src\services\SaLBuzzer.c

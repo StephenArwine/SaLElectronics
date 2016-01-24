@@ -6,7 +6,7 @@
 #include <SaL.h>
 
 
-#define cmdReset_    0x1E
+#define MS5607_CMD_RES    0x1E
 #define cmdAdcRead_  0x00
 #define cmdAdcConv_  0x40
 #define cmdAdcD1_    0x40
@@ -16,7 +16,7 @@
 #define cmdAdc1024_  0x04
 #define cmdAdc2048_  0x06
 #define cmdAdc4096_  0x08
-#define cmdPromRd_   0xA0
+#define MS5607_CMD_PROM_READ  0xA0
 uint16_t coefficients_[6];
 
 struct MS5607_module {
@@ -43,21 +43,22 @@ struct MS5607_module {
 };
 
 uint32_t read_Adc(
-                  uint8_t _cmd);
+    uint8_t _cmd);
 
 void read_coeff();
 
-uint32_t ConvertPressureTemperature(uint32_t pressure,
-                                    uint32_t temperature);
+uint32_t ConvertPressureTemperature(uint32_t *pressure,
+                                    uint32_t *temperature,
+                                    uint16_t *coefficients);
 
 uint32_t getAltFt();
 uint32_t pascalToCent(const int32_t pressurePa);
 
 uint32_t paToFeetNOAA(const int32_t pressurePa);
 
-// int16_t getX(struct spiModule *const module);
-// int16_t getY(struct spiModule *const module);
-// int16_t getZ(struct spiModule *const module);
+void getMS5607Coeff(uint16_t *coefficients);
+
+uint32_t readMS5607AdcResults();
 
 #endif /* MS5607_H_ */
 

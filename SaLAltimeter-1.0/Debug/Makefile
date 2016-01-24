@@ -41,6 +41,8 @@ C_SRCS +=  \
 ../../src/drivers/ADXL345.c \
 ../../src/drivers/MS5607.c \
 ../../src/services/SaLAccelerometer.c \
+../../src/services/SaLAltimeter.c \
+../../src/services/SaLBarometer.c \
 ../../src/services/SaLBitBang.c \
 ../../src/services/SaLBuzzer.c \
 ../../src/services/SaLDelay.c \
@@ -62,6 +64,8 @@ OBJS +=  \
 ADXL345.o \
 MS5607.o \
 SaLAccelerometer.o \
+SaLAltimeter.o \
+SaLBarometer.o \
 SaLBitBang.o \
 SaLBuzzer.o \
 SaLDelay.o \
@@ -76,6 +80,8 @@ OBJS_AS_ARGS +=  \
 ADXL345.o \
 MS5607.o \
 SaLAccelerometer.o \
+SaLAltimeter.o \
+SaLBarometer.o \
 SaLBitBang.o \
 SaLBuzzer.o \
 SaLDelay.o \
@@ -90,6 +96,8 @@ C_DEPS +=  \
 ADXL345.d \
 MS5607.d \
 SaLAccelerometer.d \
+SaLAltimeter.d \
+SaLBarometer.d \
 SaLBitBang.d \
 SaLBuzzer.d \
 SaLDelay.d \
@@ -104,6 +112,8 @@ C_DEPS_AS_ARGS +=  \
 ADXL345.d \
 MS5607.d \
 SaLAccelerometer.d \
+SaLAltimeter.d \
+SaLBarometer.d \
 SaLBitBang.d \
 SaLBuzzer.d \
 SaLDelay.d \
@@ -130,6 +140,10 @@ LINKER_SCRIPT_DEP+=  \
 
 
 # AVR32/GNU C Compiler
+
+
+
+
 
 
 

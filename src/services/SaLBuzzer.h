@@ -8,6 +8,14 @@
 
 void SaLPlayTone(int16_t tone_);
 
+static inline void startUpTone() {
+    SaLPlayTone(900);
+    SaLPlayTone(800);
+    SaLPlayTone(700);
+    SaLPlayTone(600);
+    SaLPlayTone(500);
+};
+
 
 
 

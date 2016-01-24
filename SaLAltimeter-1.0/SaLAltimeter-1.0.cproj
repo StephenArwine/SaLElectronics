@@ -182,6 +182,22 @@
       <SubType>compile</SubType>
       <Link>SaLAccelerometer.h</Link>
     </Compile>
+    <Compile Include="..\src\services\SaLAltimeter.c">
+      <SubType>compile</SubType>
+      <Link>SaLAltimeter.c</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLAltimeter.h">
+      <SubType>compile</SubType>
+      <Link>SaLAltimeter.h</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLBarometer.c">
+      <SubType>compile</SubType>
+      <Link>SaLBarometer.c</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLBarometer.h">
+      <SubType>compile</SubType>
+      <Link>SaLBarometer.h</Link>
+    </Compile>
     <Compile Include="..\src\services\SaLBitBang.c">
       <SubType>compile</SubType>
       <Link>SaLBitBang.c</Link>

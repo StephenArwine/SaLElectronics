@@ -5,7 +5,7 @@
 #include <SaL.h>
 
 
-struct Acceleration {
+struct AccelerationValues {
     int16_t X;
     int16_t Y;
     int16_t Z;
@@ -15,9 +15,8 @@ struct Acceleration {
 };
 
 
-struct Accelerometer {
-
-  ///  enum model_;
+typedef struct AccelerometerModule {
+    ///  enum model_;
 
 #ifdef HAS_ADXL345
 
@@ -27,16 +26,15 @@ struct Accelerometer {
 
 #endif
 
-    struct Acceleration acceleration;
+   struct AccelerationValues acceleration;
 
 
-};
+} Accelerometer, *AccelerometerPtr;
 
 
-void getAccelEvent(struct Accelerometer *const myAccelerometer);
+void getAccelEvent(Accelerometer *const myAccelerometer);
 
-void initAccelerometer(
-    struct Accelerometer *const myAccelerometer);
+void initAccelerometer(Accelerometer *const myAccelerometer);
 
 
 #endif
