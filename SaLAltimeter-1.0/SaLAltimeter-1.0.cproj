@@ -72,6 +72,10 @@
     <ListValues>
       <Value>%24(PackRepoDir)\atmel\SAMD21_DFP\1.0.222\samd21a\include</Value>
       <Value>%24(PackRepoDir)\arm\cmsis\4.2.0\CMSIS\Include\</Value>
+      <Value>C:\Users\sal\Documents\SaLElectronics\src\drivers</Value>
+      <Value>C:\Users\sal\Documents\SaLElectronics\src\services</Value>
+      <Value>C:\Users\sal\Documents\SaLElectronics\src</Value>
+      <Value>C:\Users\sal\Documents\SaLElectronics\SaLAltimeter-1.0</Value>
     </ListValues>
   </armgcc.compiler.directories.IncludePaths>
   <armgcc.compiler.optimization.level>Optimize for size (-Os)</armgcc.compiler.optimization.level>
@@ -88,6 +92,7 @@
     </ListValues>
   </armgcc.linker.libraries.LibrarySearchPaths>
   <armgcc.linker.optimization.GarbageCollectUnusedSections>True</armgcc.linker.optimization.GarbageCollectUnusedSections>
+  <armgcc.linker.memorysettings.ExternalRAM />
   <armgcc.linker.miscellaneous.LinkerFlags>-Tsamd21g18a_flash.ld</armgcc.linker.miscellaneous.LinkerFlags>
   <armgcc.preprocessingassembler.general.IncludePaths>
     <ListValues>

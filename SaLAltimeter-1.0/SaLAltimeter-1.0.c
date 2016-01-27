@@ -63,7 +63,7 @@ void GclkInit() {
     //Wait and see if the DFLL output is good . . .
     while((SYSCTRL->PCLKSR.reg & (SYSCTRL_PCLKSR_DFLLRDY)) == 0);
     //For generic clock generator 0, select the DFLL48 Clock as input
-    GCLK->GENDIV.reg  = (GCLK_GENDIV_DIV(2)  | GCLK_GENDIV_ID(0));
+    GCLK->GENDIV.reg  = (GCLK_GENDIV_DIV(1)  | GCLK_GENDIV_ID(0));
     GCLK->GENCTRL.reg = (GCLK_GENCTRL_ID(0)  | (GCLK_GENCTRL_SRC_DFLL48M) | (GCLK_GENCTRL_GENEN));
     GCLK->CLKCTRL.reg = (GCLK_CLKCTRL_GEN(0) | GCLK_CLKCTRL_CLKEN ) ;
     //set up OSC8M
@@ -79,14 +79,8 @@ void PinConfig() {
     SaLPinMode(MS5607_SLAVE_SELECT_PIN,OUTPUT);
     SaLDigitalOut(MS5607_SLAVE_SELECT_PIN,TRUE);
 }
-
 void RTCInit() {
 
-    SYSCTRL->OSC32K.reg = SYSCTRL_OSC32K_ENABLE | SYSCTRL_OSC32K_EN1K;
-    //wait for crystal to warm up
-    while((SYSCTRL->PCLKSR.reg & (SYSCTRL_PCLKSR_OSC32KRDY)) == 0);
-
-    SYSCTRL->OSC8M.reg = SYSCTRL_OSC8M_ENABLE;
     GCLK->GENDIV.reg = GCLK_GENDIV_ID(2) | GCLK_GENDIV_DIV(1);
 
     GCLK->GENCTRL.reg = GCLK_GENCTRL_ID(2) | GCLK_GENCTRL_SRC(GCLK_GENCTRL_SRC_XOSC32K) |
@@ -97,11 +91,12 @@ void RTCInit() {
     GCLK->CLKCTRL.reg = GCLK_CLKCTRL_ID(RTC_GCLK_ID) |
                         GCLK_CLKCTRL_CLKEN | GCLK_CLKCTRL_GEN(2);
 
-    RTC->MODE1.CTRL.reg = RTC_MODE1_CTRL_MODE_COUNT16;
+    RTC->MODE1.CTRL.reg = RTC_MODE1_CTRL_MODE_COUNT16 |
+                          RTC_MODE1_CTRL_PRESCALER_DIV32;
     while (RTC->MODE1.STATUS.bit.SYNCBUSY);
 
     // Prescaler needs to be enabled separately from the mode for some reason
-    RTC->MODE1.CTRL.reg |= RTC_MODE1_CTRL_PRESCALER_DIV32;
+    //  RTC->MODE1.CTRL.reg |= RTC_MODE1_CTRL_PRESCALER_DIV1;
     while (RTC->MODE1.STATUS.bit.SYNCBUSY);
 
     RTC->MODE1.PER.reg = 998;
@@ -116,10 +111,13 @@ void RTCInit() {
 
     NVIC_EnableIRQ(RTC_IRQn);
 }
-
 void RTC_Handler(void) {
     time_ms += 1000;
-    RTC->MODE1.INTFLAG.bit.OVF = 1;
+    RTC->MODE1.INTFLAG.reg = 0xFF;
+}
+
+static void uart_sync(void) {
+    while (SERCOM5->USART.SYNCBUSY.bit.CTRLB);
 }
 
 static uint32_t millis(void) {
@@ -132,6 +130,59 @@ static uint32_t millis(void) {
     return ms;
 }
 
+static void uart_init(uint32_t baud) {
+
+    uint32_t UART_CLKGEN_F = 8000000UL;
+    uint64_t br = (uint64_t)65536 * (UART_CLKGEN_F - 16 * baud) / UART_CLKGEN_F;
+
+    //enable GPS pins
+    //  SaLPinMode(MTK3339_RX_PIN,INPUT);
+    //  SaLPinMode(MTK3339_TX_PIN,OUTPUT);
+
+    volatile PortGroup *const portB22 = SaLGetPort(PIN_PB22);
+    uint32_t pin_maskB22 = (1UL << (PIN_PB22 % 32));
+    volatile PortGroup *const portB23 = SaLGetPort(PIN_PB23);
+    uint32_t pin_maskB23 = (1UL << (PIN_PB23 % 32));
+
+
+
+    //portB22->PINCFG->reg = 0x44;
+   // portB23->PINCFG->reg = 0x44;
+    ((Port *)PORT)->Group[1].PINCFG[22].reg = 0x41;
+    ((Port *)PORT)->Group[1].PINCFG[23].reg = 0x41;
+
+
+
+                                           //enable power to sercom 5 module
+                                           PM->APBCMASK.reg |= PM_APBCMASK_SERCOM5;
+    //enable and configure the sercom clock
+    GCLK->GENDIV.reg =  GCLK_GENDIV_ID(3) |
+                        GCLK_GENDIV_DIV(1);
+    GCLK->GENCTRL.reg = GCLK_GENCTRL_ID(3) |
+                        GCLK_GENCTRL_SRC_OSC8M |
+                        GCLK_GENCTRL_IDC |
+                        GCLK_GENCTRL_RUNSTDBY |
+                        GCLK_GENCTRL_GENEN;
+    GCLK->CLKCTRL.reg = GCLK_CLKCTRL_ID_SERCOM5_CORE |
+                        GCLK_CLKCTRL_GEN_GCLK3 |
+                        GCLK_CLKCTRL_CLKEN;
+    //configure the sercom module for the gps (sercom 5)
+    SERCOM5->USART.CTRLA.reg = SERCOM_USART_CTRLA_DORD |
+                               SERCOM_USART_CTRLA_MODE_USART_INT_CLK |
+                               SERCOM_USART_CTRLA_RXPO(3) |
+                               SERCOM_USART_CTRLA_TXPO(1);
+    uart_sync();
+    SERCOM5->USART.CTRLB.reg = SERCOM_USART_CTRLB_RXEN | SERCOM_USART_CTRLB_TXEN |
+                               SERCOM_USART_CTRLB_CHSIZE(0/*8 bits*/) |
+                               SERCOM_USART_CTRLB_SFDE;
+    uart_sync();
+    SERCOM5->USART.BAUD.reg = (uint16_t)br;
+    uart_sync();
+    SERCOM5->USART.CTRLA.reg |= SERCOM_USART_CTRLA_ENABLE;
+    uart_sync();
+
+}
+
 volatile uint32_t counter = 0;
 
 int main(void) {
@@ -140,6 +191,8 @@ int main(void) {
     GclkInit();
     RTCInit();
     PinConfig();
+    uart_init(9600);
+
 
     Accelerometer myAccelerometer;
     initAccelerometer(&myAccelerometer);
@@ -163,28 +216,23 @@ int main(void) {
         counter++;
         milliseconds = millis();
 
-        if (milliseconds - lasttime > 1000) {
+        if (milliseconds - lasttime > 15000) {
             lasttime = milliseconds;
-            //SaLPlayTone(400);
-            seconds++;
+            SaLPlayTone(400);
         }
-//         if (milliseconds != lasttime) {
-//             lasttime = milliseconds;
-//             lasttimes[index] =  milliseconds;
-//             index++;
-//         }
-//
-//                 getMS5607PressureSlow(&myBarometer);
-//                 currentHeight[index] = myBarometer.currentAltInFt;
-//
-//                 getAccelEvent(&myAccelerometer);
-//                 accelX = myAccelerometer.acceleration.Xf;
-//                 accelY = myAccelerometer.acceleration.Yf;
-//                 accelZ =myAccelerometer.acceleration.Zf;
-//
-//                 accelDataX[index] = accelX;
-//                 accelDataY[index] = accelY;
-//                 accelDataZ[index] = accelZ;
+
+
+        getMS5607PressureSlow(&myBarometer);
+        currentHeight[index] = myBarometer.currentAltInFt;
+
+        getAccelEvent(&myAccelerometer);
+        accelX = myAccelerometer.acceleration.Xf;
+        accelY = myAccelerometer.acceleration.Yf;
+        accelZ =myAccelerometer.acceleration.Zf;
+
+        accelDataX[index] = accelX;
+        accelDataY[index] = accelY;
+        accelDataZ[index] = accelZ;
         if (index == 1000) {
             index = 0;
         }
