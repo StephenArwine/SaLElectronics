@@ -89,11 +89,11 @@ SaLBuzzer.d SaLBuzzer.o: ../../src/services/SaLBuzzer.c \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\include/instance/usb.h \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\include/instance/wdt.h \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\include/pio/samd21g18a.h \
+ C:\Users\sal\Documents\SaLElectronics\src\utils\include/utils.h \
  C:\Users\sal\Documents\SaLElectronics\src\services/SaLPort.h \
  C:\Users\sal\Documents\SaLElectronics\src\services/SaLBitBang.h \
  C:\Users\sal\Documents\SaLElectronics\src\services/SaLSpi.h \
  C:\Users\sal\Documents\SaLElectronics\src\services/SaLDelay.h \
- C:\Users\sal\Documents\SaLElectronics\src\services/SaLUSART.h \
  C:\Users\sal\Documents\SaLElectronics\src\drivers/MS5607.h \
  C:\Users\sal\Documents\SaLElectronics\src\drivers/ADXL345.h \
  C:\Users\sal\Documents\SaLElectronics\src\services/SaLAccelerometer.h \
@@ -280,6 +280,8 @@ C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a
 
 C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\include/pio/samd21g18a.h:
 
+C:\Users\sal\Documents\SaLElectronics\src\utils\include/utils.h:
+
 C:\Users\sal\Documents\SaLElectronics\src\services/SaLPort.h:
 
 C:\Users\sal\Documents\SaLElectronics\src\services/SaLBitBang.h:
@@ -287,8 +289,6 @@ C:\Users\sal\Documents\SaLElectronics\src\services/SaLBitBang.h:
 C:\Users\sal\Documents\SaLElectronics\src\services/SaLSpi.h:
 
 C:\Users\sal\Documents\SaLElectronics\src\services/SaLDelay.h:
-
-C:\Users\sal\Documents\SaLElectronics\src\services/SaLUSART.h:
 
 C:\Users\sal\Documents\SaLElectronics\src\drivers/MS5607.h:
 

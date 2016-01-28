@@ -18,11 +18,21 @@
 
 ..\src\services\SaLDelay.c
 
+..\src\services\SaLIo.c
+
 ..\src\services\SaLPort.c
 
 ..\src\services\SaLSpi.c
 
 ..\src\services\SaLUSART.c
+
+..\src\utils\src\utils_assert.c
+
+..\src\utils\src\utils_event.c
+
+..\src\utils\src\utils_list.c
+
+..\src\utils\src\utils_syscalls.c
 
 Device_Startup\startup_samd21.c
 

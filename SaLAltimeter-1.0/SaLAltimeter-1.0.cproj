@@ -128,12 +128,14 @@
       <Value>../../src/services</Value>
       <Value>../../src</Value>
       <Value>..</Value>
+      <Value>C:\Users\sal\Documents\SaLElectronics\src\utils\include</Value>
     </ListValues>
   </armgcc.compiler.directories.IncludePaths>
   <armgcc.compiler.optimization.level>Optimize (-O1)</armgcc.compiler.optimization.level>
   <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
   <armgcc.compiler.optimization.DebugLevel>Maximum (-g3)</armgcc.compiler.optimization.DebugLevel>
   <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
+  <armgcc.linker.general.UseNewlibNano>True</armgcc.linker.general.UseNewlibNano>
   <armgcc.linker.libraries.Libraries>
     <ListValues>
       <Value>libm</Value>
@@ -152,6 +154,9 @@
     <ListValues>
       <Value>%24(PackRepoDir)\atmel\SAMD21_DFP\1.0.222\samd21a\include</Value>
       <Value>%24(PackRepoDir)\arm\cmsis\4.2.0\CMSIS\Include\</Value>
+      <Value>C:\Users\sal\Documents\SaLElectronics\src\drivers</Value>
+      <Value>C:\Users\sal\Documents\SaLElectronics\src\services</Value>
+      <Value>C:\Users\sal\Documents\SaLElectronics\src</Value>
     </ListValues>
   </armgcc.preprocessingassembler.general.IncludePaths>
   <armgcc.preprocessingassembler.debugging.DebugLevel>Default (-Wa,-g)</armgcc.preprocessingassembler.debugging.DebugLevel>
@@ -227,6 +232,14 @@
       <SubType>compile</SubType>
       <Link>SaLDelay.h</Link>
     </Compile>
+    <Compile Include="..\src\services\SaLIo.c">
+      <SubType>compile</SubType>
+      <Link>SaLIo.c</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLIo.h">
+      <SubType>compile</SubType>
+      <Link>SaLIo.h</Link>
+    </Compile>
     <Compile Include="..\src\services\SaLPort.c">
       <SubType>compile</SubType>
       <Link>SaLPort.c</Link>
@@ -250,6 +263,62 @@
     <Compile Include="..\src\services\SaLUSART.h">
       <SubType>compile</SubType>
       <Link>SaLUSART.h</Link>
+    </Compile>
+    <Compile Include="..\src\utils\include\compiler.h">
+      <SubType>compile</SubType>
+      <Link>compiler.h</Link>
+    </Compile>
+    <Compile Include="..\src\utils\include\err_codes.h">
+      <SubType>compile</SubType>
+      <Link>err_codes.h</Link>
+    </Compile>
+    <Compile Include="..\src\utils\include\events.h">
+      <SubType>compile</SubType>
+      <Link>events.h</Link>
+    </Compile>
+    <Compile Include="..\src\utils\include\parts.h">
+      <SubType>compile</SubType>
+      <Link>parts.h</Link>
+    </Compile>
+    <Compile Include="..\src\utils\include\utils.h">
+      <SubType>compile</SubType>
+      <Link>utils.h</Link>
+    </Compile>
+    <Compile Include="..\src\utils\include\utils_assert.h">
+      <SubType>compile</SubType>
+      <Link>utils_assert.h</Link>
+    </Compile>
+    <Compile Include="..\src\utils\include\utils_event.h">
+      <SubType>compile</SubType>
+      <Link>utils_event.h</Link>
+    </Compile>
+    <Compile Include="..\src\utils\include\utils_increment_macro.h">
+      <SubType>compile</SubType>
+      <Link>utils_increment_macro.h</Link>
+    </Compile>
+    <Compile Include="..\src\utils\include\utils_list.h">
+      <SubType>compile</SubType>
+      <Link>utils_list.h</Link>
+    </Compile>
+    <Compile Include="..\src\utils\include\utils_repeat_macro.h">
+      <SubType>compile</SubType>
+      <Link>utils_repeat_macro.h</Link>
+    </Compile>
+    <Compile Include="..\src\utils\src\utils_assert.c">
+      <SubType>compile</SubType>
+      <Link>utils_assert.c</Link>
+    </Compile>
+    <Compile Include="..\src\utils\src\utils_event.c">
+      <SubType>compile</SubType>
+      <Link>utils_event.c</Link>
+    </Compile>
+    <Compile Include="..\src\utils\src\utils_list.c">
+      <SubType>compile</SubType>
+      <Link>utils_list.c</Link>
+    </Compile>
+    <Compile Include="..\src\utils\src\utils_syscalls.c">
+      <SubType>compile</SubType>
+      <Link>utils_syscalls.c</Link>
     </Compile>
     <Compile Include="boardDefines.h">
       <SubType>compile</SubType>

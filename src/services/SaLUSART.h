@@ -1,23 +1,39 @@
 
 
-#ifndef SALUSART_H_
-#define SALUSART_H_
+#ifndef _SALUSART_INCLUDED
+#define _SALUSART_INCLUDED
 
-#include <SaL.h>
-#include <SaLPort.h>
+#include <SaLIo.h>
 
-  struct USARTModule{
+typedef uint16_t SaLSercomUsartDataReg_t;
 
-    uint8_t TX;
 
-    uint8_t RX;
+struct _UsartDevice {
+    void *hw;
+};
 
-    uint16_t BAUD;
+struct SaLUsartDescriptor {
+    struct IoDescriptor io;
+    struct _UsartDevice device;
+};
 
-    uint8_t SERCOMNUMBER;
-	
+struct SaLUsartDescriptor USART_0;
+
+static inline void SaLInitUsart(const void *const hw) {
+
 
 
 };
+
+static inline SaLSercomUsartDataReg_t SaLUsartDataRead(const void *const hw) {
+    return ((Sercom *)hw)->USART.DATA.reg;
+};
+
+static inline void SaLUsartDataWrite(const void *const hw,SaLSercomUsartDataReg_t data) {
+
+    ((Sercom *)hw)->USART.DATA.reg = data;
+
+};
+
 
 #endif

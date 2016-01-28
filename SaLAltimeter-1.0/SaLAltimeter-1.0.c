@@ -6,7 +6,11 @@
  */
 
 #include "sam.h"
+#include <samd21g18a.h>
+#include <samd21.h>
 #include <SaL.h>
+#include <SaLIo.h>
+#include <SaLUSART.h>
 
 #define ATOMIC_SECTION_ENTER   { register uint32_t __atomic; \
 	__asm volatile ("mrs %0, primask" : "=r" (__atomic) ); \
@@ -192,6 +196,9 @@ int main(void) {
     RTCInit();
     PinConfig();
     uart_init(9600);
+	
+	struct IoDescriptor *UsartIoModule;
+	
 
 
     Accelerometer myAccelerometer;
