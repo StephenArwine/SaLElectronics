@@ -1,9 +1,10 @@
 
 
-#ifndef _SALUSART_INCLUDED
-#define _SALUSART_INCLUDED
+#ifndef _SALUSART_H_
+#define _SALUSART_H_
 
 #include <SaLIo.h>
+#include <SaL.h>
 
 typedef uint16_t SaLSercomUsartDataReg_t;
 

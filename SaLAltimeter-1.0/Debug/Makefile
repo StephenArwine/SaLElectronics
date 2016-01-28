@@ -50,10 +50,6 @@ C_SRCS +=  \
 ../../src/services/SaLPort.c \
 ../../src/services/SaLSpi.c \
 ../../src/services/SaLUSART.c \
-../../src/utils/src/utils_assert.c \
-../../src/utils/src/utils_event.c \
-../../src/utils/src/utils_list.c \
-../../src/utils/src/utils_syscalls.c \
 ../Device_Startup/startup_samd21.c \
 ../Device_Startup/system_samd21.c \
 ../SaLAltimeter-1.0.c
@@ -78,10 +74,6 @@ SaLIo.o \
 SaLPort.o \
 SaLSpi.o \
 SaLUSART.o \
-utils_assert.o \
-utils_event.o \
-utils_list.o \
-utils_syscalls.o \
 Device_Startup/startup_samd21.o \
 Device_Startup/system_samd21.o \
 SaLAltimeter-1.0.o
@@ -99,10 +91,6 @@ SaLIo.o \
 SaLPort.o \
 SaLSpi.o \
 SaLUSART.o \
-utils_assert.o \
-utils_event.o \
-utils_list.o \
-utils_syscalls.o \
 Device_Startup/startup_samd21.o \
 Device_Startup/system_samd21.o \
 SaLAltimeter-1.0.o
@@ -120,10 +108,6 @@ SaLIo.d \
 SaLPort.d \
 SaLSpi.d \
 SaLUSART.d \
-utils_assert.d \
-utils_event.d \
-utils_list.d \
-utils_syscalls.d \
 Device_Startup/startup_samd21.d \
 Device_Startup/system_samd21.d \
 SaLAltimeter-1.0.d
@@ -141,10 +125,6 @@ SaLIo.d \
 SaLPort.d \
 SaLSpi.d \
 SaLUSART.d \
-utils_assert.d \
-utils_event.d \
-utils_list.d \
-utils_syscalls.d \
 Device_Startup/startup_samd21.d \
 Device_Startup/system_samd21.d \
 SaLAltimeter-1.0.d
@@ -196,14 +176,6 @@ LINKER_SCRIPT_DEP+=  \
 
 
 
-
-
-
-
-
-
-
-
 ./%.o: ../../src/drivers/%.c
 	@echo Building file: $<
 	@echo Invoking: ARM/GNU C Compiler : 4.9.3
@@ -212,13 +184,6 @@ LINKER_SCRIPT_DEP+=  \
 	
 
 ./%.o: ../../src/services/%.c
-	@echo Building file: $<
-	@echo Invoking: ARM/GNU C Compiler : 4.9.3
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAMD21G18A__ -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\arm\cmsis\4.2.0\CMSIS\Include" -I"C:\Users\sal\Documents\SaLElectronics\src" -I"C:\Users\sal\Documents\SaLElectronics\src\services" -I"C:\Users\sal\Documents\SaLElectronics\src\drivers" -I"C:\Users\sal\Documents\SaLElectronics\SaLAltimeter-1.0" -I"../../src/drivers" -I"../../src/services" -I"../../src" -I".." -I"C:\Users\sal\Documents\SaLElectronics\src\utils\include"  -O1 -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m0plus -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
-	@echo Finished building: $<
-	
-
-./%.o: ../../src/utils/src/%.c
 	@echo Building file: $<
 	@echo Invoking: ARM/GNU C Compiler : 4.9.3
 	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAMD21G18A__ -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\arm\cmsis\4.2.0\CMSIS\Include" -I"C:\Users\sal\Documents\SaLElectronics\src" -I"C:\Users\sal\Documents\SaLElectronics\src\services" -I"C:\Users\sal\Documents\SaLElectronics\src\drivers" -I"C:\Users\sal\Documents\SaLElectronics\SaLAltimeter-1.0" -I"../../src/drivers" -I"../../src/services" -I"../../src" -I".." -I"C:\Users\sal\Documents\SaLElectronics\src\utils\include"  -O1 -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m0plus -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 

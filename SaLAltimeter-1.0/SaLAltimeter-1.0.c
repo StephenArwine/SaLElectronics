@@ -199,6 +199,7 @@ int main(void) {
 	
 	struct IoDescriptor *UsartIoModule;
 	
+	volatile char message[255];
 
 
     Accelerometer myAccelerometer;
@@ -220,6 +221,9 @@ int main(void) {
     volatile uint32_t seconds = 0;
     volatile uint32_t milliseconds = 0;
     while (1) {
+		
+		message = *SERCOM5.USART.DATA.reg;
+		
         counter++;
         milliseconds = millis();
 

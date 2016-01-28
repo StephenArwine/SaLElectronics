@@ -22,22 +22,22 @@ static inline PortGroup* SaLGetPort(
 void SaLPinMode(uint8_t pin,uint8_t DIR);
 
 static inline void SaLDigitalOut(uint8_t pin, bool level) {
-	volatile PortGroup *const port = SaLGetPort(pin);
-	uint32_t pin_mask = (1UL << (pin % 32));
-	
+    PortGroup *const port = SaLGetPort(pin);
+    uint32_t pin_mask = (1UL << (pin % 32));
 
-	if (level) {
-		port->OUTSET.reg = pin_mask;
-		} else {
-		port->OUTCLR.reg = pin_mask;
-	}
+
+    if (level) {
+        port->OUTSET.reg = pin_mask;
+    } else {
+        port->OUTCLR.reg = pin_mask;
+    }
 }
 
 static inline bool SaLDigitalIn(uint8_t pin) {
-	PortGroup *const port = SaLGetPort(pin);
-	uint32_t pin_mask = (1UL << (pin % 32));
-	bool level = (port->IN.reg & pin_mask);
-	return level;
+    PortGroup *const port = SaLGetPort(pin);
+    uint32_t pin_mask = (1UL << (pin % 32));
+    bool level = (port->IN.reg & pin_mask);
+    return level;
 }
 
 

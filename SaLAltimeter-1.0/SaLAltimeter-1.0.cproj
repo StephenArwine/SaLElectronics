@@ -280,46 +280,6 @@
       <SubType>compile</SubType>
       <Link>parts.h</Link>
     </Compile>
-    <Compile Include="..\src\utils\include\utils.h">
-      <SubType>compile</SubType>
-      <Link>utils.h</Link>
-    </Compile>
-    <Compile Include="..\src\utils\include\utils_assert.h">
-      <SubType>compile</SubType>
-      <Link>utils_assert.h</Link>
-    </Compile>
-    <Compile Include="..\src\utils\include\utils_event.h">
-      <SubType>compile</SubType>
-      <Link>utils_event.h</Link>
-    </Compile>
-    <Compile Include="..\src\utils\include\utils_increment_macro.h">
-      <SubType>compile</SubType>
-      <Link>utils_increment_macro.h</Link>
-    </Compile>
-    <Compile Include="..\src\utils\include\utils_list.h">
-      <SubType>compile</SubType>
-      <Link>utils_list.h</Link>
-    </Compile>
-    <Compile Include="..\src\utils\include\utils_repeat_macro.h">
-      <SubType>compile</SubType>
-      <Link>utils_repeat_macro.h</Link>
-    </Compile>
-    <Compile Include="..\src\utils\src\utils_assert.c">
-      <SubType>compile</SubType>
-      <Link>utils_assert.c</Link>
-    </Compile>
-    <Compile Include="..\src\utils\src\utils_event.c">
-      <SubType>compile</SubType>
-      <Link>utils_event.c</Link>
-    </Compile>
-    <Compile Include="..\src\utils\src\utils_list.c">
-      <SubType>compile</SubType>
-      <Link>utils_list.c</Link>
-    </Compile>
-    <Compile Include="..\src\utils\src\utils_syscalls.c">
-      <SubType>compile</SubType>
-      <Link>utils_syscalls.c</Link>
-    </Compile>
     <Compile Include="boardDefines.h">
       <SubType>compile</SubType>
       <Link>boardDefines.h</Link>

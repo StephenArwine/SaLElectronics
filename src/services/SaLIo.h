@@ -29,5 +29,4 @@ int32_t SaLIoRead(struct IoDescriptor *const IoDescr,
                   const uint8_t *const buf,
                   const uint16_t length);
 
-
 #endif
