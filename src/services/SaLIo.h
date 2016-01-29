@@ -4,6 +4,9 @@
 #define _SALIO_INCLUDED
 
 #include <stdint.h>
+#include <stdbool.h>
+#include <SaL.h>
+
 
 
 struct IoDescriptor;
@@ -13,7 +16,7 @@ typedef int32_t (* SaLIoWrite_t)(struct IoDescriptor *const IoDescr,
                                  const uint16_t length);
 
 typedef int32_t (* SaLIoRead_t)(struct IoDescriptor *const IoDescr,
-                                const uint8_t *const buf,
+                                uint8_t *const buf,
                                 const uint16_t length);
 
 struct IoDescriptor {
@@ -26,7 +29,7 @@ int32_t SaLIoWrite(struct IoDescriptor *const IoDescr,
                    const uint16_t length);
 
 int32_t SaLIoRead(struct IoDescriptor *const IoDescr,
-                  const uint8_t *const buf,
+                  uint8_t *const buf,
                   const uint16_t length);
 
 #endif

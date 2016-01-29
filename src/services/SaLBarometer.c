@@ -32,11 +32,11 @@ void sendMS5607D2ReadReq(uint8_t _cmd) {
 void getMS5607PressureSlow(Barometer *const myBarometer) {
 
     sendMS5607D2ReadReq(cmdAdcD1_);
-    delay_us(900);
+    delay_us(600);
     myBarometer->pressure = readMS5607AdcResults();
 
     sendMS5607D2ReadReq(cmdAdcD2_);
-    delay_us(900);
+    delay_us(600);
     myBarometer->temperature = readMS5607AdcResults();
 
     const uint32_t pressConv   = ConvertPressureTemperature(&myBarometer->pressure, &myBarometer->temperature,&myBarometer->coefficients_[0]);

@@ -6,10 +6,8 @@
  */
 
 #include "sam.h"
-#include <samd21g18a.h>
-#include <samd21.h>
+
 #include <SaL.h>
-#include <SaLIo.h>
 #include <SaLUSART.h>
 
 #define ATOMIC_SECTION_ENTER   { register uint32_t __atomic; \
@@ -142,6 +140,10 @@ static void uart_init(uint32_t baud) {
     //enable GPS pins
     //  SaLPinMode(MTK3339_RX_PIN,INPUT);
     //  SaLPinMode(MTK3339_TX_PIN,OUTPUT);
+    SYSCTRL->OSC8M.reg -= SYSCTRL_OSC8M_ENABLE;
+    SYSCTRL->OSC8M.reg -= SYSCTRL_OSC8M_PRESC_3;
+    SYSCTRL->OSC8M.reg |= SYSCTRL_OSC8M_ENABLE;
+
 
     volatile PortGroup *const portB22 = SaLGetPort(PIN_PB22);
     uint32_t pin_maskB22 = (1UL << (PIN_PB22 % 32));
@@ -151,14 +153,15 @@ static void uart_init(uint32_t baud) {
 
 
     //portB22->PINCFG->reg = 0x44;
-   // portB23->PINCFG->reg = 0x44;
+    // portB23->PINCFG->reg = 0x44;
     ((Port *)PORT)->Group[1].PINCFG[22].reg = 0x41;
     ((Port *)PORT)->Group[1].PINCFG[23].reg = 0x41;
+    ((Port *)PORT)->Group[1].PMUX[11].reg = 0x32;
 
 
 
-                                           //enable power to sercom 5 module
-                                           PM->APBCMASK.reg |= PM_APBCMASK_SERCOM5;
+    //enable power to sercom 5 module
+    PM->APBCMASK.reg |= PM_APBCMASK_SERCOM5;
     //enable and configure the sercom clock
     GCLK->GENDIV.reg =  GCLK_GENDIV_ID(3) |
                         GCLK_GENDIV_DIV(1);
@@ -170,6 +173,9 @@ static void uart_init(uint32_t baud) {
     GCLK->CLKCTRL.reg = GCLK_CLKCTRL_ID_SERCOM5_CORE |
                         GCLK_CLKCTRL_GEN_GCLK3 |
                         GCLK_CLKCTRL_CLKEN;
+//     GCLK->CLKCTRL.reg = GCLK_CLKCTRL_ID_SERCOMX_SLOW |
+//                         GCLK_CLKCTRL_GEN_GCLK3 |
+//                         GCLK_CLKCTRL_CLKEN;
     //configure the sercom module for the gps (sercom 5)
     SERCOM5->USART.CTRLA.reg = SERCOM_USART_CTRLA_DORD |
                                SERCOM_USART_CTRLA_MODE_USART_INT_CLK |
@@ -177,15 +183,15 @@ static void uart_init(uint32_t baud) {
                                SERCOM_USART_CTRLA_TXPO(1);
     uart_sync();
     SERCOM5->USART.CTRLB.reg = SERCOM_USART_CTRLB_RXEN | SERCOM_USART_CTRLB_TXEN |
-                               SERCOM_USART_CTRLB_CHSIZE(0/*8 bits*/) |
-                               SERCOM_USART_CTRLB_SFDE;
+                               SERCOM_USART_CTRLB_CHSIZE(0/*8 bits*/);
+    // SERCOM_USART_CTRLB_SFDE;
     uart_sync();
     SERCOM5->USART.BAUD.reg = (uint16_t)br;
     uart_sync();
-    SERCOM5->USART.CTRLA.reg |= SERCOM_USART_CTRLA_ENABLE;
-    uart_sync();
+
 
 }
+
 
 volatile uint32_t counter = 0;
 
@@ -196,10 +202,17 @@ int main(void) {
     RTCInit();
     PinConfig();
     uart_init(9600);
-	
-	struct IoDescriptor *UsartIoModule;
-	
-	volatile char message[255];
+
+    SaLInitUsart(&USART_0,SERCOM5);
+
+    struct IoDescriptor *UsartIoModule;
+    SaLSyncUsartIo(&USART_0, &UsartIoModule);
+
+    SERCOM5->USART.CTRLA.reg |= SERCOM_USART_CTRLA_ENABLE;
+    uart_sync();
+
+    volatile uint8_t message[255];
+    uint16_t bytesRead = 0;
 
 
     Accelerometer myAccelerometer;
@@ -220,16 +233,29 @@ int main(void) {
     uint32_t index = 0;
     volatile uint32_t seconds = 0;
     volatile uint32_t milliseconds = 0;
+    uint8_t tempByte = 0;
+
+
     while (1) {
-		
-		message = *SERCOM5.USART.DATA.reg;
-		
+
+        //   bytesRead = SaLIoRead(UsartIoModule,&message[0],255);
+
+//         uint8_t temp = SaLIoRead(UsartIoModule, &tempByte, 1);
+//         if (tempByte == 0x24) {
+//             for (uint8_t i = 0; i <255; i++) {
+//
+//                 volatile uint16_t bits = SaLIoRead(UsartIoModule, &message[i], 1);
+//             }
+//         }
+        //    bytesRead = SaLIoRead(UsartIoModule,&message[0],225);
         counter++;
+        index++;
         milliseconds = millis();
 
-        if (milliseconds - lasttime > 15000) {
+        if (milliseconds - lasttime > 10000) {
             lasttime = milliseconds;
-            SaLPlayTone(400);
+            //SaLPlayTone(400);
+            bytesRead = SaLIoRead(UsartIoModule,&message[0],225);
         }
 
 
@@ -246,6 +272,7 @@ int main(void) {
         accelDataZ[index] = accelZ;
         if (index == 1000) {
             index = 0;
+			SaLPlayTone(400);
         }
     }
 }
