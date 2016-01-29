@@ -1,5 +1,5 @@
-SaLSpi.d SaLSpi.o: ../../src/services/SaLSpi.c \
- ../../src/services/SaLSpi.h ../../src/SaL.h \
+SaLClocks.d SaLClocks.o: ../../src/services/SaLClocks.c \
+ ../../src/services/SaLClocks.h ../../src/SaL.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.9.3\include\stddef.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.9.3\include\stdint.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\stdint.h \
@@ -90,13 +90,13 @@ SaLSpi.d SaLSpi.o: ../../src/services/SaLSpi.c \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\include/pio/samd21g18a.h \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\include/samd21.h \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\include/samd21g18a.h \
- ../../src/services/SaLClocks.h ../../src/services/SaLPort.h \
- ../../src/services/SaLBitBang.h ../../src/services/SaLDelay.h \
- ../../src/services/SaLBuzzer.h ../../src/drivers/MS5607.h \
- ../../src/drivers/ADXL345.h ../../src/services/SaLAccelerometer.h \
- ../../src/services/SaLBarometer.h ../../src/services/SaLAltimeter.h
+ ../../src/services/SaLPort.h ../../src/services/SaLBitBang.h \
+ ../../src/services/SaLDelay.h ../../src/services/SaLBuzzer.h \
+ ../../src/drivers/MS5607.h ../../src/drivers/ADXL345.h \
+ ../../src/services/SaLAccelerometer.h ../../src/services/SaLBarometer.h \
+ ../../src/services/SaLAltimeter.h
 
-../../src/services/SaLSpi.h:
+../../src/services/SaLClocks.h:
 
 ../../src/SaL.h:
 
@@ -279,8 +279,6 @@ C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a
 C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\include/samd21.h:
 
 C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\include/samd21g18a.h:
-
-../../src/services/SaLClocks.h:
 
 ../../src/services/SaLPort.h:
 

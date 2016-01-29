@@ -224,6 +224,14 @@
       <SubType>compile</SubType>
       <Link>SaLBuzzer.h</Link>
     </Compile>
+    <Compile Include="..\src\services\SaLClocks.c">
+      <SubType>compile</SubType>
+      <Link>SaLClocks.c</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLClocks.h">
+      <SubType>compile</SubType>
+      <Link>SaLClocks.h</Link>
+    </Compile>
     <Compile Include="..\src\services\SaLDelay.c">
       <SubType>compile</SubType>
       <Link>SaLDelay.c</Link>
@@ -263,22 +271,6 @@
     <Compile Include="..\src\services\SaLUSART.h">
       <SubType>compile</SubType>
       <Link>SaLUSART.h</Link>
-    </Compile>
-    <Compile Include="..\src\utils\include\compiler.h">
-      <SubType>compile</SubType>
-      <Link>compiler.h</Link>
-    </Compile>
-    <Compile Include="..\src\utils\include\err_codes.h">
-      <SubType>compile</SubType>
-      <Link>err_codes.h</Link>
-    </Compile>
-    <Compile Include="..\src\utils\include\events.h">
-      <SubType>compile</SubType>
-      <Link>events.h</Link>
-    </Compile>
-    <Compile Include="..\src\utils\include\parts.h">
-      <SubType>compile</SubType>
-      <Link>parts.h</Link>
     </Compile>
     <Compile Include="boardDefines.h">
       <SubType>compile</SubType>

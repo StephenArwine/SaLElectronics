@@ -19,6 +19,7 @@
 #include <samd21g18a.h>
 #include <samd21.h>
 
+#include <SaLClocks.h>
 
 #include <SaLPort.h>
 

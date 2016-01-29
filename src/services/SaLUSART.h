@@ -8,6 +8,11 @@
 
 typedef uint16_t SaLSercomUsartDataReg_t;
 
+static inline void uart_sync(void) {
+    while (SERCOM5->USART.SYNCBUSY.bit.CTRLB);
+}
+
+void uart_init(uint32_t baud);
 
 struct _UsartDevice {
     void *hw;

@@ -45,6 +45,7 @@ C_SRCS +=  \
 ../../src/services/SaLBarometer.c \
 ../../src/services/SaLBitBang.c \
 ../../src/services/SaLBuzzer.c \
+../../src/services/SaLClocks.c \
 ../../src/services/SaLDelay.c \
 ../../src/services/SaLIo.c \
 ../../src/services/SaLPort.c \
@@ -69,6 +70,7 @@ SaLAltimeter.o \
 SaLBarometer.o \
 SaLBitBang.o \
 SaLBuzzer.o \
+SaLClocks.o \
 SaLDelay.o \
 SaLIo.o \
 SaLPort.o \
@@ -86,6 +88,7 @@ SaLAltimeter.o \
 SaLBarometer.o \
 SaLBitBang.o \
 SaLBuzzer.o \
+SaLClocks.o \
 SaLDelay.o \
 SaLIo.o \
 SaLPort.o \
@@ -103,6 +106,7 @@ SaLAltimeter.d \
 SaLBarometer.d \
 SaLBitBang.d \
 SaLBuzzer.d \
+SaLClocks.d \
 SaLDelay.d \
 SaLIo.d \
 SaLPort.d \
@@ -120,6 +124,7 @@ SaLAltimeter.d \
 SaLBarometer.d \
 SaLBitBang.d \
 SaLBuzzer.d \
+SaLClocks.d \
 SaLDelay.d \
 SaLIo.d \
 SaLPort.d \
@@ -145,6 +150,8 @@ LINKER_SCRIPT_DEP+=  \
 
 
 # AVR32/GNU C Compiler
+
+
 
 
 

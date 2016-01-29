@@ -16,6 +16,8 @@
 
 ..\src\services\SaLBuzzer.c
 
+..\src\services\SaLClocks.c
+
 ..\src\services\SaLDelay.c
 
 ..\src\services\SaLIo.c
