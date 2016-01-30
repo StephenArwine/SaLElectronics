@@ -6,6 +6,8 @@
 
 ..\src\drivers\MS5607.c
 
+..\src\drivers\MTK3329.c
+
 ..\src\services\SaLAccelerometer.c
 
 ..\src\services\SaLAltimeter.c
@@ -16,7 +18,11 @@
 
 ..\src\services\SaLBuzzer.c
 
+..\src\services\SaLClocks.c
+
 ..\src\services\SaLDelay.c
+
+..\src\services\SaLIo.c
 
 ..\src\services\SaLPort.c
 

@@ -40,6 +40,8 @@ SUBDIRS :=  \
 C_SRCS +=  \
 ../../src/drivers/ADXL345.c \
 ../../src/drivers/MS5607.c \
+../../src/drivers/MTK3329.c \
+../../src/include/utils_syscalls.c \
 ../../src/services/SaLAccelerometer.c \
 ../../src/services/SaLAltimeter.c \
 ../../src/services/SaLBarometer.c \
@@ -65,6 +67,8 @@ ASM_SRCS +=
 OBJS +=  \
 ADXL345.o \
 MS5607.o \
+MTK3329.o \
+utils_syscalls.o \
 SaLAccelerometer.o \
 SaLAltimeter.o \
 SaLBarometer.o \
@@ -83,6 +87,8 @@ SaLAltimeter-1.0.o
 OBJS_AS_ARGS +=  \
 ADXL345.o \
 MS5607.o \
+MTK3329.o \
+utils_syscalls.o \
 SaLAccelerometer.o \
 SaLAltimeter.o \
 SaLBarometer.o \
@@ -101,6 +107,8 @@ SaLAltimeter-1.0.o
 C_DEPS +=  \
 ADXL345.d \
 MS5607.d \
+MTK3329.d \
+utils_syscalls.d \
 SaLAccelerometer.d \
 SaLAltimeter.d \
 SaLBarometer.d \
@@ -119,6 +127,8 @@ SaLAltimeter-1.0.d
 C_DEPS_AS_ARGS +=  \
 ADXL345.d \
 MS5607.d \
+MTK3329.d \
+utils_syscalls.d \
 SaLAccelerometer.d \
 SaLAltimeter.d \
 SaLBarometer.d \
@@ -183,31 +193,42 @@ LINKER_SCRIPT_DEP+=  \
 
 
 
+
+
+
+
 ./%.o: ../../src/drivers/%.c
 	@echo Building file: $<
 	@echo Invoking: ARM/GNU C Compiler : 4.9.3
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAMD21G18A__ -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\arm\cmsis\4.2.0\CMSIS\Include" -I"C:\Users\sal\Documents\SaLElectronics\src" -I"C:\Users\sal\Documents\SaLElectronics\src\services" -I"C:\Users\sal\Documents\SaLElectronics\src\drivers" -I"C:\Users\sal\Documents\SaLElectronics\SaLAltimeter-1.0" -I"../../src/drivers" -I"../../src/services" -I"../../src" -I".." -I"C:\Users\sal\Documents\SaLElectronics\src\utils\include"  -O1 -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m0plus -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAMD21G18A__ -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\arm\cmsis\4.2.0\CMSIS\Include" -I"C:\Users\sal\Documents\SaLElectronics\src" -I"C:\Users\sal\Documents\SaLElectronics\src\services" -I"C:\Users\sal\Documents\SaLElectronics\src\drivers" -I"C:\Users\sal\Documents\SaLElectronics\SaLAltimeter-1.0" -I"../../src/drivers" -I"../../src/services" -I"../../src" -I".." -I"C:\Users\sal\Documents\SaLElectronics\src\utils\include" -I"C:\Users\sal\Documents\SaLElectronics\src\include"  -O1 -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m0plus -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+./%.o: ../../src/include/%.c
+	@echo Building file: $<
+	@echo Invoking: ARM/GNU C Compiler : 4.9.3
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAMD21G18A__ -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\arm\cmsis\4.2.0\CMSIS\Include" -I"C:\Users\sal\Documents\SaLElectronics\src" -I"C:\Users\sal\Documents\SaLElectronics\src\services" -I"C:\Users\sal\Documents\SaLElectronics\src\drivers" -I"C:\Users\sal\Documents\SaLElectronics\SaLAltimeter-1.0" -I"../../src/drivers" -I"../../src/services" -I"../../src" -I".." -I"C:\Users\sal\Documents\SaLElectronics\src\utils\include" -I"C:\Users\sal\Documents\SaLElectronics\src\include"  -O1 -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m0plus -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 ./%.o: ../../src/services/%.c
 	@echo Building file: $<
 	@echo Invoking: ARM/GNU C Compiler : 4.9.3
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAMD21G18A__ -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\arm\cmsis\4.2.0\CMSIS\Include" -I"C:\Users\sal\Documents\SaLElectronics\src" -I"C:\Users\sal\Documents\SaLElectronics\src\services" -I"C:\Users\sal\Documents\SaLElectronics\src\drivers" -I"C:\Users\sal\Documents\SaLElectronics\SaLAltimeter-1.0" -I"../../src/drivers" -I"../../src/services" -I"../../src" -I".." -I"C:\Users\sal\Documents\SaLElectronics\src\utils\include"  -O1 -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m0plus -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAMD21G18A__ -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\arm\cmsis\4.2.0\CMSIS\Include" -I"C:\Users\sal\Documents\SaLElectronics\src" -I"C:\Users\sal\Documents\SaLElectronics\src\services" -I"C:\Users\sal\Documents\SaLElectronics\src\drivers" -I"C:\Users\sal\Documents\SaLElectronics\SaLAltimeter-1.0" -I"../../src/drivers" -I"../../src/services" -I"../../src" -I".." -I"C:\Users\sal\Documents\SaLElectronics\src\utils\include" -I"C:\Users\sal\Documents\SaLElectronics\src\include"  -O1 -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m0plus -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 Device_Startup/%.o: ../Device_Startup/%.c
 	@echo Building file: $<
 	@echo Invoking: ARM/GNU C Compiler : 4.9.3
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAMD21G18A__ -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\arm\cmsis\4.2.0\CMSIS\Include" -I"C:\Users\sal\Documents\SaLElectronics\src" -I"C:\Users\sal\Documents\SaLElectronics\src\services" -I"C:\Users\sal\Documents\SaLElectronics\src\drivers" -I"C:\Users\sal\Documents\SaLElectronics\SaLAltimeter-1.0" -I"../../src/drivers" -I"../../src/services" -I"../../src" -I".." -I"C:\Users\sal\Documents\SaLElectronics\src\utils\include"  -O1 -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m0plus -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAMD21G18A__ -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\arm\cmsis\4.2.0\CMSIS\Include" -I"C:\Users\sal\Documents\SaLElectronics\src" -I"C:\Users\sal\Documents\SaLElectronics\src\services" -I"C:\Users\sal\Documents\SaLElectronics\src\drivers" -I"C:\Users\sal\Documents\SaLElectronics\SaLAltimeter-1.0" -I"../../src/drivers" -I"../../src/services" -I"../../src" -I".." -I"C:\Users\sal\Documents\SaLElectronics\src\utils\include" -I"C:\Users\sal\Documents\SaLElectronics\src\include"  -O1 -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m0plus -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 ./%.o: .././%.c
 	@echo Building file: $<
 	@echo Invoking: ARM/GNU C Compiler : 4.9.3
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAMD21G18A__ -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\arm\cmsis\4.2.0\CMSIS\Include" -I"C:\Users\sal\Documents\SaLElectronics\src" -I"C:\Users\sal\Documents\SaLElectronics\src\services" -I"C:\Users\sal\Documents\SaLElectronics\src\drivers" -I"C:\Users\sal\Documents\SaLElectronics\SaLAltimeter-1.0" -I"../../src/drivers" -I"../../src/services" -I"../../src" -I".." -I"C:\Users\sal\Documents\SaLElectronics\src\utils\include"  -O1 -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m0plus -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAMD21G18A__ -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\arm\cmsis\4.2.0\CMSIS\Include" -I"C:\Users\sal\Documents\SaLElectronics\src" -I"C:\Users\sal\Documents\SaLElectronics\src\services" -I"C:\Users\sal\Documents\SaLElectronics\src\drivers" -I"C:\Users\sal\Documents\SaLElectronics\SaLAltimeter-1.0" -I"../../src/drivers" -I"../../src/services" -I"../../src" -I".." -I"C:\Users\sal\Documents\SaLElectronics\src\utils\include" -I"C:\Users\sal\Documents\SaLElectronics\src\include"  -O1 -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m0plus -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
@@ -236,7 +257,7 @@ all: $(OUTPUT_FILE_PATH) $(ADDITIONAL_DEPENDENCIES)
 $(OUTPUT_FILE_PATH): $(OBJS) $(USER_OBJS) $(OUTPUT_FILE_DEP) $(LIB_DEP) $(LINKER_SCRIPT_DEP)
 	@echo Building target: $@
 	@echo Invoking: ARM/GNU Linker : 4.9.3
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE) -o$(OUTPUT_FILE_PATH_AS_ARGS) $(OBJS_AS_ARGS) $(USER_OBJS) $(LIBS) -mthumb -Wl,-Map="SaLAltimeter-1.0.map" --specs=nano.specs -Wl,--start-group -lm  -Wl,--end-group -L"..\\Device_Startup"  -Wl,--gc-sections -mcpu=cortex-m0plus -Tsamd21g18a_flash.ld  
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE) -o$(OUTPUT_FILE_PATH_AS_ARGS) $(OBJS_AS_ARGS) $(USER_OBJS) $(LIBS) -mthumb --specs=nano.specs -Wl,--start-group -lm -lc  -Wl,--end-group -L"..\\Device_Startup"  -Wl,--gc-sections -mcpu=cortex-m0plus -Tsamd21g18a_flash.ld  
 	@echo Finished building target: $@
 	"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-objcopy.exe" -O binary "SaLAltimeter-1.0.elf" "SaLAltimeter-1.0.bin"
 	"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-objcopy.exe" -O ihex -R .eeprom -R .fuse -R .lock -R .signature  "SaLAltimeter-1.0.elf" "SaLAltimeter-1.0.hex"

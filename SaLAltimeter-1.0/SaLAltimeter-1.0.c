@@ -10,10 +10,7 @@
 #include <SaL.h>
 #include <SaLUSART.h>
 
-#define ATOMIC_SECTION_ENTER   { register uint32_t __atomic; \
-	__asm volatile ("mrs %0, primask" : "=r" (__atomic) ); \
-	__asm volatile ("cpsid i");
-#define ATOMIC_SECTION_LEAVE   __asm volatile ("msr primask, %0" : : "r" (__atomic) ); }
+
 
 volatile uint32_t time_ms = 0;
 volatile uint32_t lasttimes[1000];
@@ -64,7 +61,9 @@ int main(void) {
     struct IoDescriptor *UsartIoModule;
     SaLSyncUsartIo(&USART_0, &UsartIoModule);
 
-     uint8_t message[255];
+    MTK3329 myGPS;
+
+    uint8_t message[255];
 
     Accelerometer myAccelerometer;
     initAccelerometer(&myAccelerometer);
@@ -80,17 +79,21 @@ int main(void) {
     uint32_t index = 0;
     volatile uint32_t seconds = 0;
     volatile uint32_t milliseconds = 0;
+    volatile uint8_t curHour = 0;
+    volatile uint8_t curmin = 0;
 
     while (1) {
-		
+
         counter++;
         index++;
         milliseconds = millis();
 
         if (milliseconds - lasttime > 10000) {
             lasttime = milliseconds;
-            //SaLPlayTone(400);
             bytesRead = SaLIoRead(UsartIoModule,&message[0],225);
+            MTK3329ParseMessage(&myGPS,&message[0]);
+            SaLPlayTone(400);
+
         }
 
         getMS5607PressureSlow(&myBarometer);
@@ -103,7 +106,7 @@ int main(void) {
 
         if (index == 1000) {
             index = 0;
-            SaLPlayTone(400);
+            //SaLPlayTone(400);
         }
     }
 }

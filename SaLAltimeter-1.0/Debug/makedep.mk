@@ -6,6 +6,10 @@
 
 ..\src\drivers\MS5607.c
 
+..\src\drivers\MTK3329.c
+
+..\src\include\utils_syscalls.c
+
 ..\src\services\SaLAccelerometer.c
 
 ..\src\services\SaLAltimeter.c

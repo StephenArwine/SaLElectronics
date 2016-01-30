@@ -54,7 +54,7 @@ void uart_init(uint32_t baud) {
     uart_sync();
     SERCOM5->USART.CTRLA.reg |= SERCOM_USART_CTRLA_ENABLE;
     uart_sync();
-	
+
     SaLInitUsart(&USART_0,SERCOM5);
 
 }
@@ -78,7 +78,6 @@ int32_t SaLInitUsart(struct SaLUsartDescriptor *const descr,
 void SaLSyncUsartIo(struct SaLUsartDescriptor *const descr,
                     struct IoDescriptor **Io) {
     *Io = &descr->io;
-
 };
 
 bool _usartByteRecieved(const struct _UsartDevice *const device) {
@@ -87,6 +86,13 @@ bool _usartByteRecieved(const struct _UsartDevice *const device) {
 
 uint8_t _usartGetData(const struct _UsartDevice *const device) {
     return _usartGetDataReg(device->hw);
+}
+
+bool _usartGetDreInterupt(const struct _UsartDevice *const device) {
+    return _usartGetDreInteruptReg(device->hw);
+}
+void _usartSetData(const struct _UsartDevice *const device, uint8_t data){
+	_usartSetDataReg(device->hw,data);
 }
 
 
@@ -114,10 +120,10 @@ static int32_t SaLUsartDataWrite(struct IoDescriptor *const ioDescr,
     int32_t offset = 0;
     struct SaLUsartDescriptor *descr = CONTAINER_OF(ioDescr,struct SaLUsartDescriptor, io);
 
-    while (!_usartGetInteruptDre(&descr->device));
+    while (!_usartGetDreInterupt(&descr->device));
     do {
         _usartSetDataReg(&descr->device,buf[offset]);
-        while (!_usartGetInteruptDre(&descr->device));
+        while (!_usartGetDreInterupt(&descr->device));
     } while (++offset < length);
     return offset;
 

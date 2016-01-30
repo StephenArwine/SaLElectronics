@@ -129,16 +129,19 @@
       <Value>../../src</Value>
       <Value>..</Value>
       <Value>C:\Users\sal\Documents\SaLElectronics\src\utils\include</Value>
+      <Value>C:\Users\sal\Documents\SaLElectronics\src\include</Value>
     </ListValues>
   </armgcc.compiler.directories.IncludePaths>
   <armgcc.compiler.optimization.level>Optimize (-O1)</armgcc.compiler.optimization.level>
   <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
   <armgcc.compiler.optimization.DebugLevel>Maximum (-g3)</armgcc.compiler.optimization.DebugLevel>
   <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
+  <armgcc.linker.general.GenerateMAPFile>False</armgcc.linker.general.GenerateMAPFile>
   <armgcc.linker.general.UseNewlibNano>True</armgcc.linker.general.UseNewlibNano>
   <armgcc.linker.libraries.Libraries>
     <ListValues>
       <Value>libm</Value>
+      <Value>libc</Value>
     </ListValues>
   </armgcc.linker.libraries.Libraries>
   <armgcc.linker.libraries.LibrarySearchPaths>
@@ -179,6 +182,58 @@
     <Compile Include="..\src\drivers\MS5607.h">
       <SubType>compile</SubType>
       <Link>MS5607.h</Link>
+    </Compile>
+    <Compile Include="..\src\drivers\MTK3329.c">
+      <SubType>compile</SubType>
+      <Link>MTK3329.c</Link>
+    </Compile>
+    <Compile Include="..\src\drivers\MTK3329.h">
+      <SubType>compile</SubType>
+      <Link>MTK3329.h</Link>
+    </Compile>
+    <Compile Include="..\src\include\compiler.h">
+      <SubType>compile</SubType>
+      <Link>compiler.h</Link>
+    </Compile>
+    <Compile Include="..\src\include\err_codes.h">
+      <SubType>compile</SubType>
+      <Link>err_codes.h</Link>
+    </Compile>
+    <Compile Include="..\src\include\events.h">
+      <SubType>compile</SubType>
+      <Link>events.h</Link>
+    </Compile>
+    <Compile Include="..\src\include\parts.h">
+      <SubType>compile</SubType>
+      <Link>parts.h</Link>
+    </Compile>
+    <Compile Include="..\src\include\utils.h">
+      <SubType>compile</SubType>
+      <Link>utils.h</Link>
+    </Compile>
+    <Compile Include="..\src\include\utils_assert.h">
+      <SubType>compile</SubType>
+      <Link>utils_assert.h</Link>
+    </Compile>
+    <Compile Include="..\src\include\utils_event.h">
+      <SubType>compile</SubType>
+      <Link>utils_event.h</Link>
+    </Compile>
+    <Compile Include="..\src\include\utils_increment_macro.h">
+      <SubType>compile</SubType>
+      <Link>utils_increment_macro.h</Link>
+    </Compile>
+    <Compile Include="..\src\include\utils_list.h">
+      <SubType>compile</SubType>
+      <Link>utils_list.h</Link>
+    </Compile>
+    <Compile Include="..\src\include\utils_repeat_macro.h">
+      <SubType>compile</SubType>
+      <Link>utils_repeat_macro.h</Link>
+    </Compile>
+    <Compile Include="..\src\include\utils_syscalls.c">
+      <SubType>compile</SubType>
+      <Link>utils_syscalls.c</Link>
     </Compile>
     <Compile Include="..\src\SaL.h">
       <SubType>compile</SubType>

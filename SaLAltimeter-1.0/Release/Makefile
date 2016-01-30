@@ -40,12 +40,15 @@ SUBDIRS :=  \
 C_SRCS +=  \
 ../../src/drivers/ADXL345.c \
 ../../src/drivers/MS5607.c \
+../../src/drivers/MTK3329.c \
 ../../src/services/SaLAccelerometer.c \
 ../../src/services/SaLAltimeter.c \
 ../../src/services/SaLBarometer.c \
 ../../src/services/SaLBitBang.c \
 ../../src/services/SaLBuzzer.c \
+../../src/services/SaLClocks.c \
 ../../src/services/SaLDelay.c \
+../../src/services/SaLIo.c \
 ../../src/services/SaLPort.c \
 ../../src/services/SaLSpi.c \
 ../../src/services/SaLUSART.c \
@@ -63,12 +66,15 @@ ASM_SRCS +=
 OBJS +=  \
 ADXL345.o \
 MS5607.o \
+MTK3329.o \
 SaLAccelerometer.o \
 SaLAltimeter.o \
 SaLBarometer.o \
 SaLBitBang.o \
 SaLBuzzer.o \
+SaLClocks.o \
 SaLDelay.o \
+SaLIo.o \
 SaLPort.o \
 SaLSpi.o \
 SaLUSART.o \
@@ -79,12 +85,15 @@ SaLAltimeter-1.0.o
 OBJS_AS_ARGS +=  \
 ADXL345.o \
 MS5607.o \
+MTK3329.o \
 SaLAccelerometer.o \
 SaLAltimeter.o \
 SaLBarometer.o \
 SaLBitBang.o \
 SaLBuzzer.o \
+SaLClocks.o \
 SaLDelay.o \
+SaLIo.o \
 SaLPort.o \
 SaLSpi.o \
 SaLUSART.o \
@@ -95,12 +104,15 @@ SaLAltimeter-1.0.o
 C_DEPS +=  \
 ADXL345.d \
 MS5607.d \
+MTK3329.d \
 SaLAccelerometer.d \
 SaLAltimeter.d \
 SaLBarometer.d \
 SaLBitBang.d \
 SaLBuzzer.d \
+SaLClocks.d \
 SaLDelay.d \
+SaLIo.d \
 SaLPort.d \
 SaLSpi.d \
 SaLUSART.d \
@@ -111,12 +123,15 @@ SaLAltimeter-1.0.d
 C_DEPS_AS_ARGS +=  \
 ADXL345.d \
 MS5607.d \
+MTK3329.d \
 SaLAccelerometer.d \
 SaLAltimeter.d \
 SaLBarometer.d \
 SaLBitBang.d \
 SaLBuzzer.d \
+SaLClocks.d \
 SaLDelay.d \
+SaLIo.d \
 SaLPort.d \
 SaLSpi.d \
 SaLUSART.d \
@@ -140,6 +155,12 @@ LINKER_SCRIPT_DEP+=  \
 
 
 # AVR32/GNU C Compiler
+
+
+
+
+
+
 
 
 
