@@ -9,6 +9,10 @@
 
 #include <SaL.h>
 #include <SaLUSART.h>
+#include <SaLPort.h>
+#include <SaLAltimeter.h>
+
+
 
 
 
@@ -20,6 +24,11 @@ float accelDataY[1000];
 float accelDataZ[1000];
 float currentHeight[1000];
 uint8_t bytesRead;
+
+
+
+
+
 
 void PinConfig() {
     /* temp SS HIGH for other peripherals */
@@ -57,30 +66,32 @@ int main(void) {
     SaLRtcInit();
     PinConfig();
     uart_init(9600);
-
+	
     struct IoDescriptor *UsartIoModule;
+	struct GpsModule myGPS;
+	struct MTK3329Module MTK3329Instance;
+	struct AccelerometerModule myAccelerometer;
+	struct BarometerModule myBarometer;
+	struct AltimeterModule myAltimeter;
+	struct sample currentSample;
+	
     SaLSyncUsartIo(&USART_0, &UsartIoModule);
-
-    MTK3329 myGPS;
-
-    uint8_t message[255];
-
-    Accelerometer myAccelerometer;
     initAccelerometer(&myAccelerometer);
-
-    Barometer myBarometer;
     initBarometer(&myBarometer);
-
     getAccelEvent(&myAccelerometer);
+
+    myGPS.MTK3329 = MTK3329Instance;
+    myAltimeter.myAltimetersAccelerometer = &myAccelerometer;
+    myAltimeter.myAltimetersBarometer = &myBarometer;
+    myAltimeter.myAltimetersGps = &myGPS;
 
     //startUpTone();
     NVIC_EnableIRQ(RTC_IRQn);
     uint32_t lasttime = 0;
     uint32_t index = 0;
-    volatile uint32_t seconds = 0;
     volatile uint32_t milliseconds = 0;
-    volatile uint8_t curHour = 0;
-    volatile uint8_t curmin = 0;
+
+    uint8_t message[255];
 
     while (1) {
 
@@ -91,18 +102,21 @@ int main(void) {
         if (milliseconds - lasttime > 10000) {
             lasttime = milliseconds;
             bytesRead = SaLIoRead(UsartIoModule,&message[0],225);
-            MTK3329ParseMessage(&myGPS,&message[0]);
+            MTK3329ParseMessage(&myGPS.MTK3329,&message[0]);
             SaLPlayTone(400);
-
+            currentSample = getSample(myAltimeter);
         }
 
         getMS5607PressureSlow(&myBarometer);
         currentHeight[index] = myBarometer.currentAltInFt;
 
-        getAccelEvent(&myAccelerometer);
+        getAccelEvent(myAltimeter.myAltimetersAccelerometer);
         accelDataX[index] = myAccelerometer.acceleration.Xf;
         accelDataY[index] = myAccelerometer.acceleration.Yf;
-        accelDataZ[index] =myAccelerometer.acceleration.Zf;
+        accelDataZ[index] = myAccelerometer.acceleration.Zf;
+
+
+
 
         if (index == 1000) {
             index = 0;

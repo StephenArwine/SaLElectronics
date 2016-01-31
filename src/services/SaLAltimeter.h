@@ -3,16 +3,23 @@
 #ifndef SALALTIMETER_H_
 #define SALALTIMETER_H_
 
-#include <SaL.h>
+//#include <SaL.h>
+#include <SaLAccelerometer.h>
+#include <SaLBarometer.h>
+#include <SaLGps.h>
 
-typedef struct AltimeterModule {
+struct AltimeterModule {
 
-   struct AltimeterPtr *myAltimetersAccelerometer;
+    struct AccelerometerModule *myAltimetersAccelerometer;
 
-    struct BarometerPtr *myAltimetersBarometer;
+    struct BarometerModule *myAltimetersBarometer;
+
+    struct GpsModule *myAltimetersGps;
+
+    float groundHeight;
 
 
-} Altimeter, *AltimeterPtr;
+};
 
 
 

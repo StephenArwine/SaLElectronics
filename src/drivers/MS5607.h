@@ -4,7 +4,7 @@
 #define MS5607_H_
 
 #include <SaL.h>
-
+#include <SaLTypes.h>
 
 #define MS5607_CMD_RES    0x1E
 #define cmdAdcRead_  0x00
@@ -41,6 +41,7 @@ struct MS5607_module {
 
 
 };
+
 
 uint32_t read_Adc(
     uint8_t _cmd);

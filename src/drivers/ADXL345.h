@@ -4,6 +4,8 @@
 #define ADXL345_H_
 
 
+#include <SaLTypes.h>
+#include <boardDefines.h>
 #include <SaL.h>
 
 volatile int16_t Xaccel;

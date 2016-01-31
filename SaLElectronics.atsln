@@ -6,33 +6,6 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "SaLAltimeter-1.0", "SaLAltimeter-1.0\SaLAltimeter-1.0.cproj", "{DCE6C7E3-EE26-4D79-826B-08594B9AD897}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1EE98676-D7D6-451D-B4DC-7F38164B2CE0}"
-	ProjectSection(SolutionItems) = preProject
-		src\drivers\ADXL345.c = src\drivers\ADXL345.c
-		src\drivers\ADXL345.h = src\drivers\ADXL345.h
-		src\services\SaLAccelerometer.c = src\services\SaLAccelerometer.c
-		src\services\SaLAccelerometer.h = src\services\SaLAccelerometer.h
-		src\services\SaLAltimeter.c = src\services\SaLAltimeter.c
-		src\services\SaLAltimeter.h = src\services\SaLAltimeter.h
-		src\services\SaLBarometer.c = src\services\SaLBarometer.c
-		src\services\SaLBarometer.h = src\services\SaLBarometer.h
-		src\services\SaLBitBang.c = src\services\SaLBitBang.c
-		src\services\SaLBitBang.h = src\services\SaLBitBang.h
-		src\services\SaLBuzzer.c = src\services\SaLBuzzer.c
-		src\services\SaLBuzzer.h = src\services\SaLBuzzer.h
-		src\services\SaLClocks.c = src\services\SaLClocks.c
-		src\services\SaLClocks.h = src\services\SaLClocks.h
-		src\services\SaLConv2C.h = src\services\SaLConv2C.h
-		src\services\SaLDelay.c = src\services\SaLDelay.c
-		src\services\SaLDelay.h = src\services\SaLDelay.h
-		src\services\SaLIo.c = src\services\SaLIo.c
-		src\services\SaLIo.h = src\services\SaLIo.h
-		src\services\SaLPort.c = src\services\SaLPort.c
-		src\services\SaLPort.h = src\services\SaLPort.h
-		src\services\SaLSpi.c = src\services\SaLSpi.c
-		src\services\SaLSpi.h = src\services\SaLSpi.h
-		src\services\SaLUSART.c = src\services\SaLUSART.c
-		src\services\SaLUSART.h = src\services\SaLUSART.h
-	EndProjectSection
 EndProject
 Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "SaLAltimeter_rtc_test", "SaLAltimeter_rtc_test\SaLAltimeter_rtc_test.cproj", "{B40DF2B2-26F8-4513-85F5-6271523EF93E}"
 EndProject

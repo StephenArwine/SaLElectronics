@@ -1,3 +1,7 @@
+
+#ifndef SAL_H_
+#define SAL_H_
+
 #include <stddef.h>
 #include <stdint.h>
 #include <stdio.h>
@@ -37,6 +41,9 @@
 
 #include <SaLBuzzer.h>
 
+#include <SaLSample.h>
+
+
 #ifdef HAS_MS5607
 #include <MS5607.h>
 #endif
@@ -49,9 +56,8 @@
 #include <MTK3329.h>
 #endif
 
-#include <SaLAccelerometer.h>
-#include <SaLBarometer.h>
 
-#include <SaLAltimeter.h>
 
+
+#endif
 

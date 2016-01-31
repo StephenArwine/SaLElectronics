@@ -1,6 +1,13 @@
 #define HAS_SPI_MODULE 1
 #include <samd21g18a.h>
 
+
+#define INPUT 0
+#define OUTPUT 1
+#define OUTSTRONG 3
+#define TRUE 1
+#define FALSE 0
+
 #define HAS_MS5607 1
 #define MS5607_MOSI_PIN PIN_PA13
 #define MS5607_MISO_PIN PIN_PA14

@@ -1,15 +1,15 @@
 
 
 #include <SaLAccelerometer.h>
-#include <SaLConv2C.h>
 
-void initAccelerometer(
-    Accelerometer *const myAccelerometer) {
+
+
+void initAccelerometer(struct AccelerometerModule *myAccelerometer) {
 
 #ifdef HAS_ADXL345
 
     SaLPinMode(ADXL345_SLAVE_SELECT_PIN,OUTPUT);
-    SaLDigitalOut(ADXL345_SLAVE_SELECT_PIN,TRUE);
+    SaLDigitalOut(ADXL345_SLAVE_SELECT_PIN,true);
     SaLPinMode(ADXL345_MOSI_PIN,OUTPUT);
     SaLPinMode(ADXL345_SCK_PIN,OUTPUT);
     SaLPinMode(ADXL345_MISO_PIN,INPUT);
@@ -17,25 +17,25 @@ void initAccelerometer(
     myAccelerometer->rate_ = MY_ADXL345_DATA_RATE;
     myAccelerometer->range_ = MY_ADXL345_RANGE;
 
-    SaLDigitalOut(ADXL345_SLAVE_SELECT_PIN,FALSE);
+    SaLDigitalOut(ADXL345_SLAVE_SELECT_PIN,false);
     byteOut(ADXL345_SCK_PIN,ADXL345_MOSI_PIN,ADXL345_REG_POWER_CTL);
     byteOut(ADXL345_SCK_PIN,ADXL345_MOSI_PIN,0x00); // disable
-    SaLDigitalOut(ADXL345_SLAVE_SELECT_PIN,TRUE);
+    SaLDigitalOut(ADXL345_SLAVE_SELECT_PIN,true);
 
-    SaLDigitalOut(ADXL345_SLAVE_SELECT_PIN,FALSE);
+    SaLDigitalOut(ADXL345_SLAVE_SELECT_PIN,false);
     byteOut(ADXL345_SCK_PIN,ADXL345_MOSI_PIN,ADXL345_REG_BW_RATE);
     byteOut(ADXL345_SCK_PIN,ADXL345_MOSI_PIN,myAccelerometer->rate_);
-    SaLDigitalOut(ADXL345_SLAVE_SELECT_PIN,TRUE);
+    SaLDigitalOut(ADXL345_SLAVE_SELECT_PIN,true);
 
-    SaLDigitalOut(ADXL345_SLAVE_SELECT_PIN,FALSE);
+    SaLDigitalOut(ADXL345_SLAVE_SELECT_PIN,false);
     byteOut(ADXL345_SCK_PIN,ADXL345_MOSI_PIN,ADXL345_REG_BW_RATE);
     byteOut(ADXL345_SCK_PIN,ADXL345_MOSI_PIN,myAccelerometer->range_);
-    SaLDigitalOut(ADXL345_SLAVE_SELECT_PIN,TRUE);
+    SaLDigitalOut(ADXL345_SLAVE_SELECT_PIN,true);
 
-    SaLDigitalOut(ADXL345_SLAVE_SELECT_PIN,FALSE);
+    SaLDigitalOut(ADXL345_SLAVE_SELECT_PIN,false);
     byteOut(ADXL345_SCK_PIN,ADXL345_MOSI_PIN,ADXL345_REG_POWER_CTL);
     byteOut(ADXL345_SCK_PIN,ADXL345_MOSI_PIN,0x08); // enable
-    SaLDigitalOut(ADXL345_SLAVE_SELECT_PIN,TRUE);
+    SaLDigitalOut(ADXL345_SLAVE_SELECT_PIN,true);
 
 #endif
 
@@ -48,7 +48,7 @@ void initAccelerometer(
 
 }
 
-void getAccelEvent(Accelerometer *const myAccelerometer) {
+void getAccelEvent(struct AccelerometerModule *myAccelerometer) {
 
 #ifdef HAS_ADXL345
 

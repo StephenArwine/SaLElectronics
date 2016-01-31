@@ -2,8 +2,12 @@
 #ifndef SALACCELEROMETER_H_
 #define SALACCELEROMETER_H_
 
-#include <SaL.h>
+#include <SaLTypes.h>
+#include <ADXL345.h>
+#include <SaLConv2C.h>
 
+
+struct AccelerometerModule;
 
 struct AccelerationValues {
     int16_t X;
@@ -15,7 +19,7 @@ struct AccelerationValues {
 };
 
 
-typedef struct AccelerometerModule {
+struct AccelerometerModule {
     ///  enum model_;
 
 #ifdef HAS_ADXL345
@@ -26,15 +30,14 @@ typedef struct AccelerometerModule {
 
 #endif
 
-   struct AccelerationValues acceleration;
+    struct AccelerationValues acceleration;
+
+};
 
 
-} Accelerometer, *AccelerometerPtr;
+void getAccelEvent(struct AccelerometerModule *myAccelerometer);
 
-
-void getAccelEvent(Accelerometer *const myAccelerometer);
-
-void initAccelerometer(Accelerometer *const myAccelerometer);
+void initAccelerometer(struct AccelerometerModule *myAccelerometer);
 
 
 #endif

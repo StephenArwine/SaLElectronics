@@ -1,7 +1,7 @@
 
 
-#ifndef _SALIO_INCLUDED
-#define _SALIO_INCLUDED
+#ifndef _SALIO_H_
+#define _SALIO_H_
 
 #include <stdint.h>
 #include <stdbool.h>

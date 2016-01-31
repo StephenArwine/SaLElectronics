@@ -1,7 +1,7 @@
 
 #include <MTK3329.h>
 
-void MTK3329ParseGPRMC(MTK3329 *const myMTK3329, uint8_t *const message) {
+void MTK3329ParseGPRMC(struct MTK3329Module *const myMTK3329, uint8_t *const message) {
     float latitude;
     float longitude;
     char *RMCMessage = message;
@@ -18,9 +18,9 @@ void MTK3329ParseGPRMC(MTK3329 *const myMTK3329, uint8_t *const message) {
     //parse valid data
     RMCMessage = strchr(RMCMessage,',')+1;
     if (RMCMessage[0] == 'A') {
-        myMTK3329->validSalad = TRUE;
+        myMTK3329->validSalad = true;
     } else if (RMCMessage[0] == 'V') {
-        myMTK3329->validSalad = FALSE;
+        myMTK3329->validSalad = false;
     }
 
     //parse latitude
@@ -76,7 +76,7 @@ void MTK3329ParseGPRMC(MTK3329 *const myMTK3329, uint8_t *const message) {
 
 
 
-void MTK3329ParseMessage(MTK3329 *const myMTK3329,uint8_t *const messageToParse) {
+void MTK3329ParseMessage(struct MTK3329Module *const myMTK3329,uint8_t *const messageToParse) {
     int32_t i = 0;
     do {
         if (messageToParse[i] == 0x24) {

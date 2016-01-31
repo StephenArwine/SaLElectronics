@@ -96,11 +96,13 @@ SaLAltimeter-1.0.d SaLAltimeter-1.0.o: .././SaLAltimeter-1.0.c \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\include/samd21g18a.h \
  ../../src/services/SaLClocks.h ../../src/services/SaLPort.h \
  ../../src/services/SaLBitBang.h ../../src/services/SaLDelay.h \
- ../../src/services/SaLBuzzer.h ../../src/drivers/MS5607.h \
- ../../src/drivers/ADXL345.h ../../src/drivers/MTK3329.h \
- ../../src/services/SaLAccelerometer.h ../../src/services/SaLBarometer.h \
- ../../src/services/SaLAltimeter.h ../../src/services/SaLUSART.h \
- ../../src/services/SaLIo.h
+ ../../src/services/SaLBuzzer.h ../../src/services/SaLSample.h \
+ ../../src/services/SaLAltimeter.h ../../src/services/SaLAccelerometer.h \
+ ../../src/services/SaLTypes.h ../../src/drivers/ADXL345.h \
+ ../../src/services/SaLConv2C.h ../../src/services/SaLBarometer.h \
+ ../../src/services/SaLSensor.h ../../src/drivers/MS5607.h \
+ ../../src/services/SaLGps.h ../../src/drivers/MTK3329.h \
+ ../../src/services/SaLUSART.h ../../src/services/SaLIo.h
 
 C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\include/sam.h:
 
@@ -306,17 +308,27 @@ C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a
 
 ../../src/services/SaLBuzzer.h:
 
-../../src/drivers/MS5607.h:
+../../src/services/SaLSample.h:
 
-../../src/drivers/ADXL345.h:
-
-../../src/drivers/MTK3329.h:
+../../src/services/SaLAltimeter.h:
 
 ../../src/services/SaLAccelerometer.h:
 
+../../src/services/SaLTypes.h:
+
+../../src/drivers/ADXL345.h:
+
+../../src/services/SaLConv2C.h:
+
 ../../src/services/SaLBarometer.h:
 
-../../src/services/SaLAltimeter.h:
+../../src/services/SaLSensor.h:
+
+../../src/drivers/MS5607.h:
+
+../../src/services/SaLGps.h:
+
+../../src/drivers/MTK3329.h:
 
 ../../src/services/SaLUSART.h:
 

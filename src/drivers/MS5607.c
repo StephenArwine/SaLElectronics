@@ -4,17 +4,17 @@
 
 
 uint32_t read_Adc(uint8_t _cmd) {
-    SaLDigitalOut(MS5607_SLAVE_SELECT_PIN,FALSE);
+    SaLDigitalOut(MS5607_SLAVE_SELECT_PIN,false);
     byteOut(MS5607_SCK_PIN,MS5607_MOSI_PIN,_cmd);
-    SaLDigitalOut(MS5607_SLAVE_SELECT_PIN,TRUE);
+    SaLDigitalOut(MS5607_SLAVE_SELECT_PIN,true);
     delay_us(900);
 
-    SaLDigitalOut(MS5607_SLAVE_SELECT_PIN,FALSE);
+    SaLDigitalOut(MS5607_SLAVE_SELECT_PIN,false);
     byteOut(MS5607_SCK_PIN,MS5607_MOSI_PIN,cmdAdcRead_);
     volatile uint8_t _byte1 = getByte(MS5607_SCK_PIN,MS5607_MISO_PIN);
     volatile uint8_t _byte2 = getByte(MS5607_SCK_PIN,MS5607_MISO_PIN);
     volatile uint8_t _byte3 = getByte(MS5607_SCK_PIN,MS5607_MISO_PIN);
-    SaLDigitalOut(MS5607_SLAVE_SELECT_PIN,TRUE);
+    SaLDigitalOut(MS5607_SLAVE_SELECT_PIN,true);
 
     uint32_t _receive = _byte1;
     _receive = (_receive * 256) + _byte2;
@@ -26,12 +26,12 @@ uint32_t read_Adc(uint8_t _cmd) {
 
 uint32_t readMS5607AdcResults(){
 	
-	 SaLDigitalOut(MS5607_SLAVE_SELECT_PIN,FALSE);
+	 SaLDigitalOut(MS5607_SLAVE_SELECT_PIN,false);
 	 byteOut(MS5607_SCK_PIN,MS5607_MOSI_PIN,cmdAdcRead_);
 	 volatile uint8_t _byte1 = getByte(MS5607_SCK_PIN,MS5607_MISO_PIN);
 	 volatile uint8_t _byte2 = getByte(MS5607_SCK_PIN,MS5607_MISO_PIN);
 	 volatile uint8_t _byte3 = getByte(MS5607_SCK_PIN,MS5607_MISO_PIN);
-	 SaLDigitalOut(MS5607_SLAVE_SELECT_PIN,TRUE);
+	 SaLDigitalOut(MS5607_SLAVE_SELECT_PIN,true);
 	 
 	 uint32_t _receive = (_byte1 << 16) | (_byte2 << 8) | (_byte3);
 	 return _receive;
@@ -43,11 +43,11 @@ void getMS5607Coeff(uint16_t *coefficients) {
         delay_us(600);
         uint8_t _cmd = MS5607_CMD_PROM_READ + ((coeff_num+1)*2);
         delay_us(600);
-        SaLDigitalOut(MS5607_SLAVE_SELECT_PIN,FALSE);
+        SaLDigitalOut(MS5607_SLAVE_SELECT_PIN,false);
         byteOut(MS5607_SCK_PIN,MS5607_MOSI_PIN,_cmd);
         uint8_t _byte1 = getByte(MS5607_SCK_PIN,MS5607_MISO_PIN);
         uint8_t _byte2 = getByte(MS5607_SCK_PIN,MS5607_MISO_PIN);
-        SaLDigitalOut(MS5607_SLAVE_SELECT_PIN,TRUE);
+        SaLDigitalOut(MS5607_SLAVE_SELECT_PIN,true);
         *(coefficients+coeff_num) = (_byte1 << 8) | _byte2;
     }
 }

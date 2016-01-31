@@ -4,7 +4,7 @@
 
 
 
-void initBarometer(Barometer *const myBarometer) {
+void initBarometer(struct BarometerModule *const myBarometer) {
 
 #ifdef HAS_MS5607
     SaLPinMode(MS5607_SLAVE_SELECT_PIN,OUTPUT);
@@ -29,7 +29,7 @@ void sendMS5607D2ReadReq(uint8_t _cmd) {
     SaLDigitalOut(MS5607_SLAVE_SELECT_PIN,TRUE);
 }
 
-void getMS5607PressureSlow(Barometer *const myBarometer) {
+void getMS5607PressureSlow(struct BarometerModule *const myBarometer) {
 
     sendMS5607D2ReadReq(cmdAdcD1_);
     delay_us(700);

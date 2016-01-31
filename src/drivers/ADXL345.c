@@ -3,24 +3,24 @@
 void setRange(
     ADXL345Range _cmd) {
 
-    SaLDigitalOut(ADXL345_SLAVE_SELECT_PIN,FALSE);
+    SaLDigitalOut(ADXL345_SLAVE_SELECT_PIN,false);
     byteOut(ADXL345_SCK_PIN,ADXL345_MOSI_PIN,ADXL345_REG_DATA_FORMAT);
     byteOut(ADXL345_SCK_PIN,ADXL345_MOSI_PIN,_cmd);
-    SaLDigitalOut(ADXL345_SLAVE_SELECT_PIN,TRUE);
+    SaLDigitalOut(ADXL345_SLAVE_SELECT_PIN,true);
 }
 
 void getADXL345Event(uint8_t *values) {
 
-    SaLDigitalOut(ADXL345_SLAVE_SELECT_PIN,FALSE);
+    SaLDigitalOut(ADXL345_SLAVE_SELECT_PIN,false);
     byteOut(ADXL345_SCK_PIN,ADXL345_MOSI_PIN,ADXL345_REG_DATAX0 | 0x80 | 0x40);
     for (uint8_t i = 0; i < 6; i++) {
         *(values+i) = getByte(ADXL345_SCK_PIN,ADXL345_MISO_PIN);
     }
-    SaLDigitalOut(ADXL345_SLAVE_SELECT_PIN,TRUE);
+    SaLDigitalOut(ADXL345_SLAVE_SELECT_PIN,true);
 }
 
 void getevents() {
-    SaLDigitalOut(ADXL345_SLAVE_SELECT_PIN,FALSE);
+    SaLDigitalOut(ADXL345_SLAVE_SELECT_PIN,false);
     byteOut(ADXL345_SCK_PIN,ADXL345_MOSI_PIN,ADXL345_REG_DATAX0 | 0x80 | 0x40);
     volatile uint8_t _byte1 = getByte(ADXL345_SCK_PIN,ADXL345_MISO_PIN);
     volatile uint8_t _byte2 = getByte(ADXL345_SCK_PIN,ADXL345_MISO_PIN);
@@ -29,7 +29,7 @@ void getevents() {
     volatile uint8_t _byte5 = getByte(ADXL345_SCK_PIN,ADXL345_MISO_PIN);
     volatile uint8_t _byte6 = getByte(ADXL345_SCK_PIN,ADXL345_MISO_PIN);
 
-    SaLDigitalOut(ADXL345_SLAVE_SELECT_PIN,TRUE);
+    SaLDigitalOut(ADXL345_SLAVE_SELECT_PIN,true);
 
 
 

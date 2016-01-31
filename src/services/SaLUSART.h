@@ -29,9 +29,9 @@ void SaLSyncUsartIo(struct SaLUsartDescriptor *const descr,
                     struct IoDescriptor **Io);
 
 static inline void _usartSetDataReg(const void *const hw, uint8_t data ) {
-	ATOMIC_SECTION_ENTER
+    ATOMIC_SECTION_ENTER
     ((Sercom *)hw)->USART.DATA.reg = data;
-	ATOMIC_SECTION_LEAVE
+    ATOMIC_SECTION_LEAVE
 }
 
 static inline SaLSercomUsartDataReg_t _usartGetDataReg(const void *const hw) {
