@@ -25,6 +25,8 @@
 #define CONTAINER_OF(ptr, type, field_name) \
 ((type *) (((uint8_t *)ptr) - offsetof(type, field_name)))
 
+#include <SaLMath.h>
+
 
 #include <boardDefines.h>
 
@@ -42,6 +44,9 @@
 #include <SaLBuzzer.h>
 
 #include <SaLSample.h>
+
+#include <SaLAltimeter.h>
+
 
 
 #ifdef HAS_MS5607

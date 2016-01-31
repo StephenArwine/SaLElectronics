@@ -10,7 +10,6 @@
 #include <SaL.h>
 #include <SaLUSART.h>
 #include <SaLPort.h>
-#include <SaLAltimeter.h>
 
 
 
@@ -66,15 +65,15 @@ int main(void) {
     SaLRtcInit();
     PinConfig();
     uart_init(9600);
-	
+
     struct IoDescriptor *UsartIoModule;
-	struct GpsModule myGPS;
-	struct MTK3329Module MTK3329Instance;
-	struct AccelerometerModule myAccelerometer;
-	struct BarometerModule myBarometer;
-	struct AltimeterModule myAltimeter;
-	struct sample currentSample;
-	
+    struct GpsModule myGPS;
+    struct MTK3329Module MTK3329Instance;
+    struct AccelerometerModule myAccelerometer;
+    struct BarometerModule myBarometer;
+    struct AltimeterModule myAltimeter;
+    struct sample currentSample;
+
     SaLSyncUsartIo(&USART_0, &UsartIoModule);
     initAccelerometer(&myAccelerometer);
     initBarometer(&myBarometer);
@@ -93,6 +92,24 @@ int main(void) {
 
     uint8_t message[255];
 
+    struct sVar groundHeight;
+
+    for (uint8_t i = 0; i < 100; i++) {
+        getMS5607PressureSlow(&myBarometer);
+        float tempheight = myBarometer.currentAltInFt;
+        addSampleToVariance(&groundHeight,tempheight);
+    }
+	
+    for (uint8_t i = 0; i < 200; i++) {
+        getMS5607PressureSlow(&myBarometer);
+        float tempheight = myBarometer.currentAltInFt;
+        addSampleToVariance(&groundHeight,tempheight);
+
+    }
+
+    volatile uint32_t groundAlt = groundHeight.mean;
+    volatile uint32_t variance = GetVariance(&groundHeight,&groundHeight.mean);
+
     while (1) {
 
         counter++;
@@ -108,7 +125,7 @@ int main(void) {
         }
 
         getMS5607PressureSlow(&myBarometer);
-        currentHeight[index] = myBarometer.currentAltInFt;
+        currentHeight[index] = groundAlt - myBarometer.currentAltInFt;
 
         getAccelEvent(myAltimeter.myAltimetersAccelerometer);
         accelDataX[index] = myAccelerometer.acceleration.Xf;

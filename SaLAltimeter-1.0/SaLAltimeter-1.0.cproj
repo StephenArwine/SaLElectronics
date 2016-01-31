@@ -167,12 +167,6 @@
   <armgcc.linker.optimization.GarbageCollectUnusedSections>True</armgcc.linker.optimization.GarbageCollectUnusedSections>
   <armgcc.linker.memorysettings.ExternalRAM />
   <armgcc.linker.miscellaneous.LinkerFlags>-Tsamd21g18a_flash.ld</armgcc.linker.miscellaneous.LinkerFlags>
-  <armgcc.assembler.general.IncludePaths>
-    <ListValues>
-      <Value>../../src/services</Value>
-      <Value>../../src/drivers</Value>
-    </ListValues>
-  </armgcc.assembler.general.IncludePaths>
   <armgcc.assembler.debugging.DebugLevel>Default (-g)</armgcc.assembler.debugging.DebugLevel>
   <armgcc.preprocessingassembler.general.IncludePaths>
     <ListValues>
@@ -192,21 +186,41 @@
       <SubType>compile</SubType>
       <Link>ADXL345.c</Link>
     </Compile>
+    <Compile Include="..\src\drivers\ADXL345.h">
+      <SubType>compile</SubType>
+      <Link>ADXL345.h</Link>
+    </Compile>
     <Compile Include="..\src\drivers\CC1120.c">
       <SubType>compile</SubType>
       <Link>CC1120.c</Link>
+    </Compile>
+    <Compile Include="..\src\drivers\CC1120.h">
+      <SubType>compile</SubType>
+      <Link>CC1120.h</Link>
     </Compile>
     <Compile Include="..\src\drivers\MS5607.c">
       <SubType>compile</SubType>
       <Link>MS5607.c</Link>
     </Compile>
+    <Compile Include="..\src\drivers\MS5607.h">
+      <SubType>compile</SubType>
+      <Link>MS5607.h</Link>
+    </Compile>
     <Compile Include="..\src\drivers\MTK3329.c">
       <SubType>compile</SubType>
       <Link>MTK3329.c</Link>
     </Compile>
+    <Compile Include="..\src\drivers\MTK3329.h">
+      <SubType>compile</SubType>
+      <Link>MTK3329.h</Link>
+    </Compile>
     <Compile Include="..\src\include\utils_syscalls.c">
       <SubType>compile</SubType>
       <Link>utils_syscalls.c</Link>
+    </Compile>
+    <Compile Include="..\src\SaL.h">
+      <SubType>compile</SubType>
+      <Link>SaL.h</Link>
     </Compile>
     <Compile Include="..\src\services\SaLAccelerometer.c">
       <SubType>compile</SubType>
@@ -279,6 +293,10 @@
     <Compile Include="..\src\services\SaLIo.h">
       <SubType>compile</SubType>
       <Link>SaLIo.h</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLMath.c">
+      <SubType>compile</SubType>
+      <Link>SaLMath.c</Link>
     </Compile>
     <Compile Include="..\src\services\SaLPort.c">
       <SubType>compile</SubType>
