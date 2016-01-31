@@ -2,6 +2,8 @@
 #ifndef SALSAMPLE_H_
 #define SALSAMPLE_H_
 
+#include <SaLTypes.h>
+
 #include <SaLAltimeter.h>
 
 struct sample {
@@ -22,7 +24,7 @@ struct sample {
 };
 
 /* returns a current data sample from the altimeters sensors */
-struct sample getSample(struct AltimeterModule const altimeter) ;
+struct sample getSample(struct AltimeterModule altimeter);
 
 
 #endif

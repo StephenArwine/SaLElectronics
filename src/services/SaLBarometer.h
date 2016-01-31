@@ -28,7 +28,7 @@ struct BarometerModule {
 
 #endif
 
-    float currentAltInFt;
+    uint32_t currentAltInFt;
 
 
 };

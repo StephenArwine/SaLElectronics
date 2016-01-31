@@ -96,11 +96,8 @@ MS5607.d MS5607.o: ../../src/drivers/MS5607.c ../../src/drivers/MS5607.h \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\include/samd21g18a.h \
  ../../src/services/SaLClocks.h ../../src/services/SaLPort.h \
  ../../src/services/SaLBitBang.h ../../src/services/SaLDelay.h \
- ../../src/services/SaLBuzzer.h ../../src/services/SaLSample.h \
- ../../src/services/SaLAltimeter.h ../../src/services/SaLAccelerometer.h \
- ../../src/drivers/ADXL345.h ../../src/services/SaLConv2C.h \
- ../../src/services/SaLBarometer.h ../../src/services/SaLSensor.h \
- ../../src/services/SaLGps.h ../../src/drivers/MTK3329.h \
+ ../../src/services/SaLBuzzer.h ../../src/drivers/ADXL345.h \
+ ../../src/drivers/MTK3329.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\math.h
 
 ../../src/drivers/MS5607.h:
@@ -311,21 +308,7 @@ C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a
 
 ../../src/services/SaLBuzzer.h:
 
-../../src/services/SaLSample.h:
-
-../../src/services/SaLAltimeter.h:
-
-../../src/services/SaLAccelerometer.h:
-
 ../../src/drivers/ADXL345.h:
-
-../../src/services/SaLConv2C.h:
-
-../../src/services/SaLBarometer.h:
-
-../../src/services/SaLSensor.h:
-
-../../src/services/SaLGps.h:
 
 ../../src/drivers/MTK3329.h:
 

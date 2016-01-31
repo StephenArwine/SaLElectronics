@@ -1,7 +1,7 @@
 #include <SaLSample.h>
 
 
-struct sample getSample(struct AltimeterModule const altimeter) {
+struct sample getSample(struct AltimeterModule altimeter) {
     struct sample s;
     s.pressure			= altimeter.myAltimetersBarometer->pressure;
     s.altitude			= altimeter.myAltimetersBarometer->currentAltInFt;

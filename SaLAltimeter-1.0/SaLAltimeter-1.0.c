@@ -5,15 +5,12 @@
  * Author : Stephen Arwine
  */
 
-#include "sam.h"
+//#include "sam.h"
 
 #include <SaL.h>
 #include <SaLUSART.h>
 #include <SaLPort.h>
-
-
-
-
+#include <SaLSample.h>
 
 volatile uint32_t time_ms = 0;
 volatile uint32_t lasttimes[1000];
@@ -23,11 +20,6 @@ float accelDataY[1000];
 float accelDataZ[1000];
 float currentHeight[1000];
 uint8_t bytesRead;
-
-
-
-
-
 
 void PinConfig() {
     /* temp SS HIGH for other peripherals */
@@ -86,7 +78,6 @@ int main(void) {
 
     //startUpTone();
     NVIC_EnableIRQ(RTC_IRQn);
-    uint32_t lasttime = 0;
     uint32_t index = 0;
     volatile uint32_t milliseconds = 0;
 
@@ -96,19 +87,23 @@ int main(void) {
 
     for (uint8_t i = 0; i < 100; i++) {
         getMS5607PressureSlow(&myBarometer);
-        float tempheight = myBarometer.currentAltInFt;
+        uint32_t tempheight = myBarometer.currentAltInFt;
         addSampleToVariance(&groundHeight,tempheight);
     }
-	
+    volatile uint32_t variance = GetVariance(&groundHeight,&groundHeight.mean);
+
+
     for (uint8_t i = 0; i < 200; i++) {
         getMS5607PressureSlow(&myBarometer);
-        float tempheight = myBarometer.currentAltInFt;
+        uint32_t tempheight = myBarometer.currentAltInFt;
         addSampleToVariance(&groundHeight,tempheight);
 
     }
 
     volatile uint32_t groundAlt = groundHeight.mean;
-    volatile uint32_t variance = GetVariance(&groundHeight,&groundHeight.mean);
+    variance = GetVariance(&groundHeight,&groundHeight.mean);
+
+    uint32_t lasttime = millis();
 
     while (1) {
 
@@ -120,8 +115,9 @@ int main(void) {
             lasttime = milliseconds;
             bytesRead = SaLIoRead(UsartIoModule,&message[0],225);
             MTK3329ParseMessage(&myGPS.MTK3329,&message[0]);
-            SaLPlayTone(400);
+            //SaLPlayTone(400);
             currentSample = getSample(myAltimeter);
+            counter = 0;
         }
 
         getMS5607PressureSlow(&myBarometer);
@@ -131,9 +127,6 @@ int main(void) {
         accelDataX[index] = myAccelerometer.acceleration.Xf;
         accelDataY[index] = myAccelerometer.acceleration.Yf;
         accelDataZ[index] = myAccelerometer.acceleration.Zf;
-
-
-
 
         if (index == 1000) {
             index = 0;

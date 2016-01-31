@@ -7,6 +7,8 @@
 #include <SaLBarometer.h>
 #include <SaLGps.h>
 
+struct AltimeterModule;
+
 struct AltimeterModule {
 
     struct AccelerometerModule *myAltimetersAccelerometer;
