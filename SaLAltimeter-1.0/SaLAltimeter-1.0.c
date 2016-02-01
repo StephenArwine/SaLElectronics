@@ -19,6 +19,7 @@ float accelDataY[1000];
 float accelDataZ[1000];
 int32_t currentHeight[1000];
 uint8_t bytesRead;
+bool retrieveSample;
 
 void PinConfig() {
     /* temp SS HIGH for other peripherals */
@@ -32,10 +33,9 @@ void PinConfig() {
     SaLDigitalOut(MS5607_SLAVE_SELECT_PIN,TRUE);
 }
 
-void TC3_Handler(void)
-{
-	            SaLPlayTone(400);
-TC3->COUNT8.INTFLAG.reg = 0XFF;
+void TC3_Handler(void) {
+    retrieveSample = true;
+    TC3->COUNT8.INTFLAG.reg = 0XFF;
 }
 
 volatile uint32_t counter = 0;
@@ -47,7 +47,7 @@ int main(void) {
     SaLRtcInit();
     PinConfig();
     uart_init(9600);
-	SaLTC3Init();
+    SaLTC3Init();
 
     struct IoDescriptor *UsartIoModule;
     struct GpsModule myGPS;
@@ -69,7 +69,7 @@ int main(void) {
 
     //startUpTone();
     NVIC_EnableIRQ(RTC_IRQn);
-	NVIC_EnableIRQ(TC3_IRQn);
+    NVIC_EnableIRQ(TC3_IRQn);
     uint32_t index = 0;
     volatile uint32_t milliseconds = 0;
 
@@ -100,29 +100,32 @@ int main(void) {
     while (1) {
 
         counter++;
-        index++;
         milliseconds = millis();
 
         if (milliseconds - lasttime > 10000) {
             lasttime = milliseconds;
             bytesRead = SaLIoRead(UsartIoModule,&message[0],225);
             MTK3329ParseMessage(&myGPS.MTK3329,&message[0]);
-           // SaLPlayTone(400);
+            // SaLPlayTone(400);
             currentSample = getSample(myAltimeter);
-            counter = 0;
+            //counter = 0;
         }
 
-        getMS5607PressureSlow(&myBarometer);
-        currentHeight[index] = groundAlt - myBarometer.currentAltInFt;
+        if (retrieveSample) {
 
-        getAccelEvent(myAltimeter.myAltimetersAccelerometer);
-        accelDataX[index] = myAccelerometer.acceleration.Xf;
-        accelDataY[index] = myAccelerometer.acceleration.Yf;
-        accelDataZ[index] = myAccelerometer.acceleration.Zf;
+            getMS5607PressureSlow(&myBarometer);
+            currentHeight[index] = groundAlt - myBarometer.currentAltInFt;
 
-        if (index == 1000) {
-            index = -1;
-            //SaLPlayTone(400);
+            getAccelEvent(myAltimeter.myAltimetersAccelerometer);
+            accelDataX[index] = myAccelerometer.acceleration.Xf;
+            accelDataY[index] = myAccelerometer.acceleration.Yf;
+            accelDataZ[index] = myAccelerometer.acceleration.Zf;
+            retrieveSample = false;
+            index++;
+        }
+        if (index == 500) {
+            index = 0;
+            SaLPlayTone(400);
         }
     }
 }

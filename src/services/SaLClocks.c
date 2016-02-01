@@ -59,7 +59,7 @@ void SaLTC3Init() {
 
     TC3->COUNT16.CTRLA.reg = TC_CTRLA_MODE_COUNT16 |
                             TC_CTRLA_RUNSTDBY |
-                            TC_CTRLA_PRESCALER_DIV1024;
+                            TC_CTRLA_PRESCALER_DIV8;
   //  TC3->COUNT16.PER.reg = 0xFE;
 
     TC3->COUNT16.INTENSET.reg = TC_INTENSET_OVF;
