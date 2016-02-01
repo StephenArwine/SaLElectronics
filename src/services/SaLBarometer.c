@@ -41,6 +41,8 @@ void getMS5607PressureSlow(struct BarometerModule *const myBarometer) {
 
     const uint32_t pressConv   = ConvertPressureTemperature(&myBarometer->pressure, &myBarometer->temperature,&myBarometer->coefficients_[0]);
 
-    myBarometer->currentAltInFt = paToFeetNOAA(pressConv);
+    myBarometer->currentAltInFt = pascalToCent(pressConv);
+    //myBarometer->currentAltInFt = paToFeetNOAA(pressConv);
+
 
 }

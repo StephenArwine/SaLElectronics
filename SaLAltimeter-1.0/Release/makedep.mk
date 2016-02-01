@@ -28,7 +28,11 @@
 
 ..\src\services\SaLIo.c
 
+..\src\services\SaLMath.c
+
 ..\src\services\SaLPort.c
+
+..\src\services\SaLSample.c
 
 ..\src\services\SaLSpi.c
 

@@ -51,7 +51,9 @@ C_SRCS +=  \
 ../../src/services/SaLClocks.c \
 ../../src/services/SaLDelay.c \
 ../../src/services/SaLIo.c \
+../../src/services/SaLMath.c \
 ../../src/services/SaLPort.c \
+../../src/services/SaLSample.c \
 ../../src/services/SaLSpi.c \
 ../../src/services/SaLUSART.c \
 ../Device_Startup/startup_samd21.c \
@@ -79,7 +81,9 @@ SaLBuzzer.o \
 SaLClocks.o \
 SaLDelay.o \
 SaLIo.o \
+SaLMath.o \
 SaLPort.o \
+SaLSample.o \
 SaLSpi.o \
 SaLUSART.o \
 Device_Startup/startup_samd21.o \
@@ -100,7 +104,9 @@ SaLBuzzer.o \
 SaLClocks.o \
 SaLDelay.o \
 SaLIo.o \
+SaLMath.o \
 SaLPort.o \
+SaLSample.o \
 SaLSpi.o \
 SaLUSART.o \
 Device_Startup/startup_samd21.o \
@@ -121,7 +127,9 @@ SaLBuzzer.d \
 SaLClocks.d \
 SaLDelay.d \
 SaLIo.d \
+SaLMath.d \
 SaLPort.d \
+SaLSample.d \
 SaLSpi.d \
 SaLUSART.d \
 Device_Startup/startup_samd21.d \
@@ -142,7 +150,9 @@ SaLBuzzer.d \
 SaLClocks.d \
 SaLDelay.d \
 SaLIo.d \
+SaLMath.d \
 SaLPort.d \
+SaLSample.d \
 SaLSpi.d \
 SaLUSART.d \
 Device_Startup/startup_samd21.d \
@@ -165,6 +175,10 @@ LINKER_SCRIPT_DEP+=  \
 
 
 # AVR32/GNU C Compiler
+
+
+
+
 
 
 

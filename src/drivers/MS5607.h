@@ -55,7 +55,7 @@ uint32_t ConvertPressureTemperature(uint32_t *pressure,
 uint32_t getAltFt();
 uint32_t pascalToCent(const int32_t pressurePa);
 
-uint32_t paToFeetNOAA(const int32_t pressurePa);
+float paToFeetNOAA(const int32_t pressurePa);
 
 void getMS5607Coeff(uint16_t *coefficients);
 

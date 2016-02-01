@@ -12,13 +12,12 @@
 #include <SaLPort.h>
 #include <SaLSample.h>
 
-volatile uint32_t time_ms = 0;
 volatile uint32_t lasttimes[1000];
 
 float accelDataX[1000];
 float accelDataY[1000];
 float accelDataZ[1000];
-float currentHeight[1000];
+int32_t currentHeight[1000];
 uint8_t bytesRead;
 
 void PinConfig() {
@@ -33,19 +32,10 @@ void PinConfig() {
     SaLDigitalOut(MS5607_SLAVE_SELECT_PIN,TRUE);
 }
 
-void RTC_Handler(void) {
-    time_ms += 1000;
-    RTC->MODE1.INTFLAG.reg = 0xFF;
-}
-
-static uint32_t millis(void) {
-    uint32_t ms;
-    ATOMIC_SECTION_ENTER
-    ms = time_ms + RTC->MODE1.COUNT.reg;
-    if (RTC->MODE1.INTFLAG.bit.OVF)
-        ms = time_ms + RTC->MODE1.COUNT.reg + 1000;
-    ATOMIC_SECTION_LEAVE
-    return ms;
+void TC3_Handler(void)
+{
+	            SaLPlayTone(400);
+TC3->COUNT8.INTFLAG.reg = 0XFF;
 }
 
 volatile uint32_t counter = 0;
@@ -57,6 +47,7 @@ int main(void) {
     SaLRtcInit();
     PinConfig();
     uart_init(9600);
+	SaLTC3Init();
 
     struct IoDescriptor *UsartIoModule;
     struct GpsModule myGPS;
@@ -78,6 +69,7 @@ int main(void) {
 
     //startUpTone();
     NVIC_EnableIRQ(RTC_IRQn);
+	NVIC_EnableIRQ(TC3_IRQn);
     uint32_t index = 0;
     volatile uint32_t milliseconds = 0;
 
@@ -100,7 +92,7 @@ int main(void) {
 
     }
 
-    volatile uint32_t groundAlt = groundHeight.mean;
+    volatile int32_t groundAlt = groundHeight.mean;
     variance = GetVariance(&groundHeight,&groundHeight.mean);
 
     uint32_t lasttime = millis();
@@ -115,7 +107,7 @@ int main(void) {
             lasttime = milliseconds;
             bytesRead = SaLIoRead(UsartIoModule,&message[0],225);
             MTK3329ParseMessage(&myGPS.MTK3329,&message[0]);
-            //SaLPlayTone(400);
+           // SaLPlayTone(400);
             currentSample = getSample(myAltimeter);
             counter = 0;
         }
@@ -129,7 +121,7 @@ int main(void) {
         accelDataZ[index] = myAccelerometer.acceleration.Zf;
 
         if (index == 1000) {
-            index = 0;
+            index = -1;
             //SaLPlayTone(400);
         }
     }

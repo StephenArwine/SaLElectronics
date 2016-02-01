@@ -6,4 +6,10 @@
 void SalGclkInit();
 void SaLRtcInit();
 
+void RTC_Handler(void);
+uint32_t millis(void);
+
+void SaLTC3Init();
+
+
 #endif
