@@ -23,8 +23,17 @@ struct sample {
 
 };
 
+extern bool baroSampleReady;
+extern bool accelSampleReady;
+extern bool gpsSampleReady;
+extern struct sample sampleBeingCooked;
+extern struct sample cookedSample;
+
+void sampleInit();
+
 /* returns a current data sample from the altimeters sensors */
 struct sample getSample(struct AltimeterModule altimeter);
 
+void sampleTick();
 
 #endif

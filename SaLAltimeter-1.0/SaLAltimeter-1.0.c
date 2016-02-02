@@ -20,6 +20,8 @@ float accelDataZ[1000];
 int32_t currentHeight[1000];
 uint8_t bytesRead;
 bool retrieveSample;
+uint32_t index2;
+
 
 void PinConfig() {
     /* temp SS HIGH for other peripherals */
@@ -33,21 +35,31 @@ void PinConfig() {
     SaLDigitalOut(MS5607_SLAVE_SELECT_PIN,TRUE);
 }
 
-void TC3_Handler(void) {
-    retrieveSample = true;
-    TC3->COUNT8.INTFLAG.reg = 0XFF;
+void TC5_Handler(void) {
+    //SaLPlayTone(400);
+    ATOMIC_SECTION_ENTER
+    index2++;
+    TC5->COUNT8.INTFLAG.reg = 0XFF;
+    ATOMIC_SECTION_LEAVE
 }
+
+void TC4_Handler(void) {
+    retrieveSample = true;
+    TC4->COUNT16.INTFLAG.reg = 0XFF;
+}
+
 
 volatile uint32_t counter = 0;
 
 int main(void) {
-    SystemInit();
+    // SystemInit();
     SaLDelayInit();
     SalGclkInit();
     SaLRtcInit();
     PinConfig();
     uart_init(9600);
-    SaLTC3Init();
+    SaLTC4Init();
+    // SaLTC5Init();
 
     struct IoDescriptor *UsartIoModule;
     struct GpsModule myGPS;
@@ -68,9 +80,8 @@ int main(void) {
     myAltimeter.myAltimetersGps = &myGPS;
 
     //startUpTone();
-    NVIC_EnableIRQ(RTC_IRQn);
-    NVIC_EnableIRQ(TC3_IRQn);
-    uint32_t index = 0;
+
+    //uint32_t index = 0;
     volatile uint32_t milliseconds = 0;
 
     uint8_t message[255];
@@ -96,36 +107,51 @@ int main(void) {
     variance = GetVariance(&groundHeight,&groundHeight.mean);
 
     uint32_t lasttime = millis();
+    volatile uint16_t mil;
+    volatile uint16_t mil2;
 
     while (1) {
 
         counter++;
-        milliseconds = millis();
+        // milliseconds = millis();
 
-        if (milliseconds - lasttime > 10000) {
-            lasttime = milliseconds;
-            bytesRead = SaLIoRead(UsartIoModule,&message[0],225);
-            MTK3329ParseMessage(&myGPS.MTK3329,&message[0]);
-            // SaLPlayTone(400);
-            currentSample = getSample(myAltimeter);
-            //counter = 0;
+        //sampleTick();
+
+
+
+
+
+
+        /*
+                if (milliseconds - lasttime > 10000) {
+                    lasttime = milliseconds;
+                    bytesRead = SaLIoRead(UsartIoModule,&message[0],225);
+                    MTK3329ParseMessage(&myGPS.MTK3329,&message[0]);
+                    // SaLPlayTone(400);
+                    currentSample = getSample(myAltimeter);
+                    //counter = 0;
+                }
+
+                if (retrieveSample) {
+
+        			*/
+
+        getMS5607PressureSlow(&myBarometer);
+       // currentHeight[index2] = groundAlt - myBarometer.currentAltInFt;
+
+    //    getAccelEvent(myAltimeter.myAltimetersAccelerometer);
+      //  accelDataX[index2] = myAccelerometer.acceleration.Xf;
+      //  accelDataY[index2] = myAccelerometer.acceleration.Yf;
+      //  accelDataZ[index2] = myAccelerometer.acceleration.Zf;
+   //     retrieveSample = false;
+    //    index2++;
+
+
+   //     if (index2 > 1000) {
+   //         index2 = 0;
+   //         mil = millis();
+    //        mil2 = millis();
         }
 
-        if (retrieveSample) {
-
-            getMS5607PressureSlow(&myBarometer);
-            currentHeight[index] = groundAlt - myBarometer.currentAltInFt;
-
-            getAccelEvent(myAltimeter.myAltimetersAccelerometer);
-            accelDataX[index] = myAccelerometer.acceleration.Xf;
-            accelDataY[index] = myAccelerometer.acceleration.Yf;
-            accelDataZ[index] = myAccelerometer.acceleration.Zf;
-            retrieveSample = false;
-            index++;
-        }
-        if (index == 500) {
-            index = 0;
-            SaLPlayTone(400);
-        }
     }
 }

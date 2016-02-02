@@ -9,7 +9,9 @@ void SaLRtcInit();
 void RTC_Handler(void);
 uint32_t millis(void);
 
-void SaLTC3Init();
+void SaLTC4Init();
+void SaLTC5Init();
+
 
 
 #endif

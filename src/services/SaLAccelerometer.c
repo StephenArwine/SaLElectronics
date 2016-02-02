@@ -2,9 +2,75 @@
 
 #include <SaLAccelerometer.h>
 
+enum accelSampleState accelSampleState;
+uint8_t regAccelData[6];
+int16_t X;
+int16_t Y;
+int16_t Z;
+float Xf;
+float Yf;
+float Zf;
+
+bool accelSample() {
+
+    switch(accelSampleState) {
+    case accelSampleEmpty:
+        getADXL345Event(&regAccelData[0]);
+        accelSampleState++;
+        return false;
+        break;
+    case accelSampleretreaved:
+        X = Convert2C(&regAccelData[0]);
+        accelSampleState++;
+        return false;
+        break;
+    case accelSampleXIntConverted:
+        Y = Convert2C(&regAccelData[2]);
+        accelSampleState++;
+        return false;
+        break;
+    case accelSampleYIntConverted:
+        Z = Convert2C(&regAccelData[4]);
+        accelSampleState++;
+        return false;
+        break;
+    case accelSampleZIntConverted:
+        Xf = X * ADXL345_MG2G_MULTIPLIER;
+        accelSampleState++;
+        return false;
+        break;
+    case accelSampleXFloatConverted:
+        Yf = Y * ADXL345_MG2G_MULTIPLIER;
+        accelSampleState++;
+        return false;
+        break;
+    case accelSampleYFloatConverted:
+        Zf = Z * ADXL345_MG2G_MULTIPLIER;
+        accelSampleState++;
+        return false;
+        break;
+    case accelSapleCooked:
+
+        return true;
+        break;
+		
+    default:
+        return false;
+        break;
+
+    }
+
+}
+
+
+
 
 
 void initAccelerometer(struct AccelerometerModule *myAccelerometer) {
+
+    accelSampleState = accelSampleEmpty;
+
+
 
 #ifdef HAS_ADXL345
 
@@ -39,13 +105,6 @@ void initAccelerometer(struct AccelerometerModule *myAccelerometer) {
 
 #endif
 
-
-
-
-
-
-
-
 }
 
 void getAccelEvent(struct AccelerometerModule *myAccelerometer) {
@@ -53,9 +112,7 @@ void getAccelEvent(struct AccelerometerModule *myAccelerometer) {
 #ifdef HAS_ADXL345
 
     uint8_t regAccelData[6];
-
     getADXL345Event(&regAccelData[0]);
-
     myAccelerometer->acceleration.X = Convert2C(&regAccelData[0]);
     myAccelerometer->acceleration.Y = Convert2C(&regAccelData[2]);
     myAccelerometer->acceleration.Z = Convert2C(&regAccelData[4]);
@@ -64,9 +121,16 @@ void getAccelEvent(struct AccelerometerModule *myAccelerometer) {
     myAccelerometer->acceleration.Yf = myAccelerometer->acceleration.Y * ADXL345_MG2G_MULTIPLIER;
     myAccelerometer->acceleration.Zf = myAccelerometer->acceleration.Z * ADXL345_MG2G_MULTIPLIER;
 
-
-
-
 #endif
 
+}
+
+float SaLGetAccelX(){
+	return Xf;
+}
+float SaLGetAccelY(){
+	return Yf;
+}
+float SaLGetAccelZ(){
+	return Zf;
 }

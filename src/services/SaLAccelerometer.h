@@ -34,10 +34,36 @@ struct AccelerometerModule {
 
 };
 
+enum accelSampleState {
+    accelSampleEmpty = 0,
+    accelSampleretreaved = 1,
+    accelSampleXIntConverted = 2,
+    accelSampleYIntConverted = 3,
+    accelSampleZIntConverted = 4,
+    accelSampleXFloatConverted = 5,
+    accelSampleYFloatConverted = 6,
+    accelSapleCooked = 7
+};
+extern enum accelSampleState accelSampleState;
+
+bool AccelSample;
+extern uint8_t regAccelData[6];
+extern int16_t X;
+extern int16_t Y;
+extern int16_t Z;
+extern float Xf;
+extern float Yf;
+extern float Zf;
+
+
 
 void getAccelEvent(struct AccelerometerModule *myAccelerometer);
 
 void initAccelerometer(struct AccelerometerModule *myAccelerometer);
+
+float SaLGetAccelX();
+float SaLGetAccelY();
+float SaLGetAccelZ();
 
 
 #endif
