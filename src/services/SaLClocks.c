@@ -133,7 +133,7 @@ void SaLRtcInit() {
                         GCLK_CLKCTRL_GEN(2);
 
     RTC->MODE1.CTRL.reg = RTC_MODE1_CTRL_MODE_COUNT16 |
-                          RTC_MODE1_CTRL_PRESCALER_DIV32;
+                          RTC_MODE1_CTRL_PRESCALER_DIV1;
     while (RTC->MODE1.STATUS.bit.SYNCBUSY);
 
 // Prescaler needs to be enabled separately from the mode for some reason

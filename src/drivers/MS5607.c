@@ -11,9 +11,9 @@ uint32_t read_Adc(uint8_t _cmd) {
 
     SaLDigitalOut(MS5607_SLAVE_SELECT_PIN,false);
     byteOut(MS5607_SCK_PIN,MS5607_MOSI_PIN,cmdAdcRead_);
-    volatile uint8_t _byte1 = getByte(MS5607_SCK_PIN,MS5607_MISO_PIN);
-    volatile uint8_t _byte2 = getByte(MS5607_SCK_PIN,MS5607_MISO_PIN);
-    volatile uint8_t _byte3 = getByte(MS5607_SCK_PIN,MS5607_MISO_PIN);
+     uint8_t _byte1 = getByte(MS5607_SCK_PIN,MS5607_MISO_PIN);
+     uint8_t _byte2 = getByte(MS5607_SCK_PIN,MS5607_MISO_PIN);
+     uint8_t _byte3 = getByte(MS5607_SCK_PIN,MS5607_MISO_PIN);
     SaLDigitalOut(MS5607_SLAVE_SELECT_PIN,true);
 
     uint32_t _receive = _byte1;
@@ -28,9 +28,9 @@ uint32_t readMS5607AdcResults(){
 	
 	 SaLDigitalOut(MS5607_SLAVE_SELECT_PIN,false);
 	 byteOut(MS5607_SCK_PIN,MS5607_MOSI_PIN,cmdAdcRead_);
-	 volatile uint8_t _byte1 = getByte(MS5607_SCK_PIN,MS5607_MISO_PIN);
-	 volatile uint8_t _byte2 = getByte(MS5607_SCK_PIN,MS5607_MISO_PIN);
-	 volatile uint8_t _byte3 = getByte(MS5607_SCK_PIN,MS5607_MISO_PIN);
+	  uint8_t _byte1 = getByte(MS5607_SCK_PIN,MS5607_MISO_PIN);
+	  uint8_t _byte2 = getByte(MS5607_SCK_PIN,MS5607_MISO_PIN);
+	  uint8_t _byte3 = getByte(MS5607_SCK_PIN,MS5607_MISO_PIN);
 	 SaLDigitalOut(MS5607_SLAVE_SELECT_PIN,true);
 	 
 	 uint32_t _receive = (_byte1 << 16) | (_byte2 << 8) | (_byte3);
@@ -60,12 +60,12 @@ uint32_t ConvertPressureTemperature(uint32_t *pressure, uint32_t *temperature, u
     const uint64_t C6 = (uint64_t)(*(coefficients + 5));
 
     // calculate 1st order pressure and temperature (MS5607 1st order algorithm)
-    const volatile int32_t dT    = *temperature - (C5 * 256);
-    const volatile int32_t temp  = 2000 + (dT * C6) / (8388608) ;
+    const  int32_t dT    = *temperature - (C5 * 256);
+    const  int32_t temp  = 2000 + (dT * C6) / (8388608) ;
 
-    const volatile int64_t OFF   = (C2 * (131072)) + ((C4 * dT) / (64));
-    const volatile int64_t SENS  = (C1 * (65536)) + ((C3 * dT) / (128));
-    const volatile int32_t press = ((*pressure * SENS / (2097152) - OFF) / (32768));
+    const  int64_t OFF   = (C2 * (131072)) + ((C4 * dT) / (64));
+    const  int64_t SENS  = (C1 * (65536)) + ((C3 * dT) / (128));
+    const  int32_t press = ((*pressure * SENS / (2097152) - OFF) / (32768));
     return press;
 }
 

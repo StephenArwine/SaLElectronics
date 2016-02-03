@@ -3,8 +3,12 @@
 #define SALSAMPLE_H_
 
 #include <SaLTypes.h>
+#include <math.h>
 
 #include <SaLAltimeter.h>
+#include <SaLAccelerometer.h>
+#include <SaLBarometer.h>
+#include <SaLGps.h>
 
 struct sample {
 
@@ -19,7 +23,13 @@ struct sample {
     uint8_t second;
     float longitude;
     float latitude;
-	bool GPSvalid;
+    bool GPSvalid;
+    uint32_t sampleMills;
+	uint32_t deltaT;
+	float positionStar;
+	float velocityStar;
+	float position;
+	float velocity;
 
 };
 

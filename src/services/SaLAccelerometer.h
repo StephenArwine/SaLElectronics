@@ -46,7 +46,8 @@ enum accelSampleState {
 };
 extern enum accelSampleState accelSampleState;
 
-bool AccelSample;
+bool accelSample();
+
 extern uint8_t regAccelData[6];
 extern int16_t X;
 extern int16_t Y;

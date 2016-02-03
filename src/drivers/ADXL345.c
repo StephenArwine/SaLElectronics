@@ -22,12 +22,12 @@ void getADXL345Event(uint8_t *values) {
 void getevents() {
     SaLDigitalOut(ADXL345_SLAVE_SELECT_PIN,false);
     byteOut(ADXL345_SCK_PIN,ADXL345_MOSI_PIN,ADXL345_REG_DATAX0 | 0x80 | 0x40);
-    volatile uint8_t _byte1 = getByte(ADXL345_SCK_PIN,ADXL345_MISO_PIN);
-    volatile uint8_t _byte2 = getByte(ADXL345_SCK_PIN,ADXL345_MISO_PIN);
-    volatile uint8_t _byte3 = getByte(ADXL345_SCK_PIN,ADXL345_MISO_PIN);
-    volatile uint8_t _byte4 = getByte(ADXL345_SCK_PIN,ADXL345_MISO_PIN);
-    volatile uint8_t _byte5 = getByte(ADXL345_SCK_PIN,ADXL345_MISO_PIN);
-    volatile uint8_t _byte6 = getByte(ADXL345_SCK_PIN,ADXL345_MISO_PIN);
+     uint8_t _byte1 = getByte(ADXL345_SCK_PIN,ADXL345_MISO_PIN);
+     uint8_t _byte2 = getByte(ADXL345_SCK_PIN,ADXL345_MISO_PIN);
+     uint8_t _byte3 = getByte(ADXL345_SCK_PIN,ADXL345_MISO_PIN);
+     uint8_t _byte4 = getByte(ADXL345_SCK_PIN,ADXL345_MISO_PIN);
+     uint8_t _byte5 = getByte(ADXL345_SCK_PIN,ADXL345_MISO_PIN);
+     uint8_t _byte6 = getByte(ADXL345_SCK_PIN,ADXL345_MISO_PIN);
 
     SaLDigitalOut(ADXL345_SLAVE_SELECT_PIN,true);
 

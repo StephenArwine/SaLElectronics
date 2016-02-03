@@ -91,9 +91,10 @@ SaLSample.d SaLSample.o: ../../src/services/SaLSample.c \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\include/instance/usb.h \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\include/instance/wdt.h \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\include/pio/samd21g18a.h \
- ../../src/include/err_codes.h ../../src/services/SaLAltimeter.h \
- ../../src/services/SaLAccelerometer.h ../../src/drivers/ADXL345.h \
- ../boardDefines.h \
+ ../../src/include/err_codes.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\math.h \
+ ../../src/services/SaLAltimeter.h ../../src/services/SaLAccelerometer.h \
+ ../../src/drivers/ADXL345.h ../boardDefines.h \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\include/samd21g18a.h \
  ../../src/SaL.h ../../src/services/SaLMath.h \
  ../../src/services/SaLClocks.h ../../src/services/SaLPort.h \
@@ -292,6 +293,8 @@ C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a
 C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\include/pio/samd21g18a.h:
 
 ../../src/include/err_codes.h:
+
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\math.h:
 
 ../../src/services/SaLAltimeter.h:
 

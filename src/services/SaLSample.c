@@ -6,6 +6,7 @@ bool gpsSampleReady;
 
 struct sample sampleBeingCooked;
 struct sample cookedSample;
+uint32_t sampleMills;
 
 
 struct sample getSample(struct AltimeterModule altimeter) {
@@ -26,9 +27,11 @@ struct sample getSample(struct AltimeterModule altimeter) {
     return s;
 }
 
-uint16_t ticks = 0;
-volatile uint16_t mil;
-volatile uint16_t mil2;
+int16_t index222 = 0;
+uint16_t thisTime;
+uint16_t lastTime;
+uint16_t deltatt;
+uint16_t deltaa[1000];
 
 void sampleTick() {
 
@@ -37,24 +40,33 @@ void sampleTick() {
 
 
     if (baroSampleReady && accelSampleReady) {
-        ticks++;
-
+        index222++;
+        sampleBeingCooked.sampleMills = millis();
+        sampleBeingCooked.deltaT = sampleBeingCooked.sampleMills - cookedSample.sampleMills;
         sampleBeingCooked.altitude = SaLBaroGetHeight();
         sampleBeingCooked.accelerationInX = SaLGetAccelX();
         sampleBeingCooked.accelerationInY = SaLGetAccelY();
         sampleBeingCooked.accelerationInZ = SaLGetAccelZ();
+        sampleBeingCooked.position = SaLBaroGetHeight();
+
+        sampleBeingCooked.velocityStar = cookedSample.positionStar + sampleBeingCooked.accelerationInX*sampleBeingCooked.deltaT;
+        sampleBeingCooked.positionStar = cookedSample.position +
+                                         cookedSample.velocityStar * sampleBeingCooked.deltaT +
+                                         sampleBeingCooked.accelerationInZ *  (pow(sampleBeingCooked.deltaT,2)/2);
+
+
         baroSampleState = 0;
         accelSampleState = 0;
         baroSampleReady = false;
         accelSampleReady = false;
-    }
-
-    if (ticks > 1000) {
-        //  SaLPlayTone(400);
-        mil = millis();
-        mil2 = millis();
-
-        ticks = 0;
+        cookedSample = sampleBeingCooked;
+        deltaa[index222] = cookedSample.altitude;
+        if (index222 > 1000) {
+            index222 = 0;
+            thisTime = millis();
+            deltatt = thisTime - lastTime;
+            lastTime = millis();
+        }
     }
 }
 
@@ -63,5 +75,5 @@ void sampleInit() {
     baroSampleReady = false;
     accelSampleReady = false;
     gpsSampleReady = false;
-
+    cookedSample.sampleMills = millis();
 }

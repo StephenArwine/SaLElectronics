@@ -48,8 +48,11 @@ void TC4_Handler(void) {
     TC4->COUNT16.INTFLAG.reg = 0XFF;
 }
 
+struct sample cookedSample;
 
 volatile uint32_t counter = 0;
+
+struct sample cookedSample;
 
 int main(void) {
     // SystemInit();
@@ -67,7 +70,6 @@ int main(void) {
     struct AccelerometerModule myAccelerometer;
     struct BarometerModule myBarometer;
     struct AltimeterModule myAltimeter;
-    struct sample currentSample;
 
     SaLSyncUsartIo(&USART_0, &UsartIoModule);
     initAccelerometer(&myAccelerometer);
@@ -106,52 +108,16 @@ int main(void) {
     volatile int32_t groundAlt = groundHeight.mean;
     variance = GetVariance(&groundHeight,&groundHeight.mean);
 
-    uint32_t lasttime = millis();
-    volatile uint16_t mil;
-    volatile uint16_t mil2;
+    volatile uint16_t ticks = 0;
 
     while (1) {
-
+        ticks++;
         counter++;
         // milliseconds = millis();
 
-        //sampleTick();
-
-
-
-
-
-
-        /*
-                if (milliseconds - lasttime > 10000) {
-                    lasttime = milliseconds;
-                    bytesRead = SaLIoRead(UsartIoModule,&message[0],225);
-                    MTK3329ParseMessage(&myGPS.MTK3329,&message[0]);
-                    // SaLPlayTone(400);
-                    currentSample = getSample(myAltimeter);
-                    //counter = 0;
-                }
-
-                if (retrieveSample) {
-
-        			*/
-
-        getMS5607PressureSlow(&myBarometer);
-       // currentHeight[index2] = groundAlt - myBarometer.currentAltInFt;
-
-    //    getAccelEvent(myAltimeter.myAltimetersAccelerometer);
-      //  accelDataX[index2] = myAccelerometer.acceleration.Xf;
-      //  accelDataY[index2] = myAccelerometer.acceleration.Yf;
-      //  accelDataZ[index2] = myAccelerometer.acceleration.Zf;
-   //     retrieveSample = false;
-    //    index2++;
-
-
-   //     if (index2 > 1000) {
-   //         index2 = 0;
-   //         mil = millis();
-    //        mil2 = millis();
+        sampleTick();
+        if (ticks > 1000) {
+            ticks = 0;
         }
-
     }
 }

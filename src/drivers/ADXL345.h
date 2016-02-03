@@ -8,9 +8,9 @@
 #include <boardDefines.h>
 #include <SaL.h>
 
-volatile int16_t Xaccel;
-volatile int16_t Yaccel;
-volatile int16_t Zaccel;
+ int16_t Xaccel;
+ int16_t Yaccel;
+ int16_t Zaccel;
 
 
 float currentX();

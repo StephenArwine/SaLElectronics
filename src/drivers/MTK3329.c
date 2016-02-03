@@ -80,7 +80,7 @@ void MTK3329ParseMessage(struct MTK3329Module *const myMTK3329,uint8_t *const me
     int32_t i = 0;
     do {
         if (messageToParse[i] == 0x24) {
-            volatile uint8_t header[3];
+             uint8_t header[3];
             header[0] = messageToParse[i+3];
             header[1] = messageToParse[i+4];
             header[2] = messageToParse[i+5];

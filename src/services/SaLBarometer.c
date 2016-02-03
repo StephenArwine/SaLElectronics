@@ -22,7 +22,7 @@ bool baroSample(void) {
         break;
     case baroSamplePressureRequested:
         //timer interrupt will send baroSampleState++
-        if (millis() != mills) {
+        if (millis() - mills > 22) {
             baroSampleState++;
         } else {
             hits++;
@@ -37,10 +37,11 @@ bool baroSample(void) {
     case baroSamplePressureRetreaved:
         sendMS5607D2ReadReq(cmdAdcD2_);
         baroSampleState++;
+        mills = millis();
         return false;
         break;
     case baroSampleTemperatureRequested:
-        if (millis() != mills) {
+        if (millis() - mills > 22) {
             baroSampleState++;
         } else {
             hits++;
@@ -53,7 +54,7 @@ bool baroSample(void) {
         return false;
         break;
     case baroSampleTemperatureRetreaved:
-        pascelFromPresTempConv =ConvertPressureTemperature(&pressure, &temperature,&coefficients_[0]);
+        pascelFromPresTempConv = ConvertPressureTemperature(&pressure, &temperature,&coefficients_[0]);
         baroSampleState++;
         return false;
         break;
@@ -117,5 +118,5 @@ void getMS5607PressureSlow(struct BarometerModule *const myBarometer) {
 }
 
 uint32_t SaLBaroGetHeight() {
-	return currentAltinCm;
+    return currentAltinCm;
 };
