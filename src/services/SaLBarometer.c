@@ -74,7 +74,7 @@ bool baroSample(void) {
 };
 
 
-void initBarometer(struct BarometerModule *const myBarometer) {
+void initBarometer() {
 
     baroSampleState = baroSampleEmpty;
 
@@ -101,21 +101,6 @@ void sendMS5607D2ReadReq(uint8_t _cmd) {
     SaLDigitalOut(MS5607_SLAVE_SELECT_PIN,TRUE);
 }
 
-void getMS5607PressureSlow(struct BarometerModule *const myBarometer) {
-
-    sendMS5607D2ReadReq(cmdAdcD1_);
-    delay_us(700);
-    myBarometer->pressure = readMS5607AdcResults();
-
-    sendMS5607D2ReadReq(cmdAdcD2_);
-    delay_us(700);
-    myBarometer->temperature = readMS5607AdcResults();
-
-    const uint32_t pressConv   = ConvertPressureTemperature(&myBarometer->pressure, &myBarometer->temperature,&coefficients_[0]);
-
-    myBarometer->currentAltInFt = pascalToCent(pressConv);
-    //myBarometer->currentAltInFt = paToFeetNOAA(pressConv);
-}
 
 uint32_t SaLBaroGetHeight() {
     return currentAltinCm;

@@ -99,21 +99,21 @@ void SaLTC4Init() {
     NVIC_EnableIRQ(TC4_IRQn);
 }
 
-void SaLTC5Init() {
-
-    PM->APBCMASK.reg |= PM_APBCMASK_TC5;
-
-    TC5->COUNT8.CTRLA.reg = TC_CTRLA_MODE_COUNT8 |
-                            TC_CTRLA_RUNSTDBY |
-                            TC_CTRLA_PRESCALER_DIV256;
-    TC5->COUNT8.PER.reg = 0xFE;
-
-    TC5->COUNT8.INTENSET.reg = TC_INTENSET_OVF;
-
-    TC5->COUNT8.CTRLA.reg |= TC_CTRLA_ENABLE;
-
-    NVIC_EnableIRQ(TC5_IRQn);
-}
+// void SaLTC5Init() {
+// 
+//     PM->APBCMASK.reg |= PM_APBCMASK_TC5;
+// 
+//     TC5->COUNT8.CTRLA.reg = TC_CTRLA_MODE_COUNT8 |
+//                             TC_CTRLA_RUNSTDBY |
+//                             TC_CTRLA_PRESCALER_DIV256;
+//     TC5->COUNT8.PER.reg = 0xFE;
+// 
+//     TC5->COUNT8.INTENSET.reg = TC_INTENSET_OVF;
+// 
+//     TC5->COUNT8.CTRLA.reg |= TC_CTRLA_ENABLE;
+// 
+//     NVIC_EnableIRQ(TC5_IRQn);
+// }
 
 
 

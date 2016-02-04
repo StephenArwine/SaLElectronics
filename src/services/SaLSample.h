@@ -13,8 +13,8 @@
 struct sample {
 
     uint32_t pressure;
-    float altitude;
-    float groundLevel;
+    uint32_t altitude;
+    uint32_t groundLevel;
     float accelerationInX;
     float accelerationInY;
     float accelerationInZ;
@@ -25,11 +25,11 @@ struct sample {
     float latitude;
     bool GPSvalid;
     uint32_t sampleMills;
-	uint32_t deltaT;
-	float positionStar;
-	float velocityStar;
-	float position;
-	float velocity;
+    uint32_t deltaT;
+    float positionStar;
+    float velocityStar;
+    uint32_t position;
+    float velocity;
 
 };
 

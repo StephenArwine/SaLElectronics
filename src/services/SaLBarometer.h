@@ -41,7 +41,7 @@ struct BarometerModule {
 
 uint32_t SaLBaroGetHeight();
 
-void initBarometer(struct BarometerModule *const myBarometer);
+void initBarometer();
 
 #ifdef HAS_MS5607
 

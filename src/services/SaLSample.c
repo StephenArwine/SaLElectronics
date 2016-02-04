@@ -31,7 +31,6 @@ int16_t index222 = 0;
 uint16_t thisTime;
 uint16_t lastTime;
 uint16_t deltatt;
-uint16_t deltaa[1000];
 
 void sampleTick() {
 
@@ -40,7 +39,7 @@ void sampleTick() {
 
 
     if (baroSampleReady && accelSampleReady) {
-        index222++;
+
         sampleBeingCooked.sampleMills = millis();
         sampleBeingCooked.deltaT = sampleBeingCooked.sampleMills - cookedSample.sampleMills;
         sampleBeingCooked.altitude = SaLBaroGetHeight();
@@ -49,10 +48,10 @@ void sampleTick() {
         sampleBeingCooked.accelerationInZ = SaLGetAccelZ();
         sampleBeingCooked.position = SaLBaroGetHeight();
 
-        sampleBeingCooked.velocityStar = cookedSample.positionStar + sampleBeingCooked.accelerationInX*sampleBeingCooked.deltaT;
-        sampleBeingCooked.positionStar = cookedSample.position +
-                                         cookedSample.velocityStar * sampleBeingCooked.deltaT +
-                                         sampleBeingCooked.accelerationInZ *  (pow(sampleBeingCooked.deltaT,2)/2);
+        //  sampleBeingCooked.velocityStar = cookedSample.positionStar + sampleBeingCooked.accelerationInX*sampleBeingCooked.deltaT;
+        //  sampleBeingCooked.positionStar = cookedSample.position +
+        //                                 cookedSample.velocityStar * sampleBeingCooked.deltaT +
+        //                                   sampleBeingCooked.accelerationInZ *  (pow(sampleBeingCooked.deltaT,2)/2);
 
 
         baroSampleState = 0;
@@ -60,15 +59,16 @@ void sampleTick() {
         baroSampleReady = false;
         accelSampleReady = false;
         cookedSample = sampleBeingCooked;
-        deltaa[index222] = cookedSample.altitude;
-        if (index222 > 1000) {
-            index222 = 0;
-            thisTime = millis();
-            deltatt = thisTime - lastTime;
-            lastTime = millis();
-        }
+
+        //index222++;
+//         if (index222 > 1000) {
+//             index222 = 0;
+//             thisTime = millis();
+//             deltatt = thisTime - lastTime;
+//             lastTime = millis();
     }
 }
+
 
 void sampleInit() {
 
