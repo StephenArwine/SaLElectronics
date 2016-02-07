@@ -11,11 +11,14 @@
 #include <SaLUSART.h>
 #include <SaLPort.h>
 #include <SaLSample.h>
+#include <SaLUsb.h>
 
 
-uint8_t bytesRead;
+
+uint32_t bytesRead;
 bool retrieveSample;
 uint32_t index2;
+
 
 
 void PinConfig() {
@@ -39,68 +42,89 @@ struct sample cookedSample;
 
 volatile uint32_t counter = 0;
 
-struct sample cookedSample;
+void usbInit2() {
+
+
+
+}
 
 int main(void) {
-    // SystemInit();
+    SystemInit();
     SaLDelayInit();
     SalGclkInit();
     SaLRtcInit();
     PinConfig();
     uart_init(9600);
     SaLTC4Init();
-    // SaLTC5Init();
+    sampleInit();
+    // UsbInit();
+
 
     struct IoDescriptor *UsartIoModule;
+    struct IoDescriptor *UsartIoModuleUsb;
+
     struct AccelerometerModule myAccelerometer;
 
     SaLSyncUsartIo(&USART_0, &UsartIoModule);
+    SaLSyncUsartIo(&USART_1, &UsartIoModuleUsb);
+
     initAccelerometer(&myAccelerometer);
     initBarometer();
+	SaLFlashMemInit();
 //    getAccelEvent(&myAccelerometer);
 
 //     myGPS.MTK3329 = MTK3329Instance;
 //     myAltimeter.myAltimetersAccelerometer = &myAccelerometer;
 //     myAltimeter.myAltimetersBarometer = &myBarometer;
 //     myAltimeter.myAltimetersGps = &myGPS;
-// 
+//
 //     //startUpTone();
-// 
+//
 //     //uint32_t index = 0;
 //     volatile uint32_t milliseconds = 0;
-// 
+//
 //     uint8_t message[255];
-// 
+//
 //     struct sVar groundHeight;
-// 
+//
 //     for (uint8_t i = 0; i < 100; i++) {
 //         getMS5607PressureSlow(&myBarometer);
 //         uint32_t tempheight = myBarometer.currentAltInFt;
 //         addSampleToVariance(&groundHeight,tempheight);
 //     }
 //     volatile uint32_t variance = GetVariance(&groundHeight,&groundHeight.mean);
-// 
-// 
+//
+//
 //     for (uint8_t i = 0; i < 200; i++) {
 //         getMS5607PressureSlow(&myBarometer);
 //         uint32_t tempheight = myBarometer.currentAltInFt;
 //         addSampleToVariance(&groundHeight,tempheight);
-// 
+//
 //     }
-// 
+//
 //     volatile int32_t groundAlt = groundHeight.mean;
 //     variance = GetVariance(&groundHeight,&groundHeight.mean);
 
     volatile uint16_t ticks = 0;
+    uint32_t milliseconds = 0;
+    uint32_t lastTime = 0;
+    uint8_t message[255];
+//     AT25SFErace4KBlock(0);
+//     AT25SFWriteByte(0x00101,251);
+//   volatile uint8_t byte = AT25SFGetByte(0x00101);
 
     while (1) {
         ticks++;
         counter++;
-        // milliseconds = millis();
-
-        sampleTick();
-        if (ticks > 1000) {
-            ticks = 0;
+        milliseconds = millis();
+        if (milliseconds - lastTime > 150000*3.3) {
+            // bytesRead = SaLIoRead(UsartIoModule,&message[0],255);
+            lastTime = milliseconds;
+            //SaLPlayTone(400);
         }
+        sampleTick();
+
     }
+
+
 }

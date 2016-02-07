@@ -13,6 +13,7 @@ void SalGclkInit() {
                            SYSCTRL_XOSC32K_XTALEN |
                            SYSCTRL_XOSC32K_EN32K |
                            ( 6 << SYSCTRL_XOSC32K_STARTUP_Pos);
+
 //wait for crystal to warm up
     while((SYSCTRL->PCLKSR.reg & (SYSCTRL_PCLKSR_XOSC32KRDY)) == 0);
 
@@ -57,14 +58,16 @@ void SalGclkInit() {
         fine = 0x1ff;
     }
 //For generic clock generator 0, select the DFLL48 Clock as input
-    GCLK->GENDIV.reg  = (GCLK_GENDIV_DIV(1)  | GCLK_GENDIV_ID(0));
+    GCLK->GENDIV.reg  = (GCLK_GENDIV_DIV(1)  | GCLK_GENDIV_ID(1));
     GCLK->GENCTRL.reg = (GCLK_GENCTRL_ID(0)  | (GCLK_GENCTRL_SRC_DFLL48M) | (GCLK_GENCTRL_GENEN));
     GCLK->CLKCTRL.reg = (GCLK_CLKCTRL_GEN(0) | GCLK_CLKCTRL_CLKEN ) ;
 
-    SYSCTRL->DFLLCTRL.reg = (SYSCTRL_DFLLCTRL_ENABLE); //Enable the DFLL
-    SYSCTRL->DFLLCTRL.reg |= (SYSCTRL_DFLLCTRL_MODE);
-    SYSCTRL->DFLLMUL.reg = (SYSCTRL_DFLLMUL_CSTEP(coarse) | SYSCTRL_DFLLMUL_FSTEP(fine));
-    SYSCTRL->DFLLMUL.reg |= (SYSCTRL_DFLLMUL_MUL(1280));
+    SYSCTRL->DFLLCTRL.reg = (SYSCTRL_DFLLCTRL_MODE) |
+                             SYSCTRL_DFLLCTRL_USBCRM |
+                             SYSCTRL_DFLLCTRL_ENABLE;
+
+    SYSCTRL->DFLLMUL.reg = (SYSCTRL_DFLLMUL_CSTEP(1) | SYSCTRL_DFLLMUL_FSTEP(1));
+    SYSCTRL->DFLLMUL.reg |= (SYSCTRL_DFLLMUL_MUL(48000000/32768));
 
 //Wait and see if the DFLL output is good . . .
     while((SYSCTRL->PCLKSR.reg & (SYSCTRL_PCLKSR_DFLLRDY)) == 0);
@@ -78,7 +81,7 @@ void SalGclkInit() {
                         GCLK_GENCTRL_RUNSTDBY |
                         GCLK_GENCTRL_GENEN;
     GCLK->CLKCTRL.reg = GCLK_CLKCTRL_ID_TC4_TC5 |
-                        GCLK_CLKCTRL_GEN_GCLK3 |
+                        GCLK_CLKCTRL_GEN_GCLK4 |
                         GCLK_CLKCTRL_CLKEN;
 
 }
@@ -100,18 +103,18 @@ void SaLTC4Init() {
 }
 
 // void SaLTC5Init() {
-// 
+//
 //     PM->APBCMASK.reg |= PM_APBCMASK_TC5;
-// 
+//
 //     TC5->COUNT8.CTRLA.reg = TC_CTRLA_MODE_COUNT8 |
 //                             TC_CTRLA_RUNSTDBY |
 //                             TC_CTRLA_PRESCALER_DIV256;
 //     TC5->COUNT8.PER.reg = 0xFE;
-// 
+//
 //     TC5->COUNT8.INTENSET.reg = TC_INTENSET_OVF;
-// 
+//
 //     TC5->COUNT8.CTRLA.reg |= TC_CTRLA_ENABLE;
-// 
+//
 //     NVIC_EnableIRQ(TC5_IRQn);
 // }
 
@@ -161,12 +164,12 @@ void RTC_Handler(void) {
 }
 
 uint32_t millis(void) {
-	uint32_t ms;
-	ATOMIC_SECTION_ENTER
-	ms = time_ms + RTC->MODE1.COUNT.reg;
-	if (RTC->MODE1.INTFLAG.bit.OVF)
-	ms = time_ms + RTC->MODE1.COUNT.reg + 1000;
-	ATOMIC_SECTION_LEAVE
-	return ms;
+    uint32_t ms;
+    ATOMIC_SECTION_ENTER
+    ms = time_ms + RTC->MODE1.COUNT.reg;
+    if (RTC->MODE1.INTFLAG.bit.OVF)
+        ms = time_ms + RTC->MODE1.COUNT.reg + 1000;
+    ATOMIC_SECTION_LEAVE
+    return ms;
 }
 

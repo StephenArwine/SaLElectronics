@@ -10,8 +10,6 @@
 
 ..\src\drivers\MTK3329.c
 
-..\src\include\utils_syscalls.c
-
 ..\src\services\SaLAccelerometer.c
 
 ..\src\services\SaLAltimeter.c
@@ -37,6 +35,8 @@
 ..\src\services\SaLSpi.c
 
 ..\src\services\SaLUSART.c
+
+..\src\services\SaLUsb.c
 
 Device_Startup\startup_samd21.c
 

@@ -9,6 +9,7 @@
 #include <SaLAccelerometer.h>
 #include <SaLBarometer.h>
 #include <SaLGps.h>
+#include <SaLFlashMem.h>
 
 struct sample {
 

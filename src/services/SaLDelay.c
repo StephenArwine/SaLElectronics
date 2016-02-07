@@ -4,7 +4,7 @@ static uint32_t cycles_per_ms = 48000000UL / 1000;
 static uint32_t cycles_per_us = 48000000UL / 1000000;
 
 void SaLDelayInit(void) {
-    cycles_per_ms = 41900000UL;
+    cycles_per_ms = 32000000UL;
     cycles_per_ms /= 1000;
     cycles_per_us = cycles_per_ms / 1000;
 

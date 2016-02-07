@@ -8,9 +8,11 @@
 
 typedef uint16_t SaLSercomUsartDataReg_t;
 
-static inline void uart_sync(void) {
-    while (SERCOM5->USART.SYNCBUSY.bit.CTRLB);
-}
+static inline void uart_sync(const void *const hw) {
+  while (((Sercom *)hw)->USART.SYNCBUSY.bit.CTRLB);
+    //while (SERCOM5->USART.SYNCBUSY.bit.CTRLB);
+
+};
 
 void uart_init(uint32_t baud);
 
@@ -24,6 +26,7 @@ struct SaLUsartDescriptor {
 };
 
 struct SaLUsartDescriptor USART_0;
+struct SaLUsartDescriptor USART_1;
 
 void SaLSyncUsartIo(struct SaLUsartDescriptor *const descr,
                     struct IoDescriptor **Io);
@@ -35,7 +38,7 @@ static inline void _usartSetDataReg(const void *const hw, uint8_t data ) {
 }
 
 static inline SaLSercomUsartDataReg_t _usartGetDataReg(const void *const hw) {
-    return     ((Sercom *)hw)->USART.DATA.reg;
+    return ((Sercom *)hw)->USART.DATA.reg;
 }
 
 static inline bool _usartGetInteruptRCX(const void *const hw) {

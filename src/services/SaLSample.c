@@ -52,7 +52,7 @@ void sampleTick() {
         //  sampleBeingCooked.positionStar = cookedSample.position +
         //                                 cookedSample.velocityStar * sampleBeingCooked.deltaT +
         //                                   sampleBeingCooked.accelerationInZ *  (pow(sampleBeingCooked.deltaT,2)/2);
-
+        index222++;
 
         baroSampleState = 0;
         accelSampleState = 0;
@@ -60,15 +60,17 @@ void sampleTick() {
         accelSampleReady = false;
         cookedSample = sampleBeingCooked;
 
-        //index222++;
-//         if (index222 > 1000) {
-//             index222 = 0;
-//             thisTime = millis();
-//             deltatt = thisTime - lastTime;
-//             lastTime = millis();
+
+        if (index222 > 5000) {
+            index222 = 0;
+            thisTime = millis();
+            deltatt = thisTime - lastTime;
+            lastTime = millis();
+			            SaLPlayTone(400);
+
+        }
     }
 }
-
 
 void sampleInit() {
 

@@ -4,13 +4,13 @@
 
 ..\src\drivers\ADXL345.c
 
+..\src\drivers\AT25SF.c
+
 ..\src\drivers\CC1120.c
 
 ..\src\drivers\MS5607.c
 
 ..\src\drivers\MTK3329.c
-
-..\src\include\utils_syscalls.c
 
 ..\src\services\SaLAccelerometer.c
 
@@ -26,6 +26,8 @@
 
 ..\src\services\SaLDelay.c
 
+..\src\services\SaLFlashMem.c
+
 ..\src\services\SaLIo.c
 
 ..\src\services\SaLMath.c
@@ -37,6 +39,8 @@
 ..\src\services\SaLSpi.c
 
 ..\src\services\SaLUSART.c
+
+..\src\services\SaLUsb.c
 
 Device_Startup\startup_samd21.c
 

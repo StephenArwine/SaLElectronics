@@ -54,6 +54,60 @@
       <ToolName>Atmel-ICE</ToolName>
     </com_atmel_avrdbg_tool_atmelice>
     <avrtoolinterfaceclock>2000000</avrtoolinterfaceclock>
+    <PercepioTrace>
+      <TargetOS />
+      <Frequency>64000000</Frequency>
+      <EnableTraceInterrupts>False</EnableTraceInterrupts>
+      <EnableNonintrusive>False</EnableNonintrusive>
+      <EnableTargetOS>False</EnableTargetOS>
+      <EnableApplicationOutput>False</EnableApplicationOutput>
+      <EnableDataWatchPoints>True</EnableDataWatchPoints>
+      <EnablePC>True</EnablePC>
+      <EnablePCPolled>False</EnablePCPolled>
+      <PolledFrequency>1000</PolledFrequency>
+      <EnableMcu>False</EnableMcu>
+      <EnableOsAwareness>False</EnableOsAwareness>
+      <HWApplicationOutput>False</HWApplicationOutput>
+      <HWInterrupt>False</HWInterrupt>
+      <HWIntrusiveDataWatch>True</HWIntrusiveDataWatch>
+      <HWNonintrusiveDataWatch>False</HWNonintrusiveDataWatch>
+      <HWPolledDataWatch>True</HWPolledDataWatch>
+      <HWPolledProgramCounterSampling>True</HWPolledProgramCounterSampling>
+      <HWProfiling>False</HWProfiling>
+      <HWProgramCounterSampling>False</HWProgramCounterSampling>
+      <ApplicationOutput0>String</ApplicationOutput0>
+      <ApplicationOutput1>String</ApplicationOutput1>
+      <ApplicationOutput2>String</ApplicationOutput2>
+      <ApplicationOutput3>String</ApplicationOutput3>
+      <ApplicationOutput4>String</ApplicationOutput4>
+      <ApplicationOutput5>String</ApplicationOutput5>
+      <ApplicationOutput6>String</ApplicationOutput6>
+      <ApplicationOutput7>String</ApplicationOutput7>
+      <ApplicationOutput8>String</ApplicationOutput8>
+      <ApplicationOutput9>String</ApplicationOutput9>
+      <ApplicationOutput10>String</ApplicationOutput10>
+      <ApplicationOutput11>String</ApplicationOutput11>
+      <ApplicationOutput12>String</ApplicationOutput12>
+      <ApplicationOutput13>String</ApplicationOutput13>
+      <ApplicationOutput14>String</ApplicationOutput14>
+      <ApplicationOutput15>String</ApplicationOutput15>
+      <ApplicationOutput16>String</ApplicationOutput16>
+      <ApplicationOutput17>String</ApplicationOutput17>
+      <ApplicationOutput18>String</ApplicationOutput18>
+      <ApplicationOutput19>String</ApplicationOutput19>
+      <ApplicationOutput20>String</ApplicationOutput20>
+      <ApplicationOutput21>String</ApplicationOutput21>
+      <ApplicationOutput22>String</ApplicationOutput22>
+      <ApplicationOutput23>String</ApplicationOutput23>
+      <ApplicationOutput24>String</ApplicationOutput24>
+      <ApplicationOutput25>String</ApplicationOutput25>
+      <ApplicationOutput26>String</ApplicationOutput26>
+      <ApplicationOutput27>String</ApplicationOutput27>
+      <ApplicationOutput28>String</ApplicationOutput28>
+      <ApplicationOutput29>String</ApplicationOutput29>
+      <ApplicationOutput30>String</ApplicationOutput30>
+      <ApplicationOutput31>String</ApplicationOutput31>
+    </PercepioTrace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <ToolchainSettings>
@@ -70,7 +124,6 @@
   </armgcc.compiler.symbols.DefSymbols>
   <armgcc.compiler.directories.IncludePaths>
     <ListValues>
-      <Value>%24(PackRepoDir)\atmel\SAMD21_DFP\1.0.222\samd21a\include</Value>
       <Value>%24(PackRepoDir)\arm\cmsis\4.2.0\CMSIS\Include\</Value>
       <Value>../../src/drivers</Value>
       <Value>../../src/include</Value>
@@ -78,9 +131,10 @@
       <Value>../../src</Value>
       <Value>C:\Users\sal\Documents\SaLElectronics\src</Value>
       <Value>..</Value>
+      <Value>%24(PackRepoDir)\Atmel\SAMD21_DFP\1.0.229\samd21a\include</Value>
     </ListValues>
   </armgcc.compiler.directories.IncludePaths>
-  <armgcc.compiler.optimization.level>Optimize for size (-Os)</armgcc.compiler.optimization.level>
+  <armgcc.compiler.optimization.level>Optimize (-O1)</armgcc.compiler.optimization.level>
   <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
   <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
   <armgcc.linker.general.GenerateMAPFile>False</armgcc.linker.general.GenerateMAPFile>
@@ -91,12 +145,12 @@
   </armgcc.linker.libraries.Libraries>
   <armgcc.linker.libraries.LibrarySearchPaths>
     <ListValues>
-      <Value>%24(ProjectDir)\Device_Startup</Value>
-      <Value>../../src/drivers</Value>
-      <Value>../../src/services</Value>
-      <Value>../../src/include</Value>
+      <Value>..\..\src\drivers</Value>
+      <Value>..\..\src\services</Value>
+      <Value>..\..\src\include</Value>
       <Value>C:\Users\Stephen Arwine\Documents\SaLElectronics\src\services</Value>
       <Value>C:\Users\sal\Documents\SaLElectronics\src\services</Value>
+      <Value>%24(ProjectDir)\Device_Startup</Value>
     </ListValues>
   </armgcc.linker.libraries.LibrarySearchPaths>
   <armgcc.linker.optimization.GarbageCollectUnusedSections>True</armgcc.linker.optimization.GarbageCollectUnusedSections>
@@ -104,8 +158,8 @@
   <armgcc.linker.miscellaneous.LinkerFlags>-Tsamd21g18a_flash.ld</armgcc.linker.miscellaneous.LinkerFlags>
   <armgcc.preprocessingassembler.general.IncludePaths>
     <ListValues>
-      <Value>%24(PackRepoDir)\atmel\SAMD21_DFP\1.0.222\samd21a\include</Value>
       <Value>%24(PackRepoDir)\arm\cmsis\4.2.0\CMSIS\Include\</Value>
+      <Value>%24(PackRepoDir)\Atmel\SAMD21_DFP\1.0.229\samd21a\include</Value>
     </ListValues>
   </armgcc.preprocessingassembler.general.IncludePaths>
 </ArmGcc>
@@ -130,7 +184,6 @@
   </armgcc.compiler.symbols.DefSymbols>
   <armgcc.compiler.directories.IncludePaths>
     <ListValues>
-      <Value>%24(PackRepoDir)\atmel\SAMD21_DFP\1.0.222\samd21a\include</Value>
       <Value>%24(PackRepoDir)\arm\cmsis\4.2.0\CMSIS\Include\</Value>
       <Value>../../src/drivers</Value>
       <Value>../../src/include</Value>
@@ -141,6 +194,11 @@
       <Value>C:\Users\sal\Documents\SaLElectronics\src\include</Value>
       <Value>C:\Users\sal\Documents\SaLElectronics\src\drivers</Value>
       <Value>C:\Users\sal\Documents\SaLElectronics\src\services</Value>
+      <Value>../../src/usb/class/cdc/device</Value>
+      <Value>../../src/usb</Value>
+      <Value>../../src/usb/class/cdc</Value>
+      <Value>../../src/usb/device</Value>
+      <Value>%24(PackRepoDir)\Atmel\SAMD21_DFP\1.0.229\samd21a\include</Value>
     </ListValues>
   </armgcc.compiler.directories.IncludePaths>
   <armgcc.compiler.optimization.level>Optimize (-O1)</armgcc.compiler.optimization.level>
@@ -157,11 +215,11 @@
   </armgcc.linker.libraries.Libraries>
   <armgcc.linker.libraries.LibrarySearchPaths>
     <ListValues>
-      <Value>%24(ProjectDir)\Device_Startup</Value>
-      <Value>../../src/drivers</Value>
-      <Value>../../src/services</Value>
+      <Value>..\..\src\drivers</Value>
+      <Value>..\..\src\services</Value>
       <Value>C:\Users\Stephen Arwine\Documents\SaLElectronics\src\services</Value>
       <Value>C:\Users\sal\Documents\SaLElectronics\src\services</Value>
+      <Value>%24(ProjectDir)\Device_Startup</Value>
     </ListValues>
   </armgcc.linker.libraries.LibrarySearchPaths>
   <armgcc.linker.optimization.GarbageCollectUnusedSections>True</armgcc.linker.optimization.GarbageCollectUnusedSections>
@@ -170,8 +228,8 @@
   <armgcc.assembler.debugging.DebugLevel>Default (-g)</armgcc.assembler.debugging.DebugLevel>
   <armgcc.preprocessingassembler.general.IncludePaths>
     <ListValues>
-      <Value>%24(PackRepoDir)\atmel\SAMD21_DFP\1.0.222\samd21a\include</Value>
       <Value>%24(PackRepoDir)\arm\cmsis\4.2.0\CMSIS\Include\</Value>
+      <Value>%24(PackRepoDir)\Atmel\SAMD21_DFP\1.0.229\samd21a\include</Value>
     </ListValues>
   </armgcc.preprocessingassembler.general.IncludePaths>
   <armgcc.preprocessingassembler.debugging.DebugLevel>Default (-Wa,-g)</armgcc.preprocessingassembler.debugging.DebugLevel>
@@ -189,6 +247,14 @@
     <Compile Include="..\src\drivers\ADXL345.h">
       <SubType>compile</SubType>
       <Link>ADXL345.h</Link>
+    </Compile>
+    <Compile Include="..\src\drivers\AT25SF.c">
+      <SubType>compile</SubType>
+      <Link>AT25SF.c</Link>
+    </Compile>
+    <Compile Include="..\src\drivers\AT25SF.h">
+      <SubType>compile</SubType>
+      <Link>AT25SF.h</Link>
     </Compile>
     <Compile Include="..\src\drivers\CC1120.c">
       <SubType>compile</SubType>
@@ -213,10 +279,6 @@
     <Compile Include="..\src\drivers\MTK3329.h">
       <SubType>compile</SubType>
       <Link>MTK3329.h</Link>
-    </Compile>
-    <Compile Include="..\src\include\utils_syscalls.c">
-      <SubType>compile</SubType>
-      <Link>utils_syscalls.c</Link>
     </Compile>
     <Compile Include="..\src\SaL.h">
       <SubType>compile</SubType>
@@ -282,6 +344,14 @@
       <SubType>compile</SubType>
       <Link>SaLDelay.h</Link>
     </Compile>
+    <Compile Include="..\src\services\SaLFlashMem.c">
+      <SubType>compile</SubType>
+      <Link>SaLFlashMem.c</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLFlashMem.h">
+      <SubType>compile</SubType>
+      <Link>SaLFlashMem.h</Link>
+    </Compile>
     <Compile Include="..\src\services\SaLGps.h">
       <SubType>compile</SubType>
       <Link>SaLGps.h</Link>
@@ -337,6 +407,14 @@
     <Compile Include="..\src\services\SaLUSART.h">
       <SubType>compile</SubType>
       <Link>SaLUSART.h</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLUsb.c">
+      <SubType>compile</SubType>
+      <Link>SaLUsb.c</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLUsb.h">
+      <SubType>compile</SubType>
+      <Link>SaLUsb.h</Link>
     </Compile>
     <Compile Include="Device_Startup\startup_samd21.c">
       <SubType>compile</SubType>

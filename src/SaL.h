@@ -61,6 +61,9 @@
 #include <MTK3329.h>
 #endif
 
+#ifdef HAS_AT25SF
+#include <AT25SF.h>
+#endif
 
 
 

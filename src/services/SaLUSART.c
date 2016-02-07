@@ -18,10 +18,17 @@ void uart_init(uint32_t baud) {
 
     //portB22->PINCFG->reg = 0x44;
     // portB23->PINCFG->reg = 0x44;
+
+    // GPS pin configs
     ((Port *)PORT)->Group[1].PINCFG[22].reg = 0x41;
     ((Port *)PORT)->Group[1].PINCFG[23].reg = 0x41;
     ((Port *)PORT)->Group[1].PMUX[11].reg = 0x32;
 
+
+    // usb port configs
+  //  ((Port *)PORT)->Group[0].PINCFG[24].reg = 0x41;
+   // ((Port *)PORT)->Group[0].PINCFG[25].reg = 0x41;
+   // ((Port *)PORT)->Group[0].PMUX[12].reg = 0x24;
 
 
     //enable power to sercom 5 module
@@ -40,22 +47,27 @@ void uart_init(uint32_t baud) {
     //     GCLK->CLKCTRL.reg = GCLK_CLKCTRL_ID_SERCOMX_SLOW |
     //                         GCLK_CLKCTRL_GEN_GCLK3 |
     //                         GCLK_CLKCTRL_CLKEN;
+    GCLK->CLKCTRL.reg = GCLK_CLKCTRL_ID_SERCOM3_CORE |
+                        GCLK_CLKCTRL_GEN_GCLK3 |
+                        GCLK_CLKCTRL_CLKEN;
+
     //configure the sercom module for the gps (sercom 5)
     SERCOM5->USART.CTRLA.reg = SERCOM_USART_CTRLA_DORD |
                                SERCOM_USART_CTRLA_MODE_USART_INT_CLK |
                                SERCOM_USART_CTRLA_RXPO(3) |
                                SERCOM_USART_CTRLA_TXPO(1);
-    uart_sync();
+    uart_sync(SERCOM5);
     SERCOM5->USART.CTRLB.reg = SERCOM_USART_CTRLB_RXEN | SERCOM_USART_CTRLB_TXEN |
                                SERCOM_USART_CTRLB_CHSIZE(0/*8 bits*/);
     // SERCOM_USART_CTRLB_SFDE;
-    uart_sync();
+    uart_sync(SERCOM5);
     SERCOM5->USART.BAUD.reg = (uint16_t)br;
-    uart_sync();
+    uart_sync(SERCOM5);
     SERCOM5->USART.CTRLA.reg |= SERCOM_USART_CTRLA_ENABLE;
-    uart_sync();
+    uart_sync(SERCOM5);
 
     SaLInitUsart(&USART_0,SERCOM5);
+
 
 }
 static int32_t SaLUsartDataRead(struct IoDescriptor *const IoDescr,
@@ -91,8 +103,8 @@ uint8_t _usartGetData(const struct _UsartDevice *const device) {
 bool _usartGetDreInterupt(const struct _UsartDevice *const device) {
     return _usartGetDreInteruptReg(device->hw);
 }
-void _usartSetData(const struct _UsartDevice *const device, uint8_t data){
-	_usartSetDataReg(device->hw,data);
+void _usartSetData(const struct _UsartDevice *const device, uint8_t data) {
+    _usartSetDataReg(device->hw,data);
 }
 
 
