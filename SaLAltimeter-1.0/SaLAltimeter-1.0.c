@@ -71,39 +71,6 @@ int main(void) {
     initAccelerometer(&myAccelerometer);
     initBarometer();
 	SaLFlashMemInit();
-//    getAccelEvent(&myAccelerometer);
-
-//     myGPS.MTK3329 = MTK3329Instance;
-//     myAltimeter.myAltimetersAccelerometer = &myAccelerometer;
-//     myAltimeter.myAltimetersBarometer = &myBarometer;
-//     myAltimeter.myAltimetersGps = &myGPS;
-//
-//     //startUpTone();
-//
-//     //uint32_t index = 0;
-//     volatile uint32_t milliseconds = 0;
-//
-//     uint8_t message[255];
-//
-//     struct sVar groundHeight;
-//
-//     for (uint8_t i = 0; i < 100; i++) {
-//         getMS5607PressureSlow(&myBarometer);
-//         uint32_t tempheight = myBarometer.currentAltInFt;
-//         addSampleToVariance(&groundHeight,tempheight);
-//     }
-//     volatile uint32_t variance = GetVariance(&groundHeight,&groundHeight.mean);
-//
-//
-//     for (uint8_t i = 0; i < 200; i++) {
-//         getMS5607PressureSlow(&myBarometer);
-//         uint32_t tempheight = myBarometer.currentAltInFt;
-//         addSampleToVariance(&groundHeight,tempheight);
-//
-//     }
-//
-//     volatile int32_t groundAlt = groundHeight.mean;
-//     variance = GetVariance(&groundHeight,&groundHeight.mean);
 
     volatile uint16_t ticks = 0;
     uint32_t milliseconds = 0;
