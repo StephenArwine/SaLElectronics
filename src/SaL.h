@@ -45,6 +45,8 @@
 
 //#include <SaLAltimeter.h>
 
+#include <SaLFlashMem.h>
+
 
 
 

@@ -11,9 +11,9 @@ uint32_t read_Adc(uint8_t _cmd) {
 
     SaLDigitalOut(MS5607_SLAVE_SELECT_PIN,false);
     byteOut(MS5607_SCK_PIN,MS5607_MOSI_PIN,cmdAdcRead_);
-     uint8_t _byte1 = getByte(MS5607_SCK_PIN,MS5607_MISO_PIN);
-     uint8_t _byte2 = getByte(MS5607_SCK_PIN,MS5607_MISO_PIN);
-     uint8_t _byte3 = getByte(MS5607_SCK_PIN,MS5607_MISO_PIN);
+    uint8_t _byte1 = getByte(MS5607_SCK_PIN,MS5607_MISO_PIN);
+    uint8_t _byte2 = getByte(MS5607_SCK_PIN,MS5607_MISO_PIN);
+    uint8_t _byte3 = getByte(MS5607_SCK_PIN,MS5607_MISO_PIN);
     SaLDigitalOut(MS5607_SLAVE_SELECT_PIN,true);
 
     uint32_t _receive = _byte1;
@@ -24,17 +24,17 @@ uint32_t read_Adc(uint8_t _cmd) {
 
 }
 
-uint32_t readMS5607AdcResults(){
-	
-	 SaLDigitalOut(MS5607_SLAVE_SELECT_PIN,false);
-	 byteOut(MS5607_SCK_PIN,MS5607_MOSI_PIN,cmdAdcRead_);
-	  uint8_t _byte1 = getByte(MS5607_SCK_PIN,MS5607_MISO_PIN);
-	  uint8_t _byte2 = getByte(MS5607_SCK_PIN,MS5607_MISO_PIN);
-	  uint8_t _byte3 = getByte(MS5607_SCK_PIN,MS5607_MISO_PIN);
-	 SaLDigitalOut(MS5607_SLAVE_SELECT_PIN,true);
-	 
-	 uint32_t _receive = (_byte1 << 16) | (_byte2 << 8) | (_byte3);
-	 return _receive;
+uint32_t readMS5607AdcResults() {
+
+    SaLDigitalOut(MS5607_SLAVE_SELECT_PIN,false);
+    byteOut(MS5607_SCK_PIN,MS5607_MOSI_PIN,cmdAdcRead_);
+    uint8_t _byte1 = getByte(MS5607_SCK_PIN,MS5607_MISO_PIN);
+    uint8_t _byte2 = getByte(MS5607_SCK_PIN,MS5607_MISO_PIN);
+    uint8_t _byte3 = getByte(MS5607_SCK_PIN,MS5607_MISO_PIN);
+    SaLDigitalOut(MS5607_SLAVE_SELECT_PIN,true);
+
+    uint32_t _receive = (_byte1 << 16) | (_byte2 << 8) | (_byte3);
+    return _receive;
 }
 
 void getMS5607Coeff(uint16_t *coefficients) {
