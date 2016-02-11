@@ -10,7 +10,11 @@ ehthumbs.db
 *.eep
 *.o
 *.pyc
-.dep
+*.dep
+*.d
+*.lss
+*.srec
+*.bin
 
 # Folder config file
 Desktop.ini
