@@ -2,6 +2,16 @@
 Thumbs.db
 ehthumbs.db
 
+#debug and compiled files
+*.elf
+*.hex
+*.lst
+*.map
+*.eep
+*.o
+*.pyc
+.dep
+
 # Folder config file
 Desktop.ini
 
