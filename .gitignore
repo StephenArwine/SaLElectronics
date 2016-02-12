@@ -11,7 +11,14 @@ $RECYCLE.BIN/
 
 
 #compiled stuff
-.SaLAltimeter-1.0\Debug
+*.o
+*.d
+*.eep
+*.elf
+*.hex
+*.lss
+*.srec
+*.bin
 
 # Windows Installer files
 *.cab
