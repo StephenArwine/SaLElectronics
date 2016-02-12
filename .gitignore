@@ -8,6 +8,11 @@ Desktop.ini
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
 
+
+
+#compiled stuff
+.SaLAltimeter-1.0\Debug
+
 # Windows Installer files
 *.cab
 *.msi
