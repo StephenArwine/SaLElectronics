@@ -18,7 +18,7 @@ __attribute__((__aligned__(4))) const USB_DeviceDescriptor device_descriptor = {
     .bMaxPacketSize0        = 64,
     .idVendor               = 0x1209,
     .idProduct              = 0x7551,
-    .bcdDevice              = 0x0110,
+    .bcdDevice              = 0x0111,
 
     .iManufacturer          = 0x01,
     .iProduct               = 0x02,
@@ -250,10 +250,10 @@ uint16_t usb_cb_get_descriptor(uint8_t type, uint8_t index, const uint8_t** ptr)
             address = &language_string;
             break;
         case 0x01:
-            address = usb_string_to_descriptor("Tessel");
+            address = usb_string_to_descriptor("SaLElectronics");
             break;
         case 0x02:
-            address = usb_string_to_descriptor("Tessel 2");
+            address = usb_string_to_descriptor("SaLAltimeter 1.0");
             break;
         case 0x03:
             address = samd_serial_number_string_descriptor();
@@ -344,7 +344,7 @@ void req_info(uint16_t wIndex) {
     const char* str = 0;
     switch (wIndex) {
     case REQ_INFO_GIT_HASH:
-        str = 1;
+        str = 0;
         break;
     default:
         return usb_ep0_stall();

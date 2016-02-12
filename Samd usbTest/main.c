@@ -38,7 +38,7 @@ void initclocks() {
                         GCLK_CLKCTRL_GEN(0) |
                         GCLK_CLKCTRL_ID(SERCOM0_GCLK_ID_SLOW);
 
-
+/*
 // start and enable external 32k crystal
     SYSCTRL->XOSC32K.reg = SYSCTRL_XOSC32K_ENABLE |
                            SYSCTRL_XOSC32K_XTALEN |
@@ -57,7 +57,7 @@ void initclocks() {
     GCLK->CLKCTRL.reg = GCLK_CLKCTRL_GEN(1) |
                         GCLK_CLKCTRL_CLKEN |
                         GCLK_CLKCTRL_ID_DFLL48;
-
+*/
 //Configure the FDLL48MHz FLL, we will use this to provide a clock to the CPU
 //Set the course and fine step sizes, these should be less than 50% of the values used for the course and fine values (P150)
 
@@ -84,8 +84,9 @@ void initclocks() {
     // Disable ONDEMAND mode while writing configurations (errata 9905)
     SYSCTRL->DFLLCTRL.reg = dfll_ctrl_usb & ~SYSCTRL_DFLLCTRL_ONDEMAND;
     while((SYSCTRL->PCLKSR.reg & (SYSCTRL_PCLKSR_DFLLRDY)) == 0);
-    SYSCTRL->DFLLMUL.reg = (SYSCTRL_DFLLMUL_CSTEP(1) | SYSCTRL_DFLLMUL_FSTEP(1));
-    SYSCTRL->DFLLMUL.reg |= SYSCTRL_DFLLMUL_MUL(1465); // round(48000000 / 32768)
+//     SYSCTRL->DFLLMUL.reg = (SYSCTRL_DFLLMUL_CSTEP(1) | SYSCTRL_DFLLMUL_FSTEP(1));
+//     SYSCTRL->DFLLMUL.reg |= SYSCTRL_DFLLMUL_MUL(1465); // round(48000000 / 32768)
+  SYSCTRL->DFLLVAL.reg = SYSCTRL_DFLLVAL_COARSE(coarse) | SYSCTRL_DFLLVAL_FINE(fine);
 
 //Wait and see if the DFLL output is good . . .
     while((SYSCTRL->PCLKSR.reg & (SYSCTRL_PCLKSR_DFLLRDY)) == 0);
@@ -113,7 +114,7 @@ int main(void) {
 
     usb_init();
     usb_attach();
-    NVIC_SetPriority(USB_IRQn, 0xff);
+   NVIC_SetPriority(USB_IRQn, 0xff);
 
 
     volatile uint32_t count = 0;
