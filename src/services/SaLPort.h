@@ -39,5 +39,36 @@ static inline bool SaLDigitalIn(uint8_t pin) {
     return level;
 }
 
+typedef struct Pin {
+	uint8_t  mux;
+	uint8_t  group;
+	uint8_t  pin;
+	uint8_t  chan;
+} Pin;
+
+inline static void pin_mux(Pin p) {
+	if (p.pin & 1) {
+		PORT->Group[p.group].PMUX[p.pin/2].bit.PMUXO = p.mux;
+		} else {
+		PORT->Group[p.group].PMUX[p.pin/2].bit.PMUXE = p.mux;
+	}
+
+	PORT->Group[p.group].PINCFG[p.pin].bit.PMUXEN = 1;
+}
+
+
+inline static void pin_gpio(Pin p) {
+	PORT->Group[p.group].PINCFG[p.pin].bit.PMUXEN = 0;
+}
+
+
+inline static void pin_in(Pin p) {
+	pin_gpio(p);
+	PORT->Group[p.group].PINCFG[p.pin].bit.INEN = 1;
+	PORT->Group[p.group].DIRCLR.reg = (1<<p.pin);
+}
+
+
+
 
 #endif

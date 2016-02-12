@@ -28,7 +28,7 @@
 #include <SaLMath.h>
 
 
-#include <boardDefines.h>
+//#include <boardDefines.h>
 
 #include <samd21g18a.h>
 #include <samd21.h>
@@ -45,7 +45,11 @@
 
 //#include <SaLAltimeter.h>
 
+
+#ifdef HAS_FLASHMEM
 #include <SaLFlashMem.h>
+
+#endif
 
 
 

@@ -27,6 +27,7 @@ void SalGclkInit() {
                         GCLK_CLKCTRL_CLKEN |
                         GCLK_CLKCTRL_ID_DFLL48;
 
+// gclk for tc3
     GCLK->GENDIV.reg =  GCLK_GENDIV_ID(2) |
                         GCLK_GENDIV_DIV(1);
     GCLK->GENCTRL.reg = GCLK_GENCTRL_ID(2) |
