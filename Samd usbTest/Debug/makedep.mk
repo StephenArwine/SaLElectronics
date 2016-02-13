@@ -6,6 +6,8 @@
 
 ..\src\usb\usb.c
 
+..\src\usb\usbserial.c
+
 ..\src\usb\usb_requests.c
 
 Device_Startup\startup_samd21.c

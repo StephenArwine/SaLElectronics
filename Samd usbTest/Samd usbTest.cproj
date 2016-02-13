@@ -185,6 +185,10 @@
       <SubType>compile</SubType>
       <Link>usb.h</Link>
     </Compile>
+    <Compile Include="..\src\usb\usbserial.c">
+      <SubType>compile</SubType>
+      <Link>usbserial.c</Link>
+    </Compile>
     <Compile Include="..\src\usb\usb_requests.c">
       <SubType>compile</SubType>
       <Link>usb_requests.c</Link>

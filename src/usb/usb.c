@@ -3,6 +3,7 @@
 #include <cdc_standard.h>
 #include <SaLPort.h>
 #include <fw.h>
+/*#include <usbserial.c>*/
 
 USB_ENDPOINTS(5);
 
@@ -16,8 +17,8 @@ __attribute__((__aligned__(4))) const USB_DeviceDescriptor device_descriptor = {
     .bDeviceProtocol        = USB_CSCP_NoDeviceProtocol,
 
     .bMaxPacketSize0        = 64,
-    .idVendor               = 0x1209,
-    .idProduct              = 0x7551,
+    .idVendor               = 0x03EB,
+    .idProduct              = 0x2404,
     .bcdDevice              = 0x0111,
 
     .iManufacturer          = 0x01,
@@ -275,7 +276,7 @@ void usb_cb_reset(void) {
 
 bool usb_cb_set_configuration(uint8_t config) {
     if (config <= 1) {
-        //usbserial_init();
+        usbserial_init();
         return true;
     }
     return false;
@@ -410,7 +411,7 @@ void usb_cb_completion(void) {
         	usb_ep_handled(USB_EP_PIPE_IN);
         }
         }
-
+ */
         if (usb_ep_pending(USB_EP_CDC_OUT)) {
         usbserial_out_completion();
         usb_ep_handled(USB_EP_CDC_OUT);
@@ -420,7 +421,7 @@ void usb_cb_completion(void) {
         usbserial_in_completion();
         usb_ep_handled(USB_EP_CDC_IN);
         }
-        */
+       
 }
 
 bool usb_cb_set_interface(uint16_t interface, uint16_t new_altsetting) {

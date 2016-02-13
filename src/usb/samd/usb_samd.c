@@ -257,7 +257,7 @@ void USB_Handler() {
 void* samd_serial_number_string_descriptor() {
 	char buf[27];
 
-	const unsigned char* id = (unsigned char*) 0x0080A00B;
+	const unsigned char* id = (unsigned char*) 0x0080A00C;
 	for (int i=0; i<26; i++) {
 		unsigned idx = (i*5)/8;
 		unsigned pos = (i*5)%8;
