@@ -2695,34 +2695,6 @@ For boards designed to be plugged directly into a USB slot. If possible, ensure 
 </package>
 </packages>
 <symbols>
-<symbol name="JST_2MM_MALE">
-<wire x1="-2.54" y1="-2.54" x2="-2.54" y2="1.778" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="1.778" x2="-2.54" y2="3.302" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="3.302" x2="-2.54" y2="5.08" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="5.08" x2="5.08" y2="5.08" width="0.254" layer="94"/>
-<wire x1="5.08" y1="5.08" x2="5.08" y2="3.302" width="0.254" layer="94"/>
-<wire x1="5.08" y1="3.302" x2="5.08" y2="1.778" width="0.254" layer="94"/>
-<wire x1="5.08" y1="1.778" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="5.08" y1="-2.54" x2="4.064" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="4.064" y1="-2.54" x2="4.064" y2="0" width="0.254" layer="94"/>
-<wire x1="4.064" y1="0" x2="-1.524" y2="0" width="0.254" layer="94"/>
-<wire x1="-1.524" y1="0" x2="-1.524" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="-2.54" x2="-1.524" y2="-2.54" width="0.254" layer="94"/>
-<pin name="-" x="0" y="-5.08" visible="off" length="middle" rot="R90"/>
-<pin name="+" x="2.54" y="-5.08" visible="off" length="middle" rot="R90"/>
-<pin name="PAD2" x="5.08" y="2.54" visible="off" length="point" rot="R90"/>
-<pin name="PAD1" x="-2.54" y="2.54" visible="off" length="point" rot="R90"/>
-<wire x1="-2.54" y1="1.778" x2="-1.778" y2="1.778" width="0.254" layer="94"/>
-<wire x1="-1.778" y1="1.778" x2="-1.778" y2="3.302" width="0.254" layer="94"/>
-<wire x1="-1.778" y1="3.302" x2="-2.54" y2="3.302" width="0.254" layer="94"/>
-<wire x1="5.08" y1="1.778" x2="4.318" y2="1.778" width="0.254" layer="94"/>
-<wire x1="4.318" y1="1.778" x2="4.318" y2="3.302" width="0.254" layer="94"/>
-<wire x1="4.318" y1="3.302" x2="5.08" y2="3.302" width="0.254" layer="94"/>
-<wire x1="2.032" y1="1.016" x2="3.048" y2="1.016" width="0.254" layer="94"/>
-<wire x1="2.54" y1="0.508" x2="2.54" y2="1.524" width="0.254" layer="94"/>
-<wire x1="0" y1="0.508" x2="0" y2="1.524" width="0.254" layer="94"/>
-<text x="-2.54" y="5.842" size="1.778" layer="95">&gt;NAME</text>
-</symbol>
 <symbol name="CORTEX_DEBUG">
 <description>&lt;h3&gt;Cortex Debug Connector&lt;/h3&gt;
 &lt;p&gt;&lt;a href="http://infocenter.arm.com/help/topic/com.arm.doc.faqs/attached/13634/cortex_debug_connectors.pdf"&gt;Datasheet&lt;/a&gt;&lt;/p&gt;</description>
@@ -2779,33 +2751,6 @@ For boards designed to be plugged directly into a USB slot. If possible, ensure 
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="JST_2MM_MALE" prefix="J" uservalue="yes">
-<description>Mates to single-cell LiPo batteries.&lt;br&gt;
-CONN-11443&lt;br /&gt;
-Now with smashable polarity marks!</description>
-<gates>
-<gate name="G$1" symbol="JST_2MM_MALE" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="JST-2-SMD">
-<connects>
-<connect gate="G$1" pin="+" pad="2"/>
-<connect gate="G$1" pin="-" pad="1"/>
-<connect gate="G$1" pin="PAD1" pad="NC1"/>
-<connect gate="G$1" pin="PAD2" pad="NC2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="BTM_NEG" value="-"/>
-<attribute name="BTM_POS" value="+"/>
-<attribute name="PROD_ID" value="CONN-11443"/>
-<attribute name="TOP_NEG" value="-"/>
-<attribute name="TOP_POS" value="+"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="CORTEX_DEBUG" prefix="JP">
 <description>&lt;h3&gt;Cortex Debug Connector&lt;/h3&gt;
 &lt;p&gt;&lt;a href="http://infocenter.arm.com/help/topic/com.arm.doc.faqs/attached/13634/cortex_debug_connectors.pdf"&gt;Datasheet&lt;/a&gt;&lt;/p&gt;</description>
@@ -6019,6 +5964,35 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <circle x="2.905" y="0.635" radius="0.0508" width="0.2032" layer="21"/>
 <rectangle x1="-0.8382" y1="0.4826" x2="-0.762" y2="1.6764" layer="41"/>
 </package>
+<package name="ADXL193">
+<wire x1="-2.5" y1="2.5" x2="-2.5" y2="1.9" width="0.2032" layer="21"/>
+<wire x1="-2.5" y1="0.73" x2="-2.5" y2="0.53" width="0.2032" layer="21"/>
+<wire x1="-2.5" y1="-0.52" x2="-2.5" y2="-0.73" width="0.2032" layer="21"/>
+<wire x1="-2.5" y1="-1.9" x2="-2.5" y2="-2.5" width="0.2032" layer="21"/>
+<wire x1="-2.5" y1="-2.5" x2="-0.7" y2="-2.5" width="0.2032" layer="21"/>
+<wire x1="0.7" y1="-2.5" x2="2.5" y2="-2.5" width="0.2032" layer="21"/>
+<wire x1="2.5" y1="-2.5" x2="2.5" y2="-1.9" width="0.2032" layer="21"/>
+<wire x1="2.5" y1="-0.73" x2="2.5" y2="-0.53" width="0.2032" layer="21"/>
+<wire x1="2.5" y1="0.54" x2="2.5" y2="0.73" width="0.2032" layer="21"/>
+<wire x1="2.5" y1="1.9" x2="2.5" y2="2.5" width="0.2032" layer="21"/>
+<wire x1="2.5" y1="2.5" x2="0.7" y2="2.5" width="0.2032" layer="21"/>
+<wire x1="-0.7" y1="2.5" x2="-2.5" y2="2.5" width="0.2032" layer="21"/>
+<wire x1="5.08" y1="-2.54" x2="5.08" y2="3.81" width="0.127" layer="51"/>
+<wire x1="5.08" y1="3.81" x2="4.445" y2="3.175" width="0.127" layer="51"/>
+<wire x1="5.08" y1="3.81" x2="5.715" y2="3.175" width="0.127" layer="51"/>
+<circle x="0" y="0.762" radius="0.127" width="0.2032" layer="21"/>
+<smd name="P$1" x="-1.96" y="1.26" dx="0.64" dy="1.5" layer="1" rot="R90"/>
+<smd name="P$2" x="-1.96" y="0" dx="0.64" dy="1.5" layer="1" rot="R90"/>
+<smd name="P$3" x="-1.96" y="-1.26" dx="0.64" dy="1.5" layer="1" rot="R90"/>
+<smd name="P$4" x="0" y="-1.96" dx="0.64" dy="1.5" layer="1" rot="R180"/>
+<smd name="P$5" x="1.96" y="-1.26" dx="0.64" dy="1.5" layer="1" rot="R90"/>
+<smd name="P$6" x="1.96" y="0" dx="0.64" dy="1.5" layer="1" rot="R90"/>
+<smd name="P$7" x="1.96" y="1.26" dx="0.64" dy="1.5" layer="1" rot="R90"/>
+<smd name="P$8" x="0.01" y="1.9" dx="0.64" dy="1.27" layer="1"/>
+<text x="5.715" y="1.27" size="1.27" layer="51">X</text>
+<text x="-1.397" y="0" size="0.6096" layer="25">&gt;Name</text>
+<text x="-1.397" y="-0.762" size="0.6096" layer="27">&gt;Value</text>
+</package>
 </packages>
 <symbols>
 <symbol name="ADXL345">
@@ -6042,6 +6016,19 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pin name="SDO" x="12.7" y="5.08" length="short" rot="R180"/>
 <pin name="SDA" x="12.7" y="2.54" length="short" rot="R180"/>
 <pin name="SCL" x="12.7" y="0" length="short" rot="R180"/>
+</symbol>
+<symbol name="ADXL193">
+<wire x1="-7.62" y1="-5.08" x2="-7.62" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="5.08" x2="7.62" y2="5.08" width="0.254" layer="94"/>
+<wire x1="7.62" y1="5.08" x2="7.62" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-5.08" x2="-7.62" y2="-5.08" width="0.254" layer="94"/>
+<text x="-7.62" y="5.588" size="1.524" layer="95">&gt;Name</text>
+<text x="-7.62" y="-7.366" size="1.524" layer="95">&gt;Value</text>
+<pin name="VDD" x="-12.7" y="2.54" visible="pin" length="middle"/>
+<pin name="VDD2" x="-12.7" y="0" visible="pin" length="middle"/>
+<pin name="ST" x="-12.7" y="-2.54" visible="pin" length="middle"/>
+<pin name="OUT" x="12.7" y="2.54" visible="pin" length="middle" rot="R180"/>
+<pin name="GND" x="12.7" y="-2.54" visible="pin" length="middle" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -6093,6 +6080,26 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <technology name="">
 <attribute name="PROD_ID" value="IC-09097" constant="no"/>
 </technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="ADXL193">
+<description>250g accelerometer analog out</description>
+<gates>
+<gate name="G$1" symbol="ADXL193" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="ADXL193">
+<connects>
+<connect gate="G$1" pin="GND" pad="P$3"/>
+<connect gate="G$1" pin="OUT" pad="P$6"/>
+<connect gate="G$1" pin="ST" pad="P$4"/>
+<connect gate="G$1" pin="VDD" pad="P$7"/>
+<connect gate="G$1" pin="VDD2" pad="P$8"/>
+</connects>
+<technologies>
+<technology name=""/>
 </technologies>
 </device>
 </devices>
@@ -7781,7 +7788,6 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <part name="GND2" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="GND3" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="U$3" library="SaL-lib" deviceset="SI7615ADN" device=""/>
-<part name="J1" library="SparkFun-Connectors" deviceset="JST_2MM_MALE" device="" value="BAT"/>
 <part name="GND4" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="L1" library="SparkFun-Passives" deviceset="INDUCTOR" device="0603" value="FB - 30Ohm"/>
 <part name="C3" library="SparkFun-Passives" deviceset="CAP" device="0402-CAP" value="0.1uF"/>
@@ -7936,6 +7942,9 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <part name="GND50" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="U$4" library="SaL-lib1" deviceset="SIS410DN" device=""/>
 <part name="U$6" library="SaL-lib1" deviceset="SIS410DN" device=""/>
+<part name="JP5" library="SparkFun-Connectors" deviceset="M02" device="4UCON-15767"/>
+<part name="STANDOFF4" library="SparkFun-Electromechanical" deviceset="STAND-OFF" device=""/>
+<part name="U$7" library="SparkFun-Sensors" deviceset="ADXL193" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -7977,7 +7986,6 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <instance part="GND2" gate="1" x="7.62" y="233.68"/>
 <instance part="GND3" gate="1" x="27.94" y="254"/>
 <instance part="U$3" gate="G$1" x="43.18" y="259.08"/>
-<instance part="J1" gate="G$1" x="10.16" y="269.24" rot="R90"/>
 <instance part="GND4" gate="1" x="17.78" y="266.7"/>
 <instance part="L1" gate="G$1" x="109.22" y="205.74" smashed="yes">
 <attribute name="NAME" x="111.76" y="210.82" size="1.778" layer="95"/>
@@ -8309,6 +8317,9 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <instance part="GND50" gate="1" x="307.34" y="231.14"/>
 <instance part="U$4" gate="G$1" x="91.44" y="76.2"/>
 <instance part="U$6" gate="G$1" x="96.52" y="35.56"/>
+<instance part="JP5" gate="G$1" x="7.62" y="269.24"/>
+<instance part="STANDOFF4" gate="G$1" x="271.78" y="106.68"/>
+<instance part="U$7" gate="G$1" x="83.82" y="119.38"/>
 </instances>
 <busses>
 </busses>
@@ -8551,9 +8562,9 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <pinref part="GND3" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="J1" gate="G$1" pin="-"/>
 <pinref part="GND4" gate="1" pin="GND"/>
 <wire x1="17.78" y1="269.24" x2="15.24" y2="269.24" width="0.1524" layer="91"/>
+<pinref part="JP5" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <pinref part="C7" gate="G$1" pin="2"/>
@@ -8904,9 +8915,9 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <label x="48.26" y="271.78" size="1.27" layer="95" rot="R90" xref="yes"/>
 </segment>
 <segment>
-<pinref part="J1" gate="G$1" pin="+"/>
 <wire x1="15.24" y1="271.78" x2="17.78" y2="271.78" width="0.1524" layer="91"/>
 <label x="17.78" y="271.78" size="1.27" layer="95" xref="yes"/>
+<pinref part="JP5" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <pinref part="R18" gate="G$1" pin="2"/>

@@ -873,6 +873,35 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <text x="-0.508" y="-0.254" size="0.3048" layer="51" ratio="15">Y</text>
 <text x="-0.127" y="0.127" size="0.3048" layer="51" ratio="15">Z</text>
 </package>
+<package name="ADXL193">
+<wire x1="-2.5" y1="2.5" x2="-2.5" y2="1.9" width="0.2032" layer="21"/>
+<wire x1="-2.5" y1="0.73" x2="-2.5" y2="0.53" width="0.2032" layer="21"/>
+<wire x1="-2.5" y1="-0.52" x2="-2.5" y2="-0.73" width="0.2032" layer="21"/>
+<wire x1="-2.5" y1="-1.9" x2="-2.5" y2="-2.5" width="0.2032" layer="21"/>
+<wire x1="-2.5" y1="-2.5" x2="-0.7" y2="-2.5" width="0.2032" layer="21"/>
+<wire x1="0.7" y1="-2.5" x2="2.5" y2="-2.5" width="0.2032" layer="21"/>
+<wire x1="2.5" y1="-2.5" x2="2.5" y2="-1.9" width="0.2032" layer="21"/>
+<wire x1="2.5" y1="-0.73" x2="2.5" y2="-0.53" width="0.2032" layer="21"/>
+<wire x1="2.5" y1="0.54" x2="2.5" y2="0.73" width="0.2032" layer="21"/>
+<wire x1="2.5" y1="1.9" x2="2.5" y2="2.5" width="0.2032" layer="21"/>
+<wire x1="2.5" y1="2.5" x2="0.7" y2="2.5" width="0.2032" layer="21"/>
+<wire x1="-0.7" y1="2.5" x2="-2.5" y2="2.5" width="0.2032" layer="21"/>
+<wire x1="5.08" y1="-2.54" x2="5.08" y2="3.81" width="0.127" layer="51"/>
+<wire x1="5.08" y1="3.81" x2="4.445" y2="3.175" width="0.127" layer="51"/>
+<wire x1="5.08" y1="3.81" x2="5.715" y2="3.175" width="0.127" layer="51"/>
+<circle x="0" y="0.762" radius="0.127" width="0.2032" layer="21"/>
+<smd name="P$1" x="-1.96" y="1.26" dx="0.64" dy="1.5" layer="1" rot="R90"/>
+<smd name="P$2" x="-1.96" y="0" dx="0.64" dy="1.5" layer="1" rot="R90"/>
+<smd name="P$3" x="-1.96" y="-1.26" dx="0.64" dy="1.5" layer="1" rot="R90"/>
+<smd name="P$4" x="0" y="-1.96" dx="0.64" dy="1.5" layer="1" rot="R180"/>
+<smd name="P$5" x="1.96" y="-1.26" dx="0.64" dy="1.5" layer="1" rot="R90"/>
+<smd name="P$6" x="1.96" y="0" dx="0.64" dy="1.5" layer="1" rot="R90"/>
+<smd name="P$7" x="1.96" y="1.26" dx="0.64" dy="1.5" layer="1" rot="R90"/>
+<smd name="P$8" x="0.01" y="1.9" dx="0.64" dy="1.27" layer="1"/>
+<text x="5.715" y="1.27" size="1.27" layer="51">X</text>
+<text x="-1.397" y="0" size="0.6096" layer="25">&gt;Name</text>
+<text x="-1.397" y="-0.762" size="0.6096" layer="27">&gt;Value</text>
+</package>
 </packages>
 </library>
 <library name="SparkFun-Electromechanical">
@@ -1486,6 +1515,7 @@ Please make sure your boards conform to these design rules.</description>
 <element name="U$6" library="SaL-lib1" package="POWERPACK1212-8" value="SIS410DN" x="10.795" y="8.255" rot="R270"/>
 <element name="JP5" library="SparkFun-Connectors" package="JST-2-SMD-VERT" value="" x="-0.635" y="9.779" rot="MR270"/>
 <element name="STANDOFF4" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="65.405" y="2.667"/>
+<element name="U$7" library="SparkFun-Sensors" package="ADXL193" value="ADXL193" x="57.15" y="3.81" rot="MR90"/>
 </elements>
 <signals>
 <signal name="3.3V">
