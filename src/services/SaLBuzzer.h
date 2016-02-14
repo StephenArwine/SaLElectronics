@@ -4,7 +4,8 @@
 #define SALBUZZER_H_
 #define BUZZER PIN_PA12
 
-#include <SaL.h>
+#include <SaLPort.h>
+#include <SaLDelay.h>
 
 void SaLPlayTone(int16_t tone_);
 

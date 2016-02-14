@@ -1,4 +1,6 @@
 #include <ADXL345.h>
+#include <SaLPort.h>
+#include <SaLBitBang.h>
 
 void setRange(
     ADXL345Range _cmd) {

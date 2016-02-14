@@ -42,6 +42,8 @@
 
 #include <SaLTypes.h>
 #include <SaLPort.h>
+#include <boardDefines.h>
+#include <SaLDelay.h>
 
 #define OPCODE_SLOWREAD_ARRAY 0x03
 #define OPCODE_WRITEENABLE    0x06

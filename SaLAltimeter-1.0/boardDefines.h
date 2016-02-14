@@ -1,6 +1,6 @@
 #define HAS_SPI_MODULE 1
 #include <samd21g18a.h>
-
+#include <samd21.h>
 
 #define INPUT 0
 #define OUTPUT 1
@@ -8,6 +8,7 @@
 #define TRUE 1
 #define FALSE 0
 
+#define HAS_FLASHMEM 1
 #define HAS_AT25SF 1
 #define AT25SF_MOSI_PIN PIN_PA13
 #define AT25SF_MISO_PIN PIN_PA14

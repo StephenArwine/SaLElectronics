@@ -6,7 +6,7 @@
 
 #include <SaLTypes.h>
 #include <boardDefines.h>
-#include <SaL.h>
+
 
  int16_t Xaccel;
  int16_t Yaccel;

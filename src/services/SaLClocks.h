@@ -1,7 +1,9 @@
 
 #ifndef SALCLOCK_H_
 #define SALCLOCK_H_
-#include <SaL.h>
+
+#include <SaLTypes.h>
+#include <boardDefines.h>
 
 void SalGclkInit();
 void SaLRtcInit();

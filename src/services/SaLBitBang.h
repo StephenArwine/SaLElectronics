@@ -5,7 +5,9 @@
 #ifndef SALBITBANG_H_
 #define SALBITBANG_H_
 
-#include <SaL.h>
+#include <boardDefines.h>
+#include <SaLTypes.h>
+#include <SaLPort.h>
 
 
 void byteOut(uint8_t SCK_PIN,

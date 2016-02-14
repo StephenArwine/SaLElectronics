@@ -108,7 +108,7 @@ int main(void) {
     volatile uint16_t ticks = 0;
     uint32_t milliseconds = 0;
     uint32_t lastTime = 0;
-    uint8_t message[255];
+    //uint8_t message[255];
 //     AT25SFErace4KBlock(0);
 //     AT25SFWriteByte(0x00101,251);
 //   volatile uint8_t byte = AT25SFGetByte(0x00101);

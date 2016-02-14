@@ -9,7 +9,8 @@
 #include <SaLAccelerometer.h>
 #include <SaLBarometer.h>
 #include <SaLGps.h>
-#include <SaLFlashMem.h>
+#include <SaLDelay.h>
+#include <SaLBuzzer.h>
 
 struct sample {
 

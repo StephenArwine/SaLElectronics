@@ -2,8 +2,7 @@
 #ifndef SALDELAY_H_
 #define SALDELAY_H_
 
-#include <SaL.h>
-
+#include <SaLTypes.h>
 
 void SaLDelayInit(void);
 

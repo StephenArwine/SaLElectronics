@@ -6,8 +6,9 @@
 #include <SaLSensor.h>
 #include <boardDefines.h>
 #include <SaLPort.h>
-
 #include <MS5607.h>
+#include <SaLDelay.h>
+#include <SaLClocks.h>
 
 bool baroSample(void);
 

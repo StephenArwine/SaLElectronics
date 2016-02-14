@@ -1,5 +1,7 @@
 
 #include <AT25SF.h>
+#include <SaLPort.h>
+#include <SaLBitBang.h>
 
 
 uint8_t AT25SFGetByte(uint32_t address) {

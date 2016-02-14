@@ -1,6 +1,8 @@
 
 
 #include <SaLAccelerometer.h>
+#include <SaLPort.h>
+#include <SaLBitBang.h>
 
 enum accelSampleState accelSampleState;
 uint8_t regAccelData[6];

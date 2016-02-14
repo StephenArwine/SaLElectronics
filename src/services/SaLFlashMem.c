@@ -2,7 +2,6 @@
 
 #include <SaLFlashMem.h>
 
-
 void SaLFlashMemInit() {
 
 #ifdef HAS_AT25SF

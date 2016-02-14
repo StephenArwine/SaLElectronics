@@ -43,7 +43,7 @@ static void usbLoadPadCalib(void) {
 
 int32_t usbDeviceEnable(void) {
     Usb *hw = USB;
-    uint8_t ctrla;
+    //uint8_t ctrla;
 
     ((Usb *)hw)->DEVICE.CTRLA.reg |= USB_CTRLA_ENABLE;
     NVIC_EnableIRQ(USB_IRQn);

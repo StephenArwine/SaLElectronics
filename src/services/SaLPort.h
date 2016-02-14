@@ -2,7 +2,9 @@
 #ifndef SALPORT_H_
 #define SALPORT_H_
 
-#include <SaL.h>
+//#include <SaL.h>
+#include <boardDefines.h>
+#include <SaLTypes.h>
 
 static inline PortGroup* SaLGetPort(
     const uint8_t gpio_pin) {

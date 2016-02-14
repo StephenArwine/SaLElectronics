@@ -3,8 +3,11 @@
 #ifndef MS5607_H_
 #define MS5607_H_
 
-#include <SaL.h>
 #include <SaLTypes.h>
+#include <boardDefines.h>
+#include <SaLPort.h>
+#include <SaLBitBang.h>
+#include <SaLDelay.h>
 
 #define MS5607_CMD_RES    0x1E
 #define cmdAdcRead_  0x00
