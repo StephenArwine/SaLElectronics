@@ -7127,6 +7127,57 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <text x="-0.889" y="1.397" size="0.4064" layer="25">&gt;NAME</text>
 <text x="-1.016" y="-1.778" size="0.4064" layer="27">&gt;VALUE</text>
 </package>
+<package name="LED-1206-BOTTOM">
+<wire x1="-2" y1="0.4" x2="-2" y2="-0.4" width="0.127" layer="49"/>
+<wire x1="-2.4" y1="0" x2="-1.6" y2="0" width="0.127" layer="49"/>
+<wire x1="1.6" y1="0" x2="2.4" y2="0" width="0.127" layer="49"/>
+<wire x1="-1.27" y1="0" x2="-0.381" y2="0" width="0.127" layer="49"/>
+<wire x1="-0.381" y1="0" x2="-0.381" y2="0.635" width="0.127" layer="49"/>
+<wire x1="-0.381" y1="0.635" x2="0.254" y2="0" width="0.127" layer="49"/>
+<wire x1="0.254" y1="0" x2="-0.381" y2="-0.635" width="0.127" layer="49"/>
+<wire x1="-0.381" y1="-0.635" x2="-0.381" y2="0" width="0.127" layer="49"/>
+<wire x1="0.254" y1="0" x2="0.254" y2="0.635" width="0.127" layer="49"/>
+<wire x1="0.254" y1="0" x2="0.254" y2="-0.635" width="0.127" layer="49"/>
+<wire x1="0.254" y1="0" x2="1.27" y2="0" width="0.127" layer="49"/>
+<rectangle x1="-0.75" y1="-0.75" x2="0.75" y2="0.75" layer="51"/>
+<smd name="A" x="-1.8" y="0" dx="1.5" dy="1.6" layer="1"/>
+<smd name="C" x="1.8" y="0" dx="1.5" dy="1.6" layer="1"/>
+<hole x="0" y="0" drill="2.3"/>
+<polygon width="0" layer="51">
+<vertex x="1.1" y="-0.5"/>
+<vertex x="1.1" y="0.5"/>
+<vertex x="1.6" y="0.5"/>
+<vertex x="1.6" y="0.25" curve="90"/>
+<vertex x="1.4" y="0.05"/>
+<vertex x="1.4" y="-0.05" curve="90"/>
+<vertex x="1.6" y="-0.25"/>
+<vertex x="1.6" y="-0.5"/>
+</polygon>
+<polygon width="0" layer="51">
+<vertex x="-1.1" y="0.5"/>
+<vertex x="-1.1" y="-0.5"/>
+<vertex x="-1.6" y="-0.5"/>
+<vertex x="-1.6" y="-0.25" curve="90"/>
+<vertex x="-1.4" y="-0.05"/>
+<vertex x="-1.4" y="0.05" curve="90"/>
+<vertex x="-1.6" y="0.25"/>
+<vertex x="-1.6" y="0.5"/>
+</polygon>
+<wire x1="1.016" y1="1.016" x2="2.7686" y2="1.016" width="0.127" layer="21"/>
+<wire x1="2.7686" y1="1.016" x2="2.7686" y2="-1.016" width="0.127" layer="21"/>
+<wire x1="2.7686" y1="-1.016" x2="1.016" y2="-1.016" width="0.127" layer="21"/>
+<wire x1="3.175" y1="0" x2="3.3528" y2="0" width="0.127" layer="21"/>
+<wire x1="-1.016" y1="-1.016" x2="-2.7686" y2="-1.016" width="0.127" layer="21"/>
+<wire x1="-2.7686" y1="-1.016" x2="-2.7686" y2="1.016" width="0.127" layer="21"/>
+<wire x1="-2.7686" y1="1.016" x2="-1.016" y2="1.016" width="0.127" layer="21"/>
+<text x="-2.54" y="1.27" size="1.27" layer="25">&gt;NAME</text>
+<text x="-2.54" y="-2.54" size="1.27" layer="27">&gt;VALUE</text>
+<wire x1="-3.175" y1="0" x2="-3.81" y2="0" width="0.254" layer="21"/>
+<wire x1="-3.48741875" y1="-0.368296875" x2="-3.48741875" y2="0.3556" width="0.254" layer="21"/>
+<wire x1="3.175" y1="0" x2="3.81" y2="0" width="0.254" layer="21"/>
+<wire x1="-3.489959375" y1="0.37591875" x2="-3.48741875" y2="0.373378125" width="0.254" layer="21"/>
+<wire x1="-3.48741875" y1="0.373378125" x2="-3.48741875" y2="-0.370840625" width="0.254" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="LED">
@@ -7210,6 +7261,66 @@ LilyPad 1206- DIO-09912&lt;br&gt;
 <technology name="">
 <attribute name="PROD_ID" value="DIO-11154" constant="no"/>
 <attribute name="VALUE" value="Red" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="LED-GREEN" prefix="D" uservalue="yes">
+<description>&lt;B&gt;Various green LEDs&lt;br&gt;&lt;br&gt;&lt;/B&gt;
+Green LEDs used in SFE Production&lt;br&gt;&lt;br&gt;
+0603- DIO-00821&lt;br&gt;
+LARGE- DIO-00862&lt;br&gt;
+LILYPAD- DIO-09910&lt;br&gt;</description>
+<gates>
+<gate name="G$1" symbol="LED" x="0" y="0"/>
+</gates>
+<devices>
+<device name="0603" package="LED-0603">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="DIO-00821" constant="no"/>
+<attribute name="VALUE" value="GREEN" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="LILYPAD" package="LED-1206">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="DIO-09910"/>
+<attribute name="VALUE" value="GREEN" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="1206" package="LED-1206">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="DIO-00862" constant="no"/>
+<attribute name="VALUE" value="GREEN" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="1206-BOTTOM" package="LED-1206-BOTTOM">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="DIO-11076" constant="no"/>
+<attribute name="VALUE" value="Green" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -7945,6 +8056,9 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <part name="JP5" library="SparkFun-Connectors" deviceset="M02" device="4UCON-15767"/>
 <part name="STANDOFF4" library="SparkFun-Electromechanical" deviceset="STAND-OFF" device=""/>
 <part name="U$7" library="SparkFun-Sensors" deviceset="ADXL193" device=""/>
+<part name="D2" library="SparkFun-LED" deviceset="LED-GREEN" device="1206" value="GREEN"/>
+<part name="R21" library="SparkFun-Resistors" deviceset="RESISTOR" device="0402" value="27K"/>
+<part name="GND51" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -8320,6 +8434,12 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <instance part="JP5" gate="G$1" x="7.62" y="269.24"/>
 <instance part="STANDOFF4" gate="G$1" x="271.78" y="106.68"/>
 <instance part="U$7" gate="G$1" x="83.82" y="119.38"/>
+<instance part="D2" gate="G$1" x="264.16" y="73.66"/>
+<instance part="R21" gate="G$1" x="264.16" y="60.96" smashed="yes" rot="R270">
+<attribute name="NAME" x="268.1986" y="64.77" size="1.27" layer="95" rot="R270"/>
+<attribute name="VALUE" x="260.858" y="64.77" size="1.27" layer="96" rot="R270"/>
+</instance>
+<instance part="GND51" gate="1" x="264.16" y="53.34"/>
 </instances>
 <busses>
 </busses>
@@ -8860,6 +8980,10 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <wire x1="309.88" y1="236.22" x2="307.34" y2="236.22" width="0.1524" layer="91"/>
 <wire x1="307.34" y1="236.22" x2="307.34" y2="233.68" width="0.1524" layer="91"/>
 <pinref part="GND50" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="GND51" gate="1" pin="GND"/>
+<pinref part="R21" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="LVD_IN" class="0">
@@ -9601,6 +9725,25 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <pinref part="U1" gate="G$1" pin="PA12(I2C/SER2:0+)"/>
 <wire x1="200.66" y1="198.12" x2="203.2" y2="198.12" width="0.1524" layer="91"/>
 <label x="203.2" y="198.12" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$29" class="0">
+<segment>
+<pinref part="D2" gate="G$1" pin="C"/>
+<pinref part="R21" gate="G$1" pin="1"/>
+<wire x1="264.16" y1="66.04" x2="264.16" y2="68.58" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="LED" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="PA20(SER5:2+)"/>
+<wire x1="200.66" y1="177.8" x2="203.2" y2="177.8" width="0.1524" layer="91"/>
+<label x="203.2" y="177.8" size="1.27" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="D2" gate="G$1" pin="A"/>
+<wire x1="264.16" y1="76.2" x2="264.16" y2="78.74" width="0.1524" layer="91"/>
+<label x="264.16" y="78.74" size="1.27" layer="95" rot="R90" xref="yes"/>
 </segment>
 </net>
 </nets>

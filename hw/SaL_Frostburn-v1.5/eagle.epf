@@ -33,14 +33,13 @@ UsedLibrary="C:/EAGLE-7.5.0/lbr/SparkFun-Eagle-Libraries/SparkFun-Retired.lbr"
 UsedLibrary="C:/EAGLE-7.5.0/lbr/SparkFun-Eagle-Libraries/SparkFun-RF.lbr"
 UsedLibrary="C:/EAGLE-7.5.0/lbr/SparkFun-Eagle-Libraries/SparkFun-Sensors.lbr"
 UsedLibrary="C:/EAGLE-7.5.0/lbr/SparkFun-Eagle-Libraries/User-Submitted.lbr"
-UsedLibrary="C:/Users/sal/Dropbox/eagle/lib/SaL-lib1.lbr"
 
 [Win_1]
 Type="Control Panel"
-Loc="560 148 1448 783"
-State=2
+Loc="0 0 599 491"
+State=1
 Number=0
 
 [Desktop]
-Screen="3840 1080"
+Screen="1366 768"
 Window="Win_1"
