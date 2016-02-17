@@ -25,13 +25,13 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
  10 .debug_ranges 000001c0  00000000  00000000  0001da36  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_macro  00013b77  00000000  00000000  0001dbf6  2**0
+ 11 .debug_macro  000017e8  00000000  00000000  0001dbf6  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_line   00003009  00000000  00000000  0003176d  2**0
+ 12 .debug_line   00002f99  00000000  00000000  0001f3de  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_str    0006ea9c  00000000  00000000  00034776  2**0
+ 13 .debug_str    0006e943  00000000  00000000  00022377  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_frame  00000628  00000000  00000000  000a3214  2**2
+ 14 .debug_frame  00000628  00000000  00000000  00090cbc  2**2
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -1550,7 +1550,14 @@ void usbserial_in_completion() {
      86a:	46c0      	nop			; (mov r8, r8)
 
 0000086c <usb_ep0_in_multi>:
+volatile uint8_t usb_configuration;
+
+uint16_t usb_ep0_in_size;
+const uint8_t* usb_ep0_in_ptr;
+
+void usb_ep0_in_multi() {
      86c:	b538      	push	{r3, r4, r5, lr}
+	uint16_t tsize = usb_ep0_in_size;
      86e:	4b11      	ldr	r3, [pc, #68]	; (8b4 <usb_ep0_in_multi+0x48>)
      870:	881b      	ldrh	r3, [r3, #0]
      872:	1c1c      	adds	r4, r3, #0
@@ -1558,6 +1565,12 @@ void usbserial_in_completion() {
      876:	d900      	bls.n	87a <usb_ep0_in_multi+0xe>
      878:	2440      	movs	r4, #64	; 0x40
      87a:	b2a4      	uxth	r4, r4
+
+	if (tsize > USB_EP0_SIZE) {
+		tsize = USB_EP0_SIZE;
+	}
+
+	memcpy(ep0_buf_in, usb_ep0_in_ptr, tsize);
      87c:	4d0e      	ldr	r5, [pc, #56]	; (8b8 <usb_ep0_in_multi+0x4c>)
      87e:	4b0f      	ldr	r3, [pc, #60]	; (8bc <usb_ep0_in_multi+0x50>)
      880:	6819      	ldr	r1, [r3, #0]
@@ -1565,25 +1578,34 @@ void usbserial_in_completion() {
      884:	1c22      	adds	r2, r4, #0
      886:	4b0e      	ldr	r3, [pc, #56]	; (8c0 <usb_ep0_in_multi+0x54>)
      888:	4798      	blx	r3
+	usb_ep_start_in(0x80, ep0_buf_in, tsize, false);
      88a:	2080      	movs	r0, #128	; 0x80
      88c:	1c29      	adds	r1, r5, #0
      88e:	1c22      	adds	r2, r4, #0
      890:	2300      	movs	r3, #0
      892:	4d0c      	ldr	r5, [pc, #48]	; (8c4 <usb_ep0_in_multi+0x58>)
      894:	47a8      	blx	r5
+
+	if (tsize == 0) {
      896:	2c00      	cmp	r4, #0
      898:	d101      	bne.n	89e <usb_ep0_in_multi+0x32>
+		usb_ep0_out();
      89a:	4b0b      	ldr	r3, [pc, #44]	; (8c8 <usb_ep0_in_multi+0x5c>)
      89c:	4798      	blx	r3
+	}
+
+	usb_ep0_in_size -= tsize;
      89e:	4a05      	ldr	r2, [pc, #20]	; (8b4 <usb_ep0_in_multi+0x48>)
      8a0:	8813      	ldrh	r3, [r2, #0]
      8a2:	1b1b      	subs	r3, r3, r4
      8a4:	8013      	strh	r3, [r2, #0]
+	usb_ep0_in_ptr += tsize;
      8a6:	4b05      	ldr	r3, [pc, #20]	; (8bc <usb_ep0_in_multi+0x50>)
      8a8:	681a      	ldr	r2, [r3, #0]
      8aa:	4694      	mov	ip, r2
      8ac:	4464      	add	r4, ip
      8ae:	601c      	str	r4, [r3, #0]
+}
      8b0:	bd38      	pop	{r3, r4, r5, pc}
      8b2:	46c0      	nop			; (mov r8, r8)
      8b4:	2000060a 	.word	0x2000060a
@@ -1594,14 +1616,18 @@ void usbserial_in_completion() {
      8c8:	00000465 	.word	0x00000465
 
 000008cc <usb_handle_setup>:
+
+void usb_handle_setup(void){
      8cc:	b510      	push	{r4, lr}
      8ce:	b082      	sub	sp, #8
+	if ((usb_setup.bmRequestType & USB_REQTYPE_TYPE_MASK) == USB_REQTYPE_STANDARD){
      8d0:	4b47      	ldr	r3, [pc, #284]	; (9f0 <usb_handle_setup+0x124>)
      8d2:	781b      	ldrb	r3, [r3, #0]
      8d4:	2260      	movs	r2, #96	; 0x60
      8d6:	421a      	tst	r2, r3
      8d8:	d000      	beq.n	8dc <usb_handle_setup+0x10>
      8da:	e085      	b.n	9e8 <usb_handle_setup+0x11c>
+		switch (usb_setup.bRequest){
      8dc:	4b44      	ldr	r3, [pc, #272]	; (9f0 <usb_handle_setup+0x124>)
      8de:	785a      	ldrb	r2, [r3, #1]
      8e0:	2a0b      	cmp	r2, #11
@@ -1610,45 +1636,68 @@ void usbserial_in_completion() {
      8e6:	4a43      	ldr	r2, [pc, #268]	; (9f4 <usb_handle_setup+0x128>)
      8e8:	58d3      	ldr	r3, [r2, r3]
      8ea:	469f      	mov	pc, r3
+			case USB_REQ_GetStatus:
+				ep0_buf_in[0] = 0;
      8ec:	4b42      	ldr	r3, [pc, #264]	; (9f8 <usb_handle_setup+0x12c>)
      8ee:	2200      	movs	r2, #0
      8f0:	701a      	strb	r2, [r3, #0]
+				ep0_buf_in[1] = 0;
      8f2:	705a      	strb	r2, [r3, #1]
+				usb_ep0_in(2);
      8f4:	2002      	movs	r0, #2
      8f6:	4b41      	ldr	r3, [pc, #260]	; (9fc <usb_handle_setup+0x130>)
      8f8:	4798      	blx	r3
+				return usb_ep0_out();
      8fa:	4b41      	ldr	r3, [pc, #260]	; (a00 <usb_handle_setup+0x134>)
      8fc:	4798      	blx	r3
      8fe:	e075      	b.n	9ec <usb_handle_setup+0x120>
+
+			case USB_REQ_ClearFeature:
+			case USB_REQ_SetFeature:
+				usb_ep0_in(0);
      900:	2000      	movs	r0, #0
      902:	4b3e      	ldr	r3, [pc, #248]	; (9fc <usb_handle_setup+0x130>)
      904:	4798      	blx	r3
+				return usb_ep0_out();
      906:	4b3e      	ldr	r3, [pc, #248]	; (a00 <usb_handle_setup+0x134>)
      908:	4798      	blx	r3
      90a:	e06f      	b.n	9ec <usb_handle_setup+0x120>
+
+			case USB_REQ_SetAddress:
+				usb_ep0_in(0);
      90c:	2000      	movs	r0, #0
      90e:	4b3b      	ldr	r3, [pc, #236]	; (9fc <usb_handle_setup+0x130>)
      910:	4798      	blx	r3
+				return usb_ep0_out();
      912:	4b3b      	ldr	r3, [pc, #236]	; (a00 <usb_handle_setup+0x134>)
      914:	4798      	blx	r3
      916:	e069      	b.n	9ec <usb_handle_setup+0x120>
+
+			case USB_REQ_GetDescriptor: {
+				uint8_t type = (usb_setup.wValue >> 8);
      918:	4a35      	ldr	r2, [pc, #212]	; (9f0 <usb_handle_setup+0x124>)
      91a:	7893      	ldrb	r3, [r2, #2]
      91c:	78d1      	ldrb	r1, [r2, #3]
      91e:	0209      	lsls	r1, r1, #8
      920:	4319      	orrs	r1, r3
+				uint8_t index = (usb_setup.wValue & 0xFF);
+				const uint8_t* descriptor = 0;
      922:	2300      	movs	r3, #0
      924:	9301      	str	r3, [sp, #4]
+				uint16_t size = usb_cb_get_descriptor(type, index, &descriptor);
      926:	0a08      	lsrs	r0, r1, #8
      928:	b2c9      	uxtb	r1, r1
      92a:	aa01      	add	r2, sp, #4
      92c:	4b35      	ldr	r3, [pc, #212]	; (a04 <usb_handle_setup+0x138>)
      92e:	4798      	blx	r3
+
+				if (size && descriptor){
      930:	2800      	cmp	r0, #0
      932:	d020      	beq.n	976 <usb_handle_setup+0xaa>
      934:	9901      	ldr	r1, [sp, #4]
      936:	2900      	cmp	r1, #0
      938:	d01d      	beq.n	976 <usb_handle_setup+0xaa>
+					if (size > usb_setup.wLength) {
      93a:	4b2d      	ldr	r3, [pc, #180]	; (9f0 <usb_handle_setup+0x124>)
      93c:	799a      	ldrb	r2, [r3, #6]
      93e:	79db      	ldrb	r3, [r3, #7]
@@ -1660,57 +1709,90 @@ void usbserial_in_completion() {
      94a:	d900      	bls.n	94e <usb_handle_setup+0x82>
      94c:	1c1c      	adds	r4, r3, #0
      94e:	b2a2      	uxth	r2, r4
+						size = usb_setup.wLength;
+					}
+
+					if (descriptor == ep0_buf_in) {
      950:	4b29      	ldr	r3, [pc, #164]	; (9f8 <usb_handle_setup+0x12c>)
      952:	4299      	cmp	r1, r3
      954:	d108      	bne.n	968 <usb_handle_setup+0x9c>
+						usb_ep0_in_size = 0;
      956:	2100      	movs	r1, #0
      958:	4b2b      	ldr	r3, [pc, #172]	; (a08 <usb_handle_setup+0x13c>)
      95a:	8019      	strh	r1, [r3, #0]
+						usb_ep_start_in(0x80, ep0_buf_in, size, true);
      95c:	2080      	movs	r0, #128	; 0x80
      95e:	4926      	ldr	r1, [pc, #152]	; (9f8 <usb_handle_setup+0x12c>)
      960:	2301      	movs	r3, #1
      962:	4c2a      	ldr	r4, [pc, #168]	; (a0c <usb_handle_setup+0x140>)
      964:	47a0      	blx	r4
      966:	e041      	b.n	9ec <usb_handle_setup+0x120>
+					} else {
+						usb_ep0_in_size = size;
      968:	4b27      	ldr	r3, [pc, #156]	; (a08 <usb_handle_setup+0x13c>)
      96a:	801c      	strh	r4, [r3, #0]
+						usb_ep0_in_ptr = descriptor;
      96c:	4b28      	ldr	r3, [pc, #160]	; (a10 <usb_handle_setup+0x144>)
      96e:	6019      	str	r1, [r3, #0]
+						usb_ep0_in_multi();
      970:	4b28      	ldr	r3, [pc, #160]	; (a14 <usb_handle_setup+0x148>)
      972:	4798      	blx	r3
      974:	e03a      	b.n	9ec <usb_handle_setup+0x120>
+					}
+
+					return;
+				} else {
+					return usb_ep0_stall();
      976:	4b28      	ldr	r3, [pc, #160]	; (a18 <usb_handle_setup+0x14c>)
      978:	4798      	blx	r3
      97a:	e037      	b.n	9ec <usb_handle_setup+0x120>
+				}
+			}
+			case USB_REQ_GetConfiguration:
+				ep0_buf_in[0] = usb_configuration;
      97c:	4b27      	ldr	r3, [pc, #156]	; (a1c <usb_handle_setup+0x150>)
      97e:	781a      	ldrb	r2, [r3, #0]
      980:	4b1d      	ldr	r3, [pc, #116]	; (9f8 <usb_handle_setup+0x12c>)
      982:	701a      	strb	r2, [r3, #0]
+				usb_ep0_in(1);
      984:	2001      	movs	r0, #1
      986:	4b1d      	ldr	r3, [pc, #116]	; (9fc <usb_handle_setup+0x130>)
      988:	4798      	blx	r3
+				return usb_ep0_out();
      98a:	4b1d      	ldr	r3, [pc, #116]	; (a00 <usb_handle_setup+0x134>)
      98c:	4798      	blx	r3
      98e:	e02d      	b.n	9ec <usb_handle_setup+0x120>
+
+			case USB_REQ_SetConfiguration:
+				if (usb_cb_set_configuration((uint8_t)usb_setup.wValue)) {
      990:	4b17      	ldr	r3, [pc, #92]	; (9f0 <usb_handle_setup+0x124>)
      992:	7898      	ldrb	r0, [r3, #2]
      994:	4b22      	ldr	r3, [pc, #136]	; (a20 <usb_handle_setup+0x154>)
      996:	4798      	blx	r3
      998:	2800      	cmp	r0, #0
      99a:	d009      	beq.n	9b0 <usb_handle_setup+0xe4>
+					usb_ep0_in(0);
      99c:	2000      	movs	r0, #0
      99e:	4b17      	ldr	r3, [pc, #92]	; (9fc <usb_handle_setup+0x130>)
      9a0:	4798      	blx	r3
+					usb_configuration = (uint8_t)(usb_setup.wValue);
      9a2:	4b13      	ldr	r3, [pc, #76]	; (9f0 <usb_handle_setup+0x124>)
      9a4:	789a      	ldrb	r2, [r3, #2]
      9a6:	4b1d      	ldr	r3, [pc, #116]	; (a1c <usb_handle_setup+0x150>)
      9a8:	701a      	strb	r2, [r3, #0]
+					return usb_ep0_out();
      9aa:	4b15      	ldr	r3, [pc, #84]	; (a00 <usb_handle_setup+0x134>)
      9ac:	4798      	blx	r3
      9ae:	e01d      	b.n	9ec <usb_handle_setup+0x120>
+				} else {
+					return usb_ep0_stall();
      9b0:	4b19      	ldr	r3, [pc, #100]	; (a18 <usb_handle_setup+0x14c>)
      9b2:	4798      	blx	r3
      9b4:	e01a      	b.n	9ec <usb_handle_setup+0x120>
+				}
+
+			case USB_REQ_SetInterface:
+				if (usb_cb_set_interface(usb_setup.wIndex, usb_setup.wValue)) {
      9b6:	4b0e      	ldr	r3, [pc, #56]	; (9f0 <usb_handle_setup+0x124>)
      9b8:	791a      	ldrb	r2, [r3, #4]
      9ba:	7958      	ldrb	r0, [r3, #5]
@@ -1724,20 +1806,33 @@ void usbserial_in_completion() {
      9ca:	4798      	blx	r3
      9cc:	2800      	cmp	r0, #0
      9ce:	d005      	beq.n	9dc <usb_handle_setup+0x110>
+					usb_ep0_in(0);
      9d0:	2000      	movs	r0, #0
      9d2:	4b0a      	ldr	r3, [pc, #40]	; (9fc <usb_handle_setup+0x130>)
      9d4:	4798      	blx	r3
+					return usb_ep0_out();
      9d6:	4b0a      	ldr	r3, [pc, #40]	; (a00 <usb_handle_setup+0x134>)
      9d8:	4798      	blx	r3
      9da:	e007      	b.n	9ec <usb_handle_setup+0x120>
+				} else {
+					return usb_ep0_stall();
      9dc:	4b0e      	ldr	r3, [pc, #56]	; (a18 <usb_handle_setup+0x14c>)
      9de:	4798      	blx	r3
      9e0:	e004      	b.n	9ec <usb_handle_setup+0x120>
+				}
+
+			default:
+				return usb_ep0_stall();
      9e2:	4b0d      	ldr	r3, [pc, #52]	; (a18 <usb_handle_setup+0x14c>)
      9e4:	4798      	blx	r3
      9e6:	e001      	b.n	9ec <usb_handle_setup+0x120>
+		}
+	}
+
+	usb_cb_control_setup();
      9e8:	4b0f      	ldr	r3, [pc, #60]	; (a28 <usb_handle_setup+0x15c>)
      9ea:	4798      	blx	r3
+}
      9ec:	b002      	add	sp, #8
      9ee:	bd10      	pop	{r4, pc}
      9f0:	20000610 	.word	0x20000610
@@ -1757,26 +1852,38 @@ void usbserial_in_completion() {
      a28:	00000755 	.word	0x00000755
 
 00000a2c <usb_handle_control_out_complete>:
+
+void usb_handle_control_out_complete(void) {
      a2c:	b508      	push	{r3, lr}
+	if ((usb_setup.bmRequestType & USB_REQTYPE_TYPE_MASK) == USB_REQTYPE_STANDARD) {
      a2e:	4b04      	ldr	r3, [pc, #16]	; (a40 <usb_handle_control_out_complete+0x14>)
      a30:	781b      	ldrb	r3, [r3, #0]
      a32:	2260      	movs	r2, #96	; 0x60
      a34:	421a      	tst	r2, r3
      a36:	d001      	beq.n	a3c <usb_handle_control_out_complete+0x10>
+		// Let the status stage proceed
+	} else {
+		usb_cb_control_out_completion();
      a38:	4b02      	ldr	r3, [pc, #8]	; (a44 <usb_handle_control_out_complete+0x18>)
      a3a:	4798      	blx	r3
+	}
+}
      a3c:	bd08      	pop	{r3, pc}
      a3e:	46c0      	nop			; (mov r8, r8)
      a40:	20000610 	.word	0x20000610
      a44:	000007c1 	.word	0x000007c1
 
 00000a48 <usb_handle_control_in_complete>:
+
+void usb_handle_control_in_complete(void) {
      a48:	b508      	push	{r3, lr}
+	if ((usb_setup.bmRequestType & USB_REQTYPE_TYPE_MASK) == USB_REQTYPE_STANDARD) {
      a4a:	4b0c      	ldr	r3, [pc, #48]	; (a7c <usb_handle_control_in_complete+0x34>)
      a4c:	781b      	ldrb	r3, [r3, #0]
      a4e:	2260      	movs	r2, #96	; 0x60
      a50:	421a      	tst	r2, r3
      a52:	d110      	bne.n	a76 <usb_handle_control_in_complete+0x2e>
+		switch (usb_setup.bRequest){
      a54:	4b09      	ldr	r3, [pc, #36]	; (a7c <usb_handle_control_in_complete+0x34>)
      a56:	785b      	ldrb	r3, [r3, #1]
      a58:	2b05      	cmp	r3, #5
@@ -1784,18 +1891,29 @@ void usbserial_in_completion() {
      a5c:	2b06      	cmp	r3, #6
      a5e:	d007      	beq.n	a70 <usb_handle_control_in_complete+0x28>
      a60:	e00b      	b.n	a7a <usb_handle_control_in_complete+0x32>
+			case USB_REQ_SetAddress:
+				usb_set_address(usb_setup.wValue & 0x7F);
      a62:	4b06      	ldr	r3, [pc, #24]	; (a7c <usb_handle_control_in_complete+0x34>)
      a64:	7898      	ldrb	r0, [r3, #2]
      a66:	237f      	movs	r3, #127	; 0x7f
      a68:	4018      	ands	r0, r3
      a6a:	4b05      	ldr	r3, [pc, #20]	; (a80 <usb_handle_control_in_complete+0x38>)
      a6c:	4798      	blx	r3
+				return;
      a6e:	e004      	b.n	a7a <usb_handle_control_in_complete+0x32>
+			case USB_REQ_GetDescriptor:
+				usb_ep0_in_multi();
      a70:	4b04      	ldr	r3, [pc, #16]	; (a84 <usb_handle_control_in_complete+0x3c>)
      a72:	4798      	blx	r3
+				return;
      a74:	e001      	b.n	a7a <usb_handle_control_in_complete+0x32>
+		}
+	} else {
+		usb_cb_control_in_completion();
      a76:	4b04      	ldr	r3, [pc, #16]	; (a88 <usb_handle_control_in_complete+0x40>)
      a78:	4798      	blx	r3
+	}
+}
      a7a:	bd08      	pop	{r3, pc}
      a7c:	20000610 	.word	0x20000610
      a80:	00000205 	.word	0x00000205
@@ -1803,8 +1921,11 @@ void usbserial_in_completion() {
      a88:	000007bd 	.word	0x000007bd
 
 00000a8c <usb_handle_msft_compatible>:
+
+void usb_handle_msft_compatible(const USB_MicrosoftCompatibleDescriptor* msft_compatible) {
      a8c:	b538      	push	{r3, r4, r5, lr}
      a8e:	1c01      	adds	r1, r0, #0
+	if (usb_setup.wIndex == 0x0004) {
      a90:	4b17      	ldr	r3, [pc, #92]	; (af0 <usb_handle_msft_compatible+0x64>)
      a92:	791a      	ldrb	r2, [r3, #4]
      a94:	795b      	ldrb	r3, [r3, #5]
@@ -1812,11 +1933,13 @@ void usbserial_in_completion() {
      a98:	4313      	orrs	r3, r2
      a9a:	2b04      	cmp	r3, #4
      a9c:	d125      	bne.n	aea <usb_handle_msft_compatible+0x5e>
+		uint16_t len = usb_setup.wLength;
      a9e:	4a14      	ldr	r2, [pc, #80]	; (af0 <usb_handle_msft_compatible+0x64>)
      aa0:	7993      	ldrb	r3, [r2, #6]
      aa2:	79d5      	ldrb	r5, [r2, #7]
      aa4:	022d      	lsls	r5, r5, #8
      aa6:	431d      	orrs	r5, r3
+		if (len > msft_compatible->dwLength) {
      aa8:	7804      	ldrb	r4, [r0, #0]
      aaa:	7842      	ldrb	r2, [r0, #1]
      aac:	0212      	lsls	r2, r2, #8
@@ -1830,28 +1953,40 @@ void usbserial_in_completion() {
      abc:	4313      	orrs	r3, r2
      abe:	429d      	cmp	r5, r3
      ac0:	d900      	bls.n	ac4 <usb_handle_msft_compatible+0x38>
+			len = msft_compatible->dwLength;
      ac2:	b29d      	uxth	r5, r3
      ac4:	1c2c      	adds	r4, r5, #0
      ac6:	2d40      	cmp	r5, #64	; 0x40
      ac8:	d900      	bls.n	acc <usb_handle_msft_compatible+0x40>
      aca:	2440      	movs	r4, #64	; 0x40
+		}
+		if (len > USB_EP0_SIZE) {
+			len = USB_EP0_SIZE;
+		}
+		memcpy(ep0_buf_in, msft_compatible, len);
      acc:	b2a4      	uxth	r4, r4
      ace:	4d09      	ldr	r5, [pc, #36]	; (af4 <usb_handle_msft_compatible+0x68>)
      ad0:	1c28      	adds	r0, r5, #0
      ad2:	1c22      	adds	r2, r4, #0
      ad4:	4b08      	ldr	r3, [pc, #32]	; (af8 <usb_handle_msft_compatible+0x6c>)
      ad6:	4798      	blx	r3
+		usb_ep_start_in(0x80, ep0_buf_in, len, false);
      ad8:	2080      	movs	r0, #128	; 0x80
      ada:	1c29      	adds	r1, r5, #0
      adc:	1c22      	adds	r2, r4, #0
      ade:	2300      	movs	r3, #0
      ae0:	4c06      	ldr	r4, [pc, #24]	; (afc <usb_handle_msft_compatible+0x70>)
      ae2:	47a0      	blx	r4
+		return usb_ep0_out();
      ae4:	4b06      	ldr	r3, [pc, #24]	; (b00 <usb_handle_msft_compatible+0x74>)
      ae6:	4798      	blx	r3
      ae8:	e001      	b.n	aee <usb_handle_msft_compatible+0x62>
+	} else {
+		return usb_ep0_stall();
      aea:	4b06      	ldr	r3, [pc, #24]	; (b04 <usb_handle_msft_compatible+0x78>)
      aec:	4798      	blx	r3
+	}
+}
      aee:	bd38      	pop	{r3, r4, r5, pc}
      af0:	20000610 	.word	0x20000610
      af4:	200005c8 	.word	0x200005c8
@@ -1861,8 +1996,12 @@ void usbserial_in_completion() {
      b04:	000004fd 	.word	0x000004fd
 
 00000b08 <usb_string_to_descriptor>:
+
+void* usb_string_to_descriptor(char* str) {
      b08:	b510      	push	{r4, lr}
      b0a:	1c04      	adds	r4, r0, #0
+	USB_StringDescriptor* desc = (((USB_StringDescriptor*)ep0_buf_in));
+	uint16_t len = strlen(str);
      b0c:	4b0c      	ldr	r3, [pc, #48]	; (b40 <usb_string_to_descriptor+0x38>)
      b0e:	4798      	blx	r3
      b10:	b283      	uxth	r3, r0
@@ -1871,21 +2010,37 @@ void usbserial_in_completion() {
      b16:	d900      	bls.n	b1a <usb_string_to_descriptor+0x12>
      b18:	201f      	movs	r0, #31
      b1a:	b280      	uxth	r0, r0
+	const uint16_t maxlen = (USB_EP0_SIZE - 2)/2;
+	if (len > maxlen) len = maxlen;
+	desc->bLength = USB_STRING_LEN(len);
      b1c:	4a09      	ldr	r2, [pc, #36]	; (b44 <usb_string_to_descriptor+0x3c>)
      b1e:	1c43      	adds	r3, r0, #1
      b20:	005b      	lsls	r3, r3, #1
      b22:	7013      	strb	r3, [r2, #0]
+	desc->bDescriptorType = USB_DTYPE_String;
      b24:	2303      	movs	r3, #3
      b26:	7053      	strb	r3, [r2, #1]
+	for (int i=0; i<len; i++) {
      b28:	2800      	cmp	r0, #0
      b2a:	dd06      	ble.n	b3a <usb_string_to_descriptor+0x32>
      b2c:	2300      	movs	r3, #0
+		desc->bString[i] = str[i];
      b2e:	5ce1      	ldrb	r1, [r4, r3]
      b30:	8051      	strh	r1, [r2, #2]
+	uint16_t len = strlen(str);
+	const uint16_t maxlen = (USB_EP0_SIZE - 2)/2;
+	if (len > maxlen) len = maxlen;
+	desc->bLength = USB_STRING_LEN(len);
+	desc->bDescriptorType = USB_DTYPE_String;
+	for (int i=0; i<len; i++) {
      b32:	3301      	adds	r3, #1
      b34:	3202      	adds	r2, #2
      b36:	4283      	cmp	r3, r0
      b38:	dbf9      	blt.n	b2e <usb_string_to_descriptor+0x26>
+		desc->bString[i] = str[i];
+	}
+	return desc;
+}
      b3a:	4802      	ldr	r0, [pc, #8]	; (b44 <usb_string_to_descriptor+0x3c>)
      b3c:	bd10      	pop	{r4, pc}
      b3e:	46c0      	nop			; (mov r8, r8)
@@ -1893,19 +2048,44 @@ void usbserial_in_completion() {
      b44:	200005c8 	.word	0x200005c8
 
 00000b48 <Dummy_Handler>:
+ * \brief Default interrupt handler for unused IRQs.
+ */
+void Dummy_Handler(void)
+{
+        while (1) {
+        }
      b48:	e7fe      	b.n	b48 <Dummy_Handler>
      b4a:	46c0      	nop			; (mov r8, r8)
 
 00000b4c <Reset_Handler>:
+/**
+ * \brief This is the code that gets called on processor reset.
+ * To initialize the device, and call the main() routine.
+ */
+void Reset_Handler(void)
+{
      b4c:	b570      	push	{r4, r5, r6, lr}
+
+        /* Initialize the relocate segment */
+        pSrc = &_etext;
+        pDest = &_srelocate;
+
+        if (pSrc != pDest) {
      b4e:	4b2e      	ldr	r3, [pc, #184]	; (c08 <Reset_Handler+0xbc>)
      b50:	4a2e      	ldr	r2, [pc, #184]	; (c0c <Reset_Handler+0xc0>)
      b52:	429a      	cmp	r2, r3
      b54:	d003      	beq.n	b5e <Reset_Handler+0x12>
+                for (; pDest < &_erelocate;) {
      b56:	4b2e      	ldr	r3, [pc, #184]	; (c10 <Reset_Handler+0xc4>)
      b58:	4a2b      	ldr	r2, [pc, #172]	; (c08 <Reset_Handler+0xbc>)
      b5a:	429a      	cmp	r2, r3
      b5c:	d304      	bcc.n	b68 <Reset_Handler+0x1c>
+                        *pDest++ = *pSrc++;
+                }
+        }
+
+        /* Clear the zero segment */
+        for (pDest = &_szero; pDest < &_ezero;) {
      b5e:	4b2d      	ldr	r3, [pc, #180]	; (c14 <Reset_Handler+0xc8>)
      b60:	4a2d      	ldr	r2, [pc, #180]	; (c18 <Reset_Handler+0xcc>)
      b62:	429a      	cmp	r2, r3
@@ -1918,12 +2098,25 @@ void usbserial_in_completion() {
      b70:	089b      	lsrs	r3, r3, #2
      b72:	3301      	adds	r3, #1
      b74:	009b      	lsls	r3, r3, #2
+        /* Initialize the relocate segment */
+        pSrc = &_etext;
+        pDest = &_srelocate;
+
+        if (pSrc != pDest) {
+                for (; pDest < &_erelocate;) {
      b76:	2200      	movs	r2, #0
+                        *pDest++ = *pSrc++;
      b78:	4823      	ldr	r0, [pc, #140]	; (c08 <Reset_Handler+0xbc>)
      b7a:	4924      	ldr	r1, [pc, #144]	; (c0c <Reset_Handler+0xc0>)
      b7c:	588c      	ldr	r4, [r1, r2]
      b7e:	5084      	str	r4, [r0, r2]
      b80:	3204      	adds	r2, #4
+        /* Initialize the relocate segment */
+        pSrc = &_etext;
+        pDest = &_srelocate;
+
+        if (pSrc != pDest) {
+                for (; pDest < &_erelocate;) {
      b82:	429a      	cmp	r2, r3
      b84:	d1fa      	bne.n	b7c <Reset_Handler+0x30>
      b86:	e7ea      	b.n	b5e <Reset_Handler+0x12>
@@ -1934,24 +2127,48 @@ void usbserial_in_completion() {
      b90:	089b      	lsrs	r3, r3, #2
      b92:	3301      	adds	r3, #1
      b94:	009b      	lsls	r3, r3, #2
+                        *pDest++ = *pSrc++;
+                }
+        }
+
+        /* Clear the zero segment */
+        for (pDest = &_szero; pDest < &_ezero;) {
      b96:	2200      	movs	r2, #0
+                *pDest++ = 0;
      b98:	481f      	ldr	r0, [pc, #124]	; (c18 <Reset_Handler+0xcc>)
      b9a:	2100      	movs	r1, #0
      b9c:	1814      	adds	r4, r2, r0
      b9e:	6021      	str	r1, [r4, #0]
      ba0:	3204      	adds	r2, #4
+                        *pDest++ = *pSrc++;
+                }
+        }
+
+        /* Clear the zero segment */
+        for (pDest = &_szero; pDest < &_ezero;) {
      ba2:	429a      	cmp	r2, r3
      ba4:	d1fa      	bne.n	b9c <Reset_Handler+0x50>
+                *pDest++ = 0;
+        }
+
+        /* Set the vector table base address */
+        pSrc = (uint32_t *) & _sfixed;
+        SCB->VTOR = ((uint32_t) pSrc & SCB_VTOR_TBLOFF_Msk);
      ba6:	4a1f      	ldr	r2, [pc, #124]	; (c24 <Reset_Handler+0xd8>)
      ba8:	21ff      	movs	r1, #255	; 0xff
      baa:	4b1f      	ldr	r3, [pc, #124]	; (c28 <Reset_Handler+0xdc>)
      bac:	438b      	bics	r3, r1
      bae:	6093      	str	r3, [r2, #8]
+
+        /* Change default QOS values to have the best performance and correct USB behaviour */
+        SBMATRIX->SFR[SBMATRIX_SLAVE_HMCRAMC0].reg = 2;
      bb0:	39fd      	subs	r1, #253	; 0xfd
      bb2:	2390      	movs	r3, #144	; 0x90
      bb4:	005b      	lsls	r3, r3, #1
      bb6:	4a1d      	ldr	r2, [pc, #116]	; (c2c <Reset_Handler+0xe0>)
      bb8:	50d1      	str	r1, [r2, r3]
+#if defined(ID_USB)
+        USB->DEVICE.QOSCTRL.bit.CQOS = 2;
      bba:	481d      	ldr	r0, [pc, #116]	; (c30 <Reset_Handler+0xe4>)
      bbc:	78c3      	ldrb	r3, [r0, #3]
      bbe:	2403      	movs	r4, #3
@@ -1959,12 +2176,15 @@ void usbserial_in_completion() {
      bc2:	2202      	movs	r2, #2
      bc4:	4313      	orrs	r3, r2
      bc6:	70c3      	strb	r3, [r0, #3]
+        USB->DEVICE.QOSCTRL.bit.DQOS = 2;
      bc8:	78c3      	ldrb	r3, [r0, #3]
      bca:	260c      	movs	r6, #12
      bcc:	43b3      	bics	r3, r6
      bce:	2108      	movs	r1, #8
      bd0:	430b      	orrs	r3, r1
      bd2:	70c3      	strb	r3, [r0, #3]
+#endif
+        DMAC->QOSCTRL.bit.DQOS = 2;
      bd4:	4b17      	ldr	r3, [pc, #92]	; (c34 <Reset_Handler+0xe8>)
      bd6:	7b98      	ldrb	r0, [r3, #14]
      bd8:	2530      	movs	r5, #48	; 0x30
@@ -1973,23 +2193,37 @@ void usbserial_in_completion() {
      bde:	2020      	movs	r0, #32
      be0:	4328      	orrs	r0, r5
      be2:	7398      	strb	r0, [r3, #14]
+        DMAC->QOSCTRL.bit.FQOS = 2;
      be4:	7b98      	ldrb	r0, [r3, #14]
      be6:	43b0      	bics	r0, r6
      be8:	4301      	orrs	r1, r0
      bea:	7399      	strb	r1, [r3, #14]
+        DMAC->QOSCTRL.bit.WRBQOS = 2;
      bec:	7b99      	ldrb	r1, [r3, #14]
      bee:	43a1      	bics	r1, r4
      bf0:	430a      	orrs	r2, r1
      bf2:	739a      	strb	r2, [r3, #14]
+
+        /* Overwriting the default value of the NVMCTRL.CTRLB.MANW bit (errata reference 13134) */
+        NVMCTRL->CTRLB.bit.MANW = 1;
      bf4:	4a10      	ldr	r2, [pc, #64]	; (c38 <Reset_Handler+0xec>)
      bf6:	6851      	ldr	r1, [r2, #4]
      bf8:	2380      	movs	r3, #128	; 0x80
      bfa:	430b      	orrs	r3, r1
      bfc:	6053      	str	r3, [r2, #4]
+
+        /* Initialize the C library */
+        __libc_init_array();
      bfe:	4b0f      	ldr	r3, [pc, #60]	; (c3c <Reset_Handler+0xf0>)
      c00:	4798      	blx	r3
+
+        /* Branch to main function */
+        main();
      c02:	4b0f      	ldr	r3, [pc, #60]	; (c40 <Reset_Handler+0xf4>)
      c04:	4798      	blx	r3
+
+        /* Infinite loop */
+        while (1);
      c06:	e7fe      	b.n	c06 <Reset_Handler+0xba>
      c08:	20000000 	.word	0x20000000
      c0c:	000011d4 	.word	0x000011d4
@@ -2164,8 +2398,7 @@ int main(void) {
      d00:	4b18      	ldr	r3, [pc, #96]	; (d64 <main+0x68>)
      d02:	4798      	blx	r3
 
-   // ((Port *)PORT)->Group[0].DIR.reg |= (1UL << 24);
- //   ((Port *)PORT)->Group[0].DIR.reg |= (1UL << 25);
+
     ((Port *)PORT)->Group[0].PINCFG[24].reg = 0x41;
      d04:	4b18      	ldr	r3, [pc, #96]	; (d68 <main+0x6c>)
      d06:	2458      	movs	r4, #88	; 0x58
@@ -2215,7 +2448,7 @@ inline static void pin_mux(Pin p) {
      d34:	5c19      	ldrb	r1, [r3, r0]
      d36:	430a      	orrs	r2, r1
      d38:	541a      	strb	r2, [r3, r0]
-//   ((Port *)PORT)->Group[0].PMUX[12].reg = 0x66;
+
 
     pin_mux(PIN_USB_DM);
     pin_mux(PIN_USB_DP);

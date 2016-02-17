@@ -1,4 +1,5 @@
 //#include "firmware.h"
+#include <usbSerial.h>
 #include "sam.h"
 #include <SaLTypes.h>
 #include <usb.h>

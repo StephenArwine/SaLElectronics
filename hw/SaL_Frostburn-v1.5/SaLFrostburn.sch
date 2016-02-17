@@ -7966,6 +7966,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <text x="297.18" y="40.64" size="3.81" layer="97">GPS</text>
 <wire x1="231.14" y1="101.6" x2="281.94" y2="101.6" width="0.1524" layer="97" style="longdash"/>
 <wire x1="132.08" y1="101.6" x2="132.08" y2="0" width="0.1524" layer="97" style="longdash"/>
+<text x="350.52" y="7.62" size="5.08" layer="97">Stephen Arwine</text>
 </plain>
 <instances>
 <instance part="U1" gate="G$1" x="165.1" y="172.72"/>

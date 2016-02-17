@@ -12,7 +12,7 @@ __attribute__((__aligned__(4))) const USB_DeviceDescriptor device_descriptor = {
     .bDescriptorType = USB_DTYPE_Device,
 
     .bcdUSB                 = 0x0200,
-    .bDeviceClass           = 0,
+    .bDeviceClass           = 0x00,
     .bDeviceSubClass        = USB_CSCP_NoDeviceSubclass,
     .bDeviceProtocol        = USB_CSCP_NoDeviceProtocol,
 

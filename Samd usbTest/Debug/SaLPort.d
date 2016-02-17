@@ -1,5 +1,6 @@
-SaLPort.d SaLPort.o: .././SaLPort.c ../../src/services/SaLPort.h \
- ../../src/SaL.h \
+SaLPort.d SaLPort.o: ../../src/services/SaLPort.c \
+ ../../src/services/SaLPort.h ../boardDefines.h \
+ ../../src/services/SaLTypes.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.9.3\include\stddef.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.9.3\include\stdint.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\stdint.h \
@@ -91,15 +92,13 @@ SaLPort.d SaLPort.o: .././SaLPort.c ../../src/services/SaLPort.h \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\Atmel\SAMD21_DFP\1.0.229\samd21a\include/instance/usb.h \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\Atmel\SAMD21_DFP\1.0.229\samd21a\include/instance/wdt.h \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\Atmel\SAMD21_DFP\1.0.229\samd21a\include/pio/samd21g18a.h \
- ../../src/include/err_codes.h ../../src/services/SaLMath.h \
- ../../src/services/SaLTypes.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\Atmel\SAMD21_DFP\1.0.229\samd21a\include/samd21g18a.h \
- ../../src/services/SaLClocks.h ../../src/services/SaLBitBang.h \
- ../../src/services/SaLDelay.h ../../src/services/SaLBuzzer.h
+ ../../src/include/err_codes.h
 
 ../../src/services/SaLPort.h:
 
-../../src/SaL.h:
+../boardDefines.h:
+
+../../src/services/SaLTypes.h:
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.9.3\include\stddef.h:
 
@@ -286,17 +285,3 @@ C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\Atmel\SAMD21_DFP\1.0.229\samd21a
 C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\Atmel\SAMD21_DFP\1.0.229\samd21a\include/pio/samd21g18a.h:
 
 ../../src/include/err_codes.h:
-
-../../src/services/SaLMath.h:
-
-../../src/services/SaLTypes.h:
-
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\Atmel\SAMD21_DFP\1.0.229\samd21a\include/samd21g18a.h:
-
-../../src/services/SaLClocks.h:
-
-../../src/services/SaLBitBang.h:
-
-../../src/services/SaLDelay.h:
-
-../../src/services/SaLBuzzer.h:

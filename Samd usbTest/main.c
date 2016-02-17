@@ -10,6 +10,7 @@
 #include "sam.h"
 #include <usb_samd.h>
 #include <fw.h>
+#include <usbserial.h>
 
 
 
@@ -103,11 +104,10 @@ int main(void) {
 
     initclocks();
 
-   // ((Port *)PORT)->Group[0].DIR.reg |= (1UL << 24);
- //   ((Port *)PORT)->Group[0].DIR.reg |= (1UL << 25);
+
     ((Port *)PORT)->Group[0].PINCFG[24].reg = 0x41;
     ((Port *)PORT)->Group[0].PINCFG[25].reg = 0x41;
-//   ((Port *)PORT)->Group[0].PMUX[12].reg = 0x66;
+
 
     pin_mux(PIN_USB_DM);
     pin_mux(PIN_USB_DP);

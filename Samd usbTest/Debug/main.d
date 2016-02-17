@@ -86,7 +86,8 @@ main.d main.o: .././main.c \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\cdefs.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\string.h \
  ../../src/usb/usb_standard.h ../Device_Startup/fw.h \
- ../../src/services/SaLPort.h ../../src/SaL.h \
+ ../../src/services/SaLPort.h ../boardDefines.h \
+ ../../src/services/SaLTypes.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\stdio.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.9.3\include\stdarg.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\types.h \
@@ -96,11 +97,7 @@ main.d main.o: .././main.c \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\machine\stdlib.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\alloca.h \
  ../../src/include/compiler.h ../../src/include/parts.h \
- ../../src/include/err_codes.h ../../src/services/SaLMath.h \
- ../../src/services/SaLTypes.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\Atmel\SAMD21_DFP\1.0.229\samd21a\include/samd21g18a.h \
- ../../src/services/SaLClocks.h ../../src/services/SaLBitBang.h \
- ../../src/services/SaLDelay.h ../../src/services/SaLBuzzer.h
+ ../../src/include/err_codes.h ../../src/usb/usbserial.h
 
 C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\Atmel\SAMD21_DFP\1.0.229\samd21a\include/sam.h:
 
@@ -282,7 +279,9 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 
 ../../src/services/SaLPort.h:
 
-../../src/SaL.h:
+../boardDefines.h:
+
+../../src/services/SaLTypes.h:
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\stdio.h:
 
@@ -306,16 +305,4 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 
 ../../src/include/err_codes.h:
 
-../../src/services/SaLMath.h:
-
-../../src/services/SaLTypes.h:
-
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\Atmel\SAMD21_DFP\1.0.229\samd21a\include/samd21g18a.h:
-
-../../src/services/SaLClocks.h:
-
-../../src/services/SaLBitBang.h:
-
-../../src/services/SaLDelay.h:
-
-../../src/services/SaLBuzzer.h:
+../../src/usb/usbserial.h:

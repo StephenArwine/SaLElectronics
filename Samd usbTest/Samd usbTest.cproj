@@ -130,6 +130,7 @@
       <Value>../../src/services</Value>
       <Value>../../src</Value>
       <Value>%24(PackRepoDir)\Atmel\SAMD21_DFP\1.0.229\samd21a\include</Value>
+      <Value>..</Value>
     </ListValues>
   </armgcc.compiler.directories.IncludePaths>
   <armgcc.compiler.optimization.level>Optimize (-O1)</armgcc.compiler.optimization.level>
@@ -161,6 +162,10 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="..\src\services\SaLPort.c">
+      <SubType>compile</SubType>
+      <Link>SaLPort.c</Link>
+    </Compile>
     <Compile Include="..\src\services\SaLPort.h">
       <SubType>compile</SubType>
       <Link>SaLPort.h</Link>
@@ -189,6 +194,10 @@
       <SubType>compile</SubType>
       <Link>usbserial.c</Link>
     </Compile>
+    <Compile Include="..\src\usb\usbSerial.h">
+      <SubType>compile</SubType>
+      <Link>usbSerial.h</Link>
+    </Compile>
     <Compile Include="..\src\usb\usb_requests.c">
       <SubType>compile</SubType>
       <Link>usb_requests.c</Link>
@@ -196,6 +205,10 @@
     <Compile Include="..\src\usb\usb_standard.h">
       <SubType>compile</SubType>
       <Link>usb_standard.h</Link>
+    </Compile>
+    <Compile Include="boardDefines.h">
+      <SubType>compile</SubType>
+      <Link>boardDefines.h</Link>
     </Compile>
     <Compile Include="Device_Startup\fw.h">
       <SubType>compile</SubType>
@@ -208,9 +221,6 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="main.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="SaLPort.c">
       <SubType>compile</SubType>
     </Compile>
   </ItemGroup>

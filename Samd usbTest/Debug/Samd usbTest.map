@@ -48,6 +48,210 @@ Discarded input sections
  .ARM.exidx     0x00000000        0x8 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/crt0.o
  .ARM.attributes
                 0x00000000       0x1b c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/crt0.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .group         0x00000000        0x8 SaLPort.o
+ .text          0x00000000        0x0 SaLPort.o
+ .data          0x00000000        0x0 SaLPort.o
+ .bss           0x00000000        0x0 SaLPort.o
+ .text.SaLPinMode
+                0x00000000       0x58 SaLPort.o
+ .debug_info    0x00000000      0x7cc SaLPort.o
+ .debug_abbrev  0x00000000      0x1cf SaLPort.o
+ .debug_loc     0x00000000      0x1cd SaLPort.o
+ .debug_aranges
+                0x00000000       0x20 SaLPort.o
+ .debug_ranges  0x00000000       0x10 SaLPort.o
+ .debug_macro   0x00000000      0x446 SaLPort.o
+ .debug_macro   0x00000000      0x832 SaLPort.o
+ .debug_macro   0x00000000       0x10 SaLPort.o
+ .debug_macro   0x00000000      0x166 SaLPort.o
+ .debug_macro   0x00000000       0x22 SaLPort.o
+ .debug_macro   0x00000000       0x44 SaLPort.o
+ .debug_macro   0x00000000       0x58 SaLPort.o
+ .debug_macro   0x00000000       0x22 SaLPort.o
+ .debug_macro   0x00000000      0x1df SaLPort.o
+ .debug_macro   0x00000000       0x58 SaLPort.o
+ .debug_macro   0x00000000       0x35 SaLPort.o
+ .debug_macro   0x00000000       0x9c SaLPort.o
+ .debug_macro   0x00000000       0x16 SaLPort.o
+ .debug_macro   0x00000000       0x35 SaLPort.o
+ .debug_macro   0x00000000      0x29d SaLPort.o
+ .debug_macro   0x00000000       0x10 SaLPort.o
+ .debug_macro   0x00000000       0x52 SaLPort.o
+ .debug_macro   0x00000000       0x16 SaLPort.o
+ .debug_macro   0x00000000       0x43 SaLPort.o
+ .debug_macro   0x00000000      0x180 SaLPort.o
+ .debug_macro   0x00000000       0x10 SaLPort.o
+ .debug_macro   0x00000000       0x22 SaLPort.o
+ .debug_macro   0x00000000       0xbe SaLPort.o
+ .debug_macro   0x00000000       0x16 SaLPort.o
+ .debug_macro   0x00000000      0x197 SaLPort.o
+ .debug_macro   0x00000000       0x16 SaLPort.o
+ .debug_macro   0x00000000       0x16 SaLPort.o
+ .debug_macro   0x00000000       0x29 SaLPort.o
+ .debug_macro   0x00000000       0x22 SaLPort.o
+ .debug_macro   0x00000000       0x16 SaLPort.o
+ .debug_macro   0x00000000       0x40 SaLPort.o
+ .debug_macro   0x00000000       0x3a SaLPort.o
+ .debug_macro   0x00000000       0x1f SaLPort.o
+ .debug_macro   0x00000000      0x250 SaLPort.o
+ .debug_macro   0x00000000      0x682 SaLPort.o
+ .debug_macro   0x00000000      0x8bf SaLPort.o
+ .debug_macro   0x00000000      0x235 SaLPort.o
+ .debug_macro   0x00000000      0xd6a SaLPort.o
+ .debug_macro   0x00000000      0x4ce SaLPort.o
+ .debug_macro   0x00000000      0x9f8 SaLPort.o
+ .debug_macro   0x00000000      0x82b SaLPort.o
+ .debug_macro   0x00000000      0x45f SaLPort.o
+ .debug_macro   0x00000000       0x5e SaLPort.o
+ .debug_macro   0x00000000      0x906 SaLPort.o
+ .debug_macro   0x00000000      0x225 SaLPort.o
+ .debug_macro   0x00000000      0x797 SaLPort.o
+ .debug_macro   0x00000000       0x5e SaLPort.o
+ .debug_macro   0x00000000      0x634 SaLPort.o
+ .debug_macro   0x00000000      0x3b6 SaLPort.o
+ .debug_macro   0x00000000      0xc55 SaLPort.o
+ .debug_macro   0x00000000     0x1092 SaLPort.o
+ .debug_macro   0x00000000      0xc4a SaLPort.o
+ .debug_macro   0x00000000      0x6bf SaLPort.o
+ .debug_macro   0x00000000     0x1b4b SaLPort.o
+ .debug_macro   0x00000000     0x144a SaLPort.o
+ .debug_macro   0x00000000      0x34e SaLPort.o
+ .debug_macro   0x00000000       0x7c SaLPort.o
+ .debug_macro   0x00000000       0xa0 SaLPort.o
+ .debug_macro   0x00000000       0x4c SaLPort.o
+ .debug_macro   0x00000000       0xca SaLPort.o
+ .debug_macro   0x00000000       0x94 SaLPort.o
+ .debug_macro   0x00000000       0x58 SaLPort.o
+ .debug_macro   0x00000000      0x364 SaLPort.o
+ .debug_macro   0x00000000       0x82 SaLPort.o
+ .debug_macro   0x00000000      0x197 SaLPort.o
+ .debug_macro   0x00000000       0xb8 SaLPort.o
+ .debug_macro   0x00000000       0xa0 SaLPort.o
+ .debug_macro   0x00000000       0xb2 SaLPort.o
+ .debug_macro   0x00000000       0x1c SaLPort.o
+ .debug_macro   0x00000000       0x1c SaLPort.o
+ .debug_macro   0x00000000       0x1c SaLPort.o
+ .debug_macro   0x00000000       0x7c SaLPort.o
+ .debug_macro   0x00000000      0x161 SaLPort.o
+ .debug_macro   0x00000000       0xdc SaLPort.o
+ .debug_macro   0x00000000      0x12f SaLPort.o
+ .debug_macro   0x00000000      0x12f SaLPort.o
+ .debug_macro   0x00000000      0x12f SaLPort.o
+ .debug_macro   0x00000000      0x12f SaLPort.o
+ .debug_macro   0x00000000      0x12f SaLPort.o
+ .debug_macro   0x00000000      0x12f SaLPort.o
+ .debug_macro   0x00000000      0x11e SaLPort.o
+ .debug_macro   0x00000000       0xe2 SaLPort.o
+ .debug_macro   0x00000000       0xe2 SaLPort.o
+ .debug_macro   0x00000000       0xe2 SaLPort.o
+ .debug_macro   0x00000000      0x12c SaLPort.o
+ .debug_macro   0x00000000      0x100 SaLPort.o
+ .debug_macro   0x00000000       0xf4 SaLPort.o
+ .debug_macro   0x00000000      0x40f SaLPort.o
+ .debug_macro   0x00000000       0x40 SaLPort.o
+ .debug_macro   0x00000000      0x361 SaLPort.o
+ .debug_macro   0x00000000     0x16ea SaLPort.o
+ .debug_macro   0x00000000       0x6d SaLPort.o
+ .debug_macro   0x00000000       0xbe SaLPort.o
+ .debug_macro   0x00000000       0x16 SaLPort.o
+ .debug_line    0x00000000      0x808 SaLPort.o
+ .debug_str     0x00000000    0x6bc1c SaLPort.o
+ .comment       0x00000000       0x5c SaLPort.o
+ .debug_frame   0x00000000       0x28 SaLPort.o
+ .ARM.attributes
+                0x00000000       0x32 SaLPort.o
  .group         0x00000000        0x8 usb_samd.o
  .group         0x00000000        0x8 usb_samd.o
  .group         0x00000000        0x8 usb_samd.o
@@ -145,6 +349,85 @@ Discarded input sections
                 0x00000000       0x28 usb_samd.o
  .text.usb_get_speed
                 0x00000000       0x14 usb_samd.o
+ .debug_macro   0x00000000      0x832 usb_samd.o
+ .debug_macro   0x00000000       0x22 usb_samd.o
+ .debug_macro   0x00000000       0x22 usb_samd.o
+ .debug_macro   0x00000000       0x44 usb_samd.o
+ .debug_macro   0x00000000       0x58 usb_samd.o
+ .debug_macro   0x00000000       0x22 usb_samd.o
+ .debug_macro   0x00000000      0x1df usb_samd.o
+ .debug_macro   0x00000000       0x58 usb_samd.o
+ .debug_macro   0x00000000       0x35 usb_samd.o
+ .debug_macro   0x00000000       0x9c usb_samd.o
+ .debug_macro   0x00000000      0x166 usb_samd.o
+ .debug_macro   0x00000000       0x52 usb_samd.o
+ .debug_macro   0x00000000       0x16 usb_samd.o
+ .debug_macro   0x00000000       0x43 usb_samd.o
+ .debug_macro   0x00000000      0x180 usb_samd.o
+ .debug_macro   0x00000000      0x29d usb_samd.o
+ .debug_macro   0x00000000       0x35 usb_samd.o
+ .debug_macro   0x00000000       0x40 usb_samd.o
+ .debug_macro   0x00000000       0x3a usb_samd.o
+ .debug_macro   0x00000000       0x1f usb_samd.o
+ .debug_macro   0x00000000      0x250 usb_samd.o
+ .debug_macro   0x00000000      0x682 usb_samd.o
+ .debug_macro   0x00000000      0x8bf usb_samd.o
+ .debug_macro   0x00000000      0x235 usb_samd.o
+ .debug_macro   0x00000000      0xd6a usb_samd.o
+ .debug_macro   0x00000000      0x4ce usb_samd.o
+ .debug_macro   0x00000000      0x9f8 usb_samd.o
+ .debug_macro   0x00000000      0x82b usb_samd.o
+ .debug_macro   0x00000000      0x45f usb_samd.o
+ .debug_macro   0x00000000       0x5e usb_samd.o
+ .debug_macro   0x00000000      0x906 usb_samd.o
+ .debug_macro   0x00000000      0x225 usb_samd.o
+ .debug_macro   0x00000000      0x797 usb_samd.o
+ .debug_macro   0x00000000       0x5e usb_samd.o
+ .debug_macro   0x00000000      0x634 usb_samd.o
+ .debug_macro   0x00000000      0x3b6 usb_samd.o
+ .debug_macro   0x00000000      0xc55 usb_samd.o
+ .debug_macro   0x00000000     0x1092 usb_samd.o
+ .debug_macro   0x00000000      0xc4a usb_samd.o
+ .debug_macro   0x00000000      0x6bf usb_samd.o
+ .debug_macro   0x00000000     0x1b4b usb_samd.o
+ .debug_macro   0x00000000     0x144a usb_samd.o
+ .debug_macro   0x00000000      0x34e usb_samd.o
+ .debug_macro   0x00000000       0x7c usb_samd.o
+ .debug_macro   0x00000000       0xa0 usb_samd.o
+ .debug_macro   0x00000000       0x4c usb_samd.o
+ .debug_macro   0x00000000       0xca usb_samd.o
+ .debug_macro   0x00000000       0x94 usb_samd.o
+ .debug_macro   0x00000000       0x58 usb_samd.o
+ .debug_macro   0x00000000      0x364 usb_samd.o
+ .debug_macro   0x00000000       0x82 usb_samd.o
+ .debug_macro   0x00000000      0x197 usb_samd.o
+ .debug_macro   0x00000000       0xb8 usb_samd.o
+ .debug_macro   0x00000000       0xa0 usb_samd.o
+ .debug_macro   0x00000000       0xb2 usb_samd.o
+ .debug_macro   0x00000000       0x1c usb_samd.o
+ .debug_macro   0x00000000       0x1c usb_samd.o
+ .debug_macro   0x00000000       0x1c usb_samd.o
+ .debug_macro   0x00000000       0x7c usb_samd.o
+ .debug_macro   0x00000000      0x161 usb_samd.o
+ .debug_macro   0x00000000       0xdc usb_samd.o
+ .debug_macro   0x00000000      0x12f usb_samd.o
+ .debug_macro   0x00000000      0x12f usb_samd.o
+ .debug_macro   0x00000000      0x12f usb_samd.o
+ .debug_macro   0x00000000      0x12f usb_samd.o
+ .debug_macro   0x00000000      0x12f usb_samd.o
+ .debug_macro   0x00000000      0x12f usb_samd.o
+ .debug_macro   0x00000000      0x11e usb_samd.o
+ .debug_macro   0x00000000       0xe2 usb_samd.o
+ .debug_macro   0x00000000       0xe2 usb_samd.o
+ .debug_macro   0x00000000       0xe2 usb_samd.o
+ .debug_macro   0x00000000      0x12c usb_samd.o
+ .debug_macro   0x00000000      0x100 usb_samd.o
+ .debug_macro   0x00000000       0xf4 usb_samd.o
+ .debug_macro   0x00000000      0x40f usb_samd.o
+ .debug_macro   0x00000000       0x40 usb_samd.o
+ .debug_macro   0x00000000      0x361 usb_samd.o
+ .debug_macro   0x00000000     0x16ea usb_samd.o
+ .debug_macro   0x00000000       0x6d usb_samd.o
  COMMON         0x00000000        0x1 usb_samd.o
  .group         0x00000000        0x8 usb.o
  .group         0x00000000        0x8 usb.o
@@ -266,6 +549,16 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 usb.o
  .debug_macro   0x00000000       0x35 usb.o
  .debug_macro   0x00000000       0xbe usb.o
+ .debug_macro   0x00000000       0x10 usb.o
+ .debug_macro   0x00000000       0x10 usb.o
+ .debug_macro   0x00000000       0x10 usb.o
+ .debug_macro   0x00000000       0x22 usb.o
+ .debug_macro   0x00000000       0xbe usb.o
+ .debug_macro   0x00000000       0x16 usb.o
+ .debug_macro   0x00000000      0x197 usb.o
+ .debug_macro   0x00000000       0x16 usb.o
+ .debug_macro   0x00000000       0x16 usb.o
+ .debug_macro   0x00000000       0x29 usb.o
  .debug_macro   0x00000000       0x40 usb.o
  .debug_macro   0x00000000       0x3a usb.o
  .debug_macro   0x00000000       0x1f usb.o
@@ -328,7 +621,10 @@ Discarded input sections
  .debug_macro   0x00000000      0x361 usb.o
  .debug_macro   0x00000000     0x16ea usb.o
  .debug_macro   0x00000000       0x6d usb.o
+ .debug_macro   0x00000000       0xbe usb.o
+ .debug_macro   0x00000000       0x16 usb.o
  .debug_macro   0x00000000       0x10 usb.o
+ .group         0x00000000        0x8 usbserial.o
  .group         0x00000000        0x8 usbserial.o
  .group         0x00000000        0x8 usbserial.o
  .group         0x00000000        0x8 usbserial.o
@@ -501,10 +797,12 @@ Discarded input sections
  .debug_macro   0x00000000      0x361 usbserial.o
  .debug_macro   0x00000000     0x16ea usbserial.o
  .debug_macro   0x00000000       0x6d usbserial.o
+ .debug_macro   0x00000000       0x10 usbserial.o
  .debug_macro   0x00000000      0x166 usbserial.o
  .debug_macro   0x00000000       0x58 usbserial.o
  .debug_macro   0x00000000       0x35 usbserial.o
  .debug_macro   0x00000000       0x9c usbserial.o
+ .debug_macro   0x00000000       0x16 usbserial.o
  .debug_macro   0x00000000       0x35 usbserial.o
  .debug_macro   0x00000000      0x29d usbserial.o
  .debug_macro   0x00000000       0x10 usbserial.o
@@ -521,6 +819,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x16 usbserial.o
  .debug_macro   0x00000000       0x29 usbserial.o
  .debug_macro   0x00000000       0x22 usbserial.o
+ .debug_macro   0x00000000       0x16 usbserial.o
  .debug_macro   0x00000000       0xbe usbserial.o
  .debug_macro   0x00000000       0xbe usbserial.o
  .debug_macro   0x00000000       0x10 usbserial.o
@@ -666,6 +965,7 @@ Discarded input sections
  .debug_macro   0x00000000      0xc4a Device_Startup/startup_samd21.o
  .debug_macro   0x00000000      0x6bf Device_Startup/startup_samd21.o
  .debug_macro   0x00000000     0x1b4b Device_Startup/startup_samd21.o
+ .debug_macro   0x00000000     0x144a Device_Startup/startup_samd21.o
  .debug_macro   0x00000000      0x34e Device_Startup/startup_samd21.o
  .debug_macro   0x00000000       0x7c Device_Startup/startup_samd21.o
  .debug_macro   0x00000000       0xa0 Device_Startup/startup_samd21.o
@@ -853,7 +1153,7 @@ Discarded input sections
  .debug_macro   0x00000000     0x16ea Device_Startup/system_samd21.o
  .debug_macro   0x00000000       0x6d Device_Startup/system_samd21.o
  .debug_line    0x00000000      0x6ad Device_Startup/system_samd21.o
- .debug_str     0x00000000    0x68531 Device_Startup/system_samd21.o
+ .debug_str     0x00000000    0x68526 Device_Startup/system_samd21.o
  .comment       0x00000000       0x5c Device_Startup/system_samd21.o
  .debug_frame   0x00000000       0x30 Device_Startup/system_samd21.o
  .ARM.attributes
@@ -1040,6 +1340,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x35 main.o
  .debug_macro   0x00000000       0xbe main.o
  .debug_macro   0x00000000       0x10 main.o
+ .debug_macro   0x00000000       0x10 main.o
  .debug_macro   0x00000000       0x1c main.o
  .debug_macro   0x00000000       0x10 main.o
  .debug_macro   0x00000000       0x10 main.o
@@ -1051,213 +1352,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x16 main.o
  .debug_macro   0x00000000       0x29 main.o
  .debug_macro   0x00000000       0xbe main.o
- .debug_macro   0x00000000       0x34 main.o
- .debug_macro   0x00000000       0x10 main.o
+ .debug_macro   0x00000000       0x16 main.o
  .debug_macro   0x00000000       0x40 main.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .group         0x00000000        0x8 SaLPort.o
- .text          0x00000000        0x0 SaLPort.o
- .data          0x00000000        0x0 SaLPort.o
- .bss           0x00000000        0x0 SaLPort.o
- .text.SaLPinMode
-                0x00000000       0x58 SaLPort.o
- .debug_info    0x00000000      0x7cc SaLPort.o
- .debug_abbrev  0x00000000      0x1cf SaLPort.o
- .debug_loc     0x00000000      0x1cd SaLPort.o
- .debug_aranges
-                0x00000000       0x20 SaLPort.o
- .debug_ranges  0x00000000       0x10 SaLPort.o
- .debug_macro   0x00000000      0x488 SaLPort.o
- .debug_macro   0x00000000      0x832 SaLPort.o
- .debug_macro   0x00000000      0x166 SaLPort.o
- .debug_macro   0x00000000       0x22 SaLPort.o
- .debug_macro   0x00000000       0x44 SaLPort.o
- .debug_macro   0x00000000       0x58 SaLPort.o
- .debug_macro   0x00000000       0x22 SaLPort.o
- .debug_macro   0x00000000      0x1df SaLPort.o
- .debug_macro   0x00000000       0x58 SaLPort.o
- .debug_macro   0x00000000       0x35 SaLPort.o
- .debug_macro   0x00000000       0x9c SaLPort.o
- .debug_macro   0x00000000       0x16 SaLPort.o
- .debug_macro   0x00000000       0x35 SaLPort.o
- .debug_macro   0x00000000      0x29d SaLPort.o
- .debug_macro   0x00000000       0x10 SaLPort.o
- .debug_macro   0x00000000       0x52 SaLPort.o
- .debug_macro   0x00000000       0x16 SaLPort.o
- .debug_macro   0x00000000       0x43 SaLPort.o
- .debug_macro   0x00000000      0x180 SaLPort.o
- .debug_macro   0x00000000       0x10 SaLPort.o
- .debug_macro   0x00000000       0x22 SaLPort.o
- .debug_macro   0x00000000       0xbe SaLPort.o
- .debug_macro   0x00000000       0x16 SaLPort.o
- .debug_macro   0x00000000      0x197 SaLPort.o
- .debug_macro   0x00000000       0x16 SaLPort.o
- .debug_macro   0x00000000       0x16 SaLPort.o
- .debug_macro   0x00000000       0x29 SaLPort.o
- .debug_macro   0x00000000       0x22 SaLPort.o
- .debug_macro   0x00000000       0x16 SaLPort.o
- .debug_macro   0x00000000       0x40 SaLPort.o
- .debug_macro   0x00000000       0x3a SaLPort.o
- .debug_macro   0x00000000       0x1f SaLPort.o
- .debug_macro   0x00000000      0x250 SaLPort.o
- .debug_macro   0x00000000      0x682 SaLPort.o
- .debug_macro   0x00000000      0x8bf SaLPort.o
- .debug_macro   0x00000000      0x235 SaLPort.o
- .debug_macro   0x00000000      0xd6a SaLPort.o
- .debug_macro   0x00000000      0x4ce SaLPort.o
- .debug_macro   0x00000000      0x9f8 SaLPort.o
- .debug_macro   0x00000000      0x82b SaLPort.o
- .debug_macro   0x00000000      0x45f SaLPort.o
- .debug_macro   0x00000000       0x5e SaLPort.o
- .debug_macro   0x00000000      0x906 SaLPort.o
- .debug_macro   0x00000000      0x225 SaLPort.o
- .debug_macro   0x00000000      0x797 SaLPort.o
- .debug_macro   0x00000000       0x5e SaLPort.o
- .debug_macro   0x00000000      0x634 SaLPort.o
- .debug_macro   0x00000000      0x3b6 SaLPort.o
- .debug_macro   0x00000000      0xc55 SaLPort.o
- .debug_macro   0x00000000     0x1092 SaLPort.o
- .debug_macro   0x00000000      0xc4a SaLPort.o
- .debug_macro   0x00000000      0x6bf SaLPort.o
- .debug_macro   0x00000000     0x1b4b SaLPort.o
- .debug_macro   0x00000000     0x144a SaLPort.o
- .debug_macro   0x00000000      0x34e SaLPort.o
- .debug_macro   0x00000000       0x7c SaLPort.o
- .debug_macro   0x00000000       0xa0 SaLPort.o
- .debug_macro   0x00000000       0x4c SaLPort.o
- .debug_macro   0x00000000       0xca SaLPort.o
- .debug_macro   0x00000000       0x94 SaLPort.o
- .debug_macro   0x00000000       0x58 SaLPort.o
- .debug_macro   0x00000000      0x364 SaLPort.o
- .debug_macro   0x00000000       0x82 SaLPort.o
- .debug_macro   0x00000000      0x197 SaLPort.o
- .debug_macro   0x00000000       0xb8 SaLPort.o
- .debug_macro   0x00000000       0xa0 SaLPort.o
- .debug_macro   0x00000000       0xb2 SaLPort.o
- .debug_macro   0x00000000       0x1c SaLPort.o
- .debug_macro   0x00000000       0x1c SaLPort.o
- .debug_macro   0x00000000       0x1c SaLPort.o
- .debug_macro   0x00000000       0x7c SaLPort.o
- .debug_macro   0x00000000      0x161 SaLPort.o
- .debug_macro   0x00000000       0xdc SaLPort.o
- .debug_macro   0x00000000      0x12f SaLPort.o
- .debug_macro   0x00000000      0x12f SaLPort.o
- .debug_macro   0x00000000      0x12f SaLPort.o
- .debug_macro   0x00000000      0x12f SaLPort.o
- .debug_macro   0x00000000      0x12f SaLPort.o
- .debug_macro   0x00000000      0x12f SaLPort.o
- .debug_macro   0x00000000      0x11e SaLPort.o
- .debug_macro   0x00000000       0xe2 SaLPort.o
- .debug_macro   0x00000000       0xe2 SaLPort.o
- .debug_macro   0x00000000       0xe2 SaLPort.o
- .debug_macro   0x00000000      0x12c SaLPort.o
- .debug_macro   0x00000000      0x100 SaLPort.o
- .debug_macro   0x00000000       0xf4 SaLPort.o
- .debug_macro   0x00000000      0x40f SaLPort.o
- .debug_macro   0x00000000       0x40 SaLPort.o
- .debug_macro   0x00000000      0x361 SaLPort.o
- .debug_macro   0x00000000     0x16ea SaLPort.o
- .debug_macro   0x00000000       0x6d SaLPort.o
- .debug_macro   0x00000000       0xbe SaLPort.o
- .debug_macro   0x00000000       0x34 SaLPort.o
- .debug_macro   0x00000000       0x10 SaLPort.o
- .debug_line    0x00000000      0x854 SaLPort.o
- .debug_str     0x00000000    0x6bcd5 SaLPort.o
- .comment       0x00000000       0x5c SaLPort.o
- .debug_frame   0x00000000       0x28 SaLPort.o
- .ARM.attributes
-                0x00000000       0x32 SaLPort.o
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-exit.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-exit.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-exit.o)
@@ -1319,6 +1415,7 @@ Linker script and memory map
 LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crti.o
 LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
 LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/crt0.o
+LOAD SaLPort.o
 LOAD usb_samd.o
 LOAD usb.o
 LOAD usbserial.o
@@ -1326,7 +1423,6 @@ LOAD usb_requests.o
 LOAD Device_Startup/startup_samd21.o
 LOAD Device_Startup/system_samd21.o
 LOAD main.o
-LOAD SaLPort.o
 START GROUP
 LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libm.a
 END GROUP
@@ -1746,136 +1842,42 @@ OUTPUT(Samd usbTest.elf elf32-littlearm)
  .debug_ranges  0x00000190       0x18 Device_Startup/startup_samd21.o
  .debug_ranges  0x000001a8       0x18 main.o
 
-.debug_macro    0x00000000    0x13b77
+.debug_macro    0x00000000     0x17e8
  .debug_macro   0x00000000      0x413 usb_samd.o
- .debug_macro   0x00000413      0x832 usb_samd.o
- .debug_macro   0x00000c45       0x22 usb_samd.o
- .debug_macro   0x00000c67       0x22 usb_samd.o
- .debug_macro   0x00000c89       0x44 usb_samd.o
- .debug_macro   0x00000ccd       0x58 usb_samd.o
- .debug_macro   0x00000d25       0x22 usb_samd.o
- .debug_macro   0x00000d47      0x1df usb_samd.o
- .debug_macro   0x00000f26       0x58 usb_samd.o
- .debug_macro   0x00000f7e       0x35 usb_samd.o
- .debug_macro   0x00000fb3       0x9c usb_samd.o
- .debug_macro   0x0000104f      0x166 usb_samd.o
- .debug_macro   0x000011b5       0x52 usb_samd.o
- .debug_macro   0x00001207       0x16 usb_samd.o
- .debug_macro   0x0000121d       0x43 usb_samd.o
- .debug_macro   0x00001260      0x180 usb_samd.o
- .debug_macro   0x000013e0      0x29d usb_samd.o
- .debug_macro   0x0000167d       0x10 usb_samd.o
- .debug_macro   0x0000168d       0x35 usb_samd.o
- .debug_macro   0x000016c2       0xbe usb_samd.o
- .debug_macro   0x00001780       0x40 usb_samd.o
- .debug_macro   0x000017c0       0x3a usb_samd.o
- .debug_macro   0x000017fa       0x1f usb_samd.o
- .debug_macro   0x00001819      0x250 usb_samd.o
- .debug_macro   0x00001a69      0x682 usb_samd.o
- .debug_macro   0x000020eb      0x8bf usb_samd.o
- .debug_macro   0x000029aa      0x235 usb_samd.o
- .debug_macro   0x00002bdf      0xd6a usb_samd.o
- .debug_macro   0x00003949      0x4ce usb_samd.o
- .debug_macro   0x00003e17      0x9f8 usb_samd.o
- .debug_macro   0x0000480f      0x82b usb_samd.o
- .debug_macro   0x0000503a      0x45f usb_samd.o
- .debug_macro   0x00005499       0x5e usb_samd.o
- .debug_macro   0x000054f7      0x906 usb_samd.o
- .debug_macro   0x00005dfd      0x225 usb_samd.o
- .debug_macro   0x00006022      0x797 usb_samd.o
- .debug_macro   0x000067b9       0x5e usb_samd.o
- .debug_macro   0x00006817      0x634 usb_samd.o
- .debug_macro   0x00006e4b      0x3b6 usb_samd.o
- .debug_macro   0x00007201      0xc55 usb_samd.o
- .debug_macro   0x00007e56     0x1092 usb_samd.o
- .debug_macro   0x00008ee8      0xc4a usb_samd.o
- .debug_macro   0x00009b32      0x6bf usb_samd.o
- .debug_macro   0x0000a1f1     0x1b4b usb_samd.o
- .debug_macro   0x0000bd3c     0x144a usb_samd.o
- .debug_macro   0x0000d186      0x34e usb_samd.o
- .debug_macro   0x0000d4d4       0x7c usb_samd.o
- .debug_macro   0x0000d550       0xa0 usb_samd.o
- .debug_macro   0x0000d5f0       0x4c usb_samd.o
- .debug_macro   0x0000d63c       0xca usb_samd.o
- .debug_macro   0x0000d706       0x94 usb_samd.o
- .debug_macro   0x0000d79a       0x58 usb_samd.o
- .debug_macro   0x0000d7f2      0x364 usb_samd.o
- .debug_macro   0x0000db56       0x82 usb_samd.o
- .debug_macro   0x0000dbd8      0x197 usb_samd.o
- .debug_macro   0x0000dd6f       0xb8 usb_samd.o
- .debug_macro   0x0000de27       0xa0 usb_samd.o
- .debug_macro   0x0000dec7       0xb2 usb_samd.o
- .debug_macro   0x0000df79       0x1c usb_samd.o
- .debug_macro   0x0000df95       0x1c usb_samd.o
- .debug_macro   0x0000dfb1       0x1c usb_samd.o
- .debug_macro   0x0000dfcd       0x7c usb_samd.o
- .debug_macro   0x0000e049      0x161 usb_samd.o
- .debug_macro   0x0000e1aa       0xdc usb_samd.o
- .debug_macro   0x0000e286      0x12f usb_samd.o
- .debug_macro   0x0000e3b5      0x12f usb_samd.o
- .debug_macro   0x0000e4e4      0x12f usb_samd.o
- .debug_macro   0x0000e613      0x12f usb_samd.o
- .debug_macro   0x0000e742      0x12f usb_samd.o
- .debug_macro   0x0000e871      0x12f usb_samd.o
- .debug_macro   0x0000e9a0      0x11e usb_samd.o
- .debug_macro   0x0000eabe       0xe2 usb_samd.o
- .debug_macro   0x0000eba0       0xe2 usb_samd.o
- .debug_macro   0x0000ec82       0xe2 usb_samd.o
- .debug_macro   0x0000ed64      0x12c usb_samd.o
- .debug_macro   0x0000ee90      0x100 usb_samd.o
- .debug_macro   0x0000ef90       0xf4 usb_samd.o
- .debug_macro   0x0000f084      0x40f usb_samd.o
- .debug_macro   0x0000f493       0x40 usb_samd.o
- .debug_macro   0x0000f4d3      0x361 usb_samd.o
- .debug_macro   0x0000f834     0x16ea usb_samd.o
- .debug_macro   0x00010f1e       0x6d usb_samd.o
- .debug_macro   0x00010f8b       0x10 usb_samd.o
- .debug_macro   0x00010f9b      0x533 usb.o
- .debug_macro   0x000114ce       0x4c usb.o
- .debug_macro   0x0001151a       0x1c usb.o
- .debug_macro   0x00011536       0x10 usb.o
- .debug_macro   0x00011546       0x10 usb.o
- .debug_macro   0x00011556       0x22 usb.o
- .debug_macro   0x00011578       0xbe usb.o
- .debug_macro   0x00011636       0x16 usb.o
- .debug_macro   0x0001164c      0x197 usb.o
- .debug_macro   0x000117e3       0x16 usb.o
- .debug_macro   0x000117f9       0x16 usb.o
- .debug_macro   0x0001180f       0x29 usb.o
- .debug_macro   0x00011838       0xbe usb.o
- .debug_macro   0x000118f6       0x34 usb.o
- .debug_macro   0x0001192a       0x10 usb.o
- .debug_macro   0x0001193a       0x40 usb.o
- .debug_macro   0x0001197a      0x47e usbserial.o
- .debug_macro   0x00011df8       0x3a usbserial.o
- .debug_macro   0x00011e32       0x16 usbserial.o
- .debug_macro   0x00011e48       0x16 usbserial.o
- .debug_macro   0x00011e5e      0x118 usb_requests.o
- .debug_macro   0x00011f76      0x2d6 Device_Startup/startup_samd21.o
- .debug_macro   0x0001224c     0x144a Device_Startup/startup_samd21.o
- .debug_macro   0x00013696      0x4e1 main.o
+ .debug_macro   0x00000413       0x10 usb_samd.o
+ .debug_macro   0x00000423       0xbe usb_samd.o
+ .debug_macro   0x000004e1       0x10 usb_samd.o
+ .debug_macro   0x000004f1      0x4f1 usb.o
+ .debug_macro   0x000009e2       0x4c usb.o
+ .debug_macro   0x00000a2e       0x1c usb.o
+ .debug_macro   0x00000a4a       0x40 usb.o
+ .debug_macro   0x00000a8a      0x48d usbserial.o
+ .debug_macro   0x00000f17       0x3a usbserial.o
+ .debug_macro   0x00000f51      0x118 usb_requests.o
+ .debug_macro   0x00001069      0x2d6 Device_Startup/startup_samd21.o
+ .debug_macro   0x0000133f      0x4a9 main.o
 
-.debug_line     0x00000000     0x3009
+.debug_line     0x00000000     0x2f99
  .debug_line    0x00000000      0xa27 usb_samd.o
- .debug_line    0x00000a27      0x9bf usb.o
- .debug_line    0x000013e6      0x8b7 usbserial.o
- .debug_line    0x00001c9d      0x38b usb_requests.o
- .debug_line    0x00002028      0x6ce Device_Startup/startup_samd21.o
- .debug_line    0x000026f6      0x913 main.o
+ .debug_line    0x00000a27      0x978 usb.o
+ .debug_line    0x0000139f      0x8c6 usbserial.o
+ .debug_line    0x00001c65      0x38b usb_requests.o
+ .debug_line    0x00001ff0      0x6ce Device_Startup/startup_samd21.o
+ .debug_line    0x000026be      0x8db main.o
 
-.debug_str      0x00000000    0x6ea9c
+.debug_str      0x00000000    0x6e943
  .debug_str     0x00000000    0x6bbdb usb_samd.o
                               0x6c074 (size before relaxing)
- .debug_str     0x0006bbdb     0x1bd4 usb.o
-                              0x6ccbc (size before relaxing)
- .debug_str     0x0006d7af       0xe7 usbserial.o
-                              0x6bfe7 (size before relaxing)
- .debug_str     0x0006d896      0x221 usb_requests.o
-                               0x5c2e (size before relaxing)
- .debug_str     0x0006dab7      0xa36 Device_Startup/startup_samd21.o
-                              0x69674 (size before relaxing)
- .debug_str     0x0006e4ed      0x5af main.o
-                              0x6cdca (size before relaxing)
+ .debug_str     0x0006bbdb     0x1b0d usb.o
+                              0x6cbf5 (size before relaxing)
+ .debug_str     0x0006d6e8       0xf5 usbserial.o
+                              0x6c0ca (size before relaxing)
+ .debug_str     0x0006d7dd      0x1dd usb_requests.o
+                               0x5c23 (size before relaxing)
+ .debug_str     0x0006d9ba      0x9da Device_Startup/startup_samd21.o
+                              0x69669 (size before relaxing)
+ .debug_str     0x0006e394      0x5af main.o
+                              0x6cd11 (size before relaxing)
 
 .debug_frame    0x00000000      0x628
  .debug_frame   0x00000000      0x1b8 usb_samd.o

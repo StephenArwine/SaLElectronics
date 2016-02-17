@@ -6,6 +6,10 @@
 #include <boardDefines.h>
 #include <SaLTypes.h>
 
+#define INPUT 0
+#define OUTPUT 1
+#define OUTSTRONG 3
+
 static inline PortGroup* SaLGetPort(
     const uint8_t gpio_pin) {
     uint8_t port_index  = (gpio_pin / 128);
