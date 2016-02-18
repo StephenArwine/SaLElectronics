@@ -39,6 +39,8 @@
 
 #include <SaLDelay.h>
 
+#include <SaLSenseBat.h>
+
 #include <SaLBuzzer.h>
 
 //#include <SaLAltimeter.h>

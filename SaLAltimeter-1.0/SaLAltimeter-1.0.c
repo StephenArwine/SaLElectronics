@@ -57,7 +57,7 @@ int main(void) {
     uart_init(9600);
     SaLTC4Init();
     sampleInit();
-	adcInit();
+    adcInit();
     // UsbInit();
     startUpTone();
 
@@ -107,7 +107,7 @@ int main(void) {
     pinHigh(CC1120_SLAVE_SELECT);
     startUpTone();
 
-volatile uint16_t batt;
+    volatile float batt;
 
     while (1) {
         ticks++;
@@ -118,9 +118,7 @@ volatile uint16_t batt;
             lastTime = milliseconds;
             //SaLPlayTone(400);
         }
-       //   sampleTick();
-	batt = adcRead(senseBat);
+        sampleTick();
+        batt = senseBatVolts(senseBat);
     }
-
-
 }
