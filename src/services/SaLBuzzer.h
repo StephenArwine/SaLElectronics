@@ -7,14 +7,20 @@
 #include <SaLPort.h>
 #include <SaLDelay.h>
 
-void SaLPlayTone(int16_t tone_);
+void SaLPlayTone(int16_t tone_,int16_t durration);
 
 static inline void startUpTone() {
-    SaLPlayTone(900);
-    SaLPlayTone(800);
-    SaLPlayTone(700);
-    SaLPlayTone(600);
-    SaLPlayTone(500);
+    SaLPlayTone(900,300);
+    SaLPlayTone(800,300);
+    SaLPlayTone(700,300);
+    SaLPlayTone(600,300);
+    SaLPlayTone(500,300);
+	
+    SaLPlayTone(900,300);
+    SaLPlayTone(800,300);
+    SaLPlayTone(700,300);
+    SaLPlayTone(600,300);
+    SaLPlayTone(500,300);
 };
 
 

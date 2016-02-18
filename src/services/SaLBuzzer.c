@@ -2,13 +2,13 @@
 #include <SaLBuzzer.h>
 
 
-void SaLPlayTone(int16_t tone_) {
+void SaLPlayTone(int16_t tone_,int16_t durration) {
 
 
     int32_t elapsed_time = 0;
-    int32_t duration = 100000;
 
-    while (elapsed_time < duration) {
+
+    while (elapsed_time < (durration*100)) {
 
         SaLDigitalOut(BUZZER,true);
         delay_us(tone_/2);

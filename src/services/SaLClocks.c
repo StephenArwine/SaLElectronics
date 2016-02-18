@@ -1,6 +1,14 @@
 
 #include <SaLClocks.h>
 
+// Configure DFLL in USB recovery mode
+const uint32_t dfll_ctrl_usb
+= SYSCTRL_DFLLCTRL_ENABLE
+| SYSCTRL_DFLLCTRL_CCDIS
+| SYSCTRL_DFLLCTRL_BPLCKC
+| SYSCTRL_DFLLCTRL_USBCRM
+| SYSCTRL_DFLLCTRL_ONDEMAND;
+
 
 void SalGclkInit() {
 
@@ -17,6 +25,7 @@ void SalGclkInit() {
 //wait for crystal to warm up
     while((SYSCTRL->PCLKSR.reg & (SYSCTRL_PCLKSR_XOSC32KRDY)) == 0);
 
+/*
 //config xosc32k for the dfll via gen1
     GCLK->GENDIV.reg =  GCLK_GENDIV_ID(1) |
                         GCLK_GENDIV_DIV(1);
@@ -26,6 +35,7 @@ void SalGclkInit() {
     GCLK->CLKCTRL.reg = GCLK_CLKCTRL_GEN(1) |
                         GCLK_CLKCTRL_CLKEN |
                         GCLK_CLKCTRL_ID_DFLL48;
+*/
 
 // gclk for tc3
     GCLK->GENDIV.reg =  GCLK_GENDIV_ID(2) |
@@ -58,32 +68,51 @@ void SalGclkInit() {
     if (fine == 0x3ff) {
         fine = 0x1ff;
     }
-//For generic clock generator 0, select the DFLL48 Clock as input
-    GCLK->GENDIV.reg  = (GCLK_GENDIV_DIV(1)  | GCLK_GENDIV_ID(1));
-    GCLK->GENCTRL.reg = (GCLK_GENCTRL_ID(0)  | (GCLK_GENCTRL_SRC_DFLL48M) | (GCLK_GENCTRL_GENEN));
-    GCLK->CLKCTRL.reg = (GCLK_CLKCTRL_GEN(0) | GCLK_CLKCTRL_CLKEN ) ;
+	
+	//
+	////For generic clock generator 0, select the DFLL48 Clock as input
+		//GCLK->GENDIV.reg  = (GCLK_GENDIV_DIV(1)  | GCLK_GENDIV_ID(1));
+		//GCLK->GENCTRL.reg = (GCLK_GENCTRL_ID(0)  | (GCLK_GENCTRL_SRC_DFLL48M) | (GCLK_GENCTRL_GENEN));
+		//GCLK->CLKCTRL.reg = (GCLK_CLKCTRL_GEN(0) | GCLK_CLKCTRL_CLKEN ) ;
+//
+		//SYSCTRL->DFLLCTRL.reg = (SYSCTRL_DFLLCTRL_MODE) |
+								 //SYSCTRL_DFLLCTRL_USBCRM |
+								 //SYSCTRL_DFLLCTRL_ENABLE;
+//
+		//SYSCTRL->DFLLMUL.reg = (SYSCTRL_DFLLMUL_CSTEP(1) | SYSCTRL_DFLLMUL_FSTEP(1));
+		//SYSCTRL->DFLLMUL.reg |= (SYSCTRL_DFLLMUL_MUL(48000000/32768));
+//
+	////Wait and see if the DFLL output is good . . .
+		//while((SYSCTRL->PCLKSR.reg & (SYSCTRL_PCLKSR_DFLLRDY)) == 0);
+//
+//
+		//GCLK->GENDIV.reg =  GCLK_GENDIV_ID(4) |
+							//GCLK_GENDIV_DIV(1);
+		//GCLK->GENCTRL.reg = GCLK_GENCTRL_ID(4) |
+							//GCLK_GENCTRL_SRC_OSC8M |
+							//GCLK_GENCTRL_IDC |
+							//GCLK_GENCTRL_RUNSTDBY |
+							//GCLK_GENCTRL_GENEN;
+		//GCLK->CLKCTRL.reg = GCLK_CLKCTRL_ID_TC4_TC5 |
+							//GCLK_CLKCTRL_GEN_GCLK4 |
+							//GCLK_CLKCTRL_CLKEN;
 
-    SYSCTRL->DFLLCTRL.reg = (SYSCTRL_DFLLCTRL_MODE) |
-                             SYSCTRL_DFLLCTRL_USBCRM |
-                             SYSCTRL_DFLLCTRL_ENABLE;
+    // Disable ONDEMAND mode while writing configurations (errata 9905)
+    SYSCTRL->DFLLCTRL.reg = dfll_ctrl_usb & ~SYSCTRL_DFLLCTRL_ONDEMAND;
+    while((SYSCTRL->PCLKSR.reg & (SYSCTRL_PCLKSR_DFLLRDY)) == 0);
+    //     SYSCTRL->DFLLMUL.reg = (SYSCTRL_DFLLMUL_CSTEP(1) | SYSCTRL_DFLLMUL_FSTEP(1));
+    //     SYSCTRL->DFLLMUL.reg |= SYSCTRL_DFLLMUL_MUL(1465); // round(48000000 / 32768)
+    SYSCTRL->DFLLVAL.reg = SYSCTRL_DFLLVAL_COARSE(coarse) | SYSCTRL_DFLLVAL_FINE(fine);
 
-    SYSCTRL->DFLLMUL.reg = (SYSCTRL_DFLLMUL_CSTEP(1) | SYSCTRL_DFLLMUL_FSTEP(1));
-    SYSCTRL->DFLLMUL.reg |= (SYSCTRL_DFLLMUL_MUL(48000000/32768));
-
-//Wait and see if the DFLL output is good . . .
+    //Wait and see if the DFLL output is good . . .
     while((SYSCTRL->PCLKSR.reg & (SYSCTRL_PCLKSR_DFLLRDY)) == 0);
 
+    SYSCTRL->DFLLCTRL.reg = dfll_ctrl_usb;
 
-    GCLK->GENDIV.reg =  GCLK_GENDIV_ID(4) |
-                        GCLK_GENDIV_DIV(1);
-    GCLK->GENCTRL.reg = GCLK_GENCTRL_ID(4) |
-                        GCLK_GENCTRL_SRC_OSC8M |
-                        GCLK_GENCTRL_IDC |
-                        GCLK_GENCTRL_RUNSTDBY |
-                        GCLK_GENCTRL_GENEN;
-    GCLK->CLKCTRL.reg = GCLK_CLKCTRL_ID_TC4_TC5 |
-                        GCLK_CLKCTRL_GEN_GCLK4 |
-                        GCLK_CLKCTRL_CLKEN;
+    //For generic clock generator 0, select the DFLL48 Clock as input
+    GCLK->GENDIV.reg  = (GCLK_GENDIV_DIV(1)  | GCLK_GENDIV_ID(0));
+    GCLK->GENCTRL.reg = (GCLK_GENCTRL_ID(0)  | (GCLK_GENCTRL_SRC_DFLL48M) | (GCLK_GENCTRL_GENEN));
+
 
 }
 

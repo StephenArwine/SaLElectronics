@@ -1,6 +1,12 @@
+#pragma once
+
 #define HAS_SPI_MODULE 1
 #include <samd21g18a.h>
 #include <samd21.h>
+#include <SaLPort.h>
+
+const static Pin senseBat = { .group = 0, .pin = 6 , .chan = 6};
+
 
 #define INPUT 0
 #define OUTPUT 1
@@ -14,6 +20,17 @@
 #define AT25SF_MISO_PIN PIN_PA14
 #define AT25SF_SCK_PIN PIN_PA15
 #define AT25SF_SLAVE_SELECT_PIN PIN_PA08
+
+#define HAS_TX 1
+#define CC1120_MOSI_PIN PIN_PA13
+#define CC1120_MISO_PIN PIN_PA14
+#define CC1120_SCK_PIN PIN_PA15
+#define CC1120_SLAVE_SELECT_PIN PIN_PA10
+
+const static Pin CC1120_SLAVE_SELECT = {.group = 0, .pin = 10 };
+const static Pin CC1120_MISO = { .group = 0, .pin = 14 };
+const static Pin CC1120_MOSI = { .group = 0, .pin = 13 };
+const static Pin CC1120_SCK = { .group = 0, .pin = 15 };
 
 
 #define HAS_MS5607 1

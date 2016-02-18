@@ -300,6 +300,14 @@
       <SubType>compile</SubType>
       <Link>SaLAltimeter.h</Link>
     </Compile>
+    <Compile Include="..\src\services\SaLAnalog.c">
+      <SubType>compile</SubType>
+      <Link>SaLAnalog.c</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLAnalog.h">
+      <SubType>compile</SubType>
+      <Link>SaLAnalog.h</Link>
+    </Compile>
     <Compile Include="..\src\services\SaLBarometer.c">
       <SubType>compile</SubType>
       <Link>SaLBarometer.c</Link>
@@ -415,6 +423,10 @@
     <Compile Include="..\src\services\SaLUsb.h">
       <SubType>compile</SubType>
       <Link>SaLUsb.h</Link>
+    </Compile>
+    <Compile Include="boardDefines.h">
+      <SubType>compile</SubType>
+      <Link>boardDefines.h</Link>
     </Compile>
     <Compile Include="Device_Startup\startup_samd21.c">
       <SubType>compile</SubType>

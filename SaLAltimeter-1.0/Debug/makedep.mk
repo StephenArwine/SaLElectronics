@@ -16,6 +16,8 @@
 
 ..\src\services\SaLAltimeter.c
 
+..\src\services\SaLAnalog.c
+
 ..\src\services\SaLBarometer.c
 
 ..\src\services\SaLBitBang.c

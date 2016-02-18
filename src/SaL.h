@@ -33,6 +33,8 @@
 
 #include <SaLPort.h>
 
+#include <SaLAnalog.h>
+
 #include <SaLBitBang.h>
 
 #include <SaLDelay.h>

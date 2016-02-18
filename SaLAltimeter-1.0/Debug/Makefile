@@ -45,6 +45,7 @@ C_SRCS +=  \
 ../../src/drivers/MTK3329.c \
 ../../src/services/SaLAccelerometer.c \
 ../../src/services/SaLAltimeter.c \
+../../src/services/SaLAnalog.c \
 ../../src/services/SaLBarometer.c \
 ../../src/services/SaLBitBang.c \
 ../../src/services/SaLBuzzer.c \
@@ -77,6 +78,7 @@ MS5607.o \
 MTK3329.o \
 SaLAccelerometer.o \
 SaLAltimeter.o \
+SaLAnalog.o \
 SaLBarometer.o \
 SaLBitBang.o \
 SaLBuzzer.o \
@@ -102,6 +104,7 @@ MS5607.o \
 MTK3329.o \
 SaLAccelerometer.o \
 SaLAltimeter.o \
+SaLAnalog.o \
 SaLBarometer.o \
 SaLBitBang.o \
 SaLBuzzer.o \
@@ -127,6 +130,7 @@ MS5607.d \
 MTK3329.d \
 SaLAccelerometer.d \
 SaLAltimeter.d \
+SaLAnalog.d \
 SaLBarometer.d \
 SaLBitBang.d \
 SaLBuzzer.d \
@@ -152,6 +156,7 @@ MS5607.d \
 MTK3329.d \
 SaLAccelerometer.d \
 SaLAltimeter.d \
+SaLAnalog.d \
 SaLBarometer.d \
 SaLBitBang.d \
 SaLBuzzer.d \
@@ -185,6 +190,8 @@ LINKER_SCRIPT_DEP+=  \
 
 
 # AVR32/GNU C Compiler
+
+
 
 
 

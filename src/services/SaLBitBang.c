@@ -1,7 +1,25 @@
 
 #include "SaLBitBang.h"
 
+uint8_t syncByte(Pin SCK_PIN,
+                 Pin MOSI_PIN,
+                 Pin MISO_PIN,
+                 uint8_t byte) {
 
+    uint8_t byteIn = 0x00;
+
+    for (uint8_t i = 0; i<8; ++i) {
+        pinLow(SCK_PIN);
+        if (byte & 0x80) {
+            pinHigh(MOSI_PIN);
+        } else {
+            pinLow(MOSI_PIN);
+        }
+        byteIn = (byteIn << 1 ) | pinRead(MISO_PIN);
+        pinHigh(SCK_PIN);
+    }
+	return byteIn;
+}
 
 void byteOut(uint8_t SCK_PIN,
              uint8_t MOSI_PIN,

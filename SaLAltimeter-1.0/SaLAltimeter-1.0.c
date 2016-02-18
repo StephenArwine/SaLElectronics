@@ -57,7 +57,9 @@ int main(void) {
     uart_init(9600);
     SaLTC4Init();
     sampleInit();
+	adcInit();
     // UsbInit();
+    startUpTone();
 
 
     struct IoDescriptor *UsartIoModule;
@@ -70,40 +72,8 @@ int main(void) {
 
     initAccelerometer(&myAccelerometer);
     initBarometer();
-	SaLFlashMemInit();
-//    getAccelEvent(&myAccelerometer);
+    SaLFlashMemInit();
 
-//     myGPS.MTK3329 = MTK3329Instance;
-//     myAltimeter.myAltimetersAccelerometer = &myAccelerometer;
-//     myAltimeter.myAltimetersBarometer = &myBarometer;
-//     myAltimeter.myAltimetersGps = &myGPS;
-//
-//     //startUpTone();
-//
-//     //uint32_t index = 0;
-//     volatile uint32_t milliseconds = 0;
-//
-//     uint8_t message[255];
-//
-//     struct sVar groundHeight;
-//
-//     for (uint8_t i = 0; i < 100; i++) {
-//         getMS5607PressureSlow(&myBarometer);
-//         uint32_t tempheight = myBarometer.currentAltInFt;
-//         addSampleToVariance(&groundHeight,tempheight);
-//     }
-//     volatile uint32_t variance = GetVariance(&groundHeight,&groundHeight.mean);
-//
-//
-//     for (uint8_t i = 0; i < 200; i++) {
-//         getMS5607PressureSlow(&myBarometer);
-//         uint32_t tempheight = myBarometer.currentAltInFt;
-//         addSampleToVariance(&groundHeight,tempheight);
-//
-//     }
-//
-//     volatile int32_t groundAlt = groundHeight.mean;
-//     variance = GetVariance(&groundHeight,&groundHeight.mean);
 
     volatile uint16_t ticks = 0;
     uint32_t milliseconds = 0;
@@ -112,6 +82,32 @@ int main(void) {
 //     AT25SFErace4KBlock(0);
 //     AT25SFWriteByte(0x00101,251);
 //   volatile uint8_t byte = AT25SFGetByte(0x00101);
+
+    pinLow(CC1120_SLAVE_SELECT);
+    delay_ms(30);
+    pinHigh(CC1120_SLAVE_SELECT);
+    delay_ms(20);
+    pinLow(CC1120_SLAVE_SELECT);
+    delay_ms(30);
+    pinHigh(CC1120_SLAVE_SELECT);
+    delay_ms(20);
+
+    pinLow(CC1120_SLAVE_SELECT);
+    volatile uint8_t ccstatus = syncByte(CC1120_SCK ,CC1120_MOSI, CC1120_MISO, 0x80 | 0x30);
+    pinHigh(CC1120_SLAVE_SELECT);
+
+    delay_ms(200);
+
+    pinLow(CC1120_SLAVE_SELECT);
+
+    // while (pinRead(CC1120_MISO));
+    volatile uint8_t ccstatus2 = syncByte(CC1120_SCK ,CC1120_MOSI, CC1120_MISO, 0x80 | 0x3B);
+    volatile uint8_t ccstatus3 = getByte(CC1120_SCK_PIN,CC1120_MISO_PIN);
+    // byteOut(CC1120_SCK_PIN,CC1120_MOSI_PIN, 0b10111101 );
+    pinHigh(CC1120_SLAVE_SELECT);
+    startUpTone();
+
+volatile uint16_t batt;
 
     while (1) {
         ticks++;
@@ -122,8 +118,8 @@ int main(void) {
             lastTime = milliseconds;
             //SaLPlayTone(400);
         }
-        sampleTick();
-
+       //   sampleTick();
+	batt = adcRead(senseBat);
     }
 
 

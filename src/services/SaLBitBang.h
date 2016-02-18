@@ -9,6 +9,10 @@
 #include <SaLTypes.h>
 #include <SaLPort.h>
 
+uint8_t syncByte(Pin SCK_PIN,
+                 Pin MOSI_PIN,
+                 Pin MISO_PIN,
+                 uint8_t byte);
 
 void byteOut(uint8_t SCK_PIN,
              uint8_t MOSI_PIN,
