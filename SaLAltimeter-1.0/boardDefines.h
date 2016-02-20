@@ -31,6 +31,7 @@ const static Pin CC1120_SLAVE_SELECT = {.group = 0, .pin = 10 };
 const static Pin CC1120_MISO = { .group = 0, .pin = 14 };
 const static Pin CC1120_MOSI = { .group = 0, .pin = 13 };
 const static Pin CC1120_SCK = { .group = 0, .pin = 15 };
+const static Pin BUZZER = { .group = 0, .pin = 12, .cfg = 0x40 };
 
 
 #define HAS_MS5607 1
@@ -58,5 +59,6 @@ const static Pin CC1120_SCK = { .group = 0, .pin = 15 };
 #define NVM_DFLL_FINE_POS      64
 #define NVM_DFLL_FINE_SIZE     10
 
-#define BUZZER PIN_PA12
+#define BUZZERPIN PIN_PA12
+
 

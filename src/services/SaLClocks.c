@@ -3,11 +3,11 @@
 
 // Configure DFLL in USB recovery mode
 const uint32_t dfll_ctrl_usb
-= SYSCTRL_DFLLCTRL_ENABLE
-| SYSCTRL_DFLLCTRL_CCDIS
-| SYSCTRL_DFLLCTRL_BPLCKC
-| SYSCTRL_DFLLCTRL_USBCRM
-| SYSCTRL_DFLLCTRL_ONDEMAND;
+    = SYSCTRL_DFLLCTRL_ENABLE
+      | SYSCTRL_DFLLCTRL_CCDIS
+      | SYSCTRL_DFLLCTRL_BPLCKC
+      | SYSCTRL_DFLLCTRL_USBCRM
+      | SYSCTRL_DFLLCTRL_ONDEMAND;
 
 
 void SalGclkInit() {
@@ -25,27 +25,27 @@ void SalGclkInit() {
 //wait for crystal to warm up
     while((SYSCTRL->PCLKSR.reg & (SYSCTRL_PCLKSR_XOSC32KRDY)) == 0);
 
-/*
-//config xosc32k for the dfll via gen1
-    GCLK->GENDIV.reg =  GCLK_GENDIV_ID(1) |
-                        GCLK_GENDIV_DIV(1);
-    GCLK->GENCTRL.reg = GCLK_GENCTRL_ID(1) |
-                        GCLK_GENCTRL_SRC_XOSC32K |
-                        GCLK_GENCTRL_GENEN;
-    GCLK->CLKCTRL.reg = GCLK_CLKCTRL_GEN(1) |
-                        GCLK_CLKCTRL_CLKEN |
-                        GCLK_CLKCTRL_ID_DFLL48;
-*/
+    /*
+    //config xosc32k for the dfll via gen1
+        GCLK->GENDIV.reg =  GCLK_GENDIV_ID(1) |
+                            GCLK_GENDIV_DIV(1);
+        GCLK->GENCTRL.reg = GCLK_GENCTRL_ID(1) |
+                            GCLK_GENCTRL_SRC_XOSC32K |
+                            GCLK_GENCTRL_GENEN;
+        GCLK->CLKCTRL.reg = GCLK_CLKCTRL_GEN(1) |
+                            GCLK_CLKCTRL_CLKEN |
+                            GCLK_CLKCTRL_ID_DFLL48;
+    */
 
 // gclk for tc3
-    GCLK->GENDIV.reg =  GCLK_GENDIV_ID(2) |
-                        GCLK_GENDIV_DIV(1);
-    GCLK->GENCTRL.reg = GCLK_GENCTRL_ID(2) |
-                        GCLK_GENCTRL_SRC_OSC32K |
-                        GCLK_GENCTRL_GENEN;
-    GCLK->CLKCTRL.reg = GCLK_CLKCTRL_GEN(2) |
-                        GCLK_CLKCTRL_CLKEN |
-                        GCLK_CLKCTRL_ID(TC3_GCLK_ID);
+//     GCLK->GENDIV.reg =  GCLK_GENDIV_ID(2) |
+//                         GCLK_GENDIV_DIV(1);
+//     GCLK->GENCTRL.reg = GCLK_GENCTRL_ID(2) |
+//                         GCLK_GENCTRL_SRC_OSC32K |
+//                         GCLK_GENCTRL_GENEN;
+//     GCLK->CLKCTRL.reg = GCLK_CLKCTRL_GEN(2) |
+//                         GCLK_CLKCTRL_CLKEN |
+//                         GCLK_CLKCTRL_ID(TC3_GCLK_ID);
 
 //Configure the FDLL48MHz FLL, we will use this to provide a clock to the CPU
 //Set the course and fine step sizes, these should be less than 50% of the values used for the course and fine values (P150)
@@ -68,34 +68,34 @@ void SalGclkInit() {
     if (fine == 0x3ff) {
         fine = 0x1ff;
     }
-	
-	//
-	////For generic clock generator 0, select the DFLL48 Clock as input
-		//GCLK->GENDIV.reg  = (GCLK_GENDIV_DIV(1)  | GCLK_GENDIV_ID(1));
-		//GCLK->GENCTRL.reg = (GCLK_GENCTRL_ID(0)  | (GCLK_GENCTRL_SRC_DFLL48M) | (GCLK_GENCTRL_GENEN));
-		//GCLK->CLKCTRL.reg = (GCLK_CLKCTRL_GEN(0) | GCLK_CLKCTRL_CLKEN ) ;
+
+    //
+    ////For generic clock generator 0, select the DFLL48 Clock as input
+    //GCLK->GENDIV.reg  = (GCLK_GENDIV_DIV(1)  | GCLK_GENDIV_ID(1));
+    //GCLK->GENCTRL.reg = (GCLK_GENCTRL_ID(0)  | (GCLK_GENCTRL_SRC_DFLL48M) | (GCLK_GENCTRL_GENEN));
+    //GCLK->CLKCTRL.reg = (GCLK_CLKCTRL_GEN(0) | GCLK_CLKCTRL_CLKEN ) ;
 //
-		//SYSCTRL->DFLLCTRL.reg = (SYSCTRL_DFLLCTRL_MODE) |
-								 //SYSCTRL_DFLLCTRL_USBCRM |
-								 //SYSCTRL_DFLLCTRL_ENABLE;
+    //SYSCTRL->DFLLCTRL.reg = (SYSCTRL_DFLLCTRL_MODE) |
+    //SYSCTRL_DFLLCTRL_USBCRM |
+    //SYSCTRL_DFLLCTRL_ENABLE;
 //
-		//SYSCTRL->DFLLMUL.reg = (SYSCTRL_DFLLMUL_CSTEP(1) | SYSCTRL_DFLLMUL_FSTEP(1));
-		//SYSCTRL->DFLLMUL.reg |= (SYSCTRL_DFLLMUL_MUL(48000000/32768));
+    //SYSCTRL->DFLLMUL.reg = (SYSCTRL_DFLLMUL_CSTEP(1) | SYSCTRL_DFLLMUL_FSTEP(1));
+    //SYSCTRL->DFLLMUL.reg |= (SYSCTRL_DFLLMUL_MUL(48000000/32768));
 //
-	////Wait and see if the DFLL output is good . . .
-		//while((SYSCTRL->PCLKSR.reg & (SYSCTRL_PCLKSR_DFLLRDY)) == 0);
+    ////Wait and see if the DFLL output is good . . .
+    //while((SYSCTRL->PCLKSR.reg & (SYSCTRL_PCLKSR_DFLLRDY)) == 0);
 //
 //
-		//GCLK->GENDIV.reg =  GCLK_GENDIV_ID(4) |
-							//GCLK_GENDIV_DIV(1);
-		//GCLK->GENCTRL.reg = GCLK_GENCTRL_ID(4) |
-							//GCLK_GENCTRL_SRC_OSC8M |
-							//GCLK_GENCTRL_IDC |
-							//GCLK_GENCTRL_RUNSTDBY |
-							//GCLK_GENCTRL_GENEN;
-		//GCLK->CLKCTRL.reg = GCLK_CLKCTRL_ID_TC4_TC5 |
-							//GCLK_CLKCTRL_GEN_GCLK4 |
-							//GCLK_CLKCTRL_CLKEN;
+    //GCLK->GENDIV.reg =  GCLK_GENDIV_ID(4) |
+    //GCLK_GENDIV_DIV(1);
+    //GCLK->GENCTRL.reg = GCLK_GENCTRL_ID(4) |
+    //GCLK_GENCTRL_SRC_OSC8M |
+    //GCLK_GENCTRL_IDC |
+    //GCLK_GENCTRL_RUNSTDBY |
+    //GCLK_GENCTRL_GENEN;
+    //GCLK->CLKCTRL.reg = GCLK_CLKCTRL_ID_TC4_TC5 |
+    //GCLK_CLKCTRL_GEN_GCLK4 |
+    //GCLK_CLKCTRL_CLKEN;
 
     // Disable ONDEMAND mode while writing configurations (errata 9905)
     SYSCTRL->DFLLCTRL.reg = dfll_ctrl_usb & ~SYSCTRL_DFLLCTRL_ONDEMAND;
@@ -190,6 +190,7 @@ volatile uint32_t time_ms = 0;
 
 void RTC_Handler(void) {
     time_ms += 1000;
+
     RTC->MODE1.INTFLAG.reg = 0xFF;
 }
 

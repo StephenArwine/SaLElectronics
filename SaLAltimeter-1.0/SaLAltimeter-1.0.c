@@ -26,7 +26,7 @@ void PinConfig() {
     SaLPinMode(PIN_PA07,INPUT);
     SaLPinMode(PIN_PA10,OUTPUT);
     SaLPinMode(PIN_PA08,OUTPUT);
-    SaLPinMode(BUZZER,OUTSTRONG);
+    //SaLPinMode(BUZZERPIN,OUTSTRONG);
     SaLDigitalOut(PIN_PA10,true);
     SaLDigitalOut(PIN_PA08,true);
     SaLPinMode(MS5607_SLAVE_SELECT_PIN,OUTPUT);
@@ -55,11 +55,13 @@ int main(void) {
     SaLRtcInit();
     PinConfig();
     uart_init(9600);
-    SaLTC4Init();
+    //SaLTC4Init();
     sampleInit();
     adcInit();
     // UsbInit();
-    startUpTone();
+    // startUpTone();
+    SaLBuzzerInit();
+
 
 
     struct IoDescriptor *UsartIoModule;
@@ -83,20 +85,20 @@ int main(void) {
 //     AT25SFWriteByte(0x00101,251);
 //   volatile uint8_t byte = AT25SFGetByte(0x00101);
 
-    pinLow(CC1120_SLAVE_SELECT);
-    delay_ms(30);
-    pinHigh(CC1120_SLAVE_SELECT);
-    delay_ms(20);
-    pinLow(CC1120_SLAVE_SELECT);
-    delay_ms(30);
-    pinHigh(CC1120_SLAVE_SELECT);
-    delay_ms(20);
+//     pinLow(CC1120_SLAVE_SELECT);
+//     delay_ms(30);
+//     pinHigh(CC1120_SLAVE_SELECT);
+//     delay_ms(20);
+//     pinLow(CC1120_SLAVE_SELECT);
+//     delay_ms(30);
+//     pinHigh(CC1120_SLAVE_SELECT);
+//     delay_ms(20);
 
     pinLow(CC1120_SLAVE_SELECT);
     volatile uint8_t ccstatus = syncByte(CC1120_SCK ,CC1120_MOSI, CC1120_MISO, 0x80 | 0x30);
     pinHigh(CC1120_SLAVE_SELECT);
 
-    delay_ms(200);
+    //delay_ms(200);
 
     pinLow(CC1120_SLAVE_SELECT);
 
@@ -105,20 +107,26 @@ int main(void) {
     volatile uint8_t ccstatus3 = getByte(CC1120_SCK_PIN,CC1120_MISO_PIN);
     // byteOut(CC1120_SCK_PIN,CC1120_MOSI_PIN, 0b10111101 );
     pinHigh(CC1120_SLAVE_SELECT);
-    startUpTone();
+    //startUpTone();
 
     volatile float batt;
+
+    //TC5->COUNT16.CTRLA.bit.ENABLE = 0;
 
     while (1) {
         ticks++;
         counter++;
         milliseconds = millis();
+        if (milliseconds > 50000) {
+            TC5->COUNT16.CTRLA.reg = 0;
+            pinLow(BUZZER);
+        }
         if (milliseconds - lastTime > 150000*3.3) {
             // bytesRead = SaLIoRead(UsartIoModule,&message[0],255);
             lastTime = milliseconds;
             //SaLPlayTone(400);
         }
-        sampleTick();
-        batt = senseBatVolts(senseBat);
+        //sampleTick();
+        //batt = senseBatVolts(senseBat);
     }
 }
