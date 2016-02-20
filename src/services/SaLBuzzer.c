@@ -11,7 +11,7 @@ void SaLBuzzerInit() {
     GCLK->GENDIV.reg =  GCLK_GENDIV_ID(5) |
                         GCLK_GENDIV_DIV(1);
     GCLK->GENCTRL.reg = GCLK_GENCTRL_ID(5) |
-                        GCLK_GENCTRL_SRC_XOSC32K |
+                        GCLK_GENCTRL_SRC_OSC8M |
                         GCLK_GENCTRL_GENEN;
 
     GCLK->CLKCTRL.reg = GCLK_CLKCTRL_GEN(0) |
@@ -21,9 +21,12 @@ void SaLBuzzerInit() {
 
     TC5->COUNT16.CTRLA.reg = TC_CTRLA_MODE_COUNT16|
                              TC_CTRLA_RUNSTDBY |
+                             //	 TC_CTRLA_PRESCSYNC_GCLK |
                              TC_CTRLA_PRESCALER_DIV1;
 
-    TC5->COUNT16.CC[0].bit.CC = 260;
+    // TC5->COUNT16.EVCTRL.bit.EVACT = 0x1;
+
+    TC5->COUNT16.CC[0].bit.CC = 2500;
 
     //TC5->COUNT16.PER.reg = 0x02;
 
@@ -31,13 +34,30 @@ void SaLBuzzerInit() {
 
     TC5->COUNT16.CTRLA.reg |= TC_CTRLA_ENABLE;
 
+    TC5->COUNT16.EVCTRL.bit.EVACT = 0x1;
+
+
     NVIC_EnableIRQ(TC5_IRQn);
+    NVIC_SetPriority(TC5_IRQn,0xFFF);
+	
+	TC5->COUNT16.CTRLBSET.reg = TC_CTRLBSET_CMD_STOP;
 }
 
+uint16_t buzzes = 0;
+
 void TC5_Handler() {
-    TC5->COUNT16.INTFLAG.reg = 0XFF;
-    TC5->COUNT16.COUNT.bit.COUNT = 0;
+
+    TC5->COUNT16.INTFLAG.reg = TC_INTFLAG_MC0;
+    TC5->COUNT16.CTRLBSET.reg = TC_CTRLBSET_CMD_RETRIGGER;
     pinToggle(BUZZER);
+    buzzes++;
+    if (buzzes > 2000) {
+        TC5->COUNT16.CTRLA.reg = 0;
+        TC5->COUNT16.CTRLBSET.reg = TC_CTRLBSET_CMD_STOP;
+        buzzes = 0;
+        pinLow(BUZZER);
+    }
+
 }
 
 void SaLPlayTone(int16_t tone_,int16_t durration) {

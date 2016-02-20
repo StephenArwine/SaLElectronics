@@ -107,26 +107,24 @@ int main(void) {
     volatile uint8_t ccstatus3 = getByte(CC1120_SCK_PIN,CC1120_MISO_PIN);
     // byteOut(CC1120_SCK_PIN,CC1120_MOSI_PIN, 0b10111101 );
     pinHigh(CC1120_SLAVE_SELECT);
-    //startUpTone();
+    startUpTone();
 
     volatile float batt;
 
     //TC5->COUNT16.CTRLA.bit.ENABLE = 0;
 
+TC5->COUNT16.CTRLBCLR.reg= TC_CTRLBCLR_CMD_RETRIGGER; 
+
     while (1) {
         ticks++;
         counter++;
         milliseconds = millis();
-        if (milliseconds > 50000) {
-            TC5->COUNT16.CTRLA.reg = 0;
-            pinLow(BUZZER);
-        }
         if (milliseconds - lastTime > 150000*3.3) {
             // bytesRead = SaLIoRead(UsartIoModule,&message[0],255);
             lastTime = milliseconds;
             //SaLPlayTone(400);
         }
-        //sampleTick();
-        //batt = senseBatVolts(senseBat);
+        sampleTick();
+        batt = senseBatVolts(senseBat);
     }
 }
