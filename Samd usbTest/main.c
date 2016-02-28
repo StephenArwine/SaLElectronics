@@ -109,8 +109,8 @@ int main(void) {
     ((Port *)PORT)->Group[0].PINCFG[25].reg = 0x41;
 
 
-    pin_mux(PIN_USB_DM);
-    pin_mux(PIN_USB_DP);
+    pinMux(PIN_USB_DM);
+    pinMux(PIN_USB_DP);
 
     usb_init();
     usb_attach();

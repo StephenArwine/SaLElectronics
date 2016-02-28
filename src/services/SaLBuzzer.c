@@ -22,11 +22,11 @@ void SaLBuzzerInit() {
     TC5->COUNT16.CTRLA.reg = TC_CTRLA_MODE_COUNT16|
                              TC_CTRLA_RUNSTDBY |
                              //	 TC_CTRLA_PRESCSYNC_GCLK |
-                             TC_CTRLA_PRESCALER_DIV1;
+                             TC_CTRLA_PRESCALER_DIV4;
 
     // TC5->COUNT16.EVCTRL.bit.EVACT = 0x1;
 
-    TC5->COUNT16.CC[0].bit.CC = 2500;
+    TC5->COUNT16.CC[0].bit.CC = 700;
 
     //TC5->COUNT16.PER.reg = 0x02;
 
@@ -39,8 +39,8 @@ void SaLBuzzerInit() {
 
     NVIC_EnableIRQ(TC5_IRQn);
     NVIC_SetPriority(TC5_IRQn,0xFFF);
-	
-	TC5->COUNT16.CTRLBSET.reg = TC_CTRLBSET_CMD_STOP;
+
+    TC5->COUNT16.CTRLBSET.reg = TC_CTRLBSET_CMD_STOP;
 }
 
 uint16_t buzzes = 0;
@@ -51,7 +51,7 @@ void TC5_Handler() {
     TC5->COUNT16.CTRLBSET.reg = TC_CTRLBSET_CMD_RETRIGGER;
     pinToggle(BUZZER);
     buzzes++;
-    if (buzzes > 2000) {
+    if (buzzes > 4000) {
         TC5->COUNT16.CTRLA.reg = 0;
         TC5->COUNT16.CTRLBSET.reg = TC_CTRLBSET_CMD_STOP;
         buzzes = 0;
@@ -78,8 +78,23 @@ void SaLPlayTone(int16_t tone_,int16_t durration) {
         elapsed_time += (tone_);
 
 
-
     }
-
-
 }
+
+uint32_t milliseconds;
+uint32_t lastbuzz;
+uint16_t toneticks = 1000;
+
+void toneTick() {
+
+    if (toneticks > 0) {
+
+        if (milliseconds-lastbuzz > 3) {
+            toneticks--;
+            pinToggle(BUZZER);
+			lastbuzz = milliseconds;
+        }
+    }
+}
+
+

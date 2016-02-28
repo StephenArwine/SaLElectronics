@@ -27,7 +27,7 @@ static inline void startUpTone() {
 };
 
 
-
+void toneTick();
 
 
 #endif
