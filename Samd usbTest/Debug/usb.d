@@ -20,8 +20,7 @@ usb.d usb.o: ../../src/usb/usb.c ../../src/usb/usb.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\cdefs.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\string.h \
  ../../src/usb/usb_standard.h ../../src/usb/class/cdc/cdc_standard.h \
- ../../src/services/SaLPort.h ../boardDefines.h \
- ../../src/services/SaLTypes.h \
+ ../../src/services/SaLPort.h ../../src/services/SaLTypes.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\stdio.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.9.3\include\stdarg.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\types.h \
@@ -144,8 +143,6 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 ../../src/usb/class/cdc/cdc_standard.h:
 
 ../../src/services/SaLPort.h:
-
-../boardDefines.h:
 
 ../../src/services/SaLTypes.h:
 

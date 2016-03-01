@@ -1,6 +1,5 @@
 SaLPort.d SaLPort.o: ../../src/services/SaLPort.c \
- ../../src/services/SaLPort.h ../boardDefines.h \
- ../../src/services/SaLTypes.h \
+ ../../src/services/SaLPort.h ../../src/services/SaLTypes.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.9.3\include\stddef.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.9.3\include\stdint.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\stdint.h \
@@ -95,8 +94,6 @@ SaLPort.d SaLPort.o: ../../src/services/SaLPort.c \
  ../../src/include/err_codes.h
 
 ../../src/services/SaLPort.h:
-
-../boardDefines.h:
 
 ../../src/services/SaLTypes.h:
 

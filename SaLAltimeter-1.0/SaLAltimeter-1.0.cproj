@@ -131,7 +131,7 @@
       <Value>../../src</Value>
       <Value>C:\Users\sal\Documents\SaLElectronics\src</Value>
       <Value>..</Value>
-      <Value>%24(PackRepoDir)\atmel\SAMD21_DFP\1.0.222\samd21a\include</Value>
+      <Value>%24(PackRepoDir)\Atmel\SAMD21_DFP\1.0.229\samd21a\include</Value>
     </ListValues>
   </armgcc.compiler.directories.IncludePaths>
   <armgcc.compiler.optimization.level>Optimize (-O1)</armgcc.compiler.optimization.level>
@@ -159,7 +159,7 @@
   <armgcc.preprocessingassembler.general.IncludePaths>
     <ListValues>
       <Value>%24(PackRepoDir)\arm\cmsis\4.2.0\CMSIS\Include\</Value>
-      <Value>%24(PackRepoDir)\atmel\SAMD21_DFP\1.0.222\samd21a\include</Value>
+      <Value>%24(PackRepoDir)\Atmel\SAMD21_DFP\1.0.229\samd21a\include</Value>
     </ListValues>
   </armgcc.preprocessingassembler.general.IncludePaths>
 </ArmGcc>
@@ -198,7 +198,7 @@
       <Value>../../src/usb</Value>
       <Value>../../src/usb/class/cdc</Value>
       <Value>../../src/usb/device</Value>
-      <Value>%24(PackRepoDir)\atmel\SAMD21_DFP\1.0.222\samd21a\include</Value>
+      <Value>%24(PackRepoDir)\Atmel\SAMD21_DFP\1.0.229\samd21a\include</Value>
     </ListValues>
   </armgcc.compiler.directories.IncludePaths>
   <armgcc.compiler.optimization.level>Optimize (-O1)</armgcc.compiler.optimization.level>
@@ -229,7 +229,7 @@
   <armgcc.preprocessingassembler.general.IncludePaths>
     <ListValues>
       <Value>%24(PackRepoDir)\arm\cmsis\4.2.0\CMSIS\Include\</Value>
-      <Value>%24(PackRepoDir)\atmel\SAMD21_DFP\1.0.222\samd21a\include</Value>
+      <Value>%24(PackRepoDir)\Atmel\SAMD21_DFP\1.0.229\samd21a\include</Value>
     </ListValues>
   </armgcc.preprocessingassembler.general.IncludePaths>
   <armgcc.preprocessingassembler.debugging.DebugLevel>Default (-Wa,-g)</armgcc.preprocessingassembler.debugging.DebugLevel>

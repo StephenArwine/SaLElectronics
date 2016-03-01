@@ -19,6 +19,7 @@ uint32_t bytesRead;
 bool retrieveSample;
 bool sampleReady;
 uint32_t index2;
+extern uint32_t milliseconds = 0;
 
 
 
@@ -79,7 +80,7 @@ int main(void) {
 
 
     volatile uint16_t ticks = 0;
-    uint32_t milliseconds = 0;
+
     uint32_t lastTime = 0;
     //uint8_t message[255];
 //     AT25SFErace4KBlock(0);
@@ -108,14 +109,20 @@ int main(void) {
     volatile uint8_t ccstatus3 = getByte(CC1120_SCK_PIN,CC1120_MISO_PIN);
     // byteOut(CC1120_SCK_PIN,CC1120_MOSI_PIN, 0b10111101 );
     pinHigh(CC1120_SLAVE_SELECT);
+
+<<<<<<< HEAD
+
+
+=======
+     startUpTone();
     startUpTone();
-
-
-
+	
+>>>>>>> origin/master
     volatile float batt;
 
     //TC5->COUNT16.CTRLA.bit.ENABLE = 0;
 
+<<<<<<< HEAD
 //TC5->COUNT16.CTRLBCLR.reg= TC_CTRLBCLR_CMD_RETRIGGER;
 
     while (1) {
@@ -124,5 +131,15 @@ int main(void) {
             continue;
         }
         counter++;
+=======
+    TC5->COUNT16.CTRLBCLR.reg= TC_CTRLBCLR_CMD_RETRIGGER;
+
+    while (1) {
+
+        milliseconds = millis();
+
+        sampleTick(); 
+        batt = senseBatVolts(senseBat);
+>>>>>>> origin/master
     }
 }

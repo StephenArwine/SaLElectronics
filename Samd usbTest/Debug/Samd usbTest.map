@@ -152,7 +152,7 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x20 SaLPort.o
  .debug_ranges  0x00000000       0x10 SaLPort.o
- .debug_macro   0x00000000      0x446 SaLPort.o
+ .debug_macro   0x00000000      0x442 SaLPort.o
  .debug_macro   0x00000000      0x832 SaLPort.o
  .debug_macro   0x00000000       0x10 SaLPort.o
  .debug_macro   0x00000000      0x166 SaLPort.o
@@ -246,7 +246,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x6d SaLPort.o
  .debug_macro   0x00000000       0xbe SaLPort.o
  .debug_macro   0x00000000       0x16 SaLPort.o
- .debug_line    0x00000000      0x808 SaLPort.o
+ .debug_line    0x00000000      0x7f3 SaLPort.o
  .debug_str     0x00000000    0x6bc1c SaLPort.o
  .comment       0x00000000       0x5c SaLPort.o
  .debug_frame   0x00000000       0x28 SaLPort.o
@@ -1796,13 +1796,13 @@ OUTPUT(Samd usbTest.elf elf32-littlearm)
  .comment       0x00000000       0x5c Device_Startup/startup_samd21.o
  .comment       0x00000000       0x5c main.o
 
-.debug_info     0x00000000     0xb5a5
+.debug_info     0x00000000     0xb5c9
  .debug_info    0x00000000     0x36de usb_samd.o
- .debug_info    0x000036de      0xe60 usb.o
- .debug_info    0x0000453e      0x351 usbserial.o
- .debug_info    0x0000488f      0x6bb usb_requests.o
- .debug_info    0x00004f4a     0x3a6f Device_Startup/startup_samd21.o
- .debug_info    0x000089b9     0x2bec main.o
+ .debug_info    0x000036de      0xe70 usb.o
+ .debug_info    0x0000454e      0x351 usbserial.o
+ .debug_info    0x0000489f      0x6bb usb_requests.o
+ .debug_info    0x00004f5a     0x3a6f Device_Startup/startup_samd21.o
+ .debug_info    0x000089c9     0x2c00 main.o
 
 .debug_abbrev   0x00000000      0xe17
  .debug_abbrev  0x00000000      0x3d8 usb_samd.o
@@ -1842,30 +1842,30 @@ OUTPUT(Samd usbTest.elf elf32-littlearm)
  .debug_ranges  0x00000190       0x18 Device_Startup/startup_samd21.o
  .debug_ranges  0x000001a8       0x18 main.o
 
-.debug_macro    0x00000000     0x17e8
+.debug_macro    0x00000000     0x17e0
  .debug_macro   0x00000000      0x413 usb_samd.o
  .debug_macro   0x00000413       0x10 usb_samd.o
  .debug_macro   0x00000423       0xbe usb_samd.o
  .debug_macro   0x000004e1       0x10 usb_samd.o
- .debug_macro   0x000004f1      0x4f1 usb.o
- .debug_macro   0x000009e2       0x4c usb.o
- .debug_macro   0x00000a2e       0x1c usb.o
- .debug_macro   0x00000a4a       0x40 usb.o
- .debug_macro   0x00000a8a      0x48d usbserial.o
- .debug_macro   0x00000f17       0x3a usbserial.o
- .debug_macro   0x00000f51      0x118 usb_requests.o
- .debug_macro   0x00001069      0x2d6 Device_Startup/startup_samd21.o
- .debug_macro   0x0000133f      0x4a9 main.o
+ .debug_macro   0x000004f1      0x4ed usb.o
+ .debug_macro   0x000009de       0x4c usb.o
+ .debug_macro   0x00000a2a       0x1c usb.o
+ .debug_macro   0x00000a46       0x40 usb.o
+ .debug_macro   0x00000a86      0x48d usbserial.o
+ .debug_macro   0x00000f13       0x3a usbserial.o
+ .debug_macro   0x00000f4d      0x118 usb_requests.o
+ .debug_macro   0x00001065      0x2d6 Device_Startup/startup_samd21.o
+ .debug_macro   0x0000133b      0x4a5 main.o
 
-.debug_line     0x00000000     0x2f99
+.debug_line     0x00000000     0x2f6f
  .debug_line    0x00000000      0xa27 usb_samd.o
- .debug_line    0x00000a27      0x978 usb.o
- .debug_line    0x0000139f      0x8c6 usbserial.o
- .debug_line    0x00001c65      0x38b usb_requests.o
- .debug_line    0x00001ff0      0x6ce Device_Startup/startup_samd21.o
- .debug_line    0x000026be      0x8db main.o
+ .debug_line    0x00000a27      0x963 usb.o
+ .debug_line    0x0000138a      0x8c6 usbserial.o
+ .debug_line    0x00001c50      0x38b usb_requests.o
+ .debug_line    0x00001fdb      0x6ce Device_Startup/startup_samd21.o
+ .debug_line    0x000026a9      0x8c6 main.o
 
-.debug_str      0x00000000    0x6e943
+.debug_str      0x00000000    0x6e942
  .debug_str     0x00000000    0x6bbdb usb_samd.o
                               0x6c074 (size before relaxing)
  .debug_str     0x0006bbdb     0x1b0d usb.o
@@ -1876,8 +1876,8 @@ OUTPUT(Samd usbTest.elf elf32-littlearm)
                                0x5c23 (size before relaxing)
  .debug_str     0x0006d9ba      0x9da Device_Startup/startup_samd21.o
                               0x69669 (size before relaxing)
- .debug_str     0x0006e394      0x5af main.o
-                              0x6cd11 (size before relaxing)
+ .debug_str     0x0006e394      0x5ae main.o
+                              0x6cd10 (size before relaxing)
 
 .debug_frame    0x00000000      0x628
  .debug_frame   0x00000000      0x1b8 usb_samd.o

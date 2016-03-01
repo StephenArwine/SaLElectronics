@@ -15,23 +15,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
   5 .comment      0000005b  00000000  00000000  00010450  2**0
                   CONTENTS, READONLY
-  6 .debug_info   0000b5a5  00000000  00000000  000104ab  2**0
+  6 .debug_info   0000b5c9  00000000  00000000  000104ab  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_abbrev 00000e17  00000000  00000000  0001ba50  2**0
+  7 .debug_abbrev 00000e17  00000000  00000000  0001ba74  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_loc    00000faf  00000000  00000000  0001c867  2**0
+  8 .debug_loc    00000faf  00000000  00000000  0001c88b  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_aranges 00000220  00000000  00000000  0001d816  2**0
+  9 .debug_aranges 00000220  00000000  00000000  0001d83a  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_ranges 000001c0  00000000  00000000  0001da36  2**0
+ 10 .debug_ranges 000001c0  00000000  00000000  0001da5a  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_macro  000017e8  00000000  00000000  0001dbf6  2**0
+ 11 .debug_macro  000017e0  00000000  00000000  0001dc1a  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_line   00002f99  00000000  00000000  0001f3de  2**0
+ 12 .debug_line   00002f6f  00000000  00000000  0001f3fa  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_str    0006e943  00000000  00000000  00022377  2**0
+ 13 .debug_str    0006e942  00000000  00000000  00022369  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_frame  00000628  00000000  00000000  00090cbc  2**2
+ 14 .debug_frame  00000628  00000000  00000000  00090cac  2**2
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -2408,11 +2408,11 @@ int main(void) {
      d0c:	2059      	movs	r0, #89	; 0x59
      d0e:	541a      	strb	r2, [r3, r0]
 
-inline static void pin_mux(Pin p) {
-	if (p.pin & 1) {
-		PORT->Group[p.group].PMUX[p.pin/2].bit.PMUXO = p.mux;
-		} else {
-		PORT->Group[p.group].PMUX[p.pin/2].bit.PMUXE = p.mux;
+inline static void pinMux(Pin p) {
+    if (p.pin & 1) {
+        PORT->Group[p.group].PMUX[p.pin/2].bit.PMUXO = p.mux;
+    } else {
+        PORT->Group[p.group].PMUX[p.pin/2].bit.PMUXE = p.mux;
      d10:	213c      	movs	r1, #60	; 0x3c
      d12:	5c5a      	ldrb	r2, [r3, r1]
      d14:	250f      	movs	r5, #15
@@ -2421,37 +2421,35 @@ inline static void pin_mux(Pin p) {
      d1a:	2206      	movs	r2, #6
      d1c:	432a      	orrs	r2, r5
      d1e:	545a      	strb	r2, [r3, r1]
-	}
-
-	PORT->Group[p.group].PINCFG[p.pin].bit.PMUXEN = 1;
+    }
+    PORT->Group[p.group].PINCFG[p.pin].bit.PMUXEN = 1;
      d20:	5d1d      	ldrb	r5, [r3, r4]
      d22:	2201      	movs	r2, #1
      d24:	4315      	orrs	r5, r2
      d26:	551d      	strb	r5, [r3, r4]
-	uint8_t  chan;
-} Pin;
+    return (PORT->Group[p.group].IN.reg & (1<<p.pin)) != 0;
+}
 
-inline static void pin_mux(Pin p) {
-	if (p.pin & 1) {
-		PORT->Group[p.group].PMUX[p.pin/2].bit.PMUXO = p.mux;
+inline static void pinMux(Pin p) {
+    if (p.pin & 1) {
+        PORT->Group[p.group].PMUX[p.pin/2].bit.PMUXO = p.mux;
      d28:	5c5c      	ldrb	r4, [r3, r1]
      d2a:	250f      	movs	r5, #15
      d2c:	4025      	ands	r5, r4
      d2e:	2460      	movs	r4, #96	; 0x60
      d30:	432c      	orrs	r4, r5
      d32:	545c      	strb	r4, [r3, r1]
-		} else {
-		PORT->Group[p.group].PMUX[p.pin/2].bit.PMUXE = p.mux;
-	}
-
-	PORT->Group[p.group].PINCFG[p.pin].bit.PMUXEN = 1;
+    } else {
+        PORT->Group[p.group].PMUX[p.pin/2].bit.PMUXE = p.mux;
+    }
+    PORT->Group[p.group].PINCFG[p.pin].bit.PMUXEN = 1;
      d34:	5c19      	ldrb	r1, [r3, r0]
      d36:	430a      	orrs	r2, r1
      d38:	541a      	strb	r2, [r3, r0]
 
 
-    pin_mux(PIN_USB_DM);
-    pin_mux(PIN_USB_DP);
+    pinMux(PIN_USB_DM);
+    pinMux(PIN_USB_DP);
 
     usb_init();
      d3a:	4b0c      	ldr	r3, [pc, #48]	; (d6c <main+0x70>)
