@@ -46,6 +46,6 @@ void sampleInit();
 /* returns a current data sample from the altimeters sensors */
 struct sample getSample(struct AltimeterModule altimeter);
 
-void sampleTick();
+bool sampleTick();
 
 #endif

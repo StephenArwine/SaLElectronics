@@ -17,6 +17,7 @@
 
 uint32_t bytesRead;
 bool retrieveSample;
+bool sampleReady;
 uint32_t index2;
 
 
@@ -109,22 +110,19 @@ int main(void) {
     pinHigh(CC1120_SLAVE_SELECT);
     startUpTone();
 
+
+
     volatile float batt;
 
     //TC5->COUNT16.CTRLA.bit.ENABLE = 0;
 
-TC5->COUNT16.CTRLBCLR.reg= TC_CTRLBCLR_CMD_RETRIGGER; 
+//TC5->COUNT16.CTRLBCLR.reg= TC_CTRLBCLR_CMD_RETRIGGER;
 
     while (1) {
-        ticks++;
-        counter++;
-        milliseconds = millis();
-        if (milliseconds - lastTime > 150000*3.3) {
-            // bytesRead = SaLIoRead(UsartIoModule,&message[0],255);
-            lastTime = milliseconds;
-            //SaLPlayTone(400);
+
+        if (!sampleTick()) {
+            continue;
         }
-        sampleTick();
-        batt = senseBatVolts(senseBat);
+        counter++;
     }
 }

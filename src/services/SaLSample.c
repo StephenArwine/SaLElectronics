@@ -32,7 +32,7 @@ uint16_t thisTime;
 uint16_t lastTime;
 uint16_t deltatt;
 
-void sampleTick() {
+bool sampleTick() {
 
     if (!baroSampleReady) baroSampleReady = baroSample();
     if (!accelSampleReady) accelSampleReady = accelSample();
@@ -66,10 +66,13 @@ void sampleTick() {
             thisTime = millis();
             deltatt = thisTime - lastTime;
             lastTime = millis();
-			            SaLPlayTone(400,100);
+			            //SaLPlayTone(700,100);
 
         }
-    }
+		return true;
+    } else {
+		return false;
+	}
 }
 
 void sampleInit() {
