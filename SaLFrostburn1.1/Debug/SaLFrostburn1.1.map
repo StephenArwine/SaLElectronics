@@ -356,8 +356,6 @@ Discarded input sections
  .bss           0x00000000        0x0 ADXL345.o
  .text.setRange
                 0x00000000       0x2c ADXL345.o
- .text.getADXL345Event
-                0x00000000       0x40 ADXL345.o
  .text.getevents
                 0x00000000       0xd4 ADXL345.o
  .text.currentX
@@ -366,114 +364,6 @@ Discarded input sections
                 0x00000000       0x34 ADXL345.o
  .text.currentZ
                 0x00000000       0x34 ADXL345.o
- .debug_info    0x00000000      0xd18 ADXL345.o
- .debug_abbrev  0x00000000      0x2fa ADXL345.o
- .debug_loc     0x00000000      0x207 ADXL345.o
- .debug_aranges
-                0x00000000       0x48 ADXL345.o
- .debug_ranges  0x00000000       0x38 ADXL345.o
- .debug_macro   0x00000000      0x488 ADXL345.o
- .debug_macro   0x00000000      0x832 ADXL345.o
- .debug_macro   0x00000000       0x10 ADXL345.o
- .debug_macro   0x00000000      0x166 ADXL345.o
- .debug_macro   0x00000000       0x22 ADXL345.o
- .debug_macro   0x00000000       0x44 ADXL345.o
- .debug_macro   0x00000000       0x58 ADXL345.o
- .debug_macro   0x00000000       0x22 ADXL345.o
- .debug_macro   0x00000000      0x1df ADXL345.o
- .debug_macro   0x00000000       0x58 ADXL345.o
- .debug_macro   0x00000000       0x35 ADXL345.o
- .debug_macro   0x00000000       0x9c ADXL345.o
- .debug_macro   0x00000000       0x16 ADXL345.o
- .debug_macro   0x00000000       0x35 ADXL345.o
- .debug_macro   0x00000000      0x29d ADXL345.o
- .debug_macro   0x00000000       0x10 ADXL345.o
- .debug_macro   0x00000000       0x52 ADXL345.o
- .debug_macro   0x00000000       0x16 ADXL345.o
- .debug_macro   0x00000000       0x43 ADXL345.o
- .debug_macro   0x00000000      0x180 ADXL345.o
- .debug_macro   0x00000000       0x10 ADXL345.o
- .debug_macro   0x00000000       0x22 ADXL345.o
- .debug_macro   0x00000000       0xbe ADXL345.o
- .debug_macro   0x00000000       0x16 ADXL345.o
- .debug_macro   0x00000000      0x197 ADXL345.o
- .debug_macro   0x00000000       0x16 ADXL345.o
- .debug_macro   0x00000000       0x16 ADXL345.o
- .debug_macro   0x00000000       0x29 ADXL345.o
- .debug_macro   0x00000000       0x22 ADXL345.o
- .debug_macro   0x00000000       0x16 ADXL345.o
- .debug_macro   0x00000000       0x40 ADXL345.o
- .debug_macro   0x00000000       0x3a ADXL345.o
- .debug_macro   0x00000000       0x1f ADXL345.o
- .debug_macro   0x00000000      0x250 ADXL345.o
- .debug_macro   0x00000000      0x682 ADXL345.o
- .debug_macro   0x00000000      0x8bf ADXL345.o
- .debug_macro   0x00000000      0x235 ADXL345.o
- .debug_macro   0x00000000      0xd6a ADXL345.o
- .debug_macro   0x00000000      0x4ce ADXL345.o
- .debug_macro   0x00000000      0x9f8 ADXL345.o
- .debug_macro   0x00000000      0x82b ADXL345.o
- .debug_macro   0x00000000      0x45f ADXL345.o
- .debug_macro   0x00000000       0x5e ADXL345.o
- .debug_macro   0x00000000      0x906 ADXL345.o
- .debug_macro   0x00000000      0x225 ADXL345.o
- .debug_macro   0x00000000      0x797 ADXL345.o
- .debug_macro   0x00000000       0x5e ADXL345.o
- .debug_macro   0x00000000      0x634 ADXL345.o
- .debug_macro   0x00000000      0x3b6 ADXL345.o
- .debug_macro   0x00000000      0xc55 ADXL345.o
- .debug_macro   0x00000000     0x1092 ADXL345.o
- .debug_macro   0x00000000      0xc4a ADXL345.o
- .debug_macro   0x00000000      0x6bf ADXL345.o
- .debug_macro   0x00000000     0x1b4b ADXL345.o
- .debug_macro   0x00000000     0x144a ADXL345.o
- .debug_macro   0x00000000      0x34e ADXL345.o
- .debug_macro   0x00000000       0x7c ADXL345.o
- .debug_macro   0x00000000       0xa0 ADXL345.o
- .debug_macro   0x00000000       0x4c ADXL345.o
- .debug_macro   0x00000000       0xca ADXL345.o
- .debug_macro   0x00000000       0x94 ADXL345.o
- .debug_macro   0x00000000       0x58 ADXL345.o
- .debug_macro   0x00000000      0x364 ADXL345.o
- .debug_macro   0x00000000       0x82 ADXL345.o
- .debug_macro   0x00000000      0x197 ADXL345.o
- .debug_macro   0x00000000       0xb8 ADXL345.o
- .debug_macro   0x00000000       0xa0 ADXL345.o
- .debug_macro   0x00000000       0xb2 ADXL345.o
- .debug_macro   0x00000000       0x1c ADXL345.o
- .debug_macro   0x00000000       0x1c ADXL345.o
- .debug_macro   0x00000000       0x1c ADXL345.o
- .debug_macro   0x00000000       0x7c ADXL345.o
- .debug_macro   0x00000000      0x161 ADXL345.o
- .debug_macro   0x00000000       0xdc ADXL345.o
- .debug_macro   0x00000000      0x12f ADXL345.o
- .debug_macro   0x00000000      0x12f ADXL345.o
- .debug_macro   0x00000000      0x12f ADXL345.o
- .debug_macro   0x00000000      0x12f ADXL345.o
- .debug_macro   0x00000000      0x12f ADXL345.o
- .debug_macro   0x00000000      0x12f ADXL345.o
- .debug_macro   0x00000000      0x11e ADXL345.o
- .debug_macro   0x00000000       0xe2 ADXL345.o
- .debug_macro   0x00000000       0xe2 ADXL345.o
- .debug_macro   0x00000000       0xe2 ADXL345.o
- .debug_macro   0x00000000      0x12c ADXL345.o
- .debug_macro   0x00000000      0x100 ADXL345.o
- .debug_macro   0x00000000       0xf4 ADXL345.o
- .debug_macro   0x00000000      0x40f ADXL345.o
- .debug_macro   0x00000000       0x40 ADXL345.o
- .debug_macro   0x00000000      0x361 ADXL345.o
- .debug_macro   0x00000000     0x16ea ADXL345.o
- .debug_macro   0x00000000       0x6d ADXL345.o
- .debug_macro   0x00000000       0xbe ADXL345.o
- .debug_macro   0x00000000       0x16 ADXL345.o
- .debug_macro   0x00000000       0xe2 ADXL345.o
- .debug_macro   0x00000000       0xbe ADXL345.o
- .debug_line    0x00000000      0x8c6 ADXL345.o
- .debug_str     0x00000000    0x6c4b0 ADXL345.o
- .comment       0x00000000       0x5c ADXL345.o
- .debug_frame   0x00000000       0xc0 ADXL345.o
- .ARM.attributes
-                0x00000000       0x32 ADXL345.o
  COMMON         0x00000000        0x6 ADXL345.o
  .group         0x00000000        0x8 AT25SF.o
  .group         0x00000000        0x8 AT25SF.o
@@ -684,7 +574,7 @@ Discarded input sections
  .debug_macro   0x00000000       0xe2 AT25SF.o
  .debug_macro   0x00000000       0x22 AT25SF.o
  .debug_line    0x00000000      0x8d3 AT25SF.o
- .debug_str     0x00000000    0x6c13c AT25SF.o
+ .debug_str     0x00000000    0x6c131 AT25SF.o
  .comment       0x00000000       0x5c AT25SF.o
  .debug_frame   0x00000000       0x90 AT25SF.o
  .ARM.attributes
@@ -884,7 +774,7 @@ Discarded input sections
  .debug_macro   0x00000000       0xbe CC1120.o
  .debug_macro   0x00000000      0xd53 CC1120.o
  .debug_line    0x00000000      0x7de CC1120.o
- .debug_str     0x00000000    0x7035a CC1120.o
+ .debug_str     0x00000000    0x7034f CC1120.o
  .comment       0x00000000       0x5c CC1120.o
  .ARM.attributes
                 0x00000000       0x32 CC1120.o
@@ -989,15 +879,8 @@ Discarded input sections
  .bss           0x00000000        0x0 MS5607.o
  .text.read_Adc
                 0x00000000       0x68 MS5607.o
- .text.readMS5607AdcResults
-                0x00000000       0x50 MS5607.o
- .text.ConvertPressureTemperature
-                0x00000000       0x90 MS5607.o
  .text.paToFeetNOAA
                 0x00000000       0x70 MS5607.o
- .text.pascalToCent
-                0x00000000       0x48 MS5607.o
- .rodata        0x00000000      0x134 MS5607.o
  .debug_macro   0x00000000      0x832 MS5607.o
  .debug_macro   0x00000000       0x10 MS5607.o
  .debug_macro   0x00000000      0x166 MS5607.o
@@ -1295,7 +1178,7 @@ Discarded input sections
  .debug_macro   0x00000000       0xbe MTK3329.o
  .debug_macro   0x00000000       0x22 MTK3329.o
  .debug_line    0x00000000      0x83c MTK3329.o
- .debug_str     0x00000000    0x6bbf1 MTK3329.o
+ .debug_str     0x00000000    0x6bbe6 MTK3329.o
  .comment       0x00000000       0x5c MTK3329.o
  .debug_frame   0x00000000       0x5c MTK3329.o
  .ARM.attributes
@@ -1380,7 +1263,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x35 utils_syscalls.o
  .debug_macro   0x00000000      0x122 utils_syscalls.o
  .debug_line    0x00000000      0x38d utils_syscalls.o
- .debug_str     0x00000000     0x5f35 utils_syscalls.o
+ .debug_str     0x00000000     0x5f2a utils_syscalls.o
  .comment       0x00000000       0x5c utils_syscalls.o
  .debug_frame   0x00000000       0xa8 utils_syscalls.o
  .ARM.attributes
@@ -1483,15 +1366,6 @@ Discarded input sections
  .text          0x00000000        0x0 SaLAccelerometer.o
  .data          0x00000000        0x0 SaLAccelerometer.o
  .bss           0x00000000        0x0 SaLAccelerometer.o
- .text.accelSample
-                0x00000000      0x170 SaLAccelerometer.o
- .rodata        0x00000000       0x20 SaLAccelerometer.o
- .text.SaLGetAccelX
-                0x00000000        0xc SaLAccelerometer.o
- .text.SaLGetAccelY
-                0x00000000        0xc SaLAccelerometer.o
- .text.SaLGetAccelZ
-                0x00000000        0xc SaLAccelerometer.o
  .debug_macro   0x00000000      0x832 SaLAccelerometer.o
  .debug_macro   0x00000000       0x10 SaLAccelerometer.o
  .debug_macro   0x00000000      0x166 SaLAccelerometer.o
@@ -1790,7 +1664,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x46 SaLAltimeter.o
  .debug_macro   0x00000000       0x22 SaLAltimeter.o
  .debug_line    0x00000000      0x8b1 SaLAltimeter.o
- .debug_str     0x00000000    0x6c429 SaLAltimeter.o
+ .debug_str     0x00000000    0x6c41e SaLAltimeter.o
  .comment       0x00000000       0x5c SaLAltimeter.o
  .ARM.attributes
                 0x00000000       0x32 SaLAltimeter.o
@@ -2084,13 +1958,6 @@ Discarded input sections
  .text          0x00000000        0x0 SaLBarometer.o
  .data          0x00000000        0x0 SaLBarometer.o
  .bss           0x00000000        0x0 SaLBarometer.o
- .text.sendMS5607D2ReadReq
-                0x00000000       0x20 SaLBarometer.o
- .text.baroSample
-                0x00000000      0x12c SaLBarometer.o
- .rodata        0x00000000       0x24 SaLBarometer.o
- .text.SaLBaroGetHeight
-                0x00000000        0xc SaLBarometer.o
  .debug_macro   0x00000000      0x832 SaLBarometer.o
  .debug_macro   0x00000000       0x10 SaLBarometer.o
  .debug_macro   0x00000000      0x166 SaLBarometer.o
@@ -2283,6 +2150,8 @@ Discarded input sections
  .text          0x00000000        0x0 SaLBitBang.o
  .data          0x00000000        0x0 SaLBitBang.o
  .bss           0x00000000        0x0 SaLBitBang.o
+ .text.syncByte
+                0x00000000       0x98 SaLBitBang.o
  .text.bitsOut  0x00000000       0x64 SaLBitBang.o
  .text.getBits  0x00000000       0x68 SaLBitBang.o
  .debug_macro   0x00000000      0x832 SaLBitBang.o
@@ -3372,7 +3241,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x22 SaLIo.o
  .debug_macro   0x00000000      0x1e1 SaLIo.o
  .debug_line    0x00000000      0x95a SaLIo.o
- .debug_str     0x00000000    0x6d003 SaLIo.o
+ .debug_str     0x00000000    0x6cff8 SaLIo.o
  .comment       0x00000000       0x5c SaLIo.o
  .debug_frame   0x00000000       0x40 SaLIo.o
  .ARM.attributes
@@ -3570,7 +3439,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x6d SaLLog.o
  .debug_macro   0x00000000       0xbe SaLLog.o
  .debug_line    0x00000000      0x7cc SaLLog.o
- .debug_str     0x00000000    0x6ba0f SaLLog.o
+ .debug_str     0x00000000    0x6ba04 SaLLog.o
  .comment       0x00000000       0x5c SaLLog.o
  .ARM.attributes
                 0x00000000       0x32 SaLLog.o
@@ -3773,7 +3642,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x6d SaLMath.o
  .debug_macro   0x00000000       0xbe SaLMath.o
  .debug_line    0x00000000      0x7f5 SaLMath.o
- .debug_str     0x00000000    0x6baad SaLMath.o
+ .debug_str     0x00000000    0x6baa2 SaLMath.o
  .comment       0x00000000       0x5c SaLMath.o
  .debug_frame   0x00000000       0x4c SaLMath.o
  .ARM.attributes
@@ -4067,11 +3936,8 @@ Discarded input sections
  .group         0x00000000        0x8 SaLSample.o
  .text          0x00000000        0x0 SaLSample.o
  .data          0x00000000        0x0 SaLSample.o
- .bss           0x00000000        0x2 SaLSample.o
  .text.getSample
                 0x00000000       0x80 SaLSample.o
- .text.sampleTick
-                0x00000000      0x114 SaLSample.o
  .debug_macro   0x00000000      0x832 SaLSample.o
  .debug_macro   0x00000000       0x10 SaLSample.o
  .debug_macro   0x00000000      0x166 SaLSample.o
@@ -4379,7 +4245,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x22 SaLSpi.o
  .debug_macro   0x00000000      0x1e1 SaLSpi.o
  .debug_line    0x00000000      0x93c SaLSpi.o
- .debug_str     0x00000000    0x6cf9d SaLSpi.o
+ .debug_str     0x00000000    0x6cf92 SaLSpi.o
  .comment       0x00000000       0x5c SaLSpi.o
  .ARM.attributes
                 0x00000000       0x32 SaLSpi.o
@@ -4486,14 +4352,31 @@ Discarded input sections
  .text          0x00000000        0x0 SaLUSART.o
  .data          0x00000000        0x0 SaLUSART.o
  .bss           0x00000000        0x0 SaLUSART.o
+ .text.uart_init
+                0x00000000       0xf8 SaLUSART.o
  .text.SaLInitUsart
                 0x00000000       0x18 SaLUSART.o
  .text.SaLSyncUsartIo
                 0x00000000        0x4 SaLUSART.o
+ .text._usartByteRecieved
+                0x00000000        0xc SaLUSART.o
+ .text.SaLUsartDataRead
+                0x00000000       0x44 SaLUSART.o
  .text._usartGetData
                 0x00000000        0x8 SaLUSART.o
+ .text._usartGetDreInterupt
+                0x00000000        0xc SaLUSART.o
+ .text.SaLUsartDataWrite
+                0x00000000       0x58 SaLUSART.o
  .text._usartSetData
                 0x00000000       0x14 SaLUSART.o
+ .debug_info    0x00000000     0x48a0 SaLUSART.o
+ .debug_abbrev  0x00000000      0x39f SaLUSART.o
+ .debug_loc     0x00000000      0x384 SaLUSART.o
+ .debug_aranges
+                0x00000000       0x60 SaLUSART.o
+ .debug_ranges  0x00000000       0x50 SaLUSART.o
+ .debug_macro   0x00000000      0x611 SaLUSART.o
  .debug_macro   0x00000000      0x832 SaLUSART.o
  .debug_macro   0x00000000       0x22 SaLUSART.o
  .debug_macro   0x00000000       0x44 SaLUSART.o
@@ -4594,6 +4477,13 @@ Discarded input sections
  .debug_macro   0x00000000       0x22 SaLUSART.o
  .debug_macro   0x00000000       0x22 SaLUSART.o
  .debug_macro   0x00000000      0x1e1 SaLUSART.o
+ .debug_line    0x00000000      0xa84 SaLUSART.o
+ .debug_str     0x00000000    0x6e01c SaLUSART.o
+ .comment       0x00000000       0x5c SaLUSART.o
+ .debug_frame   0x00000000       0xd8 SaLUSART.o
+ .ARM.attributes
+                0x00000000       0x32 SaLUSART.o
+ COMMON         0x00000000       0x18 SaLUSART.o
  .group         0x00000000        0x8 SaLUsb.o
  .group         0x00000000        0x8 SaLUsb.o
  .group         0x00000000        0x8 SaLUsb.o
@@ -4810,7 +4700,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x22 SaLUsb.o
  .debug_macro   0x00000000      0x1e1 SaLUsb.o
  .debug_line    0x00000000      0x9cd SaLUsb.o
- .debug_str     0x00000000    0x6de5a SaLUsb.o
+ .debug_str     0x00000000    0x6de4f SaLUsb.o
  .comment       0x00000000       0x5c SaLUsb.o
  .debug_frame   0x00000000       0x50 SaLUsb.o
  .ARM.attributes
@@ -5029,7 +4919,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x22 SaL_flight.o
  .debug_macro   0x00000000      0x1e1 SaL_flight.o
  .debug_line    0x00000000      0x961 SaL_flight.o
- .debug_str     0x00000000    0x6d06d SaL_flight.o
+ .debug_str     0x00000000    0x6d062 SaL_flight.o
  .comment       0x00000000       0x5c SaL_flight.o
  .debug_frame   0x00000000       0x30 SaL_flight.o
  .ARM.attributes
@@ -5624,15 +5514,21 @@ Discarded input sections
  .debug_frame   0x00000000       0x20 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_divsi3.o)
  .ARM.attributes
                 0x00000000       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_divsi3.o)
+ .text          0x00000000        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_dvmd_tls.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_dvmd_tls.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_dvmd_tls.o)
+ .ARM.attributes
+                0x00000000       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_dvmd_tls.o)
  .text          0x00000000       0x7c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_arm_cmpdf2.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_arm_cmpdf2.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_arm_cmpdf2.o)
  .ARM.attributes
                 0x00000000       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_arm_cmpdf2.o)
+ .text          0x00000000       0x40 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_aeabi_uldivmod.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_aeabi_uldivmod.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_aeabi_uldivmod.o)
+ .ARM.attributes
+                0x00000000       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_aeabi_uldivmod.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_muldi3.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_muldi3.o)
  .text          0x00000000       0x30 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_fixunssfsi.o)
@@ -5641,8 +5537,12 @@ Discarded input sections
  .debug_frame   0x00000000       0x28 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_fixunssfsi.o)
  .ARM.attributes
                 0x00000000       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_fixunssfsi.o)
+ .text          0x00000000       0x6c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(bpabi.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(bpabi.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(bpabi.o)
+ .debug_frame   0x00000000       0x50 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(bpabi.o)
+ .ARM.attributes
+                0x00000000       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(bpabi.o)
  .text          0x00000000      0x2f8 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(addsf3.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(addsf3.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(addsf3.o)
@@ -5712,31 +5612,18 @@ Discarded input sections
  .debug_frame   0x00000000       0x38 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(ledf2.o)
  .ARM.attributes
                 0x00000000       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(ledf2.o)
- .text          0x00000000      0x534 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(muldf3.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(muldf3.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(muldf3.o)
- .rodata        0x00000000       0x40 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(muldf3.o)
- .debug_frame   0x00000000       0x3c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(muldf3.o)
- .ARM.attributes
-                0x00000000       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(muldf3.o)
  .text          0x00000000      0x6f4 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(subdf3.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(subdf3.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(subdf3.o)
  .debug_frame   0x00000000       0x3c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(subdf3.o)
  .ARM.attributes
                 0x00000000       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(subdf3.o)
- .text          0x00000000       0x78 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(floatsidf.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(floatsidf.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(floatsidf.o)
- .debug_frame   0x00000000       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(floatsidf.o)
- .ARM.attributes
-                0x00000000       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(floatsidf.o)
- .text          0x00000000      0x120 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(truncdfsf2.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(truncdfsf2.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(truncdfsf2.o)
- .debug_frame   0x00000000       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(truncdfsf2.o)
- .ARM.attributes
-                0x00000000       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(truncdfsf2.o)
  .text          0x00000000       0x74 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_arm_cmpsf2.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_arm_cmpsf2.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_arm_cmpsf2.o)
@@ -5744,12 +5631,22 @@ Discarded input sections
                 0x00000000       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_arm_cmpsf2.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_clzsi2.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_clzsi2.o)
+ .text          0x00000000      0x1f0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_divdi3.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_divdi3.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_divdi3.o)
  .ARM.extab     0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_divdi3.o)
+ .ARM.exidx     0x00000000        0x8 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_divdi3.o)
+ .debug_frame   0x00000000       0x3c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_divdi3.o)
+ .ARM.attributes
+                0x00000000       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_divdi3.o)
+ .text          0x00000000      0x158 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_udivdi3.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_udivdi3.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_udivdi3.o)
  .ARM.extab     0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_udivdi3.o)
+ .ARM.exidx     0x00000000        0x8 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_udivdi3.o)
+ .debug_frame   0x00000000       0x3c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_udivdi3.o)
+ .ARM.attributes
+                0x00000000       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_udivdi3.o)
  .text          0x00000000       0x54 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(eqsf2.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(eqsf2.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(eqsf2.o)
@@ -5768,8 +5665,11 @@ Discarded input sections
  .debug_frame   0x00000000       0x30 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(lesf2.o)
  .ARM.attributes
                 0x00000000       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(lesf2.o)
+ .text          0x00000000       0x18 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_clzdi2.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_clzdi2.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_clzdi2.o)
+ .ARM.attributes
+                0x00000000       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_clzdi2.o)
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-atof.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-atof.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-atof.o)
@@ -5810,10 +5710,6 @@ Discarded input sections
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-memcpy.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-memcpy.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-memcpy.o)
- .text.memcpy   0x00000000       0x7c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-memcpy.o)
- .debug_frame   0x00000000       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-memcpy.o)
- .ARM.attributes
-                0x00000000       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-memcpy.o)
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-memset.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-memset.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-memset.o)
@@ -6432,7 +6328,7 @@ LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin
 LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtn.o
                 0x00002000                STACK_SIZE = DEFINED (STACK_SIZE)?STACK_SIZE:DEFINED (__stack_size__)?__stack_size__:0x2000
 
-.text           0x00000000     0x1188
+.text           0x00000000     0x1908
                 0x00000000                . = ALIGN (0x4)
                 0x00000000                _sfixed = .
  *(.vectors .vectors.*)
@@ -6440,224 +6336,237 @@ LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin
                 0x00000000                exception_table
  *(.text .text.* .gnu.linkonce.t.*)
  .text          0x000000b4       0x60 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
+ .text.getADXL345Event
+                0x00000114       0x40 ADXL345.o
+                0x00000114                getADXL345Event
+ .text.readMS5607AdcResults
+                0x00000154       0x50 MS5607.o
+                0x00000154                readMS5607AdcResults
  .text.getMS5607Coeff
-                0x00000114       0x78 MS5607.o
-                0x00000114                getMS5607Coeff
+                0x000001a4       0x78 MS5607.o
+                0x000001a4                getMS5607Coeff
+ .text.ConvertPressureTemperature
+                0x0000021c       0x90 MS5607.o
+                0x0000021c                ConvertPressureTemperature
+ .text.pascalToCent
+                0x000002ac       0x48 MS5607.o
+                0x000002ac                pascalToCent
+ .text.accelSample
+                0x000002f4      0x170 SaLAccelerometer.o
+                0x000002f4                accelSample
  .text.initAccelerometer
-                0x0000018c       0x98 SaLAccelerometer.o
-                0x0000018c                initAccelerometer
- .text.adcInit  0x00000224       0x68 SaLAnalog.o
-                0x00000224                adcInit
+                0x00000464       0x98 SaLAccelerometer.o
+                0x00000464                initAccelerometer
+ .text.SaLGetAccelX
+                0x000004fc        0xc SaLAccelerometer.o
+                0x000004fc                SaLGetAccelX
+ .text.SaLGetAccelY
+                0x00000508        0xc SaLAccelerometer.o
+                0x00000508                SaLGetAccelY
+ .text.SaLGetAccelZ
+                0x00000514        0xc SaLAccelerometer.o
+                0x00000514                SaLGetAccelZ
+ .text.adcInit  0x00000520       0x68 SaLAnalog.o
+                0x00000520                adcInit
  .text.initBarometer
-                0x0000028c       0x68 SaLBarometer.o
-                0x0000028c                initBarometer
- .text.syncByte
-                0x000002f4       0x98 SaLBitBang.o
-                0x000002f4                syncByte
- .text.byteOut  0x0000038c       0x60 SaLBitBang.o
-                0x0000038c                byteOut
- .text.getByte  0x000003ec       0x5c SaLBitBang.o
-                0x000003ec                getByte
+                0x00000588       0x68 SaLBarometer.o
+                0x00000588                initBarometer
+ .text.sendMS5607D2ReadReq
+                0x000005f0       0x20 SaLBarometer.o
+                0x000005f0                sendMS5607D2ReadReq
+ .text.baroSample
+                0x00000610      0x12c SaLBarometer.o
+                0x00000610                baroSample
+ .text.SaLBaroGetHeight
+                0x0000073c        0xc SaLBarometer.o
+                0x0000073c                SaLBaroGetHeight
+ .text.byteOut  0x00000748       0x60 SaLBitBang.o
+                0x00000748                byteOut
+ .text.getByte  0x000007a8       0x5c SaLBitBang.o
+                0x000007a8                getByte
  .text.TC5_Handler
-                0x00000448       0x48 SaLBuzzer.o
-                0x00000448                TC5_Handler
+                0x00000804       0x48 SaLBuzzer.o
+                0x00000804                TC5_Handler
  .text.SalGclkInit
-                0x00000490       0xa0 SaLClocks.o
-                0x00000490                SalGclkInit
+                0x0000084c       0xa0 SaLClocks.o
+                0x0000084c                SalGclkInit
  .text.SaLRtcInit
-                0x00000530       0x84 SaLClocks.o
-                0x00000530                SaLRtcInit
+                0x000008ec       0x84 SaLClocks.o
+                0x000008ec                SaLRtcInit
  .text.RTC_Handler
-                0x000005b4       0x20 SaLClocks.o
-                0x000005b4                RTC_Handler
- .text.millis   0x000005d4       0x3c SaLClocks.o
-                0x000005d4                millis
+                0x00000970       0x20 SaLClocks.o
+                0x00000970                RTC_Handler
+ .text.millis   0x00000990       0x3c SaLClocks.o
+                0x00000990                millis
  .text.SaLDelayInit
-                0x00000610       0x20 SaLDelay.o
-                0x00000610                SaLDelayInit
+                0x000009cc       0x20 SaLDelay.o
+                0x000009cc                SaLDelayInit
  .text.delay_us
-                0x00000630       0x2c SaLDelay.o
-                0x00000630                delay_us
+                0x000009ec       0x2c SaLDelay.o
+                0x000009ec                delay_us
  .text.SaLFlashMemInit
-                0x0000065c       0x28 SaLFlashMem.o
-                0x0000065c                SaLFlashMemInit
+                0x00000a18       0x28 SaLFlashMem.o
+                0x00000a18                SaLFlashMemInit
  .text.SaLPinMode
-                0x00000684       0x58 SaLPort.o
-                0x00000684                SaLPinMode
+                0x00000a40       0x58 SaLPort.o
+                0x00000a40                SaLPinMode
+ .text.sampleTick
+                0x00000a98      0x114 SaLSample.o
+                0x00000a98                sampleTick
  .text.sampleInit
-                0x000006dc       0x30 SaLSample.o
-                0x000006dc                sampleInit
- .text.uart_init
-                0x0000070c       0xf8 SaLUSART.o
-                0x0000070c                uart_init
- .text._usartByteRecieved
-                0x00000804        0xc SaLUSART.o
-                0x00000804                _usartByteRecieved
- .text.SaLUsartDataRead
-                0x00000810       0x44 SaLUSART.o
- .text._usartGetDreInterupt
-                0x00000854        0xc SaLUSART.o
-                0x00000854                _usartGetDreInterupt
- .text.SaLUsartDataWrite
-                0x00000860       0x58 SaLUSART.o
+                0x00000bac       0x30 SaLSample.o
+                0x00000bac                sampleInit
  .text.Dummy_Handler
-                0x000008b8        0x4 Device_Startup/startup_samd21.o
-                0x000008b8                DMAC_Handler
-                0x000008b8                HardFault_Handler
-                0x000008b8                AC_Handler
-                0x000008b8                SysTick_Handler
-                0x000008b8                PendSV_Handler
-                0x000008b8                NMI_Handler
-                0x000008b8                SERCOM1_Handler
-                0x000008b8                ADC_Handler
-                0x000008b8                TCC1_Handler
-                0x000008b8                SERCOM2_Handler
-                0x000008b8                TCC0_Handler
-                0x000008b8                EIC_Handler
-                0x000008b8                WDT_Handler
-                0x000008b8                TC4_Handler
-                0x000008b8                USB_Handler
-                0x000008b8                TC3_Handler
-                0x000008b8                Dummy_Handler
-                0x000008b8                PM_Handler
-                0x000008b8                SERCOM5_Handler
-                0x000008b8                SVC_Handler
-                0x000008b8                TCC2_Handler
-                0x000008b8                EVSYS_Handler
-                0x000008b8                SERCOM3_Handler
-                0x000008b8                SERCOM4_Handler
-                0x000008b8                I2S_Handler
-                0x000008b8                NVMCTRL_Handler
-                0x000008b8                SERCOM0_Handler
-                0x000008b8                DAC_Handler
-                0x000008b8                PTC_Handler
-                0x000008b8                SYSCTRL_Handler
+                0x00000bdc        0x4 Device_Startup/startup_samd21.o
+                0x00000bdc                DMAC_Handler
+                0x00000bdc                HardFault_Handler
+                0x00000bdc                AC_Handler
+                0x00000bdc                SysTick_Handler
+                0x00000bdc                PendSV_Handler
+                0x00000bdc                NMI_Handler
+                0x00000bdc                SERCOM1_Handler
+                0x00000bdc                ADC_Handler
+                0x00000bdc                TCC1_Handler
+                0x00000bdc                SERCOM2_Handler
+                0x00000bdc                TCC0_Handler
+                0x00000bdc                EIC_Handler
+                0x00000bdc                WDT_Handler
+                0x00000bdc                TC4_Handler
+                0x00000bdc                USB_Handler
+                0x00000bdc                TC3_Handler
+                0x00000bdc                Dummy_Handler
+                0x00000bdc                PM_Handler
+                0x00000bdc                SERCOM5_Handler
+                0x00000bdc                SVC_Handler
+                0x00000bdc                TCC2_Handler
+                0x00000bdc                EVSYS_Handler
+                0x00000bdc                SERCOM3_Handler
+                0x00000bdc                SERCOM4_Handler
+                0x00000bdc                I2S_Handler
+                0x00000bdc                NVMCTRL_Handler
+                0x00000bdc                SERCOM0_Handler
+                0x00000bdc                DAC_Handler
+                0x00000bdc                PTC_Handler
+                0x00000bdc                SYSCTRL_Handler
  .text.Reset_Handler
-                0x000008bc       0xf8 Device_Startup/startup_samd21.o
-                0x000008bc                Reset_Handler
+                0x00000be0       0xf8 Device_Startup/startup_samd21.o
+                0x00000be0                Reset_Handler
  .text.SystemInit
-                0x000009b4       0x10 Device_Startup/system_samd21.o
-                0x000009b4                SystemInit
- .text.main     0x000009c4      0x168 SaLFrostburn1_1.o
-                0x000009c4                main
- .text          0x00000b2c        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_dvmd_tls.o)
-                0x00000b2c                __aeabi_idiv0
-                0x00000b2c                __aeabi_ldiv0
- .text          0x00000b30       0x40 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_aeabi_uldivmod.o)
-                0x00000b30                __aeabi_uldivmod
- .text          0x00000b70       0x54 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_muldi3.o)
-                0x00000b70                __muldi3
-                0x00000b70                __aeabi_lmul
- .text          0x00000bc4       0x6c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(bpabi.o)
-                0x00000bc4                __gnu_ldivmod_helper
-                0x00000bfc                __gnu_uldivmod_helper
- .text          0x00000c30       0x3c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_clzsi2.o)
-                0x00000c30                __clzsi2
- .text          0x00000c6c      0x1f0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_divdi3.o)
-                0x00000c6c                __divdi3
- .text          0x00000e5c      0x158 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_udivdi3.o)
-                0x00000e5c                __udivdi3
- .text          0x00000fb4       0x18 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_clzdi2.o)
-                0x00000fb4                __clzdi2
+                0x00000cd8       0x10 Device_Startup/system_samd21.o
+                0x00000cd8                SystemInit
+ .text.main     0x00000ce8       0xec SaLFrostburn1_1.o
+                0x00000ce8                main
+ .text          0x00000dd4       0x54 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_muldi3.o)
+                0x00000dd4                __muldi3
+                0x00000dd4                __aeabi_lmul
+ .text          0x00000e28      0x534 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(muldf3.o)
+                0x00000e28                __aeabi_dmul
+ .text          0x0000135c       0x78 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(floatsidf.o)
+                0x0000135c                __aeabi_i2d
+ .text          0x000013d4      0x120 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(truncdfsf2.o)
+                0x000013d4                __aeabi_d2f
+ .text          0x000014f4       0x3c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_clzsi2.o)
+                0x000014f4                __clzsi2
  .text.__libc_init_array
-                0x00000fcc       0x48 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-init.o)
-                0x00000fcc                __libc_init_array
+                0x00001530       0x48 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-init.o)
+                0x00001530                __libc_init_array
+ .text.memcpy   0x00001578       0x7c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-memcpy.o)
+                0x00001578                memcpy
  .text.startup.register_fini
-                0x00001014       0x18 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-__call_atexit.o)
- .text.atexit   0x0000102c       0x10 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-atexit.o)
-                0x0000102c                atexit
+                0x000015f4       0x18 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-__call_atexit.o)
+ .text.atexit   0x0000160c       0x10 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-atexit.o)
+                0x0000160c                atexit
  .text.__libc_fini_array
-                0x0000103c       0x34 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-fini.o)
-                0x0000103c                __libc_fini_array
+                0x0000161c       0x34 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-fini.o)
+                0x0000161c                __libc_fini_array
  .text.__register_exitproc
-                0x00001070       0xd4 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-__atexit.o)
-                0x00001070                __register_exitproc
+                0x00001650       0xd4 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-__atexit.o)
+                0x00001650                __register_exitproc
  *(.glue_7t)
  .glue_7t       0x00000000        0x0 linker stubs
  *(.glue_7)
  .glue_7        0x00000000        0x0 linker stubs
  *(.rodata .rodata* .gnu.linkonce.r.*)
- .rodata        0x00001144       0x15 SaLFrostburn1_1.o
- *fill*         0x00001159        0x3 
+ .rodata        0x00001724      0x134 MS5607.o
+ .rodata        0x00001858       0x20 SaLAccelerometer.o
+ .rodata        0x00001878       0x24 SaLBarometer.o
+ .rodata        0x0000189c       0x40 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(muldf3.o)
  .rodata.str1.4
-                0x0000115c        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-impure.o)
+                0x000018dc        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-impure.o)
                                   0x2 (size before relaxing)
  .rodata._global_impure_ptr
-                0x00001160        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-impure.o)
-                0x00001160                _global_impure_ptr
+                0x000018e0        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-impure.o)
+                0x000018e0                _global_impure_ptr
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x00001164                . = ALIGN (0x4)
+                0x000018e4                . = ALIGN (0x4)
  *(.init)
- .init          0x00001164        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crti.o
-                0x00001164                _init
- .init          0x00001168        0x8 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtn.o
-                0x00001170                . = ALIGN (0x4)
-                0x00001170                __preinit_array_start = .
+ .init          0x000018e4        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crti.o
+                0x000018e4                _init
+ .init          0x000018e8        0x8 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtn.o
+                0x000018f0                . = ALIGN (0x4)
+                0x000018f0                __preinit_array_start = .
  *(.preinit_array)
-                0x00001170                __preinit_array_end = .
-                0x00001170                . = ALIGN (0x4)
-                0x00001170                __init_array_start = .
+                0x000018f0                __preinit_array_end = .
+                0x000018f0                . = ALIGN (0x4)
+                0x000018f0                __init_array_start = .
  *(SORT(.init_array.*))
  .init_array.00000
-                0x00001170        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-__call_atexit.o)
+                0x000018f0        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-__call_atexit.o)
  *(.init_array)
- .init_array    0x00001174        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
-                0x00001178                __init_array_end = .
-                0x00001178                . = ALIGN (0x4)
+ .init_array    0x000018f4        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
+                0x000018f8                __init_array_end = .
+                0x000018f8                . = ALIGN (0x4)
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
  *crtend.o(.ctors)
-                0x00001178                . = ALIGN (0x4)
+                0x000018f8                . = ALIGN (0x4)
  *(.fini)
- .fini          0x00001178        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crti.o
-                0x00001178                _fini
- .fini          0x0000117c        0x8 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtn.o
-                0x00001184                . = ALIGN (0x4)
-                0x00001184                __fini_array_start = .
+ .fini          0x000018f8        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crti.o
+                0x000018f8                _fini
+ .fini          0x000018fc        0x8 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtn.o
+                0x00001904                . = ALIGN (0x4)
+                0x00001904                __fini_array_start = .
  *(.fini_array)
- .fini_array    0x00001184        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
+ .fini_array    0x00001904        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
  *(SORT(.fini_array.*))
-                0x00001188                __fini_array_end = .
+                0x00001908                __fini_array_end = .
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT(.dtors.*))
  *crtend.o(.dtors)
-                0x00001188                . = ALIGN (0x4)
-                0x00001188                _efixed = .
-                0x00001188                PROVIDE (__exidx_start, .)
+                0x00001908                . = ALIGN (0x4)
+                0x00001908                _efixed = .
+                0x00001908                PROVIDE (__exidx_start, .)
 
-.vfp11_veneer   0x00001188        0x0
+.vfp11_veneer   0x00001908        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x00001188        0x0
+.v4_bx          0x00001908        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x00001188        0x0
+.iplt           0x00001908        0x0
  .iplt          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
 
-.ARM.exidx      0x00001188        0x8
- *(.ARM.exidx* .gnu.linkonce.armexidx.*)
- .ARM.exidx     0x00001188        0x8 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_divdi3.o)
- .ARM.exidx     0x00001190        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_udivdi3.o)
-                                  0x8 (size before relaxing)
-                0x00001190                PROVIDE (__exidx_end, .)
+.eh_frame       0x00001908        0x0
+ .eh_frame      0x00001908        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
 
-.eh_frame       0x00001190        0x0
- .eh_frame      0x00001190        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
-
-.rel.dyn        0x00001190        0x0
+.rel.dyn        0x00001908        0x0
  .rel.iplt      0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
 
-.jcr            0x00001190        0x0
- .jcr           0x00001190        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
+.jcr            0x00001908        0x0
+ .jcr           0x00001908        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
 
-.igot.plt       0x00001190        0x0
+.igot.plt       0x00001908        0x0
  .igot.plt      0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
-                0x00001190                . = ALIGN (0x4)
-                0x00001190                _etext = .
 
-.relocate       0x20000000      0x438 load address 0x00001190
+.ARM.exidx
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                0x00001908                PROVIDE (__exidx_end, .)
+                0x00001908                . = ALIGN (0x4)
+                0x00001908                _etext = .
+
+.relocate       0x20000000      0x438 load address 0x00001908
                 0x20000000                . = ALIGN (0x4)
                 0x20000000                _srelocate = .
  *(.ramfunc .ramfunc.*)
@@ -6671,7 +6580,7 @@ LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin
                 0x20000438                . = ALIGN (0x4)
                 0x20000438                _erelocate = .
 
-.bss            0x20000438      0x114 load address 0x000015c8
+.bss            0x20000438      0x100 load address 0x00001d40
                 0x20000438                . = ALIGN (0x4)
                 0x20000438                _sbss = .
                 0x20000438                _szero = .
@@ -6682,54 +6591,53 @@ LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin
  *fill*         0x20000456        0x2 
  .bss           0x20000458        0x4 SaLClocks.o
                 0x20000458                time_ms
+ .bss           0x2000045c        0x2 SaLSample.o
+                0x2000045c                index222
  *(COMMON)
- COMMON         0x2000045c        0xc MS5607.o
-                0x2000045c                coefficients_
- COMMON         0x20000468       0x1e SaLAccelerometer.o
-                0x20000468                Y
-                0x2000046c                Zf
-                0x20000470                Xf
-                0x20000474                Yf
-                0x20000478                Z
-                0x2000047c                regAccelData
-                0x20000482                accelSampleState
-                0x20000484                X
- *fill*         0x20000486        0x2 
- COMMON         0x20000488       0x1c SaLBarometer.o
-                0x20000488                temperature
-                0x2000048c                pressure
-                0x20000490                hits
-                0x20000494                mills
-                0x20000498                baroSampleState
-                0x2000049c                currentAltinCm
-                0x200004a0                pascelFromPresTempConv
- COMMON         0x200004a4       0x90 SaLSample.o
-                0x200004a4                deltatt
-                0x200004a8                sampleBeingCooked
-                0x200004e8                gpsSampleReady
-                0x200004e9                accelSampleReady
-                0x200004ea                baroSampleReady
-                0x200004ec                sampleMills
-                0x200004f0                lastTime
-                0x200004f2                thisTime
-                0x200004f4                cookedSample
- COMMON         0x20000534       0x18 SaLUSART.o
-                0x20000534                USART_0
-                0x20000540                USART_1
-                0x2000054c                . = ALIGN (0x4)
-                0x2000054c                _ebss = .
-                0x2000054c                _ezero = .
+ *fill*         0x2000045e        0x2 
+ COMMON         0x20000460        0xc MS5607.o
+                0x20000460                coefficients_
+ COMMON         0x2000046c       0x1e SaLAccelerometer.o
+                0x2000046c                Y
+                0x20000470                Zf
+                0x20000474                Xf
+                0x20000478                Yf
+                0x2000047c                Z
+                0x20000480                regAccelData
+                0x20000486                accelSampleState
+                0x20000488                X
+ *fill*         0x2000048a        0x2 
+ COMMON         0x2000048c       0x1c SaLBarometer.o
+                0x2000048c                temperature
+                0x20000490                pressure
+                0x20000494                hits
+                0x20000498                mills
+                0x2000049c                baroSampleState
+                0x200004a0                currentAltinCm
+                0x200004a4                pascelFromPresTempConv
+ COMMON         0x200004a8       0x90 SaLSample.o
+                0x200004a8                deltatt
+                0x200004ac                sampleBeingCooked
+                0x200004ec                gpsSampleReady
+                0x200004ed                accelSampleReady
+                0x200004ee                baroSampleReady
+                0x200004f0                sampleMills
+                0x200004f4                lastTime
+                0x200004f6                thisTime
+                0x200004f8                cookedSample
+                0x20000538                . = ALIGN (0x4)
+                0x20000538                _ebss = .
+                0x20000538                _ezero = .
 
-.stack          0x2000054c     0x2004 load address 0x000016dc
-                0x20000550                . = ALIGN (0x8)
- *fill*         0x2000054c        0x4 
-                0x20000550                _sstack = .
-                0x20002550                . = (. + STACK_SIZE)
- *fill*         0x20000550     0x2000 
-                0x20002550                . = ALIGN (0x8)
-                0x20002550                _estack = .
-                0x20002550                . = ALIGN (0x4)
-                0x20002550                _end = .
+.stack          0x20000538     0x2000 load address 0x00001e40
+                0x20000538                . = ALIGN (0x8)
+                0x20000538                _sstack = .
+                0x20002538                . = (. + STACK_SIZE)
+ *fill*         0x20000538     0x2000 
+                0x20002538                . = ALIGN (0x8)
+                0x20002538                _estack = .
+                0x20002538                . = ALIGN (0x4)
+                0x20002538                _end = .
 OUTPUT(SaLFrostburn1.1.elf elf32-littlearm)
 
 .ARM.attributes
@@ -6739,29 +6647,29 @@ OUTPUT(SaLFrostburn1.1.elf elf32-littlearm)
  .ARM.attributes
                 0x0000001e       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
  .ARM.attributes
-                0x0000004a       0x32 MS5607.o
+                0x0000004a       0x32 ADXL345.o
  .ARM.attributes
-                0x0000007c       0x32 SaLAccelerometer.o
+                0x0000007c       0x32 MS5607.o
  .ARM.attributes
-                0x000000ae       0x32 SaLAnalog.o
+                0x000000ae       0x32 SaLAccelerometer.o
  .ARM.attributes
-                0x000000e0       0x32 SaLBarometer.o
+                0x000000e0       0x32 SaLAnalog.o
  .ARM.attributes
-                0x00000112       0x32 SaLBitBang.o
+                0x00000112       0x32 SaLBarometer.o
  .ARM.attributes
-                0x00000144       0x32 SaLBuzzer.o
+                0x00000144       0x32 SaLBitBang.o
  .ARM.attributes
-                0x00000176       0x32 SaLClocks.o
+                0x00000176       0x32 SaLBuzzer.o
  .ARM.attributes
-                0x000001a8       0x32 SaLDelay.o
+                0x000001a8       0x32 SaLClocks.o
  .ARM.attributes
-                0x000001da       0x32 SaLFlashMem.o
+                0x000001da       0x32 SaLDelay.o
  .ARM.attributes
-                0x0000020c       0x32 SaLPort.o
+                0x0000020c       0x32 SaLFlashMem.o
  .ARM.attributes
-                0x0000023e       0x32 SaLSample.o
+                0x0000023e       0x32 SaLPort.o
  .ARM.attributes
-                0x00000270       0x32 SaLUSART.o
+                0x00000270       0x32 SaLSample.o
  .ARM.attributes
                 0x000002a2       0x32 Device_Startup/startup_samd21.o
  .ARM.attributes
@@ -6769,39 +6677,36 @@ OUTPUT(SaLFrostburn1.1.elf elf32-littlearm)
  .ARM.attributes
                 0x00000306       0x32 SaLFrostburn1_1.o
  .ARM.attributes
-                0x00000338       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_dvmd_tls.o)
+                0x00000338       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_muldi3.o)
  .ARM.attributes
-                0x00000356       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_aeabi_uldivmod.o)
+                0x00000364       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(muldf3.o)
  .ARM.attributes
-                0x00000374       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_muldi3.o)
+                0x00000390       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(floatsidf.o)
  .ARM.attributes
-                0x000003a0       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(bpabi.o)
+                0x000003bc       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(truncdfsf2.o)
  .ARM.attributes
-                0x000003cc       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_clzsi2.o)
+                0x000003e8       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_clzsi2.o)
  .ARM.attributes
-                0x000003ea       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_divdi3.o)
+                0x00000406       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-impure.o)
  .ARM.attributes
-                0x00000416       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_udivdi3.o)
+                0x00000432       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-init.o)
  .ARM.attributes
-                0x00000442       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_clzdi2.o)
+                0x0000045e       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-memcpy.o)
  .ARM.attributes
-                0x00000460       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-impure.o)
+                0x0000048a       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-__call_atexit.o)
  .ARM.attributes
-                0x0000048c       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-init.o)
+                0x000004b6       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-atexit.o)
  .ARM.attributes
-                0x000004b8       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-__call_atexit.o)
+                0x000004e2       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-fini.o)
  .ARM.attributes
-                0x000004e4       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-atexit.o)
+                0x0000050e       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-__atexit.o)
  .ARM.attributes
-                0x00000510       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-fini.o)
- .ARM.attributes
-                0x0000053c       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-__atexit.o)
- .ARM.attributes
-                0x00000568       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtn.o
+                0x0000053a       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtn.o
 
 .comment        0x00000000       0x5b
- .comment       0x00000000       0x5b MS5607.o
+ .comment       0x00000000       0x5b ADXL345.o
                                  0x5c (size before relaxing)
+ .comment       0x00000000       0x5c MS5607.o
  .comment       0x00000000       0x5c SaLAccelerometer.o
  .comment       0x00000000       0x5c SaLAnalog.o
  .comment       0x00000000       0x5c SaLBarometer.o
@@ -6812,201 +6717,296 @@ OUTPUT(SaLFrostburn1.1.elf elf32-littlearm)
  .comment       0x00000000       0x5c SaLFlashMem.o
  .comment       0x00000000       0x5c SaLPort.o
  .comment       0x00000000       0x5c SaLSample.o
- .comment       0x00000000       0x5c SaLUSART.o
  .comment       0x00000000       0x5c Device_Startup/startup_samd21.o
  .comment       0x00000000       0x5c Device_Startup/system_samd21.o
  .comment       0x00000000       0x5c SaLFrostburn1_1.o
 
-.debug_info     0x00000000    0x16d6c
- .debug_info    0x00000000      0xfd2 MS5607.o
- .debug_info    0x00000fd2      0xff5 SaLAccelerometer.o
- .debug_info    0x00001fc7     0x1d01 SaLAnalog.o
- .debug_info    0x00003cc8      0xc3e SaLBarometer.o
- .debug_info    0x00004906     0x101d SaLBitBang.o
- .debug_info    0x00005923     0x25ad SaLBuzzer.o
- .debug_info    0x00007ed0     0x4594 SaLClocks.o
- .debug_info    0x0000c464      0x1ce SaLDelay.o
- .debug_info    0x0000c632      0x44d SaLFlashMem.o
- .debug_info    0x0000ca7f      0x7cc SaLPort.o
- .debug_info    0x0000d24b      0x771 SaLSample.o
- .debug_info    0x0000d9bc     0x48a0 SaLUSART.o
- .debug_info    0x0001225c     0x3a6f Device_Startup/startup_samd21.o
- .debug_info    0x00015ccb       0xcd Device_Startup/system_samd21.o
- .debug_info    0x00015d98      0xfd4 SaLFrostburn1_1.o
+.debug_info     0x00000000    0x13061
+ .debug_info    0x00000000      0xd18 ADXL345.o
+ .debug_info    0x00000d18      0xfd2 MS5607.o
+ .debug_info    0x00001cea      0xff5 SaLAccelerometer.o
+ .debug_info    0x00002cdf     0x1d01 SaLAnalog.o
+ .debug_info    0x000049e0      0xc3e SaLBarometer.o
+ .debug_info    0x0000561e     0x101d SaLBitBang.o
+ .debug_info    0x0000663b     0x25ad SaLBuzzer.o
+ .debug_info    0x00008be8     0x4594 SaLClocks.o
+ .debug_info    0x0000d17c      0x1ce SaLDelay.o
+ .debug_info    0x0000d34a      0x44d SaLFlashMem.o
+ .debug_info    0x0000d797      0x7cc SaLPort.o
+ .debug_info    0x0000df63      0x771 SaLSample.o
+ .debug_info    0x0000e6d4     0x3a6f Device_Startup/startup_samd21.o
+ .debug_info    0x00012143       0xcd Device_Startup/system_samd21.o
+ .debug_info    0x00012210      0xe51 SaLFrostburn1_1.o
 
-.debug_abbrev   0x00000000     0x212a
- .debug_abbrev  0x00000000      0x31e MS5607.o
- .debug_abbrev  0x0000031e      0x2fa SaLAccelerometer.o
- .debug_abbrev  0x00000618      0x218 SaLAnalog.o
- .debug_abbrev  0x00000830      0x2c6 SaLBarometer.o
- .debug_abbrev  0x00000af6      0x29a SaLBitBang.o
- .debug_abbrev  0x00000d90      0x2f1 SaLBuzzer.o
- .debug_abbrev  0x00001081      0x292 SaLClocks.o
- .debug_abbrev  0x00001313      0x108 SaLDelay.o
- .debug_abbrev  0x0000141b      0x127 SaLFlashMem.o
- .debug_abbrev  0x00001542      0x1cf SaLPort.o
- .debug_abbrev  0x00001711      0x188 SaLSample.o
- .debug_abbrev  0x00001899      0x39f SaLUSART.o
- .debug_abbrev  0x00001c38      0x211 Device_Startup/startup_samd21.o
- .debug_abbrev  0x00001e49       0x65 Device_Startup/system_samd21.o
- .debug_abbrev  0x00001eae      0x27c SaLFrostburn1_1.o
+.debug_abbrev   0x00000000     0x205b
+ .debug_abbrev  0x00000000      0x2fa ADXL345.o
+ .debug_abbrev  0x000002fa      0x31e MS5607.o
+ .debug_abbrev  0x00000618      0x2fa SaLAccelerometer.o
+ .debug_abbrev  0x00000912      0x218 SaLAnalog.o
+ .debug_abbrev  0x00000b2a      0x2c6 SaLBarometer.o
+ .debug_abbrev  0x00000df0      0x29a SaLBitBang.o
+ .debug_abbrev  0x0000108a      0x2f1 SaLBuzzer.o
+ .debug_abbrev  0x0000137b      0x292 SaLClocks.o
+ .debug_abbrev  0x0000160d      0x108 SaLDelay.o
+ .debug_abbrev  0x00001715      0x127 SaLFlashMem.o
+ .debug_abbrev  0x0000183c      0x1cf SaLPort.o
+ .debug_abbrev  0x00001a0b      0x188 SaLSample.o
+ .debug_abbrev  0x00001b93      0x211 Device_Startup/startup_samd21.o
+ .debug_abbrev  0x00001da4       0x65 Device_Startup/system_samd21.o
+ .debug_abbrev  0x00001e09      0x252 SaLFrostburn1_1.o
 
-.debug_loc      0x00000000     0x1b8a
- .debug_loc     0x00000000      0x68d MS5607.o
- .debug_loc     0x0000068d      0x1bf SaLAccelerometer.o
- .debug_loc     0x0000084c       0xa1 SaLAnalog.o
- .debug_loc     0x000008ed       0x81 SaLBarometer.o
- .debug_loc     0x0000096e      0x575 SaLBitBang.o
- .debug_loc     0x00000ee3      0x131 SaLBuzzer.o
- .debug_loc     0x00001014       0x6d SaLClocks.o
- .debug_loc     0x00001081       0xc4 SaLDelay.o
- .debug_loc     0x00001145       0x40 SaLFlashMem.o
- .debug_loc     0x00001185      0x1cd SaLPort.o
- .debug_loc     0x00001352      0x45b SaLSample.o
- .debug_loc     0x000017ad      0x384 SaLUSART.o
- .debug_loc     0x00001b31       0x20 Device_Startup/startup_samd21.o
- .debug_loc     0x00001b51       0x39 SaLFrostburn1_1.o
+.debug_loc      0x00000000     0x1a0c
+ .debug_loc     0x00000000      0x207 ADXL345.o
+ .debug_loc     0x00000207      0x68d MS5607.o
+ .debug_loc     0x00000894      0x1bf SaLAccelerometer.o
+ .debug_loc     0x00000a53       0xa1 SaLAnalog.o
+ .debug_loc     0x00000af4       0x81 SaLBarometer.o
+ .debug_loc     0x00000b75      0x575 SaLBitBang.o
+ .debug_loc     0x000010ea      0x131 SaLBuzzer.o
+ .debug_loc     0x0000121b       0x6d SaLClocks.o
+ .debug_loc     0x00001288       0xc4 SaLDelay.o
+ .debug_loc     0x0000134c       0x40 SaLFlashMem.o
+ .debug_loc     0x0000138c      0x1cd SaLPort.o
+ .debug_loc     0x00001559      0x45b SaLSample.o
+ .debug_loc     0x000019b4       0x20 Device_Startup/startup_samd21.o
+ .debug_loc     0x000019d4       0x38 SaLFrostburn1_1.o
 
-.debug_aranges  0x00000000      0x320
+.debug_aranges  0x00000000      0x308
  .debug_aranges
-                0x00000000       0x48 MS5607.o
+                0x00000000       0x48 ADXL345.o
  .debug_aranges
-                0x00000048       0x40 SaLAccelerometer.o
+                0x00000048       0x48 MS5607.o
  .debug_aranges
-                0x00000088       0x30 SaLAnalog.o
+                0x00000090       0x40 SaLAccelerometer.o
  .debug_aranges
-                0x000000b8       0x38 SaLBarometer.o
+                0x000000d0       0x30 SaLAnalog.o
  .debug_aranges
-                0x000000f0       0x40 SaLBitBang.o
+                0x00000100       0x38 SaLBarometer.o
  .debug_aranges
-                0x00000130       0x38 SaLBuzzer.o
+                0x00000138       0x40 SaLBitBang.o
  .debug_aranges
-                0x00000168       0x40 SaLClocks.o
+                0x00000178       0x38 SaLBuzzer.o
  .debug_aranges
-                0x000001a8       0x30 SaLDelay.o
+                0x000001b0       0x40 SaLClocks.o
  .debug_aranges
-                0x000001d8       0x28 SaLFlashMem.o
+                0x000001f0       0x30 SaLDelay.o
  .debug_aranges
-                0x00000200       0x20 SaLPort.o
+                0x00000220       0x28 SaLFlashMem.o
  .debug_aranges
-                0x00000220       0x30 SaLSample.o
+                0x00000248       0x20 SaLPort.o
  .debug_aranges
-                0x00000250       0x60 SaLUSART.o
+                0x00000268       0x30 SaLSample.o
  .debug_aranges
-                0x000002b0       0x28 Device_Startup/startup_samd21.o
+                0x00000298       0x28 Device_Startup/startup_samd21.o
  .debug_aranges
-                0x000002d8       0x28 Device_Startup/system_samd21.o
+                0x000002c0       0x28 Device_Startup/system_samd21.o
  .debug_aranges
-                0x00000300       0x20 SaLFrostburn1_1.o
+                0x000002e8       0x20 SaLFrostburn1_1.o
 
-.debug_ranges   0x00000000      0x3d8
- .debug_ranges  0x00000000       0x50 MS5607.o
- .debug_ranges  0x00000050       0x30 SaLAccelerometer.o
- .debug_ranges  0x00000080       0x20 SaLAnalog.o
- .debug_ranges  0x000000a0       0x28 SaLBarometer.o
- .debug_ranges  0x000000c8      0x190 SaLBitBang.o
- .debug_ranges  0x00000258       0x28 SaLBuzzer.o
- .debug_ranges  0x00000280       0x30 SaLClocks.o
- .debug_ranges  0x000002b0       0x50 SaLDelay.o
- .debug_ranges  0x00000300       0x18 SaLFlashMem.o
- .debug_ranges  0x00000318       0x10 SaLPort.o
- .debug_ranges  0x00000328       0x20 SaLSample.o
- .debug_ranges  0x00000348       0x50 SaLUSART.o
- .debug_ranges  0x00000398       0x18 Device_Startup/startup_samd21.o
- .debug_ranges  0x000003b0       0x18 Device_Startup/system_samd21.o
- .debug_ranges  0x000003c8       0x10 SaLFrostburn1_1.o
+.debug_ranges   0x00000000      0x3c0
+ .debug_ranges  0x00000000       0x38 ADXL345.o
+ .debug_ranges  0x00000038       0x50 MS5607.o
+ .debug_ranges  0x00000088       0x30 SaLAccelerometer.o
+ .debug_ranges  0x000000b8       0x20 SaLAnalog.o
+ .debug_ranges  0x000000d8       0x28 SaLBarometer.o
+ .debug_ranges  0x00000100      0x190 SaLBitBang.o
+ .debug_ranges  0x00000290       0x28 SaLBuzzer.o
+ .debug_ranges  0x000002b8       0x30 SaLClocks.o
+ .debug_ranges  0x000002e8       0x50 SaLDelay.o
+ .debug_ranges  0x00000338       0x18 SaLFlashMem.o
+ .debug_ranges  0x00000350       0x10 SaLPort.o
+ .debug_ranges  0x00000360       0x20 SaLSample.o
+ .debug_ranges  0x00000380       0x18 Device_Startup/startup_samd21.o
+ .debug_ranges  0x00000398       0x18 Device_Startup/system_samd21.o
+ .debug_ranges  0x000003b0       0x10 SaLFrostburn1_1.o
 
-.debug_macro    0x00000000     0x47cd
- .debug_macro   0x00000000      0x4b2 MS5607.o
- .debug_macro   0x000004b2       0x46 MS5607.o
- .debug_macro   0x000004f8      0x1e1 MS5607.o
- .debug_macro   0x000006d9      0x4a9 SaLAccelerometer.o
- .debug_macro   0x00000b82      0x453 SaLAnalog.o
- .debug_macro   0x00000fd5      0x4d7 SaLBarometer.o
- .debug_macro   0x000014ac      0x472 SaLBitBang.o
- .debug_macro   0x0000191e       0x3a SaLBitBang.o
- .debug_macro   0x00001958      0x476 SaLBuzzer.o
- .debug_macro   0x00001dce      0x484 SaLClocks.o
- .debug_macro   0x00002252      0x43d SaLDelay.o
- .debug_macro   0x0000268f      0x58f SaLFlashMem.o
- .debug_macro   0x00002c1e      0x442 SaLPort.o
- .debug_macro   0x00003060      0x578 SaLSample.o
- .debug_macro   0x000035d8      0x611 SaLUSART.o
- .debug_macro   0x00003be9      0x2d6 Device_Startup/startup_samd21.o
- .debug_macro   0x00003ebf      0x2dc Device_Startup/system_samd21.o
- .debug_macro   0x0000419b      0x632 SaLFrostburn1_1.o
+.debug_macro    0x00000000    0x156a0
+ .debug_macro   0x00000000      0x488 ADXL345.o
+ .debug_macro   0x00000488      0x832 ADXL345.o
+ .debug_macro   0x00000cba       0x10 ADXL345.o
+ .debug_macro   0x00000cca      0x166 ADXL345.o
+ .debug_macro   0x00000e30       0x22 ADXL345.o
+ .debug_macro   0x00000e52       0x44 ADXL345.o
+ .debug_macro   0x00000e96       0x58 ADXL345.o
+ .debug_macro   0x00000eee       0x22 ADXL345.o
+ .debug_macro   0x00000f10      0x1df ADXL345.o
+ .debug_macro   0x000010ef       0x58 ADXL345.o
+ .debug_macro   0x00001147       0x35 ADXL345.o
+ .debug_macro   0x0000117c       0x9c ADXL345.o
+ .debug_macro   0x00001218       0x16 ADXL345.o
+ .debug_macro   0x0000122e       0x35 ADXL345.o
+ .debug_macro   0x00001263      0x29d ADXL345.o
+ .debug_macro   0x00001500       0x10 ADXL345.o
+ .debug_macro   0x00001510       0x52 ADXL345.o
+ .debug_macro   0x00001562       0x16 ADXL345.o
+ .debug_macro   0x00001578       0x43 ADXL345.o
+ .debug_macro   0x000015bb      0x180 ADXL345.o
+ .debug_macro   0x0000173b       0x10 ADXL345.o
+ .debug_macro   0x0000174b       0x22 ADXL345.o
+ .debug_macro   0x0000176d       0xbe ADXL345.o
+ .debug_macro   0x0000182b       0x16 ADXL345.o
+ .debug_macro   0x00001841      0x197 ADXL345.o
+ .debug_macro   0x000019d8       0x16 ADXL345.o
+ .debug_macro   0x000019ee       0x16 ADXL345.o
+ .debug_macro   0x00001a04       0x29 ADXL345.o
+ .debug_macro   0x00001a2d       0x22 ADXL345.o
+ .debug_macro   0x00001a4f       0x16 ADXL345.o
+ .debug_macro   0x00001a65       0x40 ADXL345.o
+ .debug_macro   0x00001aa5       0x3a ADXL345.o
+ .debug_macro   0x00001adf       0x1f ADXL345.o
+ .debug_macro   0x00001afe      0x250 ADXL345.o
+ .debug_macro   0x00001d4e      0x682 ADXL345.o
+ .debug_macro   0x000023d0      0x8bf ADXL345.o
+ .debug_macro   0x00002c8f      0x235 ADXL345.o
+ .debug_macro   0x00002ec4      0xd6a ADXL345.o
+ .debug_macro   0x00003c2e      0x4ce ADXL345.o
+ .debug_macro   0x000040fc      0x9f8 ADXL345.o
+ .debug_macro   0x00004af4      0x82b ADXL345.o
+ .debug_macro   0x0000531f      0x45f ADXL345.o
+ .debug_macro   0x0000577e       0x5e ADXL345.o
+ .debug_macro   0x000057dc      0x906 ADXL345.o
+ .debug_macro   0x000060e2      0x225 ADXL345.o
+ .debug_macro   0x00006307      0x797 ADXL345.o
+ .debug_macro   0x00006a9e       0x5e ADXL345.o
+ .debug_macro   0x00006afc      0x634 ADXL345.o
+ .debug_macro   0x00007130      0x3b6 ADXL345.o
+ .debug_macro   0x000074e6      0xc55 ADXL345.o
+ .debug_macro   0x0000813b     0x1092 ADXL345.o
+ .debug_macro   0x000091cd      0xc4a ADXL345.o
+ .debug_macro   0x00009e17      0x6bf ADXL345.o
+ .debug_macro   0x0000a4d6     0x1b4b ADXL345.o
+ .debug_macro   0x0000c021     0x144a ADXL345.o
+ .debug_macro   0x0000d46b      0x34e ADXL345.o
+ .debug_macro   0x0000d7b9       0x7c ADXL345.o
+ .debug_macro   0x0000d835       0xa0 ADXL345.o
+ .debug_macro   0x0000d8d5       0x4c ADXL345.o
+ .debug_macro   0x0000d921       0xca ADXL345.o
+ .debug_macro   0x0000d9eb       0x94 ADXL345.o
+ .debug_macro   0x0000da7f       0x58 ADXL345.o
+ .debug_macro   0x0000dad7      0x364 ADXL345.o
+ .debug_macro   0x0000de3b       0x82 ADXL345.o
+ .debug_macro   0x0000debd      0x197 ADXL345.o
+ .debug_macro   0x0000e054       0xb8 ADXL345.o
+ .debug_macro   0x0000e10c       0xa0 ADXL345.o
+ .debug_macro   0x0000e1ac       0xb2 ADXL345.o
+ .debug_macro   0x0000e25e       0x1c ADXL345.o
+ .debug_macro   0x0000e27a       0x1c ADXL345.o
+ .debug_macro   0x0000e296       0x1c ADXL345.o
+ .debug_macro   0x0000e2b2       0x7c ADXL345.o
+ .debug_macro   0x0000e32e      0x161 ADXL345.o
+ .debug_macro   0x0000e48f       0xdc ADXL345.o
+ .debug_macro   0x0000e56b      0x12f ADXL345.o
+ .debug_macro   0x0000e69a      0x12f ADXL345.o
+ .debug_macro   0x0000e7c9      0x12f ADXL345.o
+ .debug_macro   0x0000e8f8      0x12f ADXL345.o
+ .debug_macro   0x0000ea27      0x12f ADXL345.o
+ .debug_macro   0x0000eb56      0x12f ADXL345.o
+ .debug_macro   0x0000ec85      0x11e ADXL345.o
+ .debug_macro   0x0000eda3       0xe2 ADXL345.o
+ .debug_macro   0x0000ee85       0xe2 ADXL345.o
+ .debug_macro   0x0000ef67       0xe2 ADXL345.o
+ .debug_macro   0x0000f049      0x12c ADXL345.o
+ .debug_macro   0x0000f175      0x100 ADXL345.o
+ .debug_macro   0x0000f275       0xf4 ADXL345.o
+ .debug_macro   0x0000f369      0x40f ADXL345.o
+ .debug_macro   0x0000f778       0x40 ADXL345.o
+ .debug_macro   0x0000f7b8      0x361 ADXL345.o
+ .debug_macro   0x0000fb19     0x16ea ADXL345.o
+ .debug_macro   0x00011203       0x6d ADXL345.o
+ .debug_macro   0x00011270       0xbe ADXL345.o
+ .debug_macro   0x0001132e       0x16 ADXL345.o
+ .debug_macro   0x00011344       0xe2 ADXL345.o
+ .debug_macro   0x00011426       0xbe ADXL345.o
+ .debug_macro   0x000114e4      0x4b2 MS5607.o
+ .debug_macro   0x00011996       0x46 MS5607.o
+ .debug_macro   0x000119dc      0x1e1 MS5607.o
+ .debug_macro   0x00011bbd      0x4a9 SaLAccelerometer.o
+ .debug_macro   0x00012066      0x453 SaLAnalog.o
+ .debug_macro   0x000124b9      0x4d7 SaLBarometer.o
+ .debug_macro   0x00012990      0x472 SaLBitBang.o
+ .debug_macro   0x00012e02       0x3a SaLBitBang.o
+ .debug_macro   0x00012e3c      0x476 SaLBuzzer.o
+ .debug_macro   0x000132b2      0x484 SaLClocks.o
+ .debug_macro   0x00013736      0x43d SaLDelay.o
+ .debug_macro   0x00013b73      0x58f SaLFlashMem.o
+ .debug_macro   0x00014102      0x442 SaLPort.o
+ .debug_macro   0x00014544      0x578 SaLSample.o
+ .debug_macro   0x00014abc      0x2d6 Device_Startup/startup_samd21.o
+ .debug_macro   0x00014d92      0x2dc Device_Startup/system_samd21.o
+ .debug_macro   0x0001506e      0x632 SaLFrostburn1_1.o
 
-.debug_line     0x00000000     0x82a4
- .debug_line    0x00000000      0x93b MS5607.o
- .debug_line    0x0000093b      0x925 SaLAccelerometer.o
- .debug_line    0x00001260      0x838 SaLAnalog.o
- .debug_line    0x00001a98      0x8ed SaLBarometer.o
- .debug_line    0x00002385      0x947 SaLBitBang.o
- .debug_line    0x00002ccc      0x8ac SaLBuzzer.o
- .debug_line    0x00003578      0x8c3 SaLClocks.o
- .debug_line    0x00003e3b      0x831 SaLDelay.o
- .debug_line    0x0000466c      0x90c SaLFlashMem.o
- .debug_line    0x00004f78      0x7f3 SaLPort.o
- .debug_line    0x0000576b      0x948 SaLSample.o
- .debug_line    0x000060b3      0xa84 SaLUSART.o
- .debug_line    0x00006b37      0x6ce Device_Startup/startup_samd21.o
- .debug_line    0x00007205      0x6ad Device_Startup/system_samd21.o
- .debug_line    0x000078b2      0x9f2 SaLFrostburn1_1.o
+.debug_line     0x00000000     0x80c1
+ .debug_line    0x00000000      0x8c6 ADXL345.o
+ .debug_line    0x000008c6      0x93b MS5607.o
+ .debug_line    0x00001201      0x925 SaLAccelerometer.o
+ .debug_line    0x00001b26      0x838 SaLAnalog.o
+ .debug_line    0x0000235e      0x8ed SaLBarometer.o
+ .debug_line    0x00002c4b      0x947 SaLBitBang.o
+ .debug_line    0x00003592      0x8ac SaLBuzzer.o
+ .debug_line    0x00003e3e      0x8c3 SaLClocks.o
+ .debug_line    0x00004701      0x831 SaLDelay.o
+ .debug_line    0x00004f32      0x90c SaLFlashMem.o
+ .debug_line    0x0000583e      0x7f3 SaLPort.o
+ .debug_line    0x00006031      0x948 SaLSample.o
+ .debug_line    0x00006979      0x6ce Device_Startup/startup_samd21.o
+ .debug_line    0x00007047      0x6ad Device_Startup/system_samd21.o
+ .debug_line    0x000076f4      0x9cd SaLFrostburn1_1.o
 
-.debug_str      0x00000000    0x7019a
- .debug_str     0x00000000    0x6c8aa MS5607.o
-                              0x6cc8f (size before relaxing)
- .debug_str     0x0006c8aa      0x713 SaLAccelerometer.o
-                              0x6c767 (size before relaxing)
- .debug_str     0x0006cfbd      0x60d SaLAnalog.o
-                              0x6c237 (size before relaxing)
- .debug_str     0x0006d5ca      0x1bc SaLBarometer.o
-                              0x6c2e5 (size before relaxing)
- .debug_str     0x0006d786       0xa6 SaLBitBang.o
-                              0x6c0ce (size before relaxing)
- .debug_str     0x0006d82c      0x4a5 SaLBuzzer.o
-                              0x6c850 (size before relaxing)
- .debug_str     0x0006dcd1      0x84a SaLClocks.o
-                              0x6ce56 (size before relaxing)
- .debug_str     0x0006e51b       0x73 SaLDelay.o
-                              0x6ba86 (size before relaxing)
- .debug_str     0x0006e58e      0x233 SaLFlashMem.o
-                              0x6cf71 (size before relaxing)
- .debug_str     0x0006e7c1       0x28 SaLPort.o
-                              0x6bc2a (size before relaxing)
- .debug_str     0x0006e7e9      0x177 SaLSample.o
-                              0x6d2a0 (size before relaxing)
- .debug_str     0x0006e960      0x8c1 SaLUSART.o
-                              0x6e027 (size before relaxing)
- .debug_str     0x0006f221      0xeb6 Device_Startup/startup_samd21.o
-                              0x69677 (size before relaxing)
- .debug_str     0x000700d7       0x6c Device_Startup/system_samd21.o
-                              0x68534 (size before relaxing)
- .debug_str     0x00070143       0x57 SaLFrostburn1_1.o
-                              0x6d269 (size before relaxing)
+.debug_str      0x00000000    0x6facb
+ .debug_str     0x00000000    0x6c0d4 ADXL345.o
+                              0x6c4a5 (size before relaxing)
+ .debug_str     0x0006c0d4      0xc26 MS5607.o
+                              0x6cc84 (size before relaxing)
+ .debug_str     0x0006ccfa      0x334 SaLAccelerometer.o
+                              0x6c75c (size before relaxing)
+ .debug_str     0x0006d02e      0x60d SaLAnalog.o
+                              0x6c22c (size before relaxing)
+ .debug_str     0x0006d63b      0x1bc SaLBarometer.o
+                              0x6c2da (size before relaxing)
+ .debug_str     0x0006d7f7       0xa6 SaLBitBang.o
+                              0x6c0c3 (size before relaxing)
+ .debug_str     0x0006d89d      0x4aa SaLBuzzer.o
+                              0x6c845 (size before relaxing)
+ .debug_str     0x0006dd47      0x84a SaLClocks.o
+                              0x6ce4b (size before relaxing)
+ .debug_str     0x0006e591       0x73 SaLDelay.o
+                              0x6ba7b (size before relaxing)
+ .debug_str     0x0006e604      0x233 SaLFlashMem.o
+                              0x6cf66 (size before relaxing)
+ .debug_str     0x0006e837       0x28 SaLPort.o
+                              0x6bc1f (size before relaxing)
+ .debug_str     0x0006e85f      0x177 SaLSample.o
+                              0x6d295 (size before relaxing)
+ .debug_str     0x0006e9d6      0xec6 Device_Startup/startup_samd21.o
+                              0x6966c (size before relaxing)
+ .debug_str     0x0006f89c       0x6c Device_Startup/system_samd21.o
+                              0x68529 (size before relaxing)
+ .debug_str     0x0006f908      0x1c3 SaLFrostburn1_1.o
+                              0x6d22a (size before relaxing)
 
-.debug_frame    0x00000000      0x86c
- .debug_frame   0x00000000       0xe4 MS5607.o
- .debug_frame   0x000000e4       0x78 SaLAccelerometer.o
- .debug_frame   0x0000015c       0x54 SaLAnalog.o
- .debug_frame   0x000001b0       0x70 SaLBarometer.o
- .debug_frame   0x00000220       0xb8 SaLBitBang.o
- .debug_frame   0x000002d8       0x74 SaLBuzzer.o
- .debug_frame   0x0000034c       0x68 SaLClocks.o
- .debug_frame   0x000003b4       0x58 SaLDelay.o
- .debug_frame   0x0000040c       0x3c SaLFlashMem.o
- .debug_frame   0x00000448       0x28 SaLPort.o
- .debug_frame   0x00000470       0x74 SaLSample.o
- .debug_frame   0x000004e4       0xd8 SaLUSART.o
- .debug_frame   0x000005bc       0x3c Device_Startup/startup_samd21.o
- .debug_frame   0x000005f8       0x30 Device_Startup/system_samd21.o
- .debug_frame   0x00000628       0x38 SaLFrostburn1_1.o
- .debug_frame   0x00000660       0x34 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_muldi3.o)
- .debug_frame   0x00000694       0x50 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(bpabi.o)
- .debug_frame   0x000006e4       0x3c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_divdi3.o)
- .debug_frame   0x00000720       0x3c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_udivdi3.o)
- .debug_frame   0x0000075c       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-init.o)
- .debug_frame   0x00000788       0x54 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-__call_atexit.o)
- .debug_frame   0x000007dc       0x28 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-atexit.o)
- .debug_frame   0x00000804       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-fini.o)
- .debug_frame   0x00000830       0x3c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-__atexit.o)
+.debug_frame    0x00000000      0x84c
+ .debug_frame   0x00000000       0xc0 ADXL345.o
+ .debug_frame   0x000000c0       0xe4 MS5607.o
+ .debug_frame   0x000001a4       0x78 SaLAccelerometer.o
+ .debug_frame   0x0000021c       0x54 SaLAnalog.o
+ .debug_frame   0x00000270       0x70 SaLBarometer.o
+ .debug_frame   0x000002e0       0xb8 SaLBitBang.o
+ .debug_frame   0x00000398       0x74 SaLBuzzer.o
+ .debug_frame   0x0000040c       0x68 SaLClocks.o
+ .debug_frame   0x00000474       0x58 SaLDelay.o
+ .debug_frame   0x000004cc       0x3c SaLFlashMem.o
+ .debug_frame   0x00000508       0x28 SaLPort.o
+ .debug_frame   0x00000530       0x74 SaLSample.o
+ .debug_frame   0x000005a4       0x3c Device_Startup/startup_samd21.o
+ .debug_frame   0x000005e0       0x30 Device_Startup/system_samd21.o
+ .debug_frame   0x00000610       0x38 SaLFrostburn1_1.o
+ .debug_frame   0x00000648       0x34 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_muldi3.o)
+ .debug_frame   0x0000067c       0x3c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(muldf3.o)
+ .debug_frame   0x000006b8       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(floatsidf.o)
+ .debug_frame   0x000006e4       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(truncdfsf2.o)
+ .debug_frame   0x00000710       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-init.o)
+ .debug_frame   0x0000073c       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-memcpy.o)
+ .debug_frame   0x00000768       0x54 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-__call_atexit.o)
+ .debug_frame   0x000007bc       0x28 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-atexit.o)
+ .debug_frame   0x000007e4       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-fini.o)
+ .debug_frame   0x00000810       0x3c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-__atexit.o)

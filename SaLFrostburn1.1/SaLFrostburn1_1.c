@@ -21,7 +21,7 @@ int main(void) {
     SaLDelayInit();
     SalGclkInit();
     SaLRtcInit();
-    uart_init(9600);
+   // uart_init(9600);
     //SaLTC4Init();
     sampleInit();
     adcInit();
@@ -80,7 +80,7 @@ int main(void) {
         //delay_ms(10000);
         //pinToggle(LedPin);
 
-        //sampleTick();
+        sampleTick();
         //batt = senseBatVolts(senseBat);
     }
 }
