@@ -110,28 +110,12 @@ int main(void) {
     // byteOut(CC1120_SCK_PIN,CC1120_MOSI_PIN, 0b10111101 );
     pinHigh(CC1120_SLAVE_SELECT);
 
-<<<<<<< HEAD
 
-
-=======
-     startUpTone();
-    startUpTone();
-	
->>>>>>> origin/master
     volatile float batt;
 
     //TC5->COUNT16.CTRLA.bit.ENABLE = 0;
 
-<<<<<<< HEAD
-//TC5->COUNT16.CTRLBCLR.reg= TC_CTRLBCLR_CMD_RETRIGGER;
 
-    while (1) {
-
-        if (!sampleTick()) {
-            continue;
-        }
-        counter++;
-=======
     TC5->COUNT16.CTRLBCLR.reg= TC_CTRLBCLR_CMD_RETRIGGER;
 
     while (1) {
@@ -140,6 +124,5 @@ int main(void) {
 
         sampleTick(); 
         batt = senseBatVolts(senseBat);
->>>>>>> origin/master
     }
 }

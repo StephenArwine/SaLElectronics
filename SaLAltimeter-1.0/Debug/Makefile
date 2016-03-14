@@ -61,7 +61,7 @@ C_SRCS +=  \
 ../../src/services/SaLUsb.c \
 ../Device_Startup/startup_samd21.c \
 ../Device_Startup/system_samd21.c \
-../SaLAltimeter-1.0.c
+../SaLAltimeter-1_0.c
 
 
 PREPROCESSING_SRCS += 
@@ -94,7 +94,7 @@ SaLUSART.o \
 SaLUsb.o \
 Device_Startup/startup_samd21.o \
 Device_Startup/system_samd21.o \
-SaLAltimeter-1.0.o
+SaLAltimeter-1_0.o
 
 OBJS_AS_ARGS +=  \
 ADXL345.o \
@@ -120,7 +120,7 @@ SaLUSART.o \
 SaLUsb.o \
 Device_Startup/startup_samd21.o \
 Device_Startup/system_samd21.o \
-SaLAltimeter-1.0.o
+SaLAltimeter-1_0.o
 
 C_DEPS +=  \
 ADXL345.d \
@@ -146,7 +146,7 @@ SaLUSART.d \
 SaLUsb.d \
 Device_Startup/startup_samd21.d \
 Device_Startup/system_samd21.d \
-SaLAltimeter-1.0.d
+SaLAltimeter-1_0.d
 
 C_DEPS_AS_ARGS +=  \
 ADXL345.d \
@@ -172,7 +172,7 @@ SaLUSART.d \
 SaLUsb.d \
 Device_Startup/startup_samd21.d \
 Device_Startup/system_samd21.d \
-SaLAltimeter-1.0.d
+SaLAltimeter-1_0.d
 
 OUTPUT_FILE_PATH +=SaLAltimeter-1.0.elf
 

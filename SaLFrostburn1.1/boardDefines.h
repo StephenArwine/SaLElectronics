@@ -21,6 +21,8 @@ const static Pin senseBat = { .group = 0, .pin = 6 , .chan = 6};
 #define AT25SF_SCK_PIN PIN_PA17
 #define AT25SF_SLAVE_SELECT_PIN PIN_PA20
 
+const static Pin AT25SF_SLAVE_SELECT = {.group = 0, .pin = 20 };
+
 #define HAS_TX 1
 #define CC1120_MOSI_PIN PIN_PA19
 #define CC1120_MISO_PIN PIN_PA16
@@ -41,12 +43,21 @@ const static Pin BUZZER = { .group = 0, .pin = 22, .cfg = 0x40 };
 #define MS5607_MISO_PIN PIN_PA13
 #define MS5607_SCK_PIN PIN_PA15
 #define MS5607_SLAVE_SELECT_PIN PIN_PA12
+const static Pin MS5607_MOSI = { .group = 0, .pin = 14 };
+const static Pin MS5607_MISO = { .group = 0, .pin = 13 };
+const static Pin MS5607_SCK = { .group = 0, .pin = 15 };
+
+const static Pin MS5607_SLAVE_SELECT = {.group = 0, .pin = 12 };
+
 
 #define HAS_ADXL345 1
 #define ADXL345_MOSI_PIN PIN_PA14
 #define ADXL345_MISO_PIN PIN_PA13
 #define ADXL345_SCK_PIN PIN_PA15
 #define ADXL345_SLAVE_SELECT_PIN PIN_PA18
+
+const static Pin ADXL345_SLAVE_SELECT = {.group = 0, .pin = 18 };
+
 
 #define HAS_GPS 1
 #define HAS_MTK3329 1
