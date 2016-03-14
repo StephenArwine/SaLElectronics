@@ -7931,7 +7931,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <part name="GND50" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="U$4" library="SaL-lib1" deviceset="SIS410DN" device=""/>
 <part name="U$6" library="SaL-lib1" deviceset="SIS410DN" device=""/>
-<part name="JP5" library="SparkFun-Connectors" deviceset="M02" device="4UCON-15767"/>
+<part name="JP5" library="SparkFun-Connectors" deviceset="M02" device="4UCON-15767" value="Lipo"/>
 <part name="STANDOFF4" library="SparkFun-Electromechanical" deviceset="STAND-OFF" device=""/>
 <part name="U$7" library="SparkFun-Sensors" deviceset="ADXL193" device=""/>
 <part name="D2" library="SparkFun-LED" deviceset="LED-GREEN" device="1206" value="GREEN"/>
@@ -9542,7 +9542,12 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <segment>
 <pinref part="SG1" gate="G$1" pin="1"/>
 <wire x1="248.92" y1="35.56" x2="246.38" y2="33.02" width="0.1524" layer="91"/>
-<label x="246.38" y="33.02" size="1.778" layer="95" rot="R270"/>
+<label x="246.38" y="33.02" size="1.27" layer="95" rot="R270" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="PA04(AIN4/REFB/SER0:0/TC0:0)"/>
+<wire x1="132.08" y1="175.26" x2="129.54" y2="175.26" width="0.1524" layer="91"/>
+<label x="129.54" y="175.26" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="N$29" class="0">

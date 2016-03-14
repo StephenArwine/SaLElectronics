@@ -1,0 +1,424 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>7.0</ProjectVersion>
+    <ToolchainName>com.Atmel.ARMGCC.C</ToolchainName>
+    <ProjectGuid>{47079521-44b1-438e-b8c6-5699666de429}</ProjectGuid>
+    <avrdevice>ATSAMD21G18A</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>SaLFrostburn1.1</AssemblyName>
+    <Name>SaLFrostburn1.1</Name>
+    <RootNamespace>SaLFrostburn1.1</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress />
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue />
+    <BootSegment>2</BootSegment>
+    <eraseonlaunchrule>1</eraseonlaunchrule>
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+  <options />
+  <configurations />
+  <files />
+  <documentation help="" />
+  <offline-documentation help="" />
+  <dependencies>
+    <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.29.0" />
+  </dependencies>
+</framework-data>
+    </AsfFrameworkConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <ArmGcc>
+  <armgcc.common.outputfiles.hex>True</armgcc.common.outputfiles.hex>
+  <armgcc.common.outputfiles.lss>True</armgcc.common.outputfiles.lss>
+  <armgcc.common.outputfiles.eep>True</armgcc.common.outputfiles.eep>
+  <armgcc.common.outputfiles.bin>True</armgcc.common.outputfiles.bin>
+  <armgcc.common.outputfiles.srec>True</armgcc.common.outputfiles.srec>
+  <armgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>NDEBUG</Value>
+    </ListValues>
+  </armgcc.compiler.symbols.DefSymbols>
+  <armgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\SAMD21_DFP\1.0.222\samd21a\include</Value>
+      <Value>%24(PackRepoDir)\arm\cmsis\4.2.0\CMSIS\Include\</Value>
+    </ListValues>
+  </armgcc.compiler.directories.IncludePaths>
+  <armgcc.compiler.optimization.level>Optimize for size (-Os)</armgcc.compiler.optimization.level>
+  <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
+  <armgcc.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </armgcc.linker.libraries.Libraries>
+  <armgcc.linker.libraries.LibrarySearchPaths>
+    <ListValues>
+      <Value>%24(ProjectDir)\Device_Startup</Value>
+    </ListValues>
+  </armgcc.linker.libraries.LibrarySearchPaths>
+  <armgcc.linker.optimization.GarbageCollectUnusedSections>True</armgcc.linker.optimization.GarbageCollectUnusedSections>
+  <armgcc.linker.miscellaneous.LinkerFlags>-Tsamd21g18a_flash.ld</armgcc.linker.miscellaneous.LinkerFlags>
+  <armgcc.preprocessingassembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\SAMD21_DFP\1.0.222\samd21a\include</Value>
+      <Value>%24(PackRepoDir)\arm\cmsis\4.2.0\CMSIS\Include\</Value>
+    </ListValues>
+  </armgcc.preprocessingassembler.general.IncludePaths>
+</ArmGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <ArmGcc>
+  <armgcc.common.outputfiles.hex>True</armgcc.common.outputfiles.hex>
+  <armgcc.common.outputfiles.lss>True</armgcc.common.outputfiles.lss>
+  <armgcc.common.outputfiles.eep>True</armgcc.common.outputfiles.eep>
+  <armgcc.common.outputfiles.bin>True</armgcc.common.outputfiles.bin>
+  <armgcc.common.outputfiles.srec>True</armgcc.common.outputfiles.srec>
+  <armgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>DEBUG</Value>
+    </ListValues>
+  </armgcc.compiler.symbols.DefSymbols>
+  <armgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\SAMD21_DFP\1.0.222\samd21a\include</Value>
+      <Value>%24(PackRepoDir)\arm\cmsis\4.2.0\CMSIS\Include\</Value>
+      <Value>../../src/services</Value>
+      <Value>../../src/include</Value>
+      <Value>../../src/drivers</Value>
+      <Value>../../src</Value>
+      <Value>..</Value>
+    </ListValues>
+  </armgcc.compiler.directories.IncludePaths>
+  <armgcc.compiler.optimization.level>Optimize (-O1)</armgcc.compiler.optimization.level>
+  <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <armgcc.compiler.optimization.DebugLevel>Maximum (-g3)</armgcc.compiler.optimization.DebugLevel>
+  <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
+  <armgcc.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </armgcc.linker.libraries.Libraries>
+  <armgcc.linker.libraries.LibrarySearchPaths>
+    <ListValues>
+      <Value>%24(ProjectDir)\Device_Startup</Value>
+    </ListValues>
+  </armgcc.linker.libraries.LibrarySearchPaths>
+  <armgcc.linker.optimization.GarbageCollectUnusedSections>True</armgcc.linker.optimization.GarbageCollectUnusedSections>
+  <armgcc.linker.memorysettings.ExternalRAM />
+  <armgcc.linker.miscellaneous.LinkerFlags>-Tsamd21g18a_flash.ld</armgcc.linker.miscellaneous.LinkerFlags>
+  <armgcc.assembler.debugging.DebugLevel>Default (-g)</armgcc.assembler.debugging.DebugLevel>
+  <armgcc.preprocessingassembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\SAMD21_DFP\1.0.222\samd21a\include</Value>
+      <Value>%24(PackRepoDir)\arm\cmsis\4.2.0\CMSIS\Include\</Value>
+    </ListValues>
+  </armgcc.preprocessingassembler.general.IncludePaths>
+  <armgcc.preprocessingassembler.debugging.DebugLevel>Default (-Wa,-g)</armgcc.preprocessingassembler.debugging.DebugLevel>
+</ArmGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\src\drivers\ADXL345.c">
+      <SubType>compile</SubType>
+      <Link>ADXL345.c</Link>
+    </Compile>
+    <Compile Include="..\src\drivers\ADXL345.h">
+      <SubType>compile</SubType>
+      <Link>ADXL345.h</Link>
+    </Compile>
+    <Compile Include="..\src\drivers\AT25SF.c">
+      <SubType>compile</SubType>
+      <Link>AT25SF.c</Link>
+    </Compile>
+    <Compile Include="..\src\drivers\AT25SF.h">
+      <SubType>compile</SubType>
+      <Link>AT25SF.h</Link>
+    </Compile>
+    <Compile Include="..\src\drivers\CC1120.c">
+      <SubType>compile</SubType>
+      <Link>CC1120.c</Link>
+    </Compile>
+    <Compile Include="..\src\drivers\CC1120.h">
+      <SubType>compile</SubType>
+      <Link>CC1120.h</Link>
+    </Compile>
+    <Compile Include="..\src\drivers\CC1120_config.h">
+      <SubType>compile</SubType>
+      <Link>CC1120_config.h</Link>
+    </Compile>
+    <Compile Include="..\src\drivers\MS5607.c">
+      <SubType>compile</SubType>
+      <Link>MS5607.c</Link>
+    </Compile>
+    <Compile Include="..\src\drivers\MS5607.h">
+      <SubType>compile</SubType>
+      <Link>MS5607.h</Link>
+    </Compile>
+    <Compile Include="..\src\drivers\MTK3329.c">
+      <SubType>compile</SubType>
+      <Link>MTK3329.c</Link>
+    </Compile>
+    <Compile Include="..\src\drivers\MTK3329.h">
+      <SubType>compile</SubType>
+      <Link>MTK3329.h</Link>
+    </Compile>
+    <Compile Include="..\src\include\compiler.h">
+      <SubType>compile</SubType>
+      <Link>compiler.h</Link>
+    </Compile>
+    <Compile Include="..\src\include\err_codes.h">
+      <SubType>compile</SubType>
+      <Link>err_codes.h</Link>
+    </Compile>
+    <Compile Include="..\src\include\events.h">
+      <SubType>compile</SubType>
+      <Link>events.h</Link>
+    </Compile>
+    <Compile Include="..\src\include\io.h">
+      <SubType>compile</SubType>
+      <Link>io.h</Link>
+    </Compile>
+    <Compile Include="..\src\include\parts.h">
+      <SubType>compile</SubType>
+      <Link>parts.h</Link>
+    </Compile>
+    <Compile Include="..\src\include\utils.h">
+      <SubType>compile</SubType>
+      <Link>utils.h</Link>
+    </Compile>
+    <Compile Include="..\src\include\utils_assert.h">
+      <SubType>compile</SubType>
+      <Link>utils_assert.h</Link>
+    </Compile>
+    <Compile Include="..\src\include\utils_event.h">
+      <SubType>compile</SubType>
+      <Link>utils_event.h</Link>
+    </Compile>
+    <Compile Include="..\src\include\utils_increment_macro.h">
+      <SubType>compile</SubType>
+      <Link>utils_increment_macro.h</Link>
+    </Compile>
+    <Compile Include="..\src\include\utils_list.h">
+      <SubType>compile</SubType>
+      <Link>utils_list.h</Link>
+    </Compile>
+    <Compile Include="..\src\include\utils_repeat_macro.h">
+      <SubType>compile</SubType>
+      <Link>utils_repeat_macro.h</Link>
+    </Compile>
+    <Compile Include="..\src\include\utils_syscalls.c">
+      <SubType>compile</SubType>
+      <Link>utils_syscalls.c</Link>
+    </Compile>
+    <Compile Include="..\src\SaL.h">
+      <SubType>compile</SubType>
+      <Link>SaL.h</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLAccelerometer.c">
+      <SubType>compile</SubType>
+      <Link>SaLAccelerometer.c</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLAccelerometer.h">
+      <SubType>compile</SubType>
+      <Link>SaLAccelerometer.h</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLAltimeter.c">
+      <SubType>compile</SubType>
+      <Link>SaLAltimeter.c</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLAltimeter.h">
+      <SubType>compile</SubType>
+      <Link>SaLAltimeter.h</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLAnalog.c">
+      <SubType>compile</SubType>
+      <Link>SaLAnalog.c</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLAnalog.h">
+      <SubType>compile</SubType>
+      <Link>SaLAnalog.h</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLBarometer.c">
+      <SubType>compile</SubType>
+      <Link>SaLBarometer.c</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLBarometer.h">
+      <SubType>compile</SubType>
+      <Link>SaLBarometer.h</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLBitBang.c">
+      <SubType>compile</SubType>
+      <Link>SaLBitBang.c</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLBitBang.h">
+      <SubType>compile</SubType>
+      <Link>SaLBitBang.h</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLBuzzer.c">
+      <SubType>compile</SubType>
+      <Link>SaLBuzzer.c</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLBuzzer.h">
+      <SubType>compile</SubType>
+      <Link>SaLBuzzer.h</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLClocks.c">
+      <SubType>compile</SubType>
+      <Link>SaLClocks.c</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLClocks.h">
+      <SubType>compile</SubType>
+      <Link>SaLClocks.h</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLConv2C.h">
+      <SubType>compile</SubType>
+      <Link>SaLConv2C.h</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLDelay.c">
+      <SubType>compile</SubType>
+      <Link>SaLDelay.c</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLDelay.h">
+      <SubType>compile</SubType>
+      <Link>SaLDelay.h</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLFlashMem.c">
+      <SubType>compile</SubType>
+      <Link>SaLFlashMem.c</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLFlashMem.h">
+      <SubType>compile</SubType>
+      <Link>SaLFlashMem.h</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLGps.h">
+      <SubType>compile</SubType>
+      <Link>SaLGps.h</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLIo.c">
+      <SubType>compile</SubType>
+      <Link>SaLIo.c</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLIo.h">
+      <SubType>compile</SubType>
+      <Link>SaLIo.h</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLLog.c">
+      <SubType>compile</SubType>
+      <Link>SaLLog.c</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLLog.h">
+      <SubType>compile</SubType>
+      <Link>SaLLog.h</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLMath.c">
+      <SubType>compile</SubType>
+      <Link>SaLMath.c</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLMath.h">
+      <SubType>compile</SubType>
+      <Link>SaLMath.h</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLPort.c">
+      <SubType>compile</SubType>
+      <Link>SaLPort.c</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLPort.h">
+      <SubType>compile</SubType>
+      <Link>SaLPort.h</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLSample.c">
+      <SubType>compile</SubType>
+      <Link>SaLSample.c</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLSample.h">
+      <SubType>compile</SubType>
+      <Link>SaLSample.h</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLSenseBat.h">
+      <SubType>compile</SubType>
+      <Link>SaLSenseBat.h</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLSensor.h">
+      <SubType>compile</SubType>
+      <Link>SaLSensor.h</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLSpi.c">
+      <SubType>compile</SubType>
+      <Link>SaLSpi.c</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLSpi.h">
+      <SubType>compile</SubType>
+      <Link>SaLSpi.h</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLTypes.h">
+      <SubType>compile</SubType>
+      <Link>SaLTypes.h</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLUSART.c">
+      <SubType>compile</SubType>
+      <Link>SaLUSART.c</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLUSART.h">
+      <SubType>compile</SubType>
+      <Link>SaLUSART.h</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLUsb.c">
+      <SubType>compile</SubType>
+      <Link>SaLUsb.c</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaLUsb.h">
+      <SubType>compile</SubType>
+      <Link>SaLUsb.h</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaL_flight.c">
+      <SubType>compile</SubType>
+      <Link>SaL_flight.c</Link>
+    </Compile>
+    <Compile Include="..\src\services\SaL_flight.h">
+      <SubType>compile</SubType>
+      <Link>SaL_flight.h</Link>
+    </Compile>
+    <Compile Include="boardDefines.h">
+      <SubType>compile</SubType>
+      <Link>boardDefines.h</Link>
+    </Compile>
+    <Compile Include="Device_Startup\startup_samd21.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Device_Startup\system_samd21.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SaLFrostburn1_1.c">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Device_Startup\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Device_Startup\samd21g18a_flash.ld">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Device_Startup\samd21g18a_sram.ld">
+      <SubType>compile</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>

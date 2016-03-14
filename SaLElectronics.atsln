@@ -11,6 +11,8 @@ Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "SaLAltimeter_rtc_test", "Sa
 EndProject
 Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "Samd usbTest", "Samd usbTest\Samd usbTest.cproj", "{C8D9028A-D4D6-4169-A22D-824C921D3641}"
 EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "SaLFrostburn1.1", "SaLFrostburn1.1\SaLFrostburn1.1.cproj", "{47079521-44B1-438E-B8C6-5699666DE429}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -30,6 +32,10 @@ Global
 		{C8D9028A-D4D6-4169-A22D-824C921D3641}.Debug|ARM.Build.0 = Debug|ARM
 		{C8D9028A-D4D6-4169-A22D-824C921D3641}.Release|ARM.ActiveCfg = Release|ARM
 		{C8D9028A-D4D6-4169-A22D-824C921D3641}.Release|ARM.Build.0 = Release|ARM
+		{47079521-44B1-438E-B8C6-5699666DE429}.Debug|ARM.ActiveCfg = Debug|ARM
+		{47079521-44B1-438E-B8C6-5699666DE429}.Debug|ARM.Build.0 = Debug|ARM
+		{47079521-44B1-438E-B8C6-5699666DE429}.Release|ARM.ActiveCfg = Release|ARM
+		{47079521-44B1-438E-B8C6-5699666DE429}.Release|ARM.Build.0 = Release|ARM
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -22,9 +22,7 @@
 					<CVendor>Atmel</CVendor>
 					<CVersion>1.0.0</CVersion>
 					<DefaultRepoPath>C:/Program Files (x86)\Atmel\Studio\7.0\Packs</DefaultRepoPath>
-					<DependentComponents>
-						<d4p1:anyType z:Ref="i1" />
-					</DependentComponents>
+					<DependentComponents />
 					<Description></Description>
 					<Files>
 						<d4p1:anyType i:type="FileInfo">
@@ -54,7 +52,7 @@
 							<Attribute>template</Attribute>
 							<Category>source</Category>
 							<Condition>C Exe</Condition>
-							<FileContentHash>o0ncidL5gR0Z0YwWJ1YroQ==</FileContentHash>
+							<FileContentHash>XZZtilG79YmoNUmOU/6xxQ==</FileContentHash>
 							<FileVersion></FileVersion>
 							<Name>samd21a/templates/main.c</Name>
 							<SelectString>Main file (.c)</SelectString>

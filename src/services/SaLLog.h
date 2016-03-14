@@ -2,6 +2,7 @@
 #ifndef SALLOG_H_
 #define SALLOG_H_
 
+#include <SaLTypes.h>
 
 
 
