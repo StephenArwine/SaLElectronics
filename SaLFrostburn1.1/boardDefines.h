@@ -74,4 +74,5 @@ const static Pin ADXL345_SLAVE_SELECT = {.group = 0, .pin = 18 };
 
 #define BUZZERPIN PIN_PA22
 
+const static Pin LedPin = {.group = 0, .pin = 27 };
 

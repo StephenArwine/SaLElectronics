@@ -30,7 +30,7 @@ int main(void) {
     pinOut(AT25SF_SLAVE_SELECT);
     pinOut(MS5607_SLAVE_SELECT);
     pinOut(ADXL345_SLAVE_SELECT);
-    SaLPinMode(PIN_PA13,INPUT);
+    // SaLPinMode(PIN_PA13,INPUT);
 
     pinOut(MS5607_MOSI);
     pinOut(MS5607_SCK);
@@ -46,7 +46,7 @@ int main(void) {
 
 
 
-
+    pinOut(LedPin);
 
 
     struct AccelerometerModule myAccelerometer;
@@ -56,11 +56,31 @@ int main(void) {
 
     /* Replace with your application code */
 
+//     uint8_t message[255];
+// // 	     AT25SFErace4KBlock(0);
+// // 	     AT25SFWriteByte(0x00101,252);
+// // 	   volatile uint8_t byte = AT25SFGetByte(0x00101);
+// 
+//     pinLow(CC1120_SLAVE_SELECT);
+//     volatile uint8_t ccstatus = syncByte(CC1120_SCK ,CC1120_MOSI, CC1120_MISO, 0x80 | 0x30);
+//     pinHigh(CC1120_SLAVE_SELECT);
+// 
+//     pinLow(CC1120_SLAVE_SELECT);
+// 
+//     while (pinRead(CC1120_MISO));
+//     volatile uint8_t ccstatus2 = syncByte(CC1120_SCK ,CC1120_MOSI, CC1120_MISO, 0x80 | 0x3B);
+//     volatile uint8_t ccstatus3 = getByte(CC1120_SCK_PIN,CC1120_MISO_PIN);
+//     // byteOut(CC1120_SCK_PIN,CC1120_MOSI_PIN, 0b10111101 );
+//     pinHigh(CC1120_SLAVE_SELECT);
+
     volatile float batt;
 
     while (1) {
 
-        sampleTick();
-        batt = senseBatVolts(senseBat);
+        //delay_ms(10000);
+        //pinToggle(LedPin);
+
+        //sampleTick();
+        //batt = senseBatVolts(senseBat);
     }
 }
