@@ -30,8 +30,8 @@ const static Pin AT25SF_SLAVE_SELECT = {.group = 0, .pin = 20 };
 #define CC1120_SLAVE_SELECT_PIN PIN_PA21
 
 const static Pin CC1120_SLAVE_SELECT = {.group = 0, .pin = 21 };
-const static Pin CC1120_MISO = { .group = 0, .pin = 16 };
 const static Pin CC1120_MOSI = { .group = 0, .pin = 19 };
+const static Pin CC1120_MISO = { .group = 0, .pin = 16 };
 const static Pin CC1120_SCK = { .group = 0, .pin = 17 };
 
 

@@ -96,19 +96,19 @@ int main(void) {
 //     pinHigh(CC1120_SLAVE_SELECT);
 //     delay_ms(20);
 
-    pinLow(CC1120_SLAVE_SELECT);
-    volatile uint8_t ccstatus = syncByte(CC1120_SCK ,CC1120_MOSI, CC1120_MISO, 0x80 | 0x30);
-    pinHigh(CC1120_SLAVE_SELECT);
+   // pinLow(CC1120_SLAVE_SELECT);
+    //volatile uint8_t ccstatus = syncByte(CC1120_SCK ,CC1120_MOSI, CC1120_MISO, 0x80 | 0x30);
+   // pinHigh(CC1120_SLAVE_SELECT);
 
     //delay_ms(200);
 
-    pinLow(CC1120_SLAVE_SELECT);
+  //  pinLow(CC1120_SLAVE_SELECT);
 
     // while (pinRead(CC1120_MISO));
-    volatile uint8_t ccstatus2 = syncByte(CC1120_SCK ,CC1120_MOSI, CC1120_MISO, 0x80 | 0x3B);
-    volatile uint8_t ccstatus3 = getByte(CC1120_SCK_PIN,CC1120_MISO_PIN);
+   // volatile uint8_t ccstatus2 = syncByte(CC1120_SCK ,CC1120_MOSI, CC1120_MISO, 0x80 | 0x3B);
+   // volatile uint8_t ccstatus3 = getByte(CC1120_SCK_PIN,CC1120_MISO_PIN);
     // byteOut(CC1120_SCK_PIN,CC1120_MOSI_PIN, 0b10111101 );
-    pinHigh(CC1120_SLAVE_SELECT);
+  //  pinHigh(CC1120_SLAVE_SELECT);
 
 
     volatile float batt;
@@ -116,7 +116,7 @@ int main(void) {
     //TC5->COUNT16.CTRLA.bit.ENABLE = 0;
 
 
-    TC5->COUNT16.CTRLBCLR.reg= TC_CTRLBCLR_CMD_RETRIGGER;
+   // TC5->COUNT16.CTRLBCLR.reg= TC_CTRLBCLR_CMD_RETRIGGER;
 
     while (1) {
 

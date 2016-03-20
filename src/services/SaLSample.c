@@ -61,7 +61,7 @@ bool sampleTick() {
         cookedSample = sampleBeingCooked;
 
 
-        if (index222 > 5000) {
+        if (index222 > 1000) {
             index222 = 0;
             thisTime = millis();
             deltatt = thisTime - lastTime;

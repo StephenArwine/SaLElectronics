@@ -32,9 +32,9 @@ int main(void) {
     pinOut(ADXL345_SLAVE_SELECT);
     // SaLPinMode(PIN_PA13,INPUT);
 
-    pinOut(MS5607_MOSI);
-    pinOut(MS5607_SCK);
-    pinIn(MS5607_MISO);
+   // pinOut(MS5607_MOSI);
+   // pinOut(MS5607_SCK);
+   //pinIn(MS5607_MISO);
 
 
 
@@ -46,13 +46,13 @@ int main(void) {
 
 
 
-    pinOut(LedPin);
+    //pinOut(LedPin);
 
 
     struct AccelerometerModule myAccelerometer;
     initAccelerometer(&myAccelerometer);
     initBarometer();
-    SaLFlashMemInit();
+    //SaLFlashMemInit();
 
     /* Replace with your application code */
 
