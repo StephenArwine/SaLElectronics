@@ -9,7 +9,7 @@ void adcInit() {
 
     // divide prescaler by 512 (93.75KHz), max adc freq is 2.1MHz
     ADC->CTRLB.reg = ADC_CTRLB_PRESCALER_DIV512 |
-                     ADC_CTRLB_RESSEL_8BIT;
+                     ADC_CTRLB_RESSEL_12BIT;
 
     // enable clock adc channel
     GCLK->CLKCTRL.reg = GCLK_CLKCTRL_CLKEN |

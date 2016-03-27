@@ -13,6 +13,7 @@ const static Pin senseBat = { .group = 0, .pin = 6 , .chan = 6};
 #define OUTSTRONG 3
 #define TRUE 1
 #define FALSE 0
+#define SaLFrostburn1_1 1
 
 #define HAS_FLASHMEM 1
 #define HAS_AT25SF 1
@@ -63,6 +64,10 @@ const static Pin ADXL345_SLAVE_SELECT = {.group = 0, .pin = 18 };
 #define HAS_MTK3329 1
 #define MTK3339_TX_PIN PIN_PB22
 #define MTK3339_RX_PIN PIN_PB23
+
+#define HAS_ADXL278 1
+const static Pin ADXL278_ACCELX = {.group = 0, .pin = 7, .chan = 7 };
+
 
 #define MY_ADXL345_DATA_RATE ADXL345_DATARATE_1600_HZ
 #define MY_ADXL345_RANGE ADXL345_RANGE_2_G | ADXL345_RANGE_FULL_RANGE

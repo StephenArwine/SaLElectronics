@@ -21,7 +21,7 @@ int main(void) {
     SaLDelayInit();
     SalGclkInit();
     SaLRtcInit();
-   // uart_init(9600);
+    // uart_init(9600);
     //SaLTC4Init();
     sampleInit();
     adcInit();
@@ -32,9 +32,9 @@ int main(void) {
     pinOut(ADXL345_SLAVE_SELECT);
     // SaLPinMode(PIN_PA13,INPUT);
 
-   // pinOut(MS5607_MOSI);
-   // pinOut(MS5607_SCK);
-   //pinIn(MS5607_MISO);
+    // pinOut(MS5607_MOSI);
+    // pinOut(MS5607_SCK);
+    //pinIn(MS5607_MISO);
 
 
 
@@ -46,27 +46,27 @@ int main(void) {
 
 
 
-    //pinOut(LedPin);
-
+    pinOut(LedPin);
+    pinHigh(LedPin);
 
     struct AccelerometerModule myAccelerometer;
     initAccelerometer(&myAccelerometer);
     initBarometer();
     //SaLFlashMemInit();
 
-    /* Replace with your application code */
+
 
 //     uint8_t message[255];
 // // 	     AT25SFErace4KBlock(0);
 // // 	     AT25SFWriteByte(0x00101,252);
 // // 	   volatile uint8_t byte = AT25SFGetByte(0x00101);
-// 
+//
 //     pinLow(CC1120_SLAVE_SELECT);
 //     volatile uint8_t ccstatus = syncByte(CC1120_SCK ,CC1120_MOSI, CC1120_MISO, 0x80 | 0x30);
 //     pinHigh(CC1120_SLAVE_SELECT);
-// 
+//
 //     pinLow(CC1120_SLAVE_SELECT);
-// 
+//
 //     while (pinRead(CC1120_MISO));
 //     volatile uint8_t ccstatus2 = syncByte(CC1120_SCK ,CC1120_MOSI, CC1120_MISO, 0x80 | 0x3B);
 //     volatile uint8_t ccstatus3 = getByte(CC1120_SCK_PIN,CC1120_MISO_PIN);
@@ -75,12 +75,23 @@ int main(void) {
 
     volatile float batt;
 
+    volatile float accelX;
+    volatile float accelXOffset;
+
+    for (uint8_t i = 0; i < 20; i++) {
+        accelXOffset += (1.8 - (adcRead(ADXL278_ACCELX) * (3.60/2.0)/pow(2,12)))/((1.8-0.50)/70);
+    }
+	accelXOffset = accelXOffset / 20;
+
     while (1) {
 
-        //delay_ms(10000);
-        //pinToggle(LedPin);
+        delay_ms(100);
+        pinToggle(LedPin);
 
         sampleTick();
-        //batt = senseBatVolts(senseBat);
+       // batt = senseBatVolts(senseBat);
+        accelX = (1.8 - (adcRead(ADXL278_ACCELX) * (3.60/2.0)/pow(2,12)))/((1.8-0.50)/70) - accelXOffset;
+       // batt = accelX;
+
     }
 }
