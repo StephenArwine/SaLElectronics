@@ -1,42 +1,15 @@
 [Eagle]
-Version="07 05 00"
+Version="08 03 01"
 Platform="Windows"
-Serial="62191E841E-LSR-WLM-1EL"
 Globals="Globals"
 Desktop="Desktop"
 
 [Globals]
 AutoSaveProject=1
-UsedLibrary="C:/EAGLE-7.5.0/lbr/telcom.lbr"
-UsedLibrary="C:/EAGLE-7.5.0/lbr/telecontrolli.lbr"
-UsedLibrary="C:/EAGLE-7.5.0/lbr/telefunken.lbr"
-UsedLibrary="C:/EAGLE-7.5.0/lbr/testpad.lbr"
-UsedLibrary="C:/EAGLE-7.5.0/lbr/texas-sn55-sn75.lbr"
-UsedLibrary="C:/EAGLE-7.5.0/lbr/texas.lbr"
-UsedLibrary="C:/EAGLE-7.5.0/lbr/SparkFun-Eagle-Libraries/GeekAmmo.lbr"
-UsedLibrary="C:/EAGLE-7.5.0/lbr/SparkFun-Eagle-Libraries/LilyPad-Wearables.lbr"
-UsedLibrary="C:/EAGLE-7.5.0/lbr/SparkFun-Eagle-Libraries/SparkFun-Aesthetics.lbr"
-UsedLibrary="C:/EAGLE-7.5.0/lbr/SparkFun-Eagle-Libraries/SparkFun-AnalogIC.lbr"
-UsedLibrary="C:/EAGLE-7.5.0/lbr/SparkFun-Eagle-Libraries/SparkFun-Boards.lbr"
-UsedLibrary="C:/EAGLE-7.5.0/lbr/SparkFun-Eagle-Libraries/SparkFun-Capacitors.lbr"
-UsedLibrary="C:/EAGLE-7.5.0/lbr/SparkFun-Eagle-Libraries/SparkFun-Connectors.lbr"
-UsedLibrary="C:/EAGLE-7.5.0/lbr/SparkFun-Eagle-Libraries/SparkFun-DigitalIC.lbr"
-UsedLibrary="C:/EAGLE-7.5.0/lbr/SparkFun-Eagle-Libraries/SparkFun-DiscreteSemi.lbr"
-UsedLibrary="C:/EAGLE-7.5.0/lbr/SparkFun-Eagle-Libraries/SparkFun-Displays.lbr"
-UsedLibrary="C:/EAGLE-7.5.0/lbr/SparkFun-Eagle-Libraries/SparkFun-Electromechanical.lbr"
-UsedLibrary="C:/EAGLE-7.5.0/lbr/SparkFun-Eagle-Libraries/SparkFun-FreqCtrl.lbr"
-UsedLibrary="C:/EAGLE-7.5.0/lbr/SparkFun-Eagle-Libraries/SparkFun-LED.lbr"
-UsedLibrary="C:/EAGLE-7.5.0/lbr/SparkFun-Eagle-Libraries/SparkFun-Passives.lbr"
-UsedLibrary="C:/EAGLE-7.5.0/lbr/SparkFun-Eagle-Libraries/SparkFun-PowerIC.lbr"
-UsedLibrary="C:/EAGLE-7.5.0/lbr/SparkFun-Eagle-Libraries/SparkFun-Resistors.lbr"
-UsedLibrary="C:/EAGLE-7.5.0/lbr/SparkFun-Eagle-Libraries/SparkFun-Retired.lbr"
-UsedLibrary="C:/EAGLE-7.5.0/lbr/SparkFun-Eagle-Libraries/SparkFun-RF.lbr"
-UsedLibrary="C:/EAGLE-7.5.0/lbr/SparkFun-Eagle-Libraries/SparkFun-Sensors.lbr"
-UsedLibrary="C:/EAGLE-7.5.0/lbr/SparkFun-Eagle-Libraries/User-Submitted.lbr"
 
 [Win_1]
 Type="Control Panel"
-Loc="0 0 1919 1039"
+Loc="-8 -31 1191 608"
 State=2
 Number=0
 
