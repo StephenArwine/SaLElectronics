@@ -21,7 +21,7 @@ int main(void) {
     SaLDelayInit();
     SalGclkInit();
     SaLRtcInit();
-    // uart_init(9600);
+     uart_init(9600);
     //SaLTC4Init();
     sampleInit();
     adcInit();
