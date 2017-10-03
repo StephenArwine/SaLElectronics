@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.5.0">
+<eagle version="8.3.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
+<setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="25" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="0.005" altunitdist="inch" altunit="mil"/>
@@ -1251,8 +1252,8 @@ Please make sure your boards conform to these design rules.</description>
 </autorouter>
 <elements>
 <element name="U1" library="SparkFun-DigitalIC" package="TQFP-48" value="ATSAMD21G-A" x="30.607" y="9.271" smashed="yes" rot="R45">
-<attribute name="PROD_ID" value="IC-13064" x="30.607" y="9.271" size="1.778" layer="27" rot="R45" display="off"/>
 <attribute name="NAME" x="30.607" y="9.271" size="0.6096" layer="25" rot="R45" align="bottom-center"/>
+<attribute name="PROD_ID" value="IC-13064" x="30.607" y="9.271" size="1.778" layer="27" rot="R45" display="off"/>
 <attribute name="VALUE" x="31.505025" y="8.372971875" size="0.8128" layer="27" rot="R45" align="bottom-center"/>
 </element>
 <element name="1U2" library="SparkFun-PowerIC" package="SOT23-5" value="V_REG_LDOSMD" x="10.922" y="9.779" smashed="yes" rot="R270">
@@ -1404,8 +1405,8 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="NAME" x="49.149" y="17.8435" size="0.6096" layer="25"/>
 </element>
 <element name="Y3" library="SparkFun-FreqCtrl" package="CRYSTAL-SMD-5X3" value="32MHz" x="46.228" y="16.637" smashed="yes">
-<attribute name="PROD_ID" value="XTAL-08218" x="46.228" y="16.637" size="1.778" layer="27" display="off"/>
 <attribute name="NAME" x="45.593" y="18.542" size="0.6096" layer="25"/>
+<attribute name="PROD_ID" value="XTAL-08218" x="46.228" y="16.637" size="1.778" layer="27" display="off"/>
 </element>
 <element name="R14" library="SparkFun-Passives" package="0402-RES" value="0ohm" x="47.879" y="13.716" smashed="yes" rot="R180">
 <attribute name="NAME" x="46.736" y="14.1605" size="0.6096" layer="25" rot="R180"/>
@@ -1446,8 +1447,8 @@ Please make sure your boards conform to these design rules.</description>
 <element name="J$1" library="SparkFun-Connectors" package="SMA-EDGE" value="SMA_EDGE" x="70.231" y="7.62" rot="MR90"/>
 <element name="U4" library="adafruit" package="FGPMMOPA6H" value="gps" x="24.384" y="9.652" rot="MR270"/>
 <element name="D1" library="SparkFun-LED" package="LED-0603" value="RED" x="24.511" y="17.272" smashed="yes" rot="R270">
-<attribute name="PROD_ID" value="DIO-00819" x="24.511" y="17.272" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="NAME" x="22.987" y="17.5895" size="0.6096" layer="25" rot="R180"/>
+<attribute name="PROD_ID" value="DIO-00819" x="24.511" y="17.272" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="R17" library="SparkFun-Passives" package="0402-RES" value="301ohm\" x="27.559" y="17.272" smashed="yes" rot="R180">
 <attribute name="NAME" x="28.829" y="16.8275" size="0.6096" layer="25"/>
@@ -1483,8 +1484,8 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="PROD_ID" value="CONN-09505" x="61.468" y="17.653" size="1.778" layer="28" rot="MR180" display="off"/>
 </element>
 <element name="S2" library="SparkFun-Electromechanical" package="TACTILE_SWITCH_SMD_4.6X2.8MM" value="SWITCH-MOMENTARY-2SMD-4.6X2.8MM" x="8.128" y="3.937" smashed="yes" rot="MR270">
-<attribute name="PROD_ID" value="SWCH-13065" x="8.128" y="3.937" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="NAME" x="6.604" y="6.477" size="0.8128" layer="26" rot="MR270"/>
+<attribute name="PROD_ID" value="SWCH-13065" x="8.128" y="3.937" size="1.778" layer="28" rot="MR270" display="off"/>
 </element>
 <element name="STANDOFF1" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="69.977" y="17.018"/>
 <element name="STANDOFF2" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="2.794" y="17.018"/>
@@ -1508,8 +1509,8 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="VALUE" x="35.687" y="1.905" size="0.6096" layer="28" rot="MR90"/>
 </element>
 <element name="D2" library="SparkFun-LED" package="LED-1206" value="GREEN" x="35.306" y="9.525" smashed="yes" rot="MR90">
-<attribute name="PROD_ID" value="DIO-00862" x="35.306" y="9.525" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="NAME" x="33.909" y="9.017" size="0.6096" layer="26" rot="MR90"/>
+<attribute name="PROD_ID" value="DIO-00862" x="35.306" y="9.525" size="1.778" layer="28" rot="MR90" display="off"/>
 </element>
 <element name="R21" library="SparkFun-Resistors" package="0402-RES" value="63" x="36.83" y="9.271" smashed="yes" rot="MR270">
 <attribute name="NAME" x="37.5285" y="8.636" size="0.6096" layer="26" font="vector" rot="MR90"/>
@@ -1517,6 +1518,7 @@ Please make sure your boards conform to these design rules.</description>
 <element name="C16" library="SparkFun-Passives" package="0402-CAP" value="0.1uF" x="40.259" y="5.207" smashed="yes" rot="MR270">
 <attribute name="NAME" x="41.4655" y="6.096" size="0.6096" layer="26" rot="MR270"/>
 </element>
+<element name="STANDOFF5" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="1.905" y="-6.985"/>
 </elements>
 <signals>
 <signal name="3.3V">

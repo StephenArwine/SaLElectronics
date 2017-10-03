@@ -165,22 +165,6 @@
 <text x="32.893" y="15.24" size="0.762" layer="25" font="vector" ratio="15" rot="R315">SAM D21g</text>
 </plain>
 <libraries>
-<library name="SparkFun-Aesthetics">
-<description>&lt;h3&gt;SparkFun Electronics' preferred foot prints&lt;/h3&gt;
-In this library you'll find non-functional items- supply symbols, logos, notations, frame blocks, etc.&lt;br&gt;&lt;br&gt;
-We've spent an enormous amount of time creating and checking these footprints and parts, but it is the end user's responsibility to ensure correctness and suitablity for a given componet or application. If you enjoy using this library, please buy one of our products at www.sparkfun.com.
-&lt;br&gt;&lt;br&gt;
-&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
-&lt;br&gt;&lt;br&gt;
-You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
-<packages>
-<package name="CREATIVE_COMMONS">
-<text x="-20.32" y="5.08" size="1.778" layer="51" font="vector">Released under the Creative Commons Attribution Share-Alike 4.0 License</text>
-<text x="0" y="2.54" size="1.778" layer="51" font="vector"> https://creativecommons.org/licenses/by-sa/4.0/</text>
-<text x="11.43" y="0" size="1.778" layer="51" font="vector">Designed by:</text>
-</package>
-</packages>
-</library>
 <library name="SparkFun-DigitalIC">
 <description>&lt;h3&gt;SparkFun Electronics' preferred foot prints&lt;/h3&gt;
 In this library you'll find all manner of digital ICs- microcontrollers, memory chips, logic chips, FPGAs, etc.&lt;br&gt;&lt;br&gt;
@@ -1266,7 +1250,6 @@ Please make sure your boards conform to these design rules.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="FRAME1" library="SparkFun-Aesthetics" package="CREATIVE_COMMONS" value="FRAME-LEDGER" x="-5.08" y="23.495"/>
 <element name="U1" library="SparkFun-DigitalIC" package="TQFP-48" value="ATSAMD21G-A" x="30.607" y="9.271" smashed="yes" rot="R45">
 <attribute name="PROD_ID" value="IC-13064" x="30.607" y="9.271" size="1.778" layer="27" rot="R45" display="off"/>
 <attribute name="NAME" x="30.607" y="9.271" size="0.6096" layer="25" rot="R45" align="bottom-center"/>
@@ -1782,8 +1765,8 @@ Please make sure your boards conform to these design rules.</description>
 <polygon width="0.254" layer="15">
 <vertex x="-0.381" y="-1.778"/>
 <vertex x="73.279" y="-1.778"/>
-<vertex x="73.279" y="-6.223"/>
-<vertex x="-0.381" y="-6.223"/>
+<vertex x="73.406" y="26.924"/>
+<vertex x="-0.254" y="26.924"/>
 </polygon>
 <contactref element="TX/RX" pad="25"/>
 <contactref element="C23" pad="2"/>
@@ -2235,22 +2218,22 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="13.589" y1="8.255" x2="11.938" y2="9.906" width="0.254" layer="2"/>
 <wire x1="11.938" y1="9.906" x2="11.303" y2="9.906" width="0.254" layer="2"/>
 <polygon width="0.254" layer="1">
-<vertex x="-0.381" y="-4.953"/>
-<vertex x="73.279" y="-4.953"/>
+<vertex x="-0.381" y="21.463"/>
+<vertex x="73.279" y="21.463"/>
 <vertex x="73.279" y="-1.778"/>
 <vertex x="-0.381" y="-1.778"/>
 </polygon>
 <polygon width="0.254" layer="2">
-<vertex x="-0.381" y="-8.128"/>
-<vertex x="73.279" y="-8.128"/>
+<vertex x="-0.254" y="25.146"/>
+<vertex x="73.406" y="25.146"/>
 <vertex x="73.279" y="-3.683"/>
 <vertex x="-0.381" y="-3.683"/>
 </polygon>
 <polygon width="0.254" layer="16">
 <vertex x="-0.381" y="-3.048"/>
 <vertex x="73.279" y="-3.048"/>
-<vertex x="73.279" y="-8.128"/>
-<vertex x="-0.381" y="-8.128"/>
+<vertex x="73.406" y="23.241"/>
+<vertex x="-0.254" y="23.241"/>
 </polygon>
 <via x="6.096" y="7.747" extent="1-16" drill="0.381"/>
 <via x="9.779" y="3.81" extent="1-16" drill="0.381"/>
@@ -3127,83 +3110,6 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="44.577" y1="2.091" x2="44.45" y2="2.218" width="0.254" layer="1"/>
 </signal>
 </signals>
-<errors>
-<approved hash="19,1,c0b9b04bde3e7901"/>
-<approved hash="19,1,d742d68023159bf2"/>
-<approved hash="19,1,4309903b51536027"/>
-<approved hash="19,1,abfca55db1fa19e1"/>
-<approved hash="19,1,0e54c2a103ab365a"/>
-<approved hash="19,1,0f2ddfee1fe23421"/>
-<approved hash="19,1,39d502e681b13d43"/>
-<approved hash="19,1,b3eca22ee9011bdb"/>
-<approved hash="5,1,e4b8b681a0dc2634"/>
-<approved hash="5,1,edad2b05782b69c9"/>
-<approved hash="5,1,b8230a8a9f362d3c"/>
-<approved hash="5,1,e4b8b681a0dc2634"/>
-<approved hash="5,1,55874179b9a0a87a"/>
-<approved hash="5,1,d4cc0243d300ab2a"/>
-<approved hash="5,1,ec9f2c307f52692b"/>
-<approved hash="5,1,02b4f19cc07ed1f9"/>
-<approved hash="19,1,4138fcf89e00214e"/>
-<approved hash="19,1,637c0d4dce4549bb"/>
-<approved hash="19,1,f2210d909adba0be"/>
-<approved hash="19,1,84d41f23b2a9596c"/>
-<approved hash="19,1,a257eaceaa794e47"/>
-<approved hash="19,1,f2fccd64a7b9da74"/>
-<approved hash="5,1,53db0ba79b797033"/>
-<approved hash="19,1,d0832e82c4ff3886"/>
-<approved hash="19,1,3e6ee8ffaecb14bd"/>
-<approved hash="19,1,632c62fae5ac986f"/>
-<approved hash="19,1,85cc3131375483dc"/>
-<approved hash="19,1,91c6dbccab44c72a"/>
-<approved hash="5,1,ae3d10a1ac1ee184"/>
-<approved hash="19,1,19811180fffcf185"/>
-<approved hash="5,1,6cb65215b88a2f6c"/>
-<approved hash="5,1,6720d9a0ae1ef398"/>
-<approved hash="19,1,c7e6a26c60e0b5c0"/>
-<approved hash="5,1,35178b73f954f6f4"/>
-<approved hash="5,1,a57cadbba97b02c2"/>
-<approved hash="19,1,b392ccb78bb78887"/>
-<approved hash="19,1,2363c174daa98db0"/>
-<approved hash="19,1,67b99300c72977b0"/>
-<approved hash="19,1,9ec3e2bab4c6cec7"/>
-<approved hash="5,1,743f33a48c06469a"/>
-<approved hash="19,1,d9df23a675da89db"/>
-<approved hash="5,1,6a3f31bbc719fd9b"/>
-<approved hash="5,1,9229790b9fb6c3a3"/>
-<approved hash="19,1,993b279ef1c112b4"/>
-<approved hash="5,1,16c31f65c487cbfa"/>
-<approved hash="5,1,05202a071f893163"/>
-<approved hash="5,1,00b12a071f8934f2"/>
-<approved hash="5,1,89b2bf30d5183bb3"/>
-<approved hash="5,1,0d972a031f8939d0"/>
-<approved hash="5,1,02062a031f893641"/>
-<approved hash="5,1,0fe42a071f713b5f"/>
-<approved hash="5,1,09752a071f913d2e"/>
-<approved hash="5,1,74fa2a3b1fb140bd"/>
-<approved hash="5,1,054c5802146a913d"/>
-<approved hash="5,1,3ed96ed98408a10e"/>
-<approved hash="5,1,d60beef88409c9f8"/>
-<approved hash="5,1,67085ff88409c9fb"/>
-<approved hash="5,1,8fdadfd98408a10d"/>
-<approved hash="5,1,e806d0f88009cdf5"/>
-<approved hash="5,1,00d450d98008a503"/>
-<approved hash="5,1,790341f88009cdf0"/>
-<approved hash="5,1,62d332d98408a104"/>
-<approved hash="5,1,f3cca3d98408a11b"/>
-<approved hash="5,1,1b1e23f88409c9ed"/>
-<approved hash="5,1,ac1c94f88809c5ef"/>
-<approved hash="5,1,44ce14d98808ad19"/>
-<approved hash="5,1,37d16cb9d598dde8"/>
-<approved hash="5,1,bb0f8bfa9fcbfc16"/>
-<approved hash="5,1,54895bb53889314a"/>
-<approved hash="5,1,51185bb5388934db"/>
-<approved hash="5,1,25535b8938b14094"/>
-<approved hash="5,1,58dc5bb538913d07"/>
-<approved hash="5,1,5c3e5bb1388939f9"/>
-<approved hash="5,1,53af5bb138893668"/>
-<approved hash="5,1,5e4d5bb538713b76"/>
-</errors>
 </board>
 </drawing>
 <compatibility>

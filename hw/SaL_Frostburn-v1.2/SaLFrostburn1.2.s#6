@@ -7939,6 +7939,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <part name="SUPPLY23" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
 <part name="GND53" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="C16" library="SparkFun-Passives" deviceset="CAP" device="0402-CAP" value="0.1uF"/>
+<part name="SUPPLY24" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -8328,6 +8329,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <attribute name="NAME" x="72.644" y="58.801" size="1.778" layer="95"/>
 <attribute name="VALUE" x="71.12" y="53.467" size="1.778" layer="96"/>
 </instance>
+<instance part="SUPPLY24" gate="G$1" x="358.14" y="251.46"/>
 </instances>
 <busses>
 </busses>
@@ -8552,6 +8554,16 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <pinref part="SUPPLY23" gate="G$1" pin="3.3V"/>
 <wire x1="71.12" y1="60.96" x2="71.12" y2="68.58" width="0.1524" layer="91"/>
 <junction x="71.12" y="60.96"/>
+</segment>
+<segment>
+<pinref part="SUPPLY24" gate="G$1" pin="3.3V"/>
+<wire x1="358.14" y1="248.92" x2="358.14" y2="251.46" width="0.1524" layer="91"/>
+<pinref part="TX/RX" gate="G$1" pin="AVDD_PFD_CHP"/>
+<pinref part="C23" gate="G$1" pin="2"/>
+<wire x1="337.82" y1="243.84" x2="350.52" y2="243.84" width="0.1524" layer="91"/>
+<wire x1="350.52" y1="243.84" x2="350.52" y2="248.92" width="0.1524" layer="91"/>
+<wire x1="358.14" y1="248.92" x2="350.52" y2="248.92" width="0.1524" layer="91"/>
+<junction x="350.52" y="248.92"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -9358,14 +9370,6 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <pinref part="C20" gate="G$1" pin="1"/>
 <wire x1="347.98" y1="218.44" x2="358.14" y2="218.44" width="0.1524" layer="91"/>
 <wire x1="358.14" y1="218.44" x2="358.14" y2="223.52" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$15" class="0">
-<segment>
-<pinref part="TX/RX" gate="G$1" pin="AVDD_PFD_CHP"/>
-<pinref part="C23" gate="G$1" pin="2"/>
-<wire x1="337.82" y1="243.84" x2="350.52" y2="243.84" width="0.1524" layer="91"/>
-<wire x1="350.52" y1="243.84" x2="350.52" y2="248.92" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$23" class="0">
