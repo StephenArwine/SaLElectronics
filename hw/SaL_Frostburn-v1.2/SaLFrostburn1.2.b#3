@@ -36,12 +36,12 @@
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
-<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
-<layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
-<layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
-<layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
-<layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="yes" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="yes" active="yes"/>
+<layer number="32" name="bCream" color="7" fill="5" visible="yes" active="yes"/>
+<layer number="33" name="tFinish" color="6" fill="3" visible="yes" active="yes"/>
+<layer number="34" name="bFinish" color="6" fill="6" visible="yes" active="yes"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="yes" active="yes"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="yes" active="yes"/>
 <layer number="37" name="tTest" color="7" fill="1" visible="yes" active="yes"/>
@@ -51,7 +51,7 @@
 <layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
 <layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
-<layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
+<layer number="44" name="Drills" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="yes" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="yes" active="yes"/>
@@ -161,7 +161,7 @@
 <wire x1="67.996" y1="19.675" x2="-4.699" y2="19.675" width="0" layer="20"/>
 <wire x1="-4.699" y1="19.675" x2="-4.699" y2="-0.127" width="0" layer="20"/>
 <text x="63.5" y="6.223" size="2.921" layer="26" font="vector" ratio="15" rot="MR0">SaLFrostburn
-        V1.1</text>
+        V1.2</text>
 <text x="28.194" y="15.113" size="0.762" layer="25" font="vector" ratio="15" rot="R315">SAM D21g</text>
 </plain>
 <libraries>
@@ -1970,7 +1970,8 @@ Please make sure your boards conform to these design rules.</description>
 <via x="51.435" y="18.161" extent="1-16" drill="0.381"/>
 <wire x1="51.435" y1="18.161" x2="51.181" y2="17.344" width="0.254" layer="1"/>
 <wire x1="45.085" y1="16.057" x2="44.251" y2="16.51" width="0.254" layer="1"/>
-<wire x1="43.434" y1="16.51" x2="38.1" y2="16.51" width="0.254" layer="1"/>
+<wire x1="43.434" y1="16.51" x2="40.005" y2="16.51" width="0.254" layer="1"/>
+<wire x1="40.005" y1="16.51" x2="38.1" y2="16.51" width="0.254" layer="1"/>
 <wire x1="38.1" y1="16.51" x2="37.774" y2="16.836" width="0.254" layer="1"/>
 <wire x1="37.774" y1="16.836" x2="37.338" y2="16.836" width="0.254" layer="1"/>
 <wire x1="37.226" y1="8.636" x2="37.226" y2="7.889" width="0.254" layer="1"/>
@@ -2277,6 +2278,9 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="34.29" y1="6.477" x2="34.29" y2="4.318" width="0.254" layer="2"/>
 <wire x1="32.131" y1="8.564" x2="36.521" y2="8.564" width="0.254" layer="16"/>
 <wire x1="36.521" y1="8.564" x2="37.211" y2="7.874" width="0.254" layer="16"/>
+<wire x1="40.005" y1="17.78" x2="40.005" y2="16.51" width="0.254" layer="1"/>
+<wire x1="43.18" y1="15.24" x2="43.434" y2="15.24" width="0.254" layer="1"/>
+<wire x1="43.434" y1="15.24" x2="43.434" y2="16.51" width="0.254" layer="1"/>
 </signal>
 <signal name="LVD_IN">
 <contactref element="1U2" pad="1"/>

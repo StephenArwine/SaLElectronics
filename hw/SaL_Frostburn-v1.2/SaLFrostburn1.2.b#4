@@ -1518,7 +1518,7 @@ Please make sure your boards conform to these design rules.</description>
 </element>
 <element name="U$4" library="SaL-lib1" package="POWERPACK1212-8" value="SIS410DN" x="8.763" y="11.303" rot="R90"/>
 <element name="U$6" library="SaL-lib1" package="POWERPACK1212-8" value="SIS410DN" x="10.795" y="8.255" rot="R270"/>
-<element name="JP5" library="SparkFun-Connectors" package="JST-2-SMD-VERT" value="" x="-0.635" y="9.779" rot="MR270"/>
+<element name="JP5" library="SparkFun-Connectors" package="JST-2-SMD-VERT" value="Lipo" x="-0.635" y="9.779" rot="MR270"/>
 <element name="STANDOFF4" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="65.278" y="2.667"/>
 <element name="U$7" library="SparkFun-Sensors" package="ADXL193" value="ADXL193" x="31.75" y="3.175" smashed="yes" rot="MR90">
 <attribute name="NAME" x="31.75" y="1.778" size="0.6096" layer="26" rot="MR90"/>

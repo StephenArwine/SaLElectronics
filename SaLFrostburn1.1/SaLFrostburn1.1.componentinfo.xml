@@ -28,7 +28,11 @@
 					<Description></Description>
 					<Files>
 						<d4p1:anyType i:type="FileInfo">
+<<<<<<< HEAD
 							<AbsolutePath>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\include</AbsolutePath>
+=======
+							<AbsolutePath>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.231\samd21a\include</AbsolutePath>
+>>>>>>> a0372f0ea3d176c862c5e88bbf4a681dd2c03423
 							<Attribute></Attribute>
 							<Category>include</Category>
 							<Condition>C</Condition>
@@ -39,7 +43,11 @@
 							<SourcePath></SourcePath>
 						</d4p1:anyType>
 						<d4p1:anyType i:type="FileInfo">
+<<<<<<< HEAD
 							<AbsolutePath>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\include\sam.h</AbsolutePath>
+=======
+							<AbsolutePath>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.231\samd21a\include\sam.h</AbsolutePath>
+>>>>>>> a0372f0ea3d176c862c5e88bbf4a681dd2c03423
 							<Attribute></Attribute>
 							<Category>header</Category>
 							<Condition>C</Condition>
@@ -50,7 +58,11 @@
 							<SourcePath></SourcePath>
 						</d4p1:anyType>
 						<d4p1:anyType i:type="FileInfo">
+<<<<<<< HEAD
 							<AbsolutePath>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\templates\main.c</AbsolutePath>
+=======
+							<AbsolutePath>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.231\samd21a\templates\main.c</AbsolutePath>
+>>>>>>> a0372f0ea3d176c862c5e88bbf4a681dd2c03423
 							<Attribute>template</Attribute>
 							<Category>source</Category>
 							<Condition>C Exe</Condition>
@@ -61,7 +73,11 @@
 							<SourcePath></SourcePath>
 						</d4p1:anyType>
 						<d4p1:anyType i:type="FileInfo">
+<<<<<<< HEAD
 							<AbsolutePath>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\templates\main.cpp</AbsolutePath>
+=======
+							<AbsolutePath>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.231\samd21a\templates\main.cpp</AbsolutePath>
+>>>>>>> a0372f0ea3d176c862c5e88bbf4a681dd2c03423
 							<Attribute>template</Attribute>
 							<Category>source</Category>
 							<Condition>C Exe</Condition>
@@ -72,7 +88,11 @@
 							<SourcePath></SourcePath>
 						</d4p1:anyType>
 						<d4p1:anyType i:type="FileInfo">
+<<<<<<< HEAD
 							<AbsolutePath>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\gcc\system_samd21.c</AbsolutePath>
+=======
+							<AbsolutePath>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.231\samd21a\gcc\system_samd21.c</AbsolutePath>
+>>>>>>> a0372f0ea3d176c862c5e88bbf4a681dd2c03423
 							<Attribute>config</Attribute>
 							<Category>source</Category>
 							<Condition>GCC Exe</Condition>
@@ -83,7 +103,11 @@
 							<SourcePath></SourcePath>
 						</d4p1:anyType>
 						<d4p1:anyType i:type="FileInfo">
+<<<<<<< HEAD
 							<AbsolutePath>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\gcc\gcc\startup_samd21.c</AbsolutePath>
+=======
+							<AbsolutePath>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.231\samd21a\gcc\gcc\startup_samd21.c</AbsolutePath>
+>>>>>>> a0372f0ea3d176c862c5e88bbf4a681dd2c03423
 							<Attribute>config</Attribute>
 							<Category>source</Category>
 							<Condition>GCC Exe</Condition>
@@ -94,7 +118,11 @@
 							<SourcePath></SourcePath>
 						</d4p1:anyType>
 						<d4p1:anyType i:type="FileInfo">
+<<<<<<< HEAD
 							<AbsolutePath>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\gcc\gcc\samd21g18a_flash.ld</AbsolutePath>
+=======
+							<AbsolutePath>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.231\samd21a\gcc\gcc\samd21g18a_flash.ld</AbsolutePath>
+>>>>>>> a0372f0ea3d176c862c5e88bbf4a681dd2c03423
 							<Attribute>config</Attribute>
 							<Category>linkerScript</Category>
 							<Condition>GCC Exe</Condition>
@@ -105,7 +133,11 @@
 							<SourcePath></SourcePath>
 						</d4p1:anyType>
 						<d4p1:anyType i:type="FileInfo">
+<<<<<<< HEAD
 							<AbsolutePath>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.222\samd21a\gcc\gcc\samd21g18a_sram.ld</AbsolutePath>
+=======
+							<AbsolutePath>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.0.231\samd21a\gcc\gcc\samd21g18a_sram.ld</AbsolutePath>
+>>>>>>> a0372f0ea3d176c862c5e88bbf4a681dd2c03423
 							<Attribute>config</Attribute>
 							<Category>other</Category>
 							<Condition>GCC Exe</Condition>
@@ -117,8 +149,13 @@
 						</d4p1:anyType>
 					</Files>
 					<PackName>SAMD21_DFP</PackName>
+<<<<<<< HEAD
 					<PackPath>C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/SAMD21_DFP/1.0.222/Atmel.SAMD21_DFP.pdsc</PackPath>
 					<PackVersion>1.0.222</PackVersion>
+=======
+					<PackPath>C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/SAMD21_DFP/1.0.231/Atmel.SAMD21_DFP.pdsc</PackPath>
+					<PackVersion>1.0.231</PackVersion>
+>>>>>>> a0372f0ea3d176c862c5e88bbf4a681dd2c03423
 					<PresentInProject>true</PresentInProject>
 					<ReferenceConditionId>ATSAMD21G18A</ReferenceConditionId>
 					<RteComponents>

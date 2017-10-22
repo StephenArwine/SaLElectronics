@@ -66,7 +66,7 @@ bool sampleTick() {
             thisTime = millis();
             deltatt = thisTime - lastTime;
             lastTime = millis();
-			            //SaLPlayTone(700,100);
+			            SaLPlayTone(700,100);
 
         }
 		return true;
