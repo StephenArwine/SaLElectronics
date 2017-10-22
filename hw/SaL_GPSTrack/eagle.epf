@@ -1,5 +1,5 @@
 [Eagle]
-Version="08 03 01"
+Version="08 03 02"
 Platform="Windows"
 Globals="Globals"
 Desktop="Desktop"
@@ -372,7 +372,7 @@ UsedLibrary="C:/Users/ancar/Dropbox/eagle/lib/Sal-lib/SaL-lib1.lbr"
 
 [Win_1]
 Type="Board Editor"
-Loc="0 0 1199 639"
+Loc="-8 -31 1191 608"
 State=0
 Number=2
 File="SaL_GPSTrack.brd"
